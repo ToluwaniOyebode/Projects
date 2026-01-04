@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "logo")(type "KiCad")(uri "C:/Users/JSI Tech/Documents/My Kicad File/Github/Projects/ESP32/Dual Axis Solar Tracker/documentation/logo.pretty")(options "")(descr ""))
+)
