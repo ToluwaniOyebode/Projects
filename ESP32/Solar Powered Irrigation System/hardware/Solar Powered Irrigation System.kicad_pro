@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 2.5,
+          "height": 5.0,
+          "width": 5.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.3
         }
       },
       "diff_pair_dimensions": [],
@@ -473,13 +473,101 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.3,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "name": "DIFF",
+        "pcb_color": "rgb(0, 255, 3)",
+        "priority": 3,
+        "schematic_color": "rgb(99, 255, 0)",
+        "track_width": 0.3,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "HPWR",
+        "pcb_color": "rgb(255, 0, 19)",
+        "priority": 2,
+        "schematic_color": "rgb(255, 9, 0)",
+        "track_width": 1.0,
+        "via_diameter": 1.0,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "I2C",
+        "pcb_color": "rgb(255, 194, 6)",
+        "priority": 0,
+        "schematic_color": "rgb(255, 187, 4)",
+        "track_width": 0.3,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "clearance": 0.3,
+        "name": "LPWR",
+        "pcb_color": "rgb(255, 0, 129)",
+        "priority": 1,
+        "schematic_color": "rgb(255, 0, 113)",
+        "track_width": 0.8,
+        "via_diameter": 1.0,
+        "via_drill": 0.3
       }
     ],
     "meta": {
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "+3.3V": [
+        "LPWR"
+      ],
+      "+5V": [
+        "LPWR"
+      ],
+      "+BATT": [
+        "LPWR"
+      ],
+      "/+": [
+        "DIFF"
+      ],
+      "/-": [
+        "DIFF"
+      ],
+      "/SCL": [
+        "I2C"
+      ],
+      "/SDA": [
+        "I2C"
+      ],
+      "/VCC": [
+        "HPWR"
+      ],
+      "GND": [
+        "HPWR"
+      ],
+      "Net-(D2-K)": [
+        "HPWR"
+      ],
+      "Net-(D4-A)": [
+        "LPWR"
+      ],
+      "Net-(D7-K)": [
+        "LPWR"
+      ],
+      "Net-(D8-K)": [
+        "LPWR"
+      ],
+      "Net-(J1-Pin_2)": [
+        "LPWR"
+      ],
+      "Net-(J1-Pin_4)": [
+        "LPWR"
+      ]
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
