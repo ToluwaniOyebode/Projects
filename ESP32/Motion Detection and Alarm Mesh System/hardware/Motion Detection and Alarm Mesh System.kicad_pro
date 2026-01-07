@@ -451,7 +451,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Gas level and leakage detection System.kicad_pro",
+    "filename": "Motion Detection and Alarm Mesh System.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -611,7 +611,7 @@
   },
   "sheets": [
     [
-      "bff80a53-8784-48bc-be3f-91ff37783134",
+      "34458b80-ab5e-4313-b302-81163d4eba04",
       "Root"
     ]
   ],

@@ -1,2 +1,2 @@
-# Gas level and leakage detection System
+# Motion Detection and Alarm Mesh System
 Generated using KiCad Industrial Setup Script
