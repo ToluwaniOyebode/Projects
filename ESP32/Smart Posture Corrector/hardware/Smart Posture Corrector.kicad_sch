@@ -10993,7 +10993,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "RF_Module:ESP32-WROOM-32U"
+		(property "Footprint" "RF_Module:ESP32-WROOM-32"
 			(at 245.11 186.69 0)
 			(effects
 				(font
@@ -12845,7 +12845,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H13mm"
 			(at 165.1 246.38 0)
 			(effects
 				(font
@@ -15175,7 +15175,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 153.67 185.42 0)
 			(effects
 				(font
@@ -17570,7 +17570,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 111.76 40.386 0)
 			(effects
 				(font
