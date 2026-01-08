@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "logo")(type "KiCad")(uri "C:/Users/PFG-ELECTRICAL/Documents/Galaxies/Resources/Personal Stuffs/Kicad Design/Projects/ESP32/Smart Posture Corrector/documentation/logo.pretty")(options "")(descr ""))
+)
