@@ -3669,6 +3669,547 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:SolderJumper_3_Open"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at -2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_3_Open"
+				(at 0 2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Solder Jumper, 3-pole, open"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Solder Jumper SPDT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Open*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SolderJumper_3_Open_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.032 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 1.016) (xy -1.016 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.016 -1.016)
+					(mid -2.0276 0)
+					(end -1.016 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -1.016 -1.016)
+					(mid -2.0276 0)
+					(end -1.016 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -0.508 1.016)
+					(end 0.508 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.016 1.016)
+					(mid 2.0276 0)
+					(end 1.016 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.016 1.016)
+					(mid 2.0276 0)
+					(end 1.016 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.016) (xy 1.016 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 2.032 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_3_Open_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Motor:Motor_Servo"
+			(pin_names
+				(offset 0.0254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "M"
+				(at -5.08 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Motor_Servo"
+				(at -5.08 -4.064 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
+				(at 0 -4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Servo Motor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "PinHeader*P2.54mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Motor_Servo_0_1"
+				(polyline
+					(pts
+						(xy 2.413 1.778) (xy 1.905 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 1.778) (xy 2.286 1.397)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 -1.778) (xy 2.032 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.413 -1.778) (xy 2.286 -1.397)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 2.413 -1.778)
+					(mid 1.2406 0)
+					(end 2.413 1.778)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.175 0)
+					(radius 0.1778)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.175 0)
+					(radius 1.4224)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 3.556) (xy -5.08 3.556) (xy -5.08 -3.556) (xy 6.35 -3.556) (xy 6.35 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 5.969 2.794)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 4.445) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.477 3.302)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 6.35 4.445)
+					(mid 7.4487 4.2737)
+					(end 7.62 3.175)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 6.985 3.81)
+					(radius 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 3.175) (xy 4.191 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Motor_Servo_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "PWM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Motor:Stepper_Motor_unipolar_6pin"
 			(pin_names
 				(offset 0)
@@ -6715,7 +7256,7 @@
 		)
 	)
 	(rectangle
-		(start 102.87 15.748)
+		(start 89.662 15.748)
 		(end 308.61 71.374)
 		(stroke
 			(width 0.762)
@@ -6727,7 +7268,7 @@
 		(uuid 0d2263f5-c550-4152-82d9-3877294cc105)
 	)
 	(rectangle
-		(start 208.28 74.422)
+		(start 208.28 75.692)
 		(end 308.61 177.8)
 		(stroke
 			(width 0.762)
@@ -6739,8 +7280,8 @@
 		(uuid 7c673318-4f72-49d5-8542-e79734970112)
 	)
 	(rectangle
-		(start 102.87 177.8)
-		(end 148.59 221.615)
+		(start 89.916 177.8)
+		(end 142.748 221.615)
 		(stroke
 			(width 0.762)
 			(type dash)
@@ -6763,7 +7304,7 @@
 		(uuid 81beb626-a488-4170-93c8-a651c07d3fca)
 	)
 	(rectangle
-		(start 152.4 224.79)
+		(start 148.59 224.79)
 		(end 203.2 276.86)
 		(stroke
 			(width 0.762)
@@ -6775,7 +7316,7 @@
 		(uuid 9e954409-f23f-42bd-ad81-735c1f5646af)
 	)
 	(rectangle
-		(start 102.87 74.422)
+		(start 131.826 75.692)
 		(end 203.2 175.26)
 		(stroke
 			(width 0.762)
@@ -6787,7 +7328,7 @@
 		(uuid a3e6f563-5f87-4cd8-a728-9937e6b6ec1e)
 	)
 	(rectangle
-		(start 152.4 177.8)
+		(start 148.59 177.8)
 		(end 203.2 221.234)
 		(stroke
 			(width 0.762)
@@ -6799,8 +7340,8 @@
 		(uuid bacc0e74-f53f-4108-9225-8831bcf22cce)
 	)
 	(rectangle
-		(start 126.746 101.346)
-		(end 180.594 145.034)
+		(start 134.366 101.346)
+		(end 186.944 145.034)
 		(stroke
 			(width 0)
 			(type default)
@@ -6811,8 +7352,20 @@
 		(uuid d3c80237-9e90-4fbb-ba3f-d84c2d72d140)
 	)
 	(rectangle
-		(start 102.87 224.79)
-		(end 148.59 276.86)
+		(start 89.916 75.565)
+		(end 129.286 174.752)
+		(stroke
+			(width 0.762)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid e98b187f-b69a-4162-8f1b-5f22579c179d)
+	)
+	(rectangle
+		(start 89.916 224.79)
+		(end 143.256 276.86)
 		(stroke
 			(width 0.762)
 			(type dash)
@@ -6836,7 +7389,7 @@
 	)
 	(text "BATTERY LEVEL"
 		(exclude_from_sim no)
-		(at 128.27 219.202 0)
+		(at 118.11 219.456 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -6860,7 +7413,7 @@
 	)
 	(text "LED INDICATORS"
 		(exclude_from_sim no)
-		(at 125.73 273.812 0)
+		(at 116.84 273.812 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -6881,6 +7434,18 @@
 			)
 		)
 		(uuid "4f691db7-c5a0-4b63-a1c2-b4ad10c7333a")
+	)
+	(text "SERVO"
+		(exclude_from_sim no)
+		(at 109.22 172.466 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+		)
+		(uuid "501c8f9f-b51c-4bef-8f30-0a9e4ef4dc09")
 	)
 	(text "BATTERY MANAGEMENT"
 		(exclude_from_sim no)
@@ -6919,7 +7484,7 @@
 	)
 	(text "MICROCONTROLLER COPROCESSOR"
 		(exclude_from_sim no)
-		(at 153.924 172.974 0)
+		(at 166.116 173.228 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -6976,7 +7541,7 @@
 	)
 	(text "COPROCESSOR\n\n4-CHANNEL MOTOR\n\nDRIVER BOARD"
 		(exclude_from_sim no)
-		(at 153.416 122.682 0)
+		(at 159.766 122.682 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -7011,6 +7576,30 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0060aeb3-624b-4938-8f15-d5ddf7306859")
+	)
+	(junction
+		(at 123.19 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "043612e4-05ef-4fe6-9c54-8bf7fbc00022")
+	)
+	(junction
+		(at 119.38 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "047f35d0-3ec5-4fb7-9a02-64817c9f2714")
+	)
+	(junction
+		(at 191.77 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "060809b1-9fea-4153-91d8-156433ec5671")
+	)
+	(junction
+		(at 275.59 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "072eb2d5-cbb4-4ffb-95ee-cd9fc841079c")
 	)
 	(junction
 		(at 261.62 64.77)
@@ -7061,6 +7650,18 @@
 		(uuid "1fcefa65-5a97-4f77-a312-8fc8f09e8d6e")
 	)
 	(junction
+		(at 275.59 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "25069cb8-5b39-4751-91fb-0423c3f6731d")
+	)
+	(junction
+		(at 300.99 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "255df548-ab96-4c97-aba5-d7bd16b8511e")
+	)
+	(junction
 		(at 250.19 251.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7089,6 +7690,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2f046f99-ce68-40c9-b609-7909cc449501")
+	)
+	(junction
+		(at 270.51 213.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "30c825b2-2618-44c4-8efa-b8615db91897")
 	)
 	(junction
 		(at 293.37 64.77)
@@ -7127,16 +7734,22 @@
 		(uuid "42f2552b-749e-4ff7-8595-448cb0f04844")
 	)
 	(junction
-		(at 186.69 119.38)
+		(at 193.04 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4407ef13-6afa-4f53-89ef-e6fd143ffca9")
 	)
 	(junction
-		(at 123.19 199.39)
+		(at 114.3 199.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4651279d-5ac9-48c7-876d-c057953dbb75")
+	)
+	(junction
+		(at 234.95 242.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4d3fcaa9-43d3-4265-9474-bb98b6f2deab")
 	)
 	(junction
 		(at 275.59 262.89)
@@ -7169,10 +7782,22 @@
 		(uuid "52e3d174-1dad-4f2a-bb78-51a89257ac13")
 	)
 	(junction
+		(at 246.38 241.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "531c79bf-7884-439a-a4a8-b11bf033e5be")
+	)
+	(junction
 		(at 290.83 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "55174357-77ae-4a06-b50d-c560e29c6835")
+	)
+	(junction
+		(at 182.88 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "570cf802-4588-4d06-85e3-6606d0d686e9")
 	)
 	(junction
 		(at 293.37 49.53)
@@ -7241,6 +7866,12 @@
 		(uuid "6e288fd0-8a9d-440b-b484-0581c8d45cf0")
 	)
 	(junction
+		(at 191.77 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e6348dc-af4a-4dcc-b03c-51c61495f5a1")
+	)
+	(junction
 		(at 243.84 193.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7259,7 +7890,19 @@
 		(uuid "75c2b9e6-3759-4118-90e6-948e543e506d")
 	)
 	(junction
-		(at 123.19 187.96)
+		(at 307.34 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76fc6651-4074-4643-917e-f5e1bee877c6")
+	)
+	(junction
+		(at 191.77 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76ffebca-667f-4025-af25-fccdbba2218d")
+	)
+	(junction
+		(at 114.3 187.96)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "78cc90aa-b482-4ba5-b0ef-f66a52627d3c")
@@ -7293,6 +7936,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "86c20890-4300-4283-9efb-08159565ba65")
+	)
+	(junction
+		(at 102.87 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8ffa12a0-00f9-412c-92fd-829ce1950feb")
 	)
 	(junction
 		(at 184.15 252.73)
@@ -7355,6 +8004,12 @@
 		(uuid "a6823404-fde4-4a21-bcb4-cb4bfe61bd06")
 	)
 	(junction
+		(at 300.99 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a92e792a-b752-49fb-8042-840fddb312ef")
+	)
+	(junction
 		(at 185.42 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7379,6 +8034,24 @@
 		(uuid "b1311d18-03cc-44b0-8393-20873d6429e0")
 	)
 	(junction
+		(at 236.22 232.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b2ee086e-9100-4fb4-9ecf-0dbbc8bf514e")
+	)
+	(junction
+		(at 300.99 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5e68f74-5711-4990-a0e1-9511c0954f20")
+	)
+	(junction
+		(at 275.59 229.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b763ce70-a3bc-4556-909c-2d690a992ec1")
+	)
+	(junction
 		(at 237.49 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7397,6 +8070,12 @@
 		(uuid "cec8a805-b079-4e04-81ea-b094e2f01740")
 	)
 	(junction
+		(at 307.34 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d2556a98-9c36-4d90-8d72-5b3539cdb4a1")
+	)
+	(junction
 		(at 290.83 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7413,6 +8092,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d7b6d254-e118-4141-8de9-e07989f85139")
+	)
+	(junction
+		(at 181.61 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8a0071b-4bde-4a8e-b2eb-0d2e0da48c19")
 	)
 	(junction
 		(at 237.49 25.4)
@@ -7449,6 +8134,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eccb5bd9-4a7b-44a5-8db3-e1412ca5345f")
+	)
+	(junction
+		(at 182.88 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed572a17-5f1c-4b28-b70c-f62cd88884f5")
 	)
 	(junction
 		(at 245.11 25.4)
@@ -7495,10 +8186,6 @@
 		(uuid "4f152e32-8270-4fa1-8055-a363d0065453")
 	)
 	(no_connect
-		(at 295.91 137.16)
-		(uuid "5fb8a1b0-6386-497e-b61b-1c76e55b6512")
-	)
-	(no_connect
 		(at 161.29 189.23)
 		(uuid "6e97eb9e-4261-47a1-8522-2e6554881ae0")
 	)
@@ -7538,7 +8225,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 254) (xy 140.97 255.27)
+			(xy 132.08 254) (xy 132.08 255.27)
 		)
 		(stroke
 			(width 0)
@@ -7558,7 +8245,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 96.52) (xy 143.51 97.79)
+			(xy 149.86 96.52) (xy 149.86 97.79)
 		)
 		(stroke
 			(width 0)
@@ -7568,7 +8255,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 149.86) (xy 157.48 148.59)
+			(xy 163.83 149.86) (xy 163.83 148.59)
 		)
 		(stroke
 			(width 0)
@@ -7598,7 +8285,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 187.96) (xy 132.08 186.69)
+			(xy 123.19 187.96) (xy 123.19 186.69)
 		)
 		(stroke
 			(width 0)
@@ -7618,13 +8305,23 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 149.86) (xy 167.64 148.59)
+			(xy 173.99 149.86) (xy 173.99 148.59)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "04d4520e-eee1-4708-a7e3-a3593034507f")
+	)
+	(wire
+		(pts
+			(xy 307.34 25.4) (xy 307.34 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "053f7bc7-3200-4ada-94d2-5369768f89b1")
 	)
 	(wire
 		(pts
@@ -7648,7 +8345,17 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 149.86) (xy 138.43 148.59)
+			(xy 179.07 80.01) (xy 179.07 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "081f4b67-c3b1-41e0-a9df-ace814e6aec3")
+	)
+	(wire
+		(pts
+			(xy 144.78 149.86) (xy 144.78 148.59)
 		)
 		(stroke
 			(width 0)
@@ -7658,7 +8365,17 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 187.96) (xy 123.19 189.23)
+			(xy 275.59 30.48) (xy 276.86 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09dd55d7-6da0-4ba0-8918-e56ff48a311b")
+	)
+	(wire
+		(pts
+			(xy 114.3 187.96) (xy 114.3 189.23)
 		)
 		(stroke
 			(width 0)
@@ -7678,7 +8395,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 187.96) (xy 132.08 187.96)
+			(xy 114.3 187.96) (xy 123.19 187.96)
 		)
 		(stroke
 			(width 0)
@@ -7708,6 +8425,16 @@
 	)
 	(wire
 		(pts
+			(xy 184.15 99.06) (xy 191.77 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d129d68-16e2-468e-a4bf-25e183923971")
+	)
+	(wire
+		(pts
 			(xy 217.17 223.52) (xy 224.79 223.52)
 		)
 		(stroke
@@ -7718,6 +8445,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 186.69) (xy 132.08 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d68110e-1fd9-49a9-9ff7-2868ae38177b")
+	)
+	(wire
+		(pts
 			(xy 193.04 25.4) (xy 200.66 25.4)
 		)
 		(stroke
@@ -7725,6 +8462,16 @@
 			(type default)
 		)
 		(uuid "0dbf678b-c64c-4a7c-bc65-a69a3c532e94")
+	)
+	(wire
+		(pts
+			(xy 200.66 90.17) (xy 191.77 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e3c198a-6caa-4256-b44e-03284bd3fe0f")
 	)
 	(wire
 		(pts
@@ -7758,6 +8505,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 154.94) (xy 181.61 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "100d6da2-1404-4999-9ab8-25224a5f8f5a")
+	)
+	(wire
+		(pts
 			(xy 179.07 25.4) (xy 179.07 27.94)
 		)
 		(stroke
@@ -7788,7 +8545,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 106.68) (xy 186.69 119.38)
+			(xy 193.04 106.68) (xy 193.04 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7818,13 +8575,23 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 96.52) (xy 154.94 97.79)
+			(xy 161.29 96.52) (xy 161.29 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "139881bf-f915-4b82-afe7-7554aaa0b071")
+	)
+	(wire
+		(pts
+			(xy 275.59 46.99) (xy 275.59 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "154d85a9-6e26-470e-a695-c7f8cbbf343f")
 	)
 	(wire
 		(pts
@@ -7858,13 +8625,23 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 254) (xy 121.92 255.27)
+			(xy 113.03 254) (xy 113.03 255.27)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1810971b-3f49-40a3-af9a-1c71c1cea18a")
+	)
+	(wire
+		(pts
+			(xy 316.23 25.4) (xy 316.23 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1823e2c6-5790-4a7b-b295-b9e726474621")
 	)
 	(wire
 		(pts
@@ -7918,6 +8695,26 @@
 	)
 	(wire
 		(pts
+			(xy 275.59 54.61) (xy 276.86 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d59af61-a1bc-4ff5-bbb2-8b84b2c4afd4")
+	)
+	(wire
+		(pts
+			(xy 246.38 241.3) (xy 280.67 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1dac197e-4425-40d6-80e7-9687dc676ceb")
+	)
+	(wire
+		(pts
 			(xy 250.19 251.46) (xy 250.19 257.81)
 		)
 		(stroke
@@ -7948,7 +8745,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 242.57) (xy 271.78 242.57)
+			(xy 233.68 242.57) (xy 234.95 242.57)
 		)
 		(stroke
 			(width 0)
@@ -7958,7 +8755,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 210.82) (xy 123.19 209.55)
+			(xy 114.3 210.82) (xy 114.3 209.55)
 		)
 		(stroke
 			(width 0)
@@ -8008,6 +8805,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 193.04) (xy 156.21 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27448943-0c86-4005-84d9-3625ca245afd")
+	)
+	(wire
+		(pts
 			(xy 218.44 203.2) (xy 232.41 203.2)
 		)
 		(stroke
@@ -8018,7 +8825,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 96.52) (xy 162.56 97.79)
+			(xy 168.91 96.52) (xy 168.91 97.79)
 		)
 		(stroke
 			(width 0)
@@ -8078,7 +8885,17 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 186.69) (xy 123.19 187.96)
+			(xy 102.87 97.79) (xy 107.95 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d6e368a-e7d8-4a01-8a6b-47603918b783")
+	)
+	(wire
+		(pts
+			(xy 114.3 186.69) (xy 114.3 187.96)
 		)
 		(stroke
 			(width 0)
@@ -8088,7 +8905,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 54.61) (xy 276.86 54.61)
+			(xy 274.32 54.61) (xy 275.59 54.61)
 		)
 		(stroke
 			(width 0)
@@ -8098,7 +8915,17 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 149.86) (xy 160.02 148.59)
+			(xy 300.99 48.26) (xy 300.99 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3023f619-369a-4a1e-b758-82c7238da1ce")
+	)
+	(wire
+		(pts
+			(xy 166.37 149.86) (xy 166.37 148.59)
 		)
 		(stroke
 			(width 0)
@@ -8178,13 +9005,23 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 96.52) (xy 135.89 97.79)
+			(xy 142.24 96.52) (xy 142.24 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "32b6d5d3-b306-4537-bfd0-f7b15939564e")
+	)
+	(wire
+		(pts
+			(xy 181.61 151.13) (xy 181.61 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32ecfc91-229d-4aa1-bb51-35ffc8b5c9c1")
 	)
 	(wire
 		(pts
@@ -8228,6 +9065,16 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 191.77) (xy 243.84 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36e89309-a43b-4b55-b5e4-3a142044de58")
+	)
+	(wire
+		(pts
 			(xy 241.3 96.52) (xy 240.03 96.52)
 		)
 		(stroke
@@ -8268,6 +9115,16 @@
 	)
 	(wire
 		(pts
+			(xy 234.95 242.57) (xy 271.78 242.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a4df0b6-ba94-4cf6-b118-d71128f152f4")
+	)
+	(wire
+		(pts
 			(xy 270.51 245.11) (xy 270.51 248.92)
 		)
 		(stroke
@@ -8278,7 +9135,17 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 231.14) (xy 121.92 241.3)
+			(xy 307.34 36.83) (xy 307.34 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ae2a25b-ae08-4e5c-8039-b7abdc751dda")
+	)
+	(wire
+		(pts
+			(xy 113.03 231.14) (xy 113.03 241.3)
 		)
 		(stroke
 			(width 0)
@@ -8338,7 +9205,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 30.48) (xy 276.86 30.48)
+			(xy 274.32 30.48) (xy 275.59 30.48)
 		)
 		(stroke
 			(width 0)
@@ -8348,13 +9215,23 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 196.85) (xy 123.19 199.39)
+			(xy 114.3 196.85) (xy 114.3 199.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4152eee6-e940-4753-b0ef-ce87dab5b189")
+	)
+	(wire
+		(pts
+			(xy 182.88 57.15) (xy 185.42 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "420a0dc7-e73e-4ae0-9afd-802455daad8b")
 	)
 	(wire
 		(pts
@@ -8398,13 +9275,23 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 187.96) (xy 123.19 187.96)
+			(xy 105.41 187.96) (xy 114.3 187.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "44258083-88c2-4286-b4d5-6d4f81a51486")
+	)
+	(wire
+		(pts
+			(xy 190.5 121.92) (xy 199.39 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44f248e1-c921-4905-8fd1-6386fd00a6b2")
 	)
 	(wire
 		(pts
@@ -8415,6 +9302,36 @@
 			(type default)
 		)
 		(uuid "4567b89b-314d-464a-886d-e7bce97c04a6")
+	)
+	(wire
+		(pts
+			(xy 300.99 22.86) (xy 300.99 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4635f423-b9f3-40ff-81a4-b87002445bc4")
+	)
+	(wire
+		(pts
+			(xy 179.07 78.74) (xy 191.77 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "479b30bb-55f6-4c38-af32-c5a6fff989a3")
+	)
+	(wire
+		(pts
+			(xy 152.4 196.85) (xy 168.91 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47a17d88-3e72-4bcc-b586-2fefc0dea332")
 	)
 	(wire
 		(pts
@@ -8478,7 +9395,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 127) (xy 186.69 119.38)
+			(xy 193.04 127) (xy 193.04 119.38)
 		)
 		(stroke
 			(width 0)
@@ -8578,6 +9495,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 99.06) (xy 191.77 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52c859e7-7175-4198-8dd8-218b14356ded")
+	)
+	(wire
+		(pts
 			(xy 214.63 132.08) (xy 226.06 132.08)
 		)
 		(stroke
@@ -8598,7 +9525,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 96.52) (xy 160.02 97.79)
+			(xy 166.37 96.52) (xy 166.37 97.79)
 		)
 		(stroke
 			(width 0)
@@ -8618,7 +9545,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 254) (xy 113.03 255.27)
+			(xy 104.14 254) (xy 104.14 255.27)
 		)
 		(stroke
 			(width 0)
@@ -8628,7 +9555,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 96.52) (xy 146.05 97.79)
+			(xy 152.4 96.52) (xy 152.4 97.79)
 		)
 		(stroke
 			(width 0)
@@ -8645,6 +9572,16 @@
 			(type default)
 		)
 		(uuid "55b2b03e-ec6d-41d0-9706-f7b76b23aa98")
+	)
+	(wire
+		(pts
+			(xy 191.77 154.94) (xy 191.77 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5623f723-fc0b-48d5-800c-bf75ae6d2c76")
 	)
 	(wire
 		(pts
@@ -8758,7 +9695,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 199.39) (xy 123.19 199.39)
+			(xy 105.41 199.39) (xy 114.3 199.39)
 		)
 		(stroke
 			(width 0)
@@ -8858,6 +9795,26 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 106.68) (xy 106.68 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "623045c2-7d9c-495c-ab65-086e2d17c105")
+	)
+	(wire
+		(pts
+			(xy 204.47 121.92) (xy 209.55 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63107f01-3ca5-447d-83a9-cc8a3228690a")
+	)
+	(wire
+		(pts
 			(xy 300.99 49.53) (xy 293.37 49.53)
 		)
 		(stroke
@@ -8878,13 +9835,23 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 232.41) (xy 241.3 232.41)
+			(xy 214.63 232.41) (xy 236.22 232.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "65aee5cd-b193-45ed-bde8-a8e3d9811f26")
+	)
+	(wire
+		(pts
+			(xy 184.15 90.17) (xy 191.77 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65c478d5-96f6-4d5a-88e1-9dab378071e1")
 	)
 	(wire
 		(pts
@@ -8895,6 +9862,16 @@
 			(type default)
 		)
 		(uuid "65e3e539-a374-42b6-9456-5f40dcf4e4d0")
+	)
+	(wire
+		(pts
+			(xy 114.3 140.97) (xy 114.3 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65fb186b-7c46-47f5-941a-39b7ea85795f")
 	)
 	(wire
 		(pts
@@ -8935,6 +9912,16 @@
 			(type default)
 		)
 		(uuid "678ca590-6e72-444e-9cd5-83759b2aa9c3")
+	)
+	(wire
+		(pts
+			(xy 114.3 106.68) (xy 119.38 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67c449e7-96e9-4451-bd5c-aba08ac3672b")
 	)
 	(bus
 		(pts
@@ -8988,6 +9975,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 54.61) (xy 185.42 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b59ba7f-5aa7-4fe6-b481-d1b966e0f5ba")
+	)
+	(wire
+		(pts
 			(xy 281.94 114.3) (xy 295.91 114.3)
 		)
 		(stroke
@@ -8998,7 +9995,27 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 241.3) (xy 280.67 241.3)
+			(xy 270.51 228.6) (xy 270.51 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cee21a3-bf99-4944-b1f1-7fec5c9c0364")
+	)
+	(wire
+		(pts
+			(xy 200.66 102.87) (xy 200.66 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dae4c2d-2684-4945-91c4-491dd92b9abd")
+	)
+	(wire
+		(pts
+			(xy 222.25 241.3) (xy 246.38 241.3)
 		)
 		(stroke
 			(width 0)
@@ -9018,6 +10035,16 @@
 	)
 	(wire
 		(pts
+			(xy 316.23 40.64) (xy 316.23 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e8521a8-5d0e-4b32-a07f-295b52497c79")
+	)
+	(wire
+		(pts
 			(xy 161.29 191.77) (xy 168.91 191.77)
 		)
 		(stroke
@@ -9028,7 +10055,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 109.22) (xy 194.31 109.22)
+			(xy 190.5 109.22) (xy 191.77 109.22)
 		)
 		(stroke
 			(width 0)
@@ -9048,6 +10075,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 140.97) (xy 109.22 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71368600-152c-486c-8381-affd23ff1440")
+	)
+	(wire
+		(pts
 			(xy 241.3 232.41) (xy 241.3 246.38)
 		)
 		(stroke
@@ -9058,7 +10095,17 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 208.28) (xy 133.35 209.55)
+			(xy 132.08 187.96) (xy 123.19 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72383ed3-30cb-40a5-887c-893776143aa5")
+	)
+	(wire
+		(pts
+			(xy 124.46 208.28) (xy 124.46 209.55)
 		)
 		(stroke
 			(width 0)
@@ -9088,7 +10135,27 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 119.38) (xy 186.69 119.38)
+			(xy 119.38 97.79) (xy 119.38 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74c222be-7d3b-40a7-8dbf-6fea23e904ab")
+	)
+	(wire
+		(pts
+			(xy 111.76 140.97) (xy 111.76 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7598ff2a-05ed-4855-928d-b315a73d27ce")
+	)
+	(wire
+		(pts
+			(xy 190.5 119.38) (xy 193.04 119.38)
 		)
 		(stroke
 			(width 0)
@@ -9098,7 +10165,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 149.86) (xy 140.97 148.59)
+			(xy 147.32 149.86) (xy 147.32 148.59)
 		)
 		(stroke
 			(width 0)
@@ -9115,6 +10182,26 @@
 			(type default)
 		)
 		(uuid "76d3df33-ee4d-450b-bc11-6e4363227ad9")
+	)
+	(wire
+		(pts
+			(xy 270.51 213.36) (xy 270.51 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78493f81-4493-440f-802f-4a781f2e26dc")
+	)
+	(wire
+		(pts
+			(xy 204.47 124.46) (xy 209.55 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "785d2c39-42ec-40ec-9bc7-fbb20630858f")
 	)
 	(wire
 		(pts
@@ -9148,6 +10235,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 237.49) (xy 246.38 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c6c8845-f805-4245-85b7-69d719e01b81")
+	)
+	(wire
+		(pts
 			(xy 120.65 35.56) (xy 120.65 38.1)
 		)
 		(stroke
@@ -9178,13 +10275,33 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 111.76) (xy 194.31 111.76)
+			(xy 111.76 143.51) (xy 118.11 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d21bac5-1c34-4c08-9c1d-6a29fce32e5a")
+	)
+	(wire
+		(pts
+			(xy 190.5 111.76) (xy 200.66 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7d4b7d90-f286-4096-a269-5305ef3f6c04")
+	)
+	(wire
+		(pts
+			(xy 118.11 138.43) (xy 118.11 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d61fdd5-3e22-42a6-9c12-8e1c3f0808b3")
 	)
 	(wire
 		(pts
@@ -9208,7 +10325,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 140.97) (xy 190.5 140.97)
+			(xy 190.5 140.97) (xy 196.85 140.97)
 		)
 		(stroke
 			(width 0)
@@ -9228,7 +10345,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 96.52) (xy 157.48 97.79)
+			(xy 163.83 96.52) (xy 163.83 97.79)
 		)
 		(stroke
 			(width 0)
@@ -9268,13 +10385,13 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 124.46) (xy 191.77 124.46)
+			(xy 113.03 97.79) (xy 119.38 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8567ddc8-6e8d-45ae-a4cb-23bcd92983bb")
+		(uuid "84bc7032-a1c6-438f-8beb-6e9872e88ce7")
 	)
 	(wire
 		(pts
@@ -9318,6 +10435,16 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 104.14) (xy 200.66 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89a106ee-7063-4c68-850d-727ae0a35242")
+	)
+	(wire
+		(pts
 			(xy 218.44 203.2) (xy 218.44 204.47)
 		)
 		(stroke
@@ -9328,7 +10455,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 96.52) (xy 165.1 97.79)
+			(xy 171.45 96.52) (xy 171.45 97.79)
 		)
 		(stroke
 			(width 0)
@@ -9428,16 +10555,6 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 121.92) (xy 191.77 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f9d1e57-8558-4259-8d0c-f9c529d889a1")
-	)
-	(wire
-		(pts
 			(xy 281.94 106.68) (xy 295.91 106.68)
 		)
 		(stroke
@@ -9498,6 +10615,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 213.36) (xy 287.02 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9430ec6d-6a44-4f16-86e2-138db8f22595")
+	)
+	(wire
+		(pts
 			(xy 266.7 193.04) (xy 275.59 193.04)
 		)
 		(stroke
@@ -9528,6 +10655,16 @@
 	)
 	(wire
 		(pts
+			(xy 177.8 158.75) (xy 186.69 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "961dcee1-dceb-42af-a3df-54ae07a6c237")
+	)
+	(wire
+		(pts
 			(xy 170.18 257.81) (xy 170.18 255.27)
 		)
 		(stroke
@@ -9538,13 +10675,43 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 149.86) (xy 143.51 148.59)
+			(xy 177.8 168.91) (xy 186.69 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97fb28ce-5b23-442d-bc20-df9514f518ed")
+	)
+	(wire
+		(pts
+			(xy 149.86 149.86) (xy 149.86 148.59)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "98048ef1-bab1-4347-8599-433fbbfd569e")
+	)
+	(wire
+		(pts
+			(xy 270.51 229.87) (xy 275.59 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a677516-4d46-4695-a4c1-1f3b4e9fed28")
+	)
+	(wire
+		(pts
+			(xy 180.34 54.61) (xy 182.88 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ab50705-575e-4bd8-83cd-4ad644e0f587")
 	)
 	(wire
 		(pts
@@ -9568,6 +10735,16 @@
 	)
 	(wire
 		(pts
+			(xy 300.99 25.4) (xy 307.34 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b6b3dd5-9392-48d3-8b7c-aa7cb67ebd09")
+	)
+	(wire
+		(pts
 			(xy 119.38 30.48) (xy 120.65 30.48)
 		)
 		(stroke
@@ -9585,16 +10762,6 @@
 			(type default)
 		)
 		(uuid "9bcb0b9d-38f8-43bd-97ce-6cd4d9ca0730")
-	)
-	(wire
-		(pts
-			(xy 161.29 194.31) (xy 168.91 194.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c5eac04-d26c-4851-9708-c9f3d59e6766")
 	)
 	(wire
 		(pts
@@ -9618,7 +10785,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 149.86) (xy 162.56 148.59)
+			(xy 168.91 149.86) (xy 168.91 148.59)
 		)
 		(stroke
 			(width 0)
@@ -9655,6 +10822,16 @@
 			(type default)
 		)
 		(uuid "a0b8059f-a837-42d0-8dee-99aee28ffe8e")
+	)
+	(wire
+		(pts
+			(xy 236.22 231.14) (xy 236.22 232.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1865bd6-786a-4160-a654-cfeb28b9b986")
 	)
 	(wire
 		(pts
@@ -9718,7 +10895,17 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 138.43) (xy 190.5 138.43)
+			(xy 184.15 92.71) (xy 184.15 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a69d8c56-667d-42f3-8b0a-8642e2abb932")
+	)
+	(wire
+		(pts
+			(xy 190.5 138.43) (xy 196.85 138.43)
 		)
 		(stroke
 			(width 0)
@@ -9758,6 +10945,26 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 232.41) (xy 241.3 232.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8122d53-d4c4-4c79-beb8-44e40d698a04")
+	)
+	(wire
+		(pts
+			(xy 119.38 106.68) (xy 119.38 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a845d4ce-5bc7-4f49-a0fa-bd65c90b074f")
+	)
+	(wire
+		(pts
 			(xy 193.04 35.56) (xy 193.04 40.64)
 		)
 		(stroke
@@ -9788,7 +10995,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 149.86) (xy 135.89 148.59)
+			(xy 142.24 149.86) (xy 142.24 148.59)
 		)
 		(stroke
 			(width 0)
@@ -9878,7 +11085,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 106.68) (xy 186.69 106.68)
+			(xy 190.5 106.68) (xy 193.04 106.68)
 		)
 		(stroke
 			(width 0)
@@ -9895,6 +11102,16 @@
 			(type default)
 		)
 		(uuid "af3e428a-2dee-4f22-81a6-0c41099e17b3")
+	)
+	(wire
+		(pts
+			(xy 182.88 57.15) (xy 182.88 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0a09c56-a577-460f-a167-904688b938f7")
 	)
 	(wire
 		(pts
@@ -9938,7 +11155,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 231.14) (xy 113.03 241.3)
+			(xy 104.14 231.14) (xy 104.14 241.3)
 		)
 		(stroke
 			(width 0)
@@ -9968,7 +11185,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 231.14) (xy 140.97 241.3)
+			(xy 132.08 231.14) (xy 132.08 241.3)
 		)
 		(stroke
 			(width 0)
@@ -9978,17 +11195,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 196.85) (xy 168.91 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b31d7bcc-d6dc-4f38-b0a4-b595a1c720e9")
-	)
-	(wire
-		(pts
-			(xy 266.7 213.36) (xy 287.02 213.36)
+			(xy 266.7 213.36) (xy 270.51 213.36)
 		)
 		(stroke
 			(width 0)
@@ -10005,6 +11212,16 @@
 			(type default)
 		)
 		(uuid "b3781cba-30ab-4b4d-9ed0-b68a4806bc6a")
+	)
+	(wire
+		(pts
+			(xy 307.34 40.64) (xy 316.23 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b48f087a-bce8-4d10-950b-d0c9555781ef")
 	)
 	(bus
 		(pts
@@ -10128,6 +11345,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 151.13) (xy 191.77 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc665db9-32e9-4811-99a2-e0d8c5076ff7")
+	)
+	(wire
+		(pts
 			(xy 250.19 96.52) (xy 250.19 97.79)
 		)
 		(stroke
@@ -10138,7 +11365,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 116.84) (xy 191.77 116.84)
+			(xy 190.5 116.84) (xy 200.66 116.84)
 		)
 		(stroke
 			(width 0)
@@ -10148,7 +11375,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 254) (xy 130.81 255.27)
+			(xy 121.92 254) (xy 121.92 255.27)
 		)
 		(stroke
 			(width 0)
@@ -10158,7 +11385,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 203.2) (xy 133.35 199.39)
+			(xy 124.46 203.2) (xy 124.46 199.39)
 		)
 		(stroke
 			(width 0)
@@ -10188,7 +11415,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 149.86) (xy 165.1 148.59)
+			(xy 171.45 149.86) (xy 171.45 148.59)
 		)
 		(stroke
 			(width 0)
@@ -10245,6 +11472,16 @@
 			(type default)
 		)
 		(uuid "c18660a5-5190-4837-8310-de7fe883518c")
+	)
+	(wire
+		(pts
+			(xy 229.87 40.64) (xy 229.87 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3102082-ae6e-4596-a7da-a6ddf9f4ab10")
 	)
 	(wire
 		(pts
@@ -10318,6 +11555,16 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 124.46) (xy 199.39 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9038653-fc1c-4406-961f-ffe7c2b803e2")
+	)
+	(wire
+		(pts
 			(xy 222.25 246.38) (xy 224.79 246.38)
 		)
 		(stroke
@@ -10348,6 +11595,36 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 106.68) (xy 102.87 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccaf46af-bde8-443d-8c86-0e1597b43c0c")
+	)
+	(wire
+		(pts
+			(xy 307.34 25.4) (xy 316.23 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccc97a7f-234a-4301-b43a-053185a34b9d")
+	)
+	(wire
+		(pts
+			(xy 102.87 97.79) (xy 102.87 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd78bedc-3572-4084-a4cb-dd78a2e6f888")
+	)
+	(wire
+		(pts
 			(xy 233.68 96.52) (xy 240.03 96.52)
 		)
 		(stroke
@@ -10368,13 +11645,23 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 231.14) (xy 130.81 241.3)
+			(xy 121.92 231.14) (xy 121.92 241.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cfd7a1bd-196e-45c0-8002-c689c4cdf751")
+	)
+	(wire
+		(pts
+			(xy 185.42 22.86) (xy 185.42 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0417ef0-b834-4ca2-be21-c6427a3ac038")
 	)
 	(wire
 		(pts
@@ -10408,17 +11695,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 104.14) (xy 191.77 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d24d13dc-1c49-46e8-bcef-65a1020c3e60")
-	)
-	(wire
-		(pts
-			(xy 190.5 137.16) (xy 190.5 138.43)
+			(xy 196.85 137.16) (xy 196.85 138.43)
 		)
 		(stroke
 			(width 0)
@@ -10448,7 +11725,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 149.86) (xy 154.94 148.59)
+			(xy 161.29 149.86) (xy 161.29 148.59)
 		)
 		(stroke
 			(width 0)
@@ -10458,7 +11735,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 96.52) (xy 138.43 97.79)
+			(xy 144.78 96.52) (xy 144.78 97.79)
 		)
 		(stroke
 			(width 0)
@@ -10528,7 +11805,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 96.52) (xy 133.35 97.79)
+			(xy 139.7 96.52) (xy 139.7 97.79)
 		)
 		(stroke
 			(width 0)
@@ -10578,6 +11855,16 @@
 	)
 	(wire
 		(pts
+			(xy 234.95 237.49) (xy 234.95 242.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd3b60e2-ba4f-42ca-9f9d-abdc9f8b699c")
+	)
+	(wire
+		(pts
 			(xy 184.15 241.3) (xy 184.15 242.57)
 		)
 		(stroke
@@ -10608,6 +11895,16 @@
 	)
 	(wire
 		(pts
+			(xy 275.59 22.86) (xy 275.59 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df8aa0ef-2fc3-4026-b998-b622dc3800e5")
+	)
+	(wire
+		(pts
 			(xy 226.06 110.49) (xy 241.3 110.49)
 		)
 		(stroke
@@ -10618,7 +11915,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 199.39) (xy 123.19 199.39)
+			(xy 124.46 199.39) (xy 114.3 199.39)
 		)
 		(stroke
 			(width 0)
@@ -10628,23 +11925,13 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 96.52) (xy 167.64 97.79)
+			(xy 173.99 96.52) (xy 173.99 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e0761d0e-568b-4772-9a22-87d50d0c5e3c")
-	)
-	(wire
-		(pts
-			(xy 190.5 142.24) (xy 190.5 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1217d51-f3a6-404f-93cd-720492b1563c")
 	)
 	(wire
 		(pts
@@ -10678,7 +11965,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 149.86) (xy 133.35 148.59)
+			(xy 139.7 149.86) (xy 139.7 148.59)
 		)
 		(stroke
 			(width 0)
@@ -10758,7 +12045,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 199.39) (xy 123.19 201.93)
+			(xy 114.3 199.39) (xy 114.3 201.93)
 		)
 		(stroke
 			(width 0)
@@ -10785,6 +12072,26 @@
 			(type default)
 		)
 		(uuid "eb2879ea-0768-4257-98c4-caf5ab969a93")
+	)
+	(wire
+		(pts
+			(xy 180.34 57.15) (xy 182.88 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecc8bfff-8c83-49bb-9c48-cc1afa6342fd")
+	)
+	(wire
+		(pts
+			(xy 152.4 193.04) (xy 152.4 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed8347dc-0102-47a9-ba57-752dcf18aa80")
 	)
 	(wire
 		(pts
@@ -10818,6 +12125,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 88.9) (xy 191.77 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f109fc6b-778b-46ba-8609-ffbf3054de5f")
+	)
+	(wire
+		(pts
 			(xy 243.84 137.16) (xy 243.84 143.51)
 		)
 		(stroke
@@ -10825,6 +12142,16 @@
 			(type default)
 		)
 		(uuid "f38758c0-0291-4b48-9941-c2ddc4b53c4e")
+	)
+	(wire
+		(pts
+			(xy 156.21 194.31) (xy 168.91 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f392dbc0-319b-4144-bf5e-28edb8312008")
 	)
 	(wire
 		(pts
@@ -10858,6 +12185,16 @@
 	)
 	(wire
 		(pts
+			(xy 300.99 40.64) (xy 307.34 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4c52c26-a275-4847-be29-61c08c318441")
+	)
+	(wire
+		(pts
 			(xy 245.11 40.64) (xy 248.92 40.64)
 		)
 		(stroke
@@ -10875,6 +12212,16 @@
 			(type default)
 		)
 		(uuid "f663c399-0fef-489b-9188-d480a84107df")
+	)
+	(wire
+		(pts
+			(xy 191.77 90.17) (xy 191.77 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6b5b6ea-0e9a-4717-a18d-33c798620725")
 	)
 	(wire
 		(pts
@@ -10928,6 +12275,16 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 78.74) (xy 191.77 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9cfff30-1975-4f8f-b481-2bbd077c375c")
+	)
+	(wire
+		(pts
 			(xy 170.18 245.11) (xy 170.18 247.65)
 		)
 		(stroke
@@ -10958,7 +12315,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 149.86) (xy 146.05 148.59)
+			(xy 152.4 149.86) (xy 152.4 148.59)
 		)
 		(stroke
 			(width 0)
@@ -11028,6 +12385,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 52.07) (xy 182.88 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd804e02-3161-47a3-a699-cee3714df684")
+	)
+	(wire
+		(pts
 			(xy 300.99 55.88) (xy 300.99 49.53)
 		)
 		(stroke
@@ -11035,6 +12402,16 @@
 			(type default)
 		)
 		(uuid "fd83db0d-29bc-4aac-b966-f38931d53c31")
+	)
+	(wire
+		(pts
+			(xy 184.15 97.79) (xy 184.15 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fea7b0ed-fedd-4911-9c94-b7d642b983f1")
 	)
 	(wire
 		(pts
@@ -11048,7 +12425,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 96.52) (xy 140.97 97.79)
+			(xy 147.32 96.52) (xy 147.32 97.79)
 		)
 		(stroke
 			(width 0)
@@ -11097,7 +12474,7 @@
 		(uuid "04554cf4-2665-4529-bca2-0046bec10176")
 	)
 	(label "GPIO19"
-		(at 140.97 231.14 270)
+		(at 132.08 231.14 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11147,7 +12524,7 @@
 		(uuid "15b3e441-680c-4cca-a421-6a7f0487be5a")
 	)
 	(label "GPIO34"
-		(at 114.3 199.39 0)
+		(at 105.41 199.39 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11155,26 +12532,6 @@
 			(justify left bottom)
 		)
 		(uuid "184cda0b-5489-49de-ac26-53ee3c300c53")
-	)
-	(label "GPIO16"
-		(at 194.31 109.22 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "19941b5d-1ab4-410a-919f-919e28d2273d")
-	)
-	(label "+5V"
-		(at 191.77 104.14 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1a331089-e7ab-4e64-a77b-bc3449261b58")
 	)
 	(label "GPIO35"
 		(at 295.91 144.78 180)
@@ -11187,7 +12544,7 @@
 		(uuid "1eae3448-f51c-431f-8d98-bf89a1949ac0")
 	)
 	(label "GPIO18"
-		(at 130.81 231.14 270)
+		(at 121.92 231.14 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11227,7 +12584,7 @@
 		(uuid "2e41d0af-0a98-4adc-a18b-be41e4ceabe1")
 	)
 	(label "SDA"
-		(at 191.77 124.46 180)
+		(at 209.55 124.46 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11266,6 +12623,16 @@
 		)
 		(uuid "33f36b4f-76af-4a8f-9cee-9e7d5f8bace3")
 	)
+	(label "A"
+		(at 177.8 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "33fd2638-e9df-4b0d-bd99-17963cf09baf")
+	)
 	(label "SCL"
 		(at 219.71 157.48 90)
 		(effects
@@ -11287,7 +12654,7 @@
 		(uuid "36ce4199-d284-4c8d-857c-2bc5e9e4d347")
 	)
 	(label "GPIO14"
-		(at 121.92 231.14 270)
+		(at 113.03 231.14 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11317,7 +12684,7 @@
 		(uuid "3fcfcb63-ac82-4bf8-8280-30568bdb3284")
 	)
 	(label "GPIO13"
-		(at 113.03 231.14 270)
+		(at 104.14 231.14 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11367,7 +12734,7 @@
 		(uuid "57eecc5d-b4c8-4fed-baec-1c243c201398")
 	)
 	(label "SCL"
-		(at 191.77 121.92 180)
+		(at 209.55 121.92 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11385,6 +12752,16 @@
 			(justify right bottom)
 		)
 		(uuid "5aa24b08-64a9-465c-8f5a-1d21bde5fcdf")
+	)
+	(label "-"
+		(at 226.06 243.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "620149e2-c1b2-455d-8361-824657872722")
 	)
 	(label "GPIO26"
 		(at 193.04 252.73 180)
@@ -11406,6 +12783,16 @@
 		)
 		(uuid "7b7986fd-a96c-4087-8fa0-a7272c6cae43")
 	)
+	(label "GPIO25"
+		(at 109.22 151.13 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7ba875ca-df96-42fd-82a9-0642a754c4af")
+	)
 	(label "GPIO27"
 		(at 177.8 250.19 180)
 		(effects
@@ -11425,6 +12812,16 @@
 			(justify right bottom)
 		)
 		(uuid "88769139-69c1-4f6e-8937-a1187e05f45b")
+	)
+	(label "A"
+		(at 198.12 104.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "893204c9-dc89-4cb3-8345-b3676acc5663")
 	)
 	(label "GPIO2"
 		(at 295.91 119.38 180)
@@ -11546,16 +12943,6 @@
 		)
 		(uuid "c6af723d-a4e5-4828-b53f-9fa55167c99b")
 	)
-	(label "+5V"
-		(at 191.77 116.84 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c9bb1e55-6d1a-4bcb-bf47-9192e9203101")
-	)
 	(label "DTR"
 		(at 307.34 237.49 180)
 		(effects
@@ -11565,6 +12952,16 @@
 			(justify right bottom)
 		)
 		(uuid "c9ed8e3a-dc9f-4e29-a1b7-544b931f1673")
+	)
+	(label "B"
+		(at 177.8 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cde20a33-6596-445f-95fb-4a6da8c02dee")
 	)
 	(label "GPIO27"
 		(at 295.91 132.08 180)
@@ -11586,8 +12983,18 @@
 		)
 		(uuid "d2541f98-7bf4-4585-8e38-08b9b19bfe35")
 	)
+	(label "GPIO16"
+		(at 200.66 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d6738c47-7809-4cf2-8161-bbfe60436ee0")
+	)
 	(label "GPIO17"
-		(at 194.31 111.76 180)
+		(at 200.66 111.76 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11595,6 +13002,16 @@
 			(justify right bottom)
 		)
 		(uuid "d83c753f-4074-432d-9a17-41de249ba691")
+	)
+	(label "B"
+		(at 198.12 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "de83c33c-8a84-416d-b24f-0f217f1bcf76")
 	)
 	(label "GPIO0"
 		(at 237.49 118.11 90)
@@ -11646,6 +13063,16 @@
 		)
 		(uuid "f6a27252-fe3b-49d8-9c02-13fdb7a34834")
 	)
+	(label "+"
+		(at 226.06 241.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fdf82b6b-0ca0-47df-9795-ece82520c51d")
+	)
 	(label "SDA"
 		(at 224.79 157.48 90)
 		(effects
@@ -11656,6 +13083,641 @@
 		)
 		(uuid "fe6f4aad-28bf-45c8-8005-943a09a7f186")
 	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 196.85 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0494d306-fb80-482c-8e25-25338bf4475e")
+		(property "Netclass" "I2C"
+			(at 195.326 117.856 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -274.32 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 236.22 231.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c9d1071-6fe6-4bd7-9a9f-ba9d26daf4d1")
+		(property "Netclass" "LPWR"
+			(at 233.68 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -234.95 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 196.85 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "38e8840b-85cc-4f87-9166-bfd5ec175e52")
+		(property "Netclass" "I2C"
+			(at 198.374 128.524 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Component Class" ""
+			(at 668.02 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 156.21 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "407854e8-f5a5-495a-8d08-db7a89388574")
+		(property "Netclass" "I2C"
+			(at 154.686 188.976 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -314.96 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 229.87 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "70246bb9-86e2-43ce-95d0-20665fc99869")
+		(property "Netclass" "HPWR"
+			(at 232.41 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Component Class" ""
+			(at 701.04 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 270.51 228.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7be12269-5af4-4c9b-9682-fde80a14122e")
+		(property "Netclass" "SER"
+			(at 268.732 224.536 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -200.66 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 246.38 237.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8a0b8615-30ad-4254-9d72-00d24cf804f5")
+		(property "Netclass" "DIFF"
+			(at 243.84 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -224.79 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 300.99 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8ea45ee9-39c8-4240-a5f0-693436e7b4c5")
+		(property "Netclass" "LPWR"
+			(at 298.45 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -170.18 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 234.95 237.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a934a9df-ff9e-4e4e-93ee-1f97db95bc25")
+		(property "Netclass" "DIFF"
+			(at 232.41 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -236.22 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 275.59 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ab0f7eed-65ed-4839-8dcf-b2c8ed8e8729")
+		(property "Netclass" "LPWR"
+			(at 273.05 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -195.58 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 243.84 191.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b80676f6-55ed-4a33-9c38-39fdc2e29134")
+		(property "Netclass" "LPWR"
+			(at 241.3 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -227.33 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 152.4 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cf3eb108-7bd0-455b-b9d5-f9abd29a886e")
+		(property "Netclass" "I2C"
+			(at 150.876 188.976 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -318.77 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 275.59 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d056bdf4-24d0-4869-80f9-983871cd519f")
+		(property "Netclass" "LPWR"
+			(at 273.05 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -195.58 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 300.99 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1d1b762-7c7c-4ba0-80c8-60302baf1579")
+		(property "Netclass" "LPWR"
+			(at 298.45 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -170.18 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 270.51 215.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d2cf2023-dc51-4f62-856c-c4c78bf77232")
+		(property "Netclass" "SER"
+			(at 272.288 219.964 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Component Class" ""
+			(at 741.68 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 132.08 186.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dfd10af6-0b36-4075-877d-61a4289aa030")
+		(property "Netclass" "LPWR"
+			(at 129.54 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -339.09 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 200.66 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e63e8c3b-2feb-4213-a099-fd3459df19c1")
+		(property "Netclass" "LPWR"
+			(at 198.12 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -270.51 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 185.42 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fa6e3bd1-a8a0-4d0b-ac65-27ee7ded4cb3")
+		(property "Netclass" "HPWR"
+			(at 182.88 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -285.75 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 200.66 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd81b843-bdab-4ca2-bfbc-7a0ab9dddf1e")
+		(property "Netclass" "LPWR"
+			(at 198.12 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -270.51 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 182.88 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0055a96f-7b48-4f29-901d-f0af1acce433")
+		(property "Reference" "#PWR038"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 182.88 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 182.88 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9e54dd1-4483-4e4a-aa12-8f998d533e63")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "PCM_SL_Capacitors:104_Ceramic")
 		(at 226.06 127 90)
@@ -11665,7 +13727,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00c1731e-98c9-4b65-b0b8-fef5c34bfee1")
-		(property "Reference" "C5"
+		(property "Reference" "C14"
 			(at 226.822 125.222 90)
 			(effects
 				(font
@@ -11719,7 +13781,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C5")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -11736,7 +13798,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0344ef84-63bf-4745-b55a-e3ef8486ccbb")
-		(property "Reference" "U3"
+		(property "Reference" "U4"
 			(at 266.192 90.932 0)
 			(effects
 				(font
@@ -11910,7 +13972,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "U3")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -11925,7 +13987,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "037ca74a-2b59-47ca-8830-3f9a5c29866d")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR031"
 			(at 243.84 163.83 0)
 			(effects
 				(font
@@ -11975,7 +14037,76 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR025")
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Resistors:10k")
+		(at 191.77 95.25 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "037d2f66-5691-44c2-bc4b-d979dd89ca2d")
+		(property "Reference" "R17"
+			(at 186.69 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "20k"
+			(at 186.69 95.758 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 196.088 94.361 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 94.742 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10kΩ, 1/4W Resistor"
+			(at 191.77 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebfef570-636b-4cc0-b1fd-98b8c46b1122")
+		)
+		(pin "2"
+			(uuid "9415f52b-633d-493d-ab26-64c84f64ac5f")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -11990,7 +14121,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "041fb786-9b2b-4ba8-ba52-04d0bd1dc77e")
-		(property "Reference" "C25"
+		(property "Reference" "C30"
 			(at 296.926 56.388 90)
 			(effects
 				(font
@@ -12044,7 +14175,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C25")
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -12059,7 +14190,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "07a86898-ba64-48eb-9263-52f6820248a5")
-		(property "Reference" "C7"
+		(property "Reference" "C16"
 			(at 234.696 123.952 90)
 			(effects
 				(font
@@ -12113,7 +14244,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C7")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -12128,7 +14259,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "08275932-d1c8-42d1-a840-d1d5d6336e72")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR027"
 			(at 218.44 210.82 0)
 			(effects
 				(font
@@ -12178,7 +14309,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR021")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -12193,7 +14324,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0880dffe-ec55-44ff-b494-817cfe8eba65")
-		(property "Reference" "C20"
+		(property "Reference" "C7"
 			(at 188.976 29.718 90)
 			(effects
 				(font
@@ -12248,7 +14379,146 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C20")
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_3_Open")
+		(at 186.69 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "09aaef31-c39d-44a7-ad48-f7696ae633ca")
+		(property "Reference" "JP3"
+			(at 186.69 163.068 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_3_Open"
+			(at 186.69 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 186.69 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 3-pole, open"
+			(at 186.69 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c6e91576-6b6b-48e8-8180-ac406c04ec3c")
+		)
+		(pin "3"
+			(uuid "fbc80b4d-e153-49fc-8a26-97a5ecb6f236")
+		)
+		(pin "2"
+			(uuid "13742af8-57aa-4fbe-bba1-fccaa47f7944")
+		)
+		(instances
+			(project ""
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "JP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SparkFun-Jumper:SolderJumper_2_Open")
+		(at 201.93 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0b5db722-18fb-48df-b782-2e9da428e8fc")
+		(property "Reference" "JP6"
+			(at 201.93 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 201.93 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 201.93 127.762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 201.93 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f174a69-7367-4806-9b20-6b5509a8334d")
+		)
+		(pin "2"
+			(uuid "e8cb85bc-b2a8-46cd-b87f-1167afc11075")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "JP6")
 					(unit 1)
 				)
 			)
@@ -12256,15 +14526,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 113.03 255.27 0)
+		(at 104.14 255.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "0c7f0353-a161-47dd-b686-cca6f4f372b2")
-		(property "Reference" "#PWR06"
-			(at 113.03 261.62 0)
+		(property "Reference" "#PWR02"
+			(at 104.14 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12273,7 +14543,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 113.03 259.08 0)
+			(at 104.14 259.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12281,7 +14551,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 255.27 0)
+			(at 104.14 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12290,7 +14560,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 255.27 0)
+			(at 104.14 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12299,7 +14569,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 113.03 255.27 0)
+			(at 104.14 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12313,7 +14583,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR06")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -12328,7 +14598,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0cc45432-6f51-405d-8476-caf982422592")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR09"
 			(at 120.65 44.45 0)
 			(effects
 				(font
@@ -12378,7 +14648,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR051")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -12386,15 +14656,15 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x06")
-		(at 160.02 143.51 90)
+		(at 166.37 143.51 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
 		(dnp no)
 		(uuid "0d268d5f-7c11-4f3b-b3a1-c076f6ebd63f")
-		(property "Reference" "J16"
-			(at 160.0199 140.97 0)
+		(property "Reference" "J10"
+			(at 166.3699 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12404,7 +14674,7 @@
 			)
 		)
 		(property "Value" "MOTOR 2"
-			(at 165.354 140.97 90)
+			(at 171.704 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12413,7 +14683,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 143.51 0)
+			(at 166.37 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12422,7 +14692,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 160.02 143.51 0)
+			(at 166.37 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12431,7 +14701,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 160.02 143.51 0)
+			(at 166.37 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12460,7 +14730,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J16")
+					(reference "J10")
 					(unit 1)
 				)
 			)
@@ -12468,15 +14738,15 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x04")
-		(at 179.07 121.92 180)
+		(at 185.42 121.92 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "0dc41a89-e089-48a7-af52-310f04dd715a")
-		(property "Reference" "J4"
-			(at 180.086 126.746 0)
+		(property "Reference" "J16"
+			(at 186.436 126.746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12486,7 +14756,7 @@
 			)
 		)
 		(property "Value" "I2C"
-			(at 176.53 119.38 90)
+			(at 182.88 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12494,8 +14764,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 179.07 121.92 0)
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Vertical"
+			(at 185.42 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12504,7 +14774,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 179.07 121.92 0)
+			(at 185.42 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12513,7 +14783,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 179.07 121.92 0)
+			(at 185.42 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12536,7 +14806,7 @@
 		(instances
 			(project ""
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J4")
+					(reference "J16")
 					(unit 1)
 				)
 			)
@@ -12693,7 +14963,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 132.08 186.69 0)
+		(at 123.19 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12701,7 +14971,7 @@
 		(dnp no)
 		(uuid "115aff29-63c6-4fe4-9271-6f265ce93434")
 		(property "Reference" "#FLG01"
-			(at 132.08 184.785 0)
+			(at 123.19 184.785 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12710,7 +14980,7 @@
 			)
 		)
 		(property "Value" "PF"
-			(at 132.08 183.134 0)
+			(at 123.19 183.134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12718,7 +14988,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 186.69 0)
+			(at 123.19 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12727,7 +14997,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 132.08 186.69 0)
+			(at 123.19 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12736,7 +15006,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 132.08 186.69 0)
+			(at 123.19 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12757,6 +15027,75 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_SL_Capacitors:104_Ceramic")
+		(at 110.49 97.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "12fa3ee2-1e35-453d-ae1e-c97273e1cf73")
+		(property "Reference" "C1"
+			(at 108.712 94.234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF"
+			(at 107.442 101.092 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 110.49 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100nF Ceramic Capacitor"
+			(at 110.49 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1fe78d66-5e16-4720-9320-dc01bd17c4b1")
+		)
+		(pin "2"
+			(uuid "5c02b26c-a366-4f28-99b0-647e4175c59d")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Interface_USB:CH340C")
 		(at 290.83 238.76 0)
 		(unit 1)
@@ -12766,7 +15105,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "132a8a52-3e6d-472f-a034-b86c13ef9e9a")
-		(property "Reference" "U4"
+		(property "Reference" "U5"
 			(at 289.56 257.81 0)
 			(effects
 				(font
@@ -12863,7 +15202,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "U4")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -12878,7 +15217,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "164f3648-1cfb-4c7e-aa84-ba85a33d9bb6")
-		(property "Reference" "C22"
+		(property "Reference" "C9"
 			(at 204.216 29.718 90)
 			(effects
 				(font
@@ -12933,7 +15272,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C22")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -12948,7 +15287,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "16670c6c-3e46-469a-9245-0deffd274be1")
-		(property "Reference" "C11"
+		(property "Reference" "C21"
 			(at 255.778 246.38 90)
 			(effects
 				(font
@@ -13000,7 +15339,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C11")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -13015,7 +15354,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "18e55bc0-5463-406e-91c1-0f59779a6e71")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR028"
 			(at 222.25 146.05 0)
 			(effects
 				(font
@@ -13065,7 +15404,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR022")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -13080,7 +15419,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1a12430f-9d65-472b-824d-61515dce56ef")
-		(property "Reference" "C8"
+		(property "Reference" "C18"
 			(at 244.348 256.54 0)
 			(effects
 				(font
@@ -13132,7 +15471,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C8")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -13140,15 +15479,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 133.35 209.55 0)
+		(at 124.46 209.55 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "1a23f9e5-8a30-4515-811c-a259871e1364")
-		(property "Reference" "#PWR07"
-			(at 133.35 215.9 0)
+		(property "Reference" "#PWR011"
+			(at 124.46 215.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13157,7 +15496,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 213.36 0)
+			(at 124.46 213.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13165,7 +15504,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 209.55 0)
+			(at 124.46 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13174,7 +15513,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 209.55 0)
+			(at 124.46 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13183,7 +15522,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 209.55 0)
+			(at 124.46 209.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13197,7 +15536,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR07")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -13212,7 +15551,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1a6ffb54-5996-4207-a495-76b35c05c966")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR015"
 			(at 170.18 248.92 0)
 			(effects
 				(font
@@ -13262,7 +15601,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR014")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -13277,7 +15616,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1c3ddf8f-527a-4efd-a56b-c10e604cda32")
-		(property "Reference" "R18"
+		(property "Reference" "R14"
 			(at 264.414 197.612 90)
 			(effects
 				(font
@@ -13331,7 +15670,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R18")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -13346,7 +15685,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1d69d0d1-57dd-4bb5-aecb-cd2f89424b0b")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR030"
 			(at 240.03 97.79 0)
 			(effects
 				(font
@@ -13396,7 +15735,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR024")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -13411,7 +15750,7 @@
 		(on_board no)
 		(dnp no)
 		(uuid "1dc6a381-30c9-4c1e-a88c-c354bbf0f6d9")
-		(property "Reference" "BT3"
+		(property "Reference" "BT1"
 			(at 140.97 43.688 90)
 			(effects
 				(font
@@ -13464,7 +15803,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "BT3")
+					(reference "BT1")
 					(unit 1)
 				)
 			)
@@ -13479,7 +15818,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1e31ba63-3ec6-4839-8616-4c860f832c8d")
-		(property "Reference" "C17"
+		(property "Reference" "C15"
 			(at 225.806 29.718 90)
 			(effects
 				(font
@@ -13534,7 +15873,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C17")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -13542,15 +15881,15 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x04")
-		(at 179.07 109.22 180)
+		(at 185.42 109.22 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "1eb1fd67-da45-4ac7-b51e-264542bb391f")
-		(property "Reference" "J12"
-			(at 180.086 114.046 0)
+		(property "Reference" "J15"
+			(at 186.436 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13560,7 +15899,7 @@
 			)
 		)
 		(property "Value" "UART"
-			(at 176.276 105.664 90)
+			(at 182.626 105.664 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13568,8 +15907,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 179.07 109.22 0)
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Vertical"
+			(at 185.42 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13578,7 +15917,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 179.07 109.22 0)
+			(at 185.42 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13587,7 +15926,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 179.07 109.22 0)
+			(at 185.42 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13610,41 +15949,40 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J12")
+					(reference "J15")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "PCM_SL_Resistors:1M")
-		(at 130.81 245.11 270)
+		(lib_id "power:+5V")
+		(at 118.11 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "221839d0-4035-4800-9897-d3da455ab855")
-		(property "Reference" "R6"
-			(at 128.524 244.602 90)
+		(uuid "1f6a9df6-0474-4eac-9ae0-d26515d2ef22")
+		(property "Reference" "#PWR07"
+			(at 118.11 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(hide yes)
 			)
 		)
-		(property "Value" "330R"
-			(at 129.54 246.38 90)
+		(property "Value" "+5V"
+			(at 118.11 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 126.492 245.999 0)
+		(property "Footprint" ""
+			(at 118.11 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13653,7 +15991,73 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 130.81 245.618 0)
+			(at 118.11 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 118.11 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b3a7b2fa-6a19-44a0-9d7d-3771ed38fb80")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Resistors:1M")
+		(at 121.92 245.11 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "221839d0-4035-4800-9897-d3da455ab855")
+		(property "Reference" "R5"
+			(at 119.634 244.602 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "330R"
+			(at 120.65 246.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 117.602 245.999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 245.618 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13662,7 +16066,7 @@
 			)
 		)
 		(property "Description" "1MΩ, 1/4W Resistor"
-			(at 130.81 245.11 0)
+			(at 121.92 245.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13679,7 +16083,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R6")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -13694,7 +16098,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "22192bcd-26d0-400e-a865-5d5330d07c9e")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR025"
 			(at 215.9 27.94 0)
 			(effects
 				(font
@@ -13744,7 +16148,72 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR019")
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 102.87 111.76 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "22d3a5f3-f029-4c47-ae34-1b3428eb96da")
+		(property "Reference" "#PWR01"
+			(at 102.87 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 102.87 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 102.87 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7760c2ed-30ce-47a0-9fda-1b20f5640449")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -13893,7 +16362,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2a9ad8bf-aff1-4f2f-a6b2-786baefda803")
-		(property "Reference" "R17"
+		(property "Reference" "R13"
 			(at 245.11 100.33 90)
 			(effects
 				(font
@@ -13947,7 +16416,72 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R17")
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 114.3 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2b9de83e-7a38-460d-9ed7-0f2ec43a4974")
+		(property "Reference" "#PWR04"
+			(at 114.3 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 148.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 114.3 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f4a52175-40fb-4cab-b09c-7466411b0cfd")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -13955,15 +16489,15 @@
 	)
 	(symbol
 		(lib_id "SparkFun-LED:LED_Red_0603")
-		(at 130.81 251.46 90)
+		(at 121.92 251.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "2d9855b1-ec8f-42c8-aaa5-6d14cbf49caa")
-		(property "Reference" "D9"
-			(at 131.572 252.222 90)
+		(property "Reference" "D3"
+			(at 122.682 252.222 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13972,7 +16506,7 @@
 			)
 		)
 		(property "Value" "Red"
-			(at 131.572 253.746 90)
+			(at 122.682 253.746 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13981,7 +16515,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D3.0mm"
-			(at 138.43 251.46 0)
+			(at 129.54 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13990,7 +16524,7 @@
 			)
 		)
 		(property "Datasheet" "https://docs.broadcom.com/docs/AV02-0551EN"
-			(at 140.97 251.46 0)
+			(at 132.08 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13999,7 +16533,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 143.51 251.46 0)
+			(at 134.62 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14008,7 +16542,7 @@
 			)
 		)
 		(property "PROD_ID" "DIO-17976"
-			(at 135.89 251.46 0)
+			(at 127 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14025,7 +16559,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D9")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -14040,7 +16574,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2f14a36e-ad4d-4b97-a479-c25f224d3c72")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR035"
 			(at 284.48 27.94 0)
 			(effects
 				(font
@@ -14090,7 +16624,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR027")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -14106,7 +16640,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2faebdd5-3f4e-4c06-9938-e733d5e03f24")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 232.41 186.69 0)
 			(effects
 				(font
@@ -14161,7 +16695,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -14169,15 +16703,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 186.69 127 0)
+		(at 193.04 127 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "31aba868-47ac-4638-b635-b503f901aae4")
-		(property "Reference" "#PWR011"
-			(at 186.69 133.35 0)
+		(property "Reference" "#PWR022"
+			(at 193.04 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14186,7 +16720,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 186.69 130.556 0)
+			(at 193.04 130.556 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14194,7 +16728,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 186.69 127 0)
+			(at 193.04 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14203,7 +16737,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 127 0)
+			(at 193.04 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14212,7 +16746,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 186.69 127 0)
+			(at 193.04 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14226,7 +16760,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR011")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -14310,7 +16844,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3905264f-9d9a-4406-8587-ae11b835b4f5")
-		(property "Reference" "D1"
+		(property "Reference" "D5"
 			(at 234.188 256.794 90)
 			(effects
 				(font
@@ -14364,7 +16898,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D1")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -14379,7 +16913,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3b6ace66-e3ee-4bf6-bce7-794e15d0e6cb")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR014"
 			(at 163.83 200.66 0)
 			(effects
 				(font
@@ -14429,7 +16963,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR030")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -14437,7 +16971,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Stepper_Motor_unipolar_6pin")
-		(at 154.94 88.9 0)
+		(at 161.29 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14445,7 +16979,7 @@
 		(dnp no)
 		(uuid "3c4b9d87-16fd-4b7d-8c6c-ca63424bcf79")
 		(property "Reference" "M4"
-			(at 162.814 77.47 0)
+			(at 169.164 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14454,7 +16988,7 @@
 			)
 		)
 		(property "Value" "MOTOR"
-			(at 158.75 89.154 0)
+			(at 165.1 89.154 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14464,7 +16998,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 155.194 89.154 0)
+			(at 161.544 89.154 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14473,7 +17007,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 155.194 89.154 0)
+			(at 161.544 89.154 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14482,7 +17016,7 @@
 			)
 		)
 		(property "Description" "6-wire unipolar stepper motor"
-			(at 154.94 88.9 0)
+			(at 161.29 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14526,7 +17060,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3caca759-8eac-42ea-8947-7734816c56e6")
-		(property "Reference" "D3"
+		(property "Reference" "D6"
 			(at 244.602 154.432 90)
 			(effects
 				(font
@@ -14589,7 +17123,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D3")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -14604,7 +17138,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3f21f817-73fe-413e-8474-1fccf61d9333")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR033"
 			(at 262.89 240.03 0)
 			(effects
 				(font
@@ -14654,7 +17188,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR028")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -14662,15 +17196,15 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Resistors:1M")
-		(at 121.92 245.11 270)
+		(at 113.03 245.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "401d41f7-8029-48ca-a8f3-cdb07fc73f92")
-		(property "Reference" "R5"
-			(at 119.634 244.602 90)
+		(property "Reference" "R2"
+			(at 110.744 244.602 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14679,7 +17213,7 @@
 			)
 		)
 		(property "Value" "330R"
-			(at 120.65 246.38 90)
+			(at 111.76 246.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14688,7 +17222,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 117.602 245.999 0)
+			(at 108.712 245.999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14697,7 +17231,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 245.618 0)
+			(at 113.03 245.618 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14706,7 +17240,7 @@
 			)
 		)
 		(property "Description" "1MΩ, 1/4W Resistor"
-			(at 121.92 245.11 0)
+			(at 113.03 245.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14723,7 +17257,75 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R5")
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SparkFun-Jumper:SolderJumper_2_Open")
+		(at 184.15 95.25 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "423f1cc4-89b8-4fd0-8ac8-f4144965a492")
+		(property "Reference" "JP2"
+			(at 180.848 95.504 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 186.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 180.848 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 177.8 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 175.26 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b96121d-cad8-4906-942d-93b5529698c9")
+		)
+		(pin "2"
+			(uuid "aac5bd17-80cf-49b6-9388-769650475e22")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "JP2")
 					(unit 1)
 				)
 			)
@@ -14738,7 +17340,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "43840e6e-ab85-4339-ab06-2e2ed59978c5")
-		(property "Reference" "C23"
+		(property "Reference" "C10"
 			(at 211.836 29.718 90)
 			(effects
 				(font
@@ -14793,7 +17395,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C23")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -14861,6 +17463,77 @@
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
 					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_3_Open")
+		(at 186.69 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "482dee4e-77da-4cc5-b03a-0d088064e8a8")
+		(property "Reference" "JP4"
+			(at 186.69 152.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_3_Open"
+			(at 186.69 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 186.69 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 3-pole, open"
+			(at 186.69 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "185b22b5-0eef-4df5-975d-e725e02a5ec8")
+		)
+		(pin "3"
+			(uuid "61c82c8a-1639-429c-abdd-cf5852354848")
+		)
+		(pin "2"
+			(uuid "23250d44-f6fb-4f8f-83e0-89d2a554029a")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "JP4")
 					(unit 1)
 				)
 			)
@@ -14944,7 +17617,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4dede207-04b2-49dd-a1b5-9267a0fbb138")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR013"
 			(at 157.48 210.82 0)
 			(effects
 				(font
@@ -14994,7 +17667,72 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR018")
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 191.77 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "539d4a0a-b75d-4084-a585-4d90b7679808")
+		(property "Reference" "#PWR040"
+			(at 191.77 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 191.77 146.812 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 191.77 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 191.77 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a2cdd1da-6b3a-4d04-8661-cd339cc5a9e8")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -15009,7 +17747,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "53d79aad-d0cc-4c15-8a8b-427457a789ab")
-		(property "Reference" "C27"
+		(property "Reference" "C28"
 			(at 289.306 56.134 90)
 			(effects
 				(font
@@ -15064,7 +17802,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C27")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -15075,11 +17813,11 @@
 		(at 173.99 27.94 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(uuid "53e150d4-ebd2-41e3-9364-b40af8aa61e6")
-		(property "Reference" "J9"
+		(property "Reference" "J12"
 			(at 171.45 27.94 0)
 			(effects
 				(font
@@ -15129,7 +17867,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J9")
+					(reference "J12")
 					(unit 1)
 				)
 			)
@@ -15144,7 +17882,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "55ed6708-9060-4001-9ac6-913aa82a79d1")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR034"
 			(at 266.7 195.58 0)
 			(effects
 				(font
@@ -15195,7 +17933,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR029")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -15210,7 +17948,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "57634572-4b26-4298-8ca9-8aa95c2c1526")
-		(property "Reference" "C18"
+		(property "Reference" "C17"
 			(at 233.426 29.718 90)
 			(effects
 				(font
@@ -15265,72 +18003,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 130.81 255.27 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "57da500e-1c85-40de-956d-930f6f6d6014")
-		(property "Reference" "#PWR09"
-			(at 130.81 261.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 130.81 259.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 130.81 255.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 255.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 130.81 255.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0a281893-97ba-430b-a5a7-96c27cee3702")
-		)
-		(instances
-			(project "Smart Robotic Car With PID control"
-				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR09")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -15344,8 +18017,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5bc55bba-523b-422f-95a9-ae84416a0065")
-		(property "Reference" "#PWR08"
+		(uuid "57da500e-1c85-40de-956d-930f6f6d6014")
+		(property "Reference" "#PWR010"
 			(at 121.92 261.62 0)
 			(effects
 				(font
@@ -15390,12 +18063,77 @@
 			)
 		)
 		(pin "1"
+			(uuid "0a281893-97ba-430b-a5a7-96c27cee3702")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 113.03 255.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5bc55bba-523b-422f-95a9-ae84416a0065")
+		(property "Reference" "#PWR03"
+			(at 113.03 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 113.03 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 113.03 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
 			(uuid "b0fa6dd2-108d-437f-a0ff-c9fc7fc2949f")
 		)
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR08")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -15403,15 +18141,15 @@
 	)
 	(symbol
 		(lib_id "Motor:Stepper_Motor_unipolar_6pin")
-		(at 146.05 157.48 180)
+		(at 152.4 157.48 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
 		(dnp no)
 		(uuid "5bcbf4e7-c34f-4664-9cfc-2ce02da1b387")
-		(property "Reference" "M1"
-			(at 138.176 168.91 0)
+		(property "Reference" "M3"
+			(at 144.526 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15420,7 +18158,7 @@
 			)
 		)
 		(property "Value" "MOTOR"
-			(at 142.24 157.226 0)
+			(at 148.59 157.226 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15430,7 +18168,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 145.796 157.226 0)
+			(at 152.146 157.226 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15439,7 +18177,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 145.796 157.226 0)
+			(at 152.146 157.226 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15448,7 +18186,7 @@
 			)
 		)
 		(property "Description" "6-wire unipolar stepper motor"
-			(at 146.05 157.48 0)
+			(at 152.4 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15477,7 +18215,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "M1")
+					(reference "M3")
 					(unit 1)
 				)
 			)
@@ -15492,7 +18230,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5caf463b-4858-4f41-8246-8d3e04ec70d2")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR021"
 			(at 190.5 215.9 0)
 			(effects
 				(font
@@ -15542,7 +18280,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR031")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -15557,7 +18295,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5d994748-9499-4dae-8ea3-0f938990ba4d")
-		(property "Reference" "C12"
+		(property "Reference" "C22"
 			(at 255.778 259.08 90)
 			(effects
 				(font
@@ -15609,7 +18347,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C12")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -15624,7 +18362,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5ddc39f1-d397-4a4a-826b-0454210efd30")
-		(property "Reference" "C4"
+		(property "Reference" "C11"
 			(at 224.79 199.39 90)
 			(effects
 				(font
@@ -15678,7 +18416,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C4")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -15693,7 +18431,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6059db20-824f-42c1-987e-b228bb03d4de")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR032"
 			(at 247.65 270.51 0)
 			(effects
 				(font
@@ -15743,7 +18481,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR026")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -15758,7 +18496,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "68ab7391-423e-4aaa-80b6-6f5bf91b7b97")
-		(property "Reference" "C1"
+		(property "Reference" "C5"
 			(at 186.944 238.76 90)
 			(effects
 				(font
@@ -15812,7 +18550,76 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C1")
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Resistors:10k")
+		(at 191.77 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6fad7eb3-eeea-483a-b641-88f68453412d")
+		(property "Reference" "R16"
+			(at 186.69 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 186.69 85.598 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 196.088 84.201 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 84.582 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10kΩ, 1/4W Resistor"
+			(at 191.77 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "82524a80-d286-4927-86a3-5ae653d73874")
+		)
+		(pin "2"
+			(uuid "369e07f7-cc24-46bb-b7af-23d14f58d6be")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -15827,7 +18634,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6fea914b-7263-43d7-96a0-3f5cd4ef95a1")
-		(property "Reference" "C19"
+		(property "Reference" "C20"
 			(at 240.792 29.718 90)
 			(effects
 				(font
@@ -15881,7 +18688,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C19")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -15896,7 +18703,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7266b028-4195-460b-be3a-841a9b6e3a33")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR029"
 			(at 233.68 139.7 0)
 			(effects
 				(font
@@ -15946,7 +18753,75 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR023")
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 175.26 54.61 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72c315d3-4122-4354-bd5f-4b2f61750950")
+		(property "Reference" "J19"
+			(at 175.26 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BMS"
+			(at 172.72 55.372 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal"
+			(at 175.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 175.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 175.26 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ab078029-e2b3-4dfa-88ed-1b34c0678fdf")
+		)
+		(pin "2"
+			(uuid "358a1f1b-078a-42dd-a0d5-7820f79a69d5")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "J19")
 					(unit 1)
 				)
 			)
@@ -15962,7 +18837,7 @@
 		(on_board no)
 		(dnp no)
 		(uuid "749ecfa1-ed40-4ceb-b10d-3994dcaaeb17")
-		(property "Reference" "J3"
+		(property "Reference" "J2"
 			(at 114.3 27.686 0)
 			(effects
 				(font
@@ -16014,7 +18889,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J3")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -16029,7 +18904,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7672cd5b-9373-4fef-9217-12f421c51fa0")
-		(property "Reference" "R16"
+		(property "Reference" "R12"
 			(at 241.554 146.812 90)
 			(effects
 				(font
@@ -16083,7 +18958,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R16")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -16098,7 +18973,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "78ab19db-3348-456f-9464-5cc3ef01738e")
-		(property "Reference" "R3"
+		(property "Reference" "R7"
 			(at 181.61 250.698 0)
 			(effects
 				(font
@@ -16152,7 +19027,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R3")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -16160,15 +19035,15 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Resistors:1M")
-		(at 113.03 245.11 270)
+		(at 104.14 245.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "797fcb6c-084f-4b64-bb85-c2ba5144bde7")
-		(property "Reference" "R4"
-			(at 110.744 244.602 90)
+		(property "Reference" "R1"
+			(at 101.854 244.602 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16177,7 +19052,7 @@
 			)
 		)
 		(property "Value" "330R"
-			(at 111.76 246.38 90)
+			(at 102.87 246.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16186,7 +19061,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 108.712 245.999 0)
+			(at 99.822 245.999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16195,7 +19070,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 245.618 0)
+			(at 104.14 245.618 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16204,7 +19079,7 @@
 			)
 		)
 		(property "Description" "1MΩ, 1/4W Resistor"
-			(at 113.03 245.11 0)
+			(at 104.14 245.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16221,7 +19096,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R4")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -16236,7 +19111,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7ebce9f9-e6b1-47d5-adfe-53fa5773f182")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR036"
 			(at 284.48 52.07 0)
 			(effects
 				(font
@@ -16286,7 +19161,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR016")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -16301,7 +19176,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7f3b27ee-f780-4746-a067-b0b1e7f17e56")
-		(property "Reference" "C10"
+		(property "Reference" "C24"
 			(at 280.162 32.258 90)
 			(effects
 				(font
@@ -16355,7 +19230,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C10")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -16370,7 +19245,7 @@
 		(on_board no)
 		(dnp no)
 		(uuid "809a6598-4550-493e-ae58-4d708398eeac")
-		(property "Reference" "BT1"
+		(property "Reference" "BT3"
 			(at 149.86 43.688 90)
 			(effects
 				(font
@@ -16423,7 +19298,77 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "BT1")
+					(reference "BT3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Capacitors:470uF_35V")
+		(at 316.23 33.02 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "80df632d-ae8f-4625-916b-5b5c17fa72ad")
+		(property "Reference" "C32"
+			(at 311.658 30.734 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220uF_16V"
+			(at 316.738 37.084 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x12.5"
+			(at 312.42 33.782 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 316.23 33.528 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "470uF, 35V Electrolytic Capacitor"
+			(at 316.23 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "abbd878b-c199-4d5a-bfc0-652eff0ab088")
+		)
+		(pin "2"
+			(uuid "348b871c-5dc6-4e56-b990-1307244e4eee")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -16431,15 +19376,15 @@
 	)
 	(symbol
 		(lib_id "SparkFun-LED:LED_Red_0603")
-		(at 121.92 251.46 90)
+		(at 113.03 251.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "80e7084d-ce22-4f1b-b067-94a0b536407f")
-		(property "Reference" "D8"
-			(at 122.682 252.222 90)
+		(property "Reference" "D2"
+			(at 113.792 252.222 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16448,7 +19393,7 @@
 			)
 		)
 		(property "Value" "Red"
-			(at 122.682 253.746 90)
+			(at 113.792 253.746 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16457,7 +19402,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D3.0mm"
-			(at 129.54 251.46 0)
+			(at 120.65 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16466,7 +19411,7 @@
 			)
 		)
 		(property "Datasheet" "https://docs.broadcom.com/docs/AV02-0551EN"
-			(at 132.08 251.46 0)
+			(at 123.19 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16475,7 +19420,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 134.62 251.46 0)
+			(at 125.73 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16484,7 +19429,7 @@
 			)
 		)
 		(property "PROD_ID" "DIO-17976"
-			(at 127 251.46 0)
+			(at 118.11 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16501,7 +19446,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D8")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -16509,15 +19454,15 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Capacitors:104_Ceramic")
-		(at 133.35 205.74 90)
+		(at 124.46 205.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "81811a0a-21d8-41ce-b6ec-f6ec020c14ce")
-		(property "Reference" "C2"
-			(at 136.144 205.74 90)
+		(property "Reference" "C3"
+			(at 127.254 205.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16526,7 +19471,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 134.62 208.026 90)
+			(at 125.73 208.026 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16535,7 +19480,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 137.16 205.74 0)
+			(at 128.27 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16544,7 +19489,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 205.74 0)
+			(at 124.46 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16553,7 +19498,7 @@
 			)
 		)
 		(property "Description" "100nF Ceramic Capacitor"
-			(at 133.35 205.74 0)
+			(at 124.46 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16570,7 +19515,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C2")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -16653,7 +19598,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8738c31f-053b-4198-bed9-34d16db51ba1")
-		(property "Reference" "C21"
+		(property "Reference" "C8"
 			(at 196.596 29.718 90)
 			(effects
 				(font
@@ -16708,7 +19653,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C21")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -16781,15 +19726,15 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 190.5 137.16 0)
+		(at 196.85 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8a7a9124-beca-4e25-bd0f-5c2e47539d8b")
-		(property "Reference" "#PWR012"
-			(at 190.5 140.97 0)
+		(property "Reference" "#PWR023"
+			(at 196.85 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16798,7 +19743,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 190.5 133.604 0)
+			(at 196.85 133.604 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16806,7 +19751,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 137.16 0)
+			(at 196.85 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16815,7 +19760,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 137.16 0)
+			(at 196.85 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16824,7 +19769,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 190.5 137.16 0)
+			(at 196.85 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16838,7 +19783,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR012")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -16854,7 +19799,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8b10052e-ee5a-4f11-9a45-3eba8d617a94")
-		(property "Reference" "J1"
+		(property "Reference" "J14"
 			(at 176.53 193.0401 0)
 			(effects
 				(font
@@ -16874,7 +19819,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 173.99 194.31 0)
 			(effects
 				(font
@@ -16928,7 +19873,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J1")
+					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -16943,7 +19888,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8b2171a4-9642-4010-bbe1-35ba3192f5b0")
-		(property "Reference" "#FLG07"
+		(property "Reference" "#FLG06"
 			(at 290.83 46.355 0)
 			(effects
 				(font
@@ -16993,7 +19938,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#FLG07")
+					(reference "#FLG06")
 					(unit 1)
 				)
 			)
@@ -17008,7 +19953,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8b474ce1-ecfa-44a8-872f-a4eba6c99ca7")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR018"
 			(at 184.15 238.76 0)
 			(effects
 				(font
@@ -17058,7 +20003,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR01")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -17066,15 +20011,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 123.19 210.82 0)
+		(at 114.3 210.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8c786a66-e9a8-489c-979a-f05a6a1dc0f4")
-		(property "Reference" "#PWR04"
-			(at 123.19 217.17 0)
+		(property "Reference" "#PWR06"
+			(at 114.3 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17083,7 +20028,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 123.19 214.63 0)
+			(at 114.3 214.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17091,7 +20036,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 123.19 210.82 0)
+			(at 114.3 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17100,7 +20045,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 210.82 0)
+			(at 114.3 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17109,7 +20054,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 123.19 210.82 0)
+			(at 114.3 210.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17123,7 +20068,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR04")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -17131,15 +20076,15 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Resistors:10k")
-		(at 123.19 193.04 270)
+		(at 114.3 193.04 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8d561207-21c6-47d7-8890-c7e96850e08e")
-		(property "Reference" "R1"
-			(at 127.508 192.278 90)
+		(property "Reference" "R3"
+			(at 118.618 192.278 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17148,7 +20093,7 @@
 			)
 		)
 		(property "Value" "68k"
-			(at 128.016 194.056 90)
+			(at 119.126 194.056 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17157,7 +20102,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 118.872 193.929 0)
+			(at 109.982 193.929 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17166,7 +20111,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 193.548 0)
+			(at 114.3 193.548 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17175,7 +20120,7 @@
 			)
 		)
 		(property "Description" "10kΩ, 1/4W Resistor"
-			(at 123.19 193.04 0)
+			(at 114.3 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17192,7 +20137,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R1")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -17204,11 +20149,11 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(uuid "8d7fe9a9-e0f3-4d4e-b911-c4293372ef86")
-		(property "Reference" "J6"
+		(property "Reference" "J4"
 			(at 129.54 35.56 0)
 			(effects
 				(font
@@ -17258,7 +20203,79 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J6")
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Motor:Motor_Servo")
+		(at 111.76 133.35 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8db17bee-ba44-46af-a43f-6e279ae26a34")
+		(property "Reference" "M1"
+			(at 110.744 120.142 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Motor_Servo"
+			(at 106.68 122.936 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 116.586 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://forums.parallax.com/uploads/attachments/46831/74481.png"
+			(at 116.586 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Servo Motor (Futaba, HiTec, JR connector)"
+			(at 111.76 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bec2680c-da97-4e22-ac49-0921c6e28779")
+		)
+		(pin "3"
+			(uuid "2167f483-e346-4305-90a8-d1c8f90bec20")
+		)
+		(pin "2"
+			(uuid "825ce82e-fc14-4b61-9cf0-209577fc9405")
+		)
+		(instances
+			(project ""
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "M1")
 					(unit 1)
 				)
 			)
@@ -17266,15 +20283,15 @@
 	)
 	(symbol
 		(lib_id "SparkFun-LED:LED_Red_0603")
-		(at 113.03 251.46 90)
+		(at 104.14 251.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "8e39beeb-1a53-489a-b5a5-40fcd66a0f7d")
-		(property "Reference" "D7"
-			(at 113.792 252.222 90)
+		(property "Reference" "D1"
+			(at 104.902 252.222 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17283,7 +20300,7 @@
 			)
 		)
 		(property "Value" "Red"
-			(at 113.792 253.746 90)
+			(at 104.902 253.746 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17292,7 +20309,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D3.0mm"
-			(at 120.65 251.46 0)
+			(at 111.76 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17301,7 +20318,7 @@
 			)
 		)
 		(property "Datasheet" "https://docs.broadcom.com/docs/AV02-0551EN"
-			(at 123.19 251.46 0)
+			(at 114.3 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17310,7 +20327,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 125.73 251.46 0)
+			(at 116.84 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17319,7 +20336,7 @@
 			)
 		)
 		(property "PROD_ID" "DIO-17976"
-			(at 118.11 251.46 0)
+			(at 109.22 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17336,7 +20353,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D7")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -17351,7 +20368,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9114a2d2-8174-4aba-8f7d-45177ced4a5d")
-		(property "Reference" "C24"
+		(property "Reference" "C25"
 			(at 280.416 56.388 90)
 			(effects
 				(font
@@ -17405,7 +20422,72 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C24")
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 179.07 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "917df56a-99cb-42a5-a2d7-d5d0e8211fee")
+		(property "Reference" "#PWR039"
+			(at 179.07 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 179.07 83.566 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 179.07 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 179.07 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 179.07 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b795aea6-3404-4624-8efb-156dc0ac61cc")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -17413,15 +20495,15 @@
 	)
 	(symbol
 		(lib_id "Motor:Stepper_Motor_unipolar_6pin")
-		(at 133.35 88.9 0)
+		(at 139.7 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
 		(dnp no)
 		(uuid "94fd0309-bc8e-48a8-948f-81ce696e8a9d")
-		(property "Reference" "M3"
-			(at 141.224 77.47 0)
+		(property "Reference" "M2"
+			(at 147.574 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17430,7 +20512,7 @@
 			)
 		)
 		(property "Value" "MOTOR"
-			(at 137.16 89.154 0)
+			(at 143.51 89.154 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17440,7 +20522,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.604 89.154 0)
+			(at 139.954 89.154 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17449,7 +20531,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 133.604 89.154 0)
+			(at 139.954 89.154 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17458,7 +20540,7 @@
 			)
 		)
 		(property "Description" "6-wire unipolar stepper motor"
-			(at 133.35 88.9 0)
+			(at 139.7 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17487,7 +20569,7 @@
 		(instances
 			(project ""
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "M3")
+					(reference "M2")
 					(unit 1)
 				)
 			)
@@ -17502,7 +20584,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "988ef768-434a-4b1a-94f3-a44de62734bf")
-		(property "Reference" "R14"
+		(property "Reference" "R10"
 			(at 226.06 147.828 90)
 			(effects
 				(font
@@ -17556,7 +20638,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R14")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -17571,7 +20653,7 @@
 		(on_board no)
 		(dnp no)
 		(uuid "9b5aace6-44d5-4ceb-90c0-41100c7f51f4")
-		(property "Reference" "BT4"
+		(property "Reference" "BT2"
 			(at 141.224 55.88 90)
 			(effects
 				(font
@@ -17624,7 +20706,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "BT4")
+					(reference "BT2")
 					(unit 1)
 				)
 			)
@@ -17632,15 +20714,15 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x06")
-		(at 162.56 102.87 270)
+		(at 168.91 102.87 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
 		(dnp no)
 		(uuid "a00f1a86-51b1-40fa-8079-f8c8c1f1c6f8")
-		(property "Reference" "J14"
-			(at 162.5601 105.41 0)
+		(property "Reference" "J11"
+			(at 168.9101 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17650,7 +20732,7 @@
 			)
 		)
 		(property "Value" "MOTOR 4"
-			(at 157.734 105.664 90)
+			(at 164.084 105.664 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17659,7 +20741,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 102.87 0)
+			(at 168.91 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17668,7 +20750,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 162.56 102.87 0)
+			(at 168.91 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17677,7 +20759,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 162.56 102.87 0)
+			(at 168.91 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17706,7 +20788,7 @@
 		(instances
 			(project ""
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J14")
+					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -17781,6 +20863,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 181.61 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a0d5182c-7fba-4f93-bd39-d8cdc062f56d")
+		(property "Reference" "#PWR041"
+			(at 181.61 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 181.61 147.574 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 181.61 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "212f8f04-2867-49f2-90c1-fe389f48cd32")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:1N5822")
 		(at 274.32 35.56 270)
 		(unit 1)
@@ -17789,7 +20936,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a13a1181-aab5-4ff2-98d3-6a4085e7b553")
-		(property "Reference" "D2"
+		(property "Reference" "D9"
 			(at 269.748 36.068 90)
 			(effects
 				(font
@@ -17843,7 +20990,76 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D2")
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Capacitors:470uF_35V")
+		(at 307.34 33.02 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a2dd24d0-9066-4cab-9cd9-4fb55197623f")
+		(property "Reference" "C31"
+			(at 303.022 30.988 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470uF_16V"
+			(at 306.07 36.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x12.5"
+			(at 303.53 33.782 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 307.34 33.528 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "470uF, 35V Electrolytic Capacitor"
+			(at 307.34 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "019bcf67-c08a-4ac0-9bd6-f215add4835e")
+		)
+		(pin "2"
+			(uuid "a7f46df3-893d-4544-97eb-5d18b3872287")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -17851,15 +21067,16 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 179.07 140.97 180)
+		(at 185.42 138.43 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "a5de0caa-25d8-4b7f-84ac-095fee5d34ab")
-		(property "Reference" "J13"
-			(at 179.07 135.89 0)
+		(property "Reference" "J17"
+			(at 185.42 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17868,15 +21085,15 @@
 			)
 		)
 		(property "Value" "12V IN"
-			(at 176.53 139.446 90)
+			(at 182.88 139.954 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 179.07 140.97 0)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal"
+			(at 185.42 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17885,7 +21102,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 179.07 140.97 0)
+			(at 185.42 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17894,7 +21111,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 179.07 140.97 0)
+			(at 185.42 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17911,7 +21128,7 @@
 		(instances
 			(project ""
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J13")
+					(reference "J17")
 					(unit 1)
 				)
 			)
@@ -17926,7 +21143,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a5e8856b-7c84-46a3-ab99-fd0731586609")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR016"
 			(at 170.18 264.16 0)
 			(effects
 				(font
@@ -17976,7 +21193,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR015")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -17991,7 +21208,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a70a4e8d-27f3-404f-a80f-8a48126a608f")
-		(property "Reference" "SW3"
+		(property "Reference" "SW2"
 			(at 219.71 115.316 0)
 			(effects
 				(font
@@ -18043,7 +21260,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "SW3")
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -18059,7 +21276,7 @@
 		(on_board no)
 		(dnp no)
 		(uuid "a71c482d-84ef-4c84-9b7a-0c99a75a7088")
-		(property "Reference" "J7"
+		(property "Reference" "J5"
 			(at 135.89 36.83 0)
 			(effects
 				(font
@@ -18109,7 +21326,75 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J7")
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SparkFun-Jumper:SolderJumper_2_Open")
+		(at 201.93 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a7a0f4c7-6328-49c6-8723-240683cdc942")
+		(property "Reference" "JP5"
+			(at 201.93 119.888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 201.93 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 201.93 125.222 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 201.93 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "061e1a4e-a1ce-4752-84c9-6566e06c06b3")
+		)
+		(pin "2"
+			(uuid "d07ae3ef-0a7d-4bc7-b512-406480dcd9b9")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "JP5")
 					(unit 1)
 				)
 			)
@@ -18124,7 +21409,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "aa401717-1e03-4ab2-afcb-8d66c6edf850")
-		(property "Reference" "C9"
+		(property "Reference" "C19"
 			(at 240.792 199.644 90)
 			(effects
 				(font
@@ -18178,7 +21463,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C9")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -18193,7 +21478,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "abace8f6-2bc3-4047-8fbf-66e4b7332e86")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 261.62 19.558 0)
 			(effects
 				(font
@@ -18259,7 +21544,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -18274,7 +21559,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ac4844dd-ec70-49eb-9703-96a18437cb2c")
-		(property "Reference" "C16"
+		(property "Reference" "C12"
 			(at 218.186 29.718 90)
 			(effects
 				(font
@@ -18329,7 +21614,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C16")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -18337,15 +21622,15 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Resistors:1M")
-		(at 140.97 245.11 270)
+		(at 132.08 245.11 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "afc8c075-01ca-4917-bea4-9792d879617e")
-		(property "Reference" "R7"
-			(at 138.684 244.602 90)
+		(property "Reference" "R6"
+			(at 129.794 244.602 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18354,7 +21639,7 @@
 			)
 		)
 		(property "Value" "330R"
-			(at 139.7 246.38 90)
+			(at 130.81 246.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18363,7 +21648,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 136.652 245.999 0)
+			(at 127.762 245.999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18372,7 +21657,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 140.97 245.618 0)
+			(at 132.08 245.618 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18381,7 +21666,7 @@
 			)
 		)
 		(property "Description" "1MΩ, 1/4W Resistor"
-			(at 140.97 245.11 0)
+			(at 132.08 245.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18398,7 +21683,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R7")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -18413,7 +21698,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "aff67091-6d7b-4e69-b737-9ff40c47258b")
-		(property "Reference" "U5"
+		(property "Reference" "U3"
 			(at 261.874 43.942 0)
 			(effects
 				(font
@@ -18479,7 +21764,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "U5")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -18487,7 +21772,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 114.3 182.88 270)
+		(at 105.41 182.88 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18495,8 +21780,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b3ad10e6-98bc-41df-88d3-2f17d912c427")
-		(property "Reference" "J24"
-			(at 114.3 180.34 0)
+		(property "Reference" "J1"
+			(at 105.41 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18505,7 +21790,7 @@
 			)
 		)
 		(property "Value" "BSENS"
-			(at 114.3 180.594 90)
+			(at 105.41 180.594 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18513,7 +21798,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Wire:SolderWire-0.1sqmm_1x01_D0.4mm_OD1mm"
-			(at 114.3 182.88 0)
+			(at 105.41 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18522,7 +21807,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 114.3 182.88 0)
+			(at 105.41 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18531,7 +21816,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 114.3 182.88 0)
+			(at 105.41 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18545,7 +21830,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J24")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -18560,7 +21845,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b5371b45-fd3d-4ace-aa85-ca82e3675067")
-		(property "Reference" "D6"
+		(property "Reference" "D11"
 			(at 277.368 204.724 90)
 			(effects
 				(font
@@ -18623,7 +21908,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D6")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -18631,15 +21916,15 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Resistors:10k")
-		(at 123.19 205.74 90)
+		(at 114.3 205.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "b594b472-91ea-4aea-94d4-d10adca4b182")
-		(property "Reference" "R2"
-			(at 124.46 204.724 90)
+		(property "Reference" "R4"
+			(at 115.57 204.724 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18648,7 +21933,7 @@
 			)
 		)
 		(property "Value" "18k"
-			(at 124.714 206.502 90)
+			(at 115.824 206.502 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18657,7 +21942,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 127.508 204.851 0)
+			(at 118.618 204.851 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18666,7 +21951,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 205.232 0)
+			(at 114.3 205.232 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18675,7 +21960,7 @@
 			)
 		)
 		(property "Description" "10kΩ, 1/4W Resistor"
-			(at 123.19 205.74 0)
+			(at 114.3 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18692,7 +21977,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R2")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -18707,7 +21992,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b81349bb-be90-4b28-b9b5-0f3d6a3c0239")
-		(property "Reference" "C3"
+		(property "Reference" "C6"
 			(at 182.372 29.464 90)
 			(effects
 				(font
@@ -18761,7 +22046,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C3")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -18776,7 +22061,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b86f203c-caff-4ba7-966b-b6904b6fc657")
-		(property "Reference" "D5"
+		(property "Reference" "D8"
 			(at 268.478 204.724 90)
 			(effects
 				(font
@@ -18839,7 +22124,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D5")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -18854,7 +22139,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bcc97d16-8f8e-4523-bb93-d86c0f8006c2")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR020"
 			(at 184.15 270.51 0)
 			(effects
 				(font
@@ -18904,7 +22189,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR05")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -18977,15 +22262,15 @@
 	)
 	(symbol
 		(lib_id "SparkFun-LED:LED_Red_0603")
-		(at 140.97 251.46 90)
+		(at 132.08 251.46 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "c07dd94c-b5d0-4122-a97c-0b589556e68c")
-		(property "Reference" "D10"
-			(at 141.732 252.222 90)
+		(property "Reference" "D4"
+			(at 132.842 252.222 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18994,7 +22279,7 @@
 			)
 		)
 		(property "Value" "Red"
-			(at 141.732 253.746 90)
+			(at 132.842 253.746 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19003,7 +22288,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D3.0mm"
-			(at 148.59 251.46 0)
+			(at 139.7 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19012,7 +22297,7 @@
 			)
 		)
 		(property "Datasheet" "https://docs.broadcom.com/docs/AV02-0551EN"
-			(at 151.13 251.46 0)
+			(at 142.24 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19021,7 +22306,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 153.67 251.46 0)
+			(at 144.78 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19030,7 +22315,7 @@
 			)
 		)
 		(property "PROD_ID" "DIO-17976"
-			(at 146.05 251.46 0)
+			(at 137.16 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19047,7 +22332,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D10")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -19062,7 +22347,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c1236b8a-fd32-4824-aab3-40f62faf93b8")
-		(property "Reference" "C15"
+		(property "Reference" "C26"
 			(at 290.068 214.376 0)
 			(effects
 				(font
@@ -19116,7 +22401,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C15")
+					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -19131,7 +22416,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c36d85c6-1d59-432d-8aec-71db99ce54d2")
-		(property "Reference" "#FLG04"
+		(property "Reference" "#FLG05"
 			(at 290.83 22.225 0)
 			(effects
 				(font
@@ -19181,7 +22466,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#FLG04")
+					(reference "#FLG05")
 					(unit 1)
 				)
 			)
@@ -19196,7 +22481,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c524d54f-88a3-4040-9d10-2e075f2fb9b9")
-		(property "Reference" "D11"
+		(property "Reference" "D10"
 			(at 277.368 59.69 90)
 			(effects
 				(font
@@ -19250,7 +22535,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D11")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -19265,7 +22550,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c5b4d55e-06f9-4584-b8af-4c6e0764c9a9")
-		(property "Reference" "R15"
+		(property "Reference" "R11"
 			(at 236.22 100.33 90)
 			(effects
 				(font
@@ -19319,7 +22604,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R15")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -19334,7 +22619,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c761d1e9-7150-479f-ae7c-3dda99e93efb")
-		(property "Reference" "C26"
+		(property "Reference" "C27"
 			(at 288.798 32.004 90)
 			(effects
 				(font
@@ -19389,7 +22674,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C26")
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -19404,7 +22689,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c7c72312-49c0-43f7-aaf6-03b0a73d13dd")
-		(property "Reference" "C13"
+		(property "Reference" "C29"
 			(at 296.672 32.258 90)
 			(effects
 				(font
@@ -19458,7 +22743,72 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C13")
+					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 182.88 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cbe04b83-663e-4591-a556-058337bbd0a6")
+		(property "Reference" "#PWR037"
+			(at 182.88 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 182.88 48.514 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 182.88 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f885d936-a7f5-4754-bb6a-2dcc18527572")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -19473,7 +22823,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ce364de4-8335-4519-8d05-c923c947917f")
-		(property "Reference" "#FLG06"
+		(property "Reference" "#FLG04"
 			(at 261.62 67.945 0)
 			(effects
 				(font
@@ -19523,7 +22873,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#FLG06")
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
@@ -19531,15 +22881,15 @@
 	)
 	(symbol
 		(lib_id "Motor:Stepper_Motor_unipolar_6pin")
-		(at 167.64 157.48 180)
+		(at 173.99 157.48 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
 		(dnp no)
 		(uuid "cfdfac92-3c3b-4a6a-bfe7-7744fadb1605")
-		(property "Reference" "M2"
-			(at 159.766 168.91 0)
+		(property "Reference" "M5"
+			(at 166.116 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19548,7 +22898,7 @@
 			)
 		)
 		(property "Value" "MOTOR"
-			(at 163.83 157.226 0)
+			(at 170.18 157.226 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19558,7 +22908,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.386 157.226 0)
+			(at 173.736 157.226 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19567,7 +22917,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 167.386 157.226 0)
+			(at 173.736 157.226 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19576,7 +22926,7 @@
 			)
 		)
 		(property "Description" "6-wire unipolar stepper motor"
-			(at 167.64 157.48 0)
+			(at 173.99 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19605,7 +22955,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "M2")
+					(reference "M5")
 					(unit 1)
 				)
 			)
@@ -19678,15 +23028,15 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x06")
-		(at 140.97 102.87 270)
+		(at 147.32 102.87 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
 		(dnp no)
 		(uuid "d608f48e-f58e-4112-97ac-e4919c78b07a")
-		(property "Reference" "J15"
-			(at 140.9701 105.41 0)
+		(property "Reference" "J7"
+			(at 147.3201 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19696,7 +23046,7 @@
 			)
 		)
 		(property "Value" "MOTOR 3"
-			(at 136.144 105.664 90)
+			(at 142.494 105.664 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19705,7 +23055,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 140.97 102.87 0)
+			(at 147.32 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19714,7 +23064,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 140.97 102.87 0)
+			(at 147.32 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19723,7 +23073,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 140.97 102.87 0)
+			(at 147.32 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19752,7 +23102,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J15")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -19767,7 +23117,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d727a9d0-9d1d-4784-a472-4d8e2189cfd6")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR019"
 			(at 184.15 248.92 0)
 			(effects
 				(font
@@ -19817,7 +23167,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR02")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -19825,15 +23175,15 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x06")
-		(at 138.43 143.51 90)
+		(at 144.78 143.51 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
 		(dnp no)
 		(uuid "da15d83b-d73c-40ff-997b-a75ee3a13a19")
-		(property "Reference" "J17"
-			(at 138.4299 140.97 0)
+		(property "Reference" "J6"
+			(at 144.7799 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19843,7 +23193,7 @@
 			)
 		)
 		(property "Value" "MOTOR 1"
-			(at 144.272 140.97 90)
+			(at 150.622 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19852,7 +23202,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 138.43 143.51 0)
+			(at 144.78 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19861,7 +23211,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 138.43 143.51 0)
+			(at 144.78 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19870,7 +23220,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 138.43 143.51 0)
+			(at 144.78 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19899,7 +23249,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J17")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -19914,7 +23264,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "da46a7e6-9d3a-418a-9fe9-d6380381ab39")
-		(property "Reference" "D4"
+		(property "Reference" "D7"
 			(at 254 190.5 0)
 			(effects
 				(font
@@ -19968,7 +23318,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "D4")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -19983,7 +23333,7 @@
 		(on_board no)
 		(dnp no)
 		(uuid "db077480-990b-4cfe-a237-760662583633")
-		(property "Reference" "BT2"
+		(property "Reference" "BT4"
 			(at 150.114 55.88 90)
 			(effects
 				(font
@@ -20036,7 +23386,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "BT2")
+					(reference "BT4")
 					(unit 1)
 				)
 			)
@@ -20133,7 +23483,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dde5f9e9-ca1c-47f7-8c91-1385b6036d03")
-		(property "Reference" "C14"
+		(property "Reference" "C23"
 			(at 273.05 258.826 0)
 			(effects
 				(font
@@ -20185,7 +23535,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C14")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -20193,15 +23543,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 140.97 255.27 0)
+		(at 132.08 255.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "deeb97ea-0bde-4710-8067-8d4c70659628")
-		(property "Reference" "#PWR010"
-			(at 140.97 261.62 0)
+		(property "Reference" "#PWR012"
+			(at 132.08 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20210,7 +23560,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 140.97 259.08 0)
+			(at 132.08 259.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20218,7 +23568,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 140.97 255.27 0)
+			(at 132.08 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20227,7 +23577,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 140.97 255.27 0)
+			(at 132.08 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20236,7 +23586,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 140.97 255.27 0)
+			(at 132.08 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20250,7 +23600,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR010")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -20265,7 +23615,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e3bdb68d-c9fc-4e04-a5d6-90f05a1e0f41")
-		(property "Reference" "C6"
+		(property "Reference" "C13"
 			(at 218.948 257.302 90)
 			(effects
 				(font
@@ -20319,7 +23669,76 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C6")
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_SL_Capacitors:470uF_35V")
+		(at 110.49 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e52b9bcf-672f-4979-bba8-498764d12473")
+		(property "Reference" "C2"
+			(at 112.776 103.886 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "680uF_35V"
+			(at 105.664 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x12.5"
+			(at 111.252 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.998 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "470uF, 35V Electrolytic Capacitor"
+			(at 110.49 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9a5749f4-554b-4241-b68d-e7463378e570")
+		)
+		(pin "2"
+			(uuid "1df871d5-8e62-4da4-8754-59e7e490a8dd")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -20335,7 +23754,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e546a016-8e1b-4038-8015-8514e922510d")
-		(property "Reference" "J2"
+		(property "Reference" "J9"
 			(at 165.354 245.11 90)
 			(effects
 				(font
@@ -20395,7 +23814,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J2")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -20410,7 +23829,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eb8fba9e-6d58-441d-891a-8a271e96de7f")
-		(property "Reference" "R19"
+		(property "Reference" "R15"
 			(at 273.558 197.612 90)
 			(effects
 				(font
@@ -20464,7 +23883,72 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R19")
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 119.38 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ebebdc77-7a0f-4d07-b254-e7955f27e277")
+		(property "Reference" "#PWR08"
+			(at 119.38 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 115.316 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 119.38 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4269c265-8b2d-49e5-abeb-0e153c755663")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -20479,7 +23963,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ececa29b-2ddb-422b-94cd-f6dbd3a3f3ee")
-		(property "Reference" "C28"
+		(property "Reference" "C4"
 			(at 179.832 204.724 0)
 			(effects
 				(font
@@ -20533,7 +24017,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "C28")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -20545,11 +24029,11 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(uuid "edfa3f08-2ccf-4268-9e8f-18a2a6b4337f")
-		(property "Reference" "J5"
+		(property "Reference" "J3"
 			(at 129.54 27.94 0)
 			(effects
 				(font
@@ -20599,7 +24083,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J5")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -20614,7 +24098,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ee5661c8-a558-4800-8351-fcb76b749f39")
-		(property "Reference" "R13"
+		(property "Reference" "R9"
 			(at 217.932 147.574 90)
 			(effects
 				(font
@@ -20668,7 +24152,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "R13")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -20676,15 +24160,15 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 123.19 186.69 0)
+		(at 114.3 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "efd22b5d-5560-4d6e-b196-afc84a22b9da")
-		(property "Reference" "#PWR03"
-			(at 123.19 190.5 0)
+		(property "Reference" "#PWR05"
+			(at 114.3 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20693,7 +24177,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 123.19 183.134 0)
+			(at 114.3 183.134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20701,7 +24185,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 123.19 186.69 0)
+			(at 114.3 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20710,7 +24194,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 186.69 0)
+			(at 114.3 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20719,7 +24203,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 123.19 186.69 0)
+			(at 114.3 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20733,7 +24217,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR03")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -20748,7 +24232,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f0040657-5eb2-4dab-a6b2-e2e98b92deb6")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR026"
 			(at 215.9 48.26 0)
 			(effects
 				(font
@@ -20798,7 +24282,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR020")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -20809,11 +24293,11 @@
 		(at 173.99 35.56 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
 		(uuid "f0bf44e7-065c-4487-aaa1-36a2a00f32f4")
-		(property "Reference" "J10"
+		(property "Reference" "J13"
 			(at 171.45 35.56 0)
 			(effects
 				(font
@@ -20863,7 +24347,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J10")
+					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -20871,15 +24355,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 190.5 142.24 0)
+		(at 196.85 140.97 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "f1690a9d-d2e0-4a78-864f-c55c81900e37")
-		(property "Reference" "#PWR013"
-			(at 190.5 148.59 0)
+		(property "Reference" "#PWR024"
+			(at 196.85 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20888,7 +24372,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 190.5 145.796 0)
+			(at 196.85 144.526 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20896,7 +24380,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 142.24 0)
+			(at 196.85 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20905,7 +24389,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 142.24 0)
+			(at 196.85 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20914,7 +24398,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 190.5 142.24 0)
+			(at 196.85 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20928,7 +24412,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "#PWR013")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -20943,7 +24427,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f9b8efbd-a366-4252-a2ac-d96a9d23af44")
-		(property "Reference" "SW2"
+		(property "Reference" "SW1"
 			(at 219.71 106.172 0)
 			(effects
 				(font
@@ -20995,7 +24479,7 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "SW2")
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -21011,7 +24495,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fad3b5a1-895d-4f85-8af1-b1a23d2f6987")
-		(property "Reference" "J11"
+		(property "Reference" "J18"
 			(at 214.122 242.57 0)
 			(effects
 				(font
@@ -21069,7 +24553,74 @@
 		(instances
 			(project "Smart Robotic Car With PID control"
 				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
-					(reference "J11")
+					(reference "J18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 190.5 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb64de56-a6ab-4922-bfbf-edc78459864b")
+		(property "Reference" "J20"
+			(at 190.5 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CHARGER"
+			(at 193.294 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "PCM_SparkFun-Connector:Barrel_Jack_PTH_Slot"
+			(at 190.5 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 190.5 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 190.5 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a4735361-dfd7-4ea1-82c6-720bb591982b")
+		)
+		(pin "2"
+			(uuid "132c7336-eaca-4787-babc-31473d6cf58a")
+		)
+		(instances
+			(project "Smart Robotic Car With PID control"
+				(path "/adbc9b97-7fe1-48c0-a9a8-dc23ac7ef1d8"
+					(reference "J20")
 					(unit 1)
 				)
 			)
