@@ -3198,7 +3198,7 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U6"
+			(property "Reference" "U2"
 				(at 0 35.56 0)
 				(effects
 					(font
@@ -3214,7 +3214,7 @@
 					)
 				)
 			)
-			(property "Footprint" "ESP32-S3-WROOM-1U-N16R8:XCVR_ESP32-S3-WROOM-1U-N16R8"
+			(property "Footprint" "footprints:ESP32-S3-WROOM-1U-N16R8"
 				(at 3.81 2.286 0)
 				(effects
 					(font
@@ -3504,177 +3504,6 @@
 						)
 					)
 					(number "40"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_5"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_6"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_7"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_8"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -15.24 -13.97 0)
-					(length 5.08)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "41_9"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -4269,6 +4098,27 @@
 						)
 					)
 					(number "10"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(symbol "ESP32-S3-WROOM-1U-N16R8_1_0"
+				(pin power_in line
+					(at -15.24 -13.97 0)
+					(length 5.08)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "41"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -7607,288 +7457,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transformer_1P_1S_1"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "T2"
-				(at 1.27 9.144 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "2220-12V"
-				(at 0.762 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 1.016 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Transformer, single primary, single secondary"
-				(at 3.048 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "transformer coil magnet"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Transformer_1P_1S_1_0_1"
-				(arc
-					(start 0 3.81)
-					(mid -0.386 2.9336)
-					(end -1.27 2.5654)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 1.27)
-					(mid -0.386 0.3936)
-					(end -1.27 0.0254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid -0.386 -2.1464)
-					(end -1.27 -2.5146)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.27 5.08)
-					(mid -0.372 4.708)
-					(end 0 3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.27 2.54)
-					(mid -0.372 2.168)
-					(end 0 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.27 0)
-					(mid -0.372 -0.372)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 4.572) (xy 1.27 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.032 -2.413) (xy 2.032 4.445)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.5654 2.54)
-					(mid 2.9157 3.4417)
-					(end 3.81 3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.5654 0)
-					(mid 2.9157 0.9017)
-					(end 3.81 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 3.81 1.2954)
-					(mid 2.9299 1.6599)
-					(end 2.5654 2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 3.81 -1.2446)
-					(mid 2.9299 -0.8801)
-					(end 2.5654 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Transformer_1P_1S_1_1_1"
-				(pin passive line
-					(at -3.81 5.08 0)
-					(length 2.54)
-					(name "AA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -3.81 -2.54 0)
-					(length 2.54)
-					(name "AB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 6.35 3.81 180)
-					(length 2.54)
-					(name "SB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 6.35 -1.27 180)
-					(length 2.54)
-					(name "SA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Transistor_BJT:UMH3N"
 			(pin_names
 				(hide yes)
@@ -9280,16 +8848,22 @@
 		(uuid "0304456c-0a64-4d12-a2ac-5552b16fb212")
 	)
 	(junction
+		(at 231.14 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0803809c-610e-46d2-a0b7-de1877596783")
+	)
+	(junction
 		(at 229.87 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "08507b3c-1a12-4fa4-bb79-c121071a413b")
 	)
 	(junction
-		(at 114.3 36.83)
+		(at 242.57 248.92)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0f2ed43f-3f81-4ce3-852a-95c73cab93ac")
+		(uuid "0eaefbdf-db0f-45e4-b52b-b41c84309783")
 	)
 	(junction
 		(at 302.26 26.67)
@@ -9352,16 +8926,16 @@
 		(uuid "222e8126-ab72-4915-9ae0-1e14a8855c48")
 	)
 	(junction
+		(at 105.41 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "228bdaa3-2c0f-4863-85a2-027ba9e21b2e")
+	)
+	(junction
 		(at 232.41 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "22ae0845-1206-4ca7-acf8-a68e3961af03")
-	)
-	(junction
-		(at 255.27 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "22da1bdd-b19d-464f-850e-b3b9a629c202")
 	)
 	(junction
 		(at 167.64 57.15)
@@ -9374,6 +8948,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "28056bcc-5223-4dc3-8743-e34db030127f")
+	)
+	(junction
+		(at 133.35 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3791075f-c558-450c-a03c-e27950e968f7")
+	)
+	(junction
+		(at 250.19 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "399b3045-f3c8-44d0-8219-b6a49c7198c6")
 	)
 	(junction
 		(at 292.1 31.75)
@@ -9406,16 +8992,34 @@
 		(uuid "3e14db26-fa43-4890-a920-990a582d2b02")
 	)
 	(junction
+		(at 314.96 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e2cd47b-fac9-4724-ae14-4f57513d8c11")
+	)
+	(junction
 		(at 271.78 220.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3fcba5ba-1f38-41d8-9b66-581f6b0c9c69")
 	)
 	(junction
+		(at 246.38 240.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48d3a541-8c1d-4f05-bfef-c10bceb280ac")
+	)
+	(junction
 		(at 241.3 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "501dc22d-5ad2-49d9-b3c3-d9bca9ce0789")
+	)
+	(junction
+		(at 105.41 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "57e92a9a-1e8f-473c-b4c9-7353edf18cb3")
 	)
 	(junction
 		(at 116.84 195.58)
@@ -9430,6 +9034,12 @@
 		(uuid "5ac44225-c64d-47c7-aa17-e0fc0676eb46")
 	)
 	(junction
+		(at 293.37 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5bc71b2b-3612-4b5d-af52-97cc95b080e0")
+	)
+	(junction
 		(at 223.52 200.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9440,6 +9050,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6592488b-30ad-44b6-9a84-3e3ddc297510")
+	)
+	(junction
+		(at 114.3 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "671f4b5e-4ad9-4b08-a657-8ba1f70f11f7")
 	)
 	(junction
 		(at 250.19 59.69)
@@ -9466,10 +9082,16 @@
 		(uuid "78be1a9c-bd71-48dd-8705-d723a5f5812e")
 	)
 	(junction
-		(at 220.98 116.84)
+		(at 229.87 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8067132a-5510-4968-baa4-0c575eb9b876")
+		(uuid "797844ad-e30e-43e1-96a7-66b3bc7f1bce")
+	)
+	(junction
+		(at 314.96 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7da9f04b-b456-4ef5-96d3-e9b1d33ee551")
 	)
 	(junction
 		(at 109.22 247.65)
@@ -9494,6 +9116,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "88ec90b4-cb50-4eb3-b153-7fc10e1a3af3")
+	)
+	(junction
+		(at 219.71 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8986142e-336a-4239-9213-b33d94c798a6")
 	)
 	(junction
 		(at 180.34 54.61)
@@ -9524,6 +9152,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9bda6199-fde6-4090-8944-63a3cedfd213")
+	)
+	(junction
+		(at 259.08 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9d8c1f77-7163-4c91-94cd-f05b0437ecbf")
 	)
 	(junction
 		(at 234.95 69.85)
@@ -9568,6 +9202,12 @@
 		(uuid "aa76c47e-b284-42b5-9e3c-e843a80d83f3")
 	)
 	(junction
+		(at 293.37 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae14d123-7abf-43c3-8495-61fe299f8a78")
+	)
+	(junction
 		(at 245.11 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9578,6 +9218,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b182bef9-4652-4c0c-adb0-32fb390cffd8")
+	)
+	(junction
+		(at 251.46 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b23df8c8-9f50-439c-9b92-71b9aa1938ba")
 	)
 	(junction
 		(at 280.67 200.66)
@@ -9640,6 +9286,12 @@
 		(uuid "d4776c3a-337f-40a1-9212-fe3e42af7bc1")
 	)
 	(junction
+		(at 123.19 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d5252e77-3ec5-4269-a845-a1cc3fe34103")
+	)
+	(junction
 		(at 261.62 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9656,6 +9308,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dcdd6b35-619a-42c3-ae29-e685f9dc5d9b")
+	)
+	(junction
+		(at 237.49 251.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dd85c36e-1ca1-4fa7-bc07-1ca7c60d7075")
 	)
 	(junction
 		(at 104.14 195.58)
@@ -9698,6 +9356,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb507234-37a5-4c4e-8279-d27d0ca1db00")
+	)
+	(junction
+		(at 231.14 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eb574483-5642-4f93-bd92-a1130d12f157")
 	)
 	(junction
 		(at 248.92 200.66)
@@ -9875,6 +9539,16 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 33.02) (xy 231.14 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04326260-e7f9-4967-bfa9-425dc79150ee")
+	)
+	(wire
+		(pts
 			(xy 290.83 118.11) (xy 304.8 118.11)
 		)
 		(stroke
@@ -9925,6 +9599,16 @@
 	)
 	(wire
 		(pts
+			(xy 171.45 97.79) (xy 166.37 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0741cd85-363a-4554-92ce-23df713b986b")
+	)
+	(wire
+		(pts
 			(xy 220.98 125.73) (xy 220.98 144.78)
 		)
 		(stroke
@@ -9942,6 +9626,16 @@
 			(type default)
 		)
 		(uuid "07ff58b3-e8d2-41a0-9999-2c496f72d36b")
+	)
+	(wire
+		(pts
+			(xy 133.35 54.61) (xy 133.35 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "082f4575-48f1-43cd-b964-455f53878085")
 	)
 	(wire
 		(pts
@@ -10105,6 +9799,16 @@
 	)
 	(wire
 		(pts
+			(xy 293.37 60.96) (xy 294.64 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff50a35-fc7d-4aec-960b-402981a83b6e")
+	)
+	(wire
+		(pts
 			(xy 232.41 135.89) (xy 232.41 144.78)
 		)
 		(stroke
@@ -10252,16 +9956,6 @@
 			(type default)
 		)
 		(uuid "1830efee-c364-420a-b66a-bb97c8955bdd")
-	)
-	(wire
-		(pts
-			(xy 220.98 115.57) (xy 220.98 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "183b8ac7-7c95-467b-9f8c-31345d33fb90")
 	)
 	(wire
 		(pts
@@ -10415,6 +10109,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 251.46) (xy 238.76 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "221db84c-0c74-435e-b05a-6ca9d370cd4f")
+	)
+	(wire
+		(pts
 			(xy 119.38 123.19) (xy 116.84 123.19)
 		)
 		(stroke
@@ -10425,7 +10129,17 @@
 	)
 	(wire
 		(pts
-			(xy 292.1 60.96) (xy 294.64 60.96)
+			(xy 314.96 25.4) (xy 314.96 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23b24ac0-fef2-4672-9ba0-009a1695afa7")
+	)
+	(wire
+		(pts
+			(xy 292.1 60.96) (xy 293.37 60.96)
 		)
 		(stroke
 			(width 0)
@@ -10455,13 +10169,23 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 25.4) (xy 255.27 26.67)
+			(xy 259.08 25.4) (xy 259.08 26.67)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "28048967-50dc-4883-b208-e5c6bf0ea017")
+	)
+	(wire
+		(pts
+			(xy 248.92 199.39) (xy 248.92 200.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "283d6ee9-f55f-4557-bd3d-8eda422e1a09")
 	)
 	(wire
 		(pts
@@ -10565,6 +10289,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 238.76) (xy 154.94 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d94c0e3-215d-453d-b345-7ab9138fe79b")
+	)
+	(wire
+		(pts
 			(xy 229.87 55.88) (xy 228.6 55.88)
 		)
 		(stroke
@@ -10665,13 +10399,13 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 57.15) (xy 106.68 58.42)
+			(xy 133.35 257.81) (xy 133.35 259.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3113873b-5a7b-4aa4-b5d1-fa08701e58be")
+		(uuid "325205f2-e3c4-4234-b3bf-1625bf24acc7")
 	)
 	(wire
 		(pts
@@ -10692,6 +10426,16 @@
 			(type default)
 		)
 		(uuid "33f0bd1c-7a7e-4943-9991-6a09b082d8bf")
+	)
+	(wire
+		(pts
+			(xy 99.06 31.75) (xy 105.41 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34ebfc92-479b-42a7-802a-a44c6ae38e2f")
 	)
 	(wire
 		(pts
@@ -10722,6 +10466,16 @@
 			(type default)
 		)
 		(uuid "37d641a0-3a17-4e1a-8087-2ee9d3cacaae")
+	)
+	(wire
+		(pts
+			(xy 293.37 31.75) (xy 294.64 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37df5426-80a7-45c4-90fb-c5ceacd2a969")
 	)
 	(wire
 		(pts
@@ -10855,7 +10609,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 248.92) (xy 285.75 248.92)
+			(xy 227.33 248.92) (xy 242.57 248.92)
 		)
 		(stroke
 			(width 0)
@@ -10955,6 +10709,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 238.76) (xy 246.38 240.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42a4270f-cf0d-4a10-a433-88f35e3a98a8")
+	)
+	(wire
+		(pts
 			(xy 229.87 267.97) (xy 229.87 270.51)
 		)
 		(stroke
@@ -10962,6 +10726,16 @@
 			(type default)
 		)
 		(uuid "430d0bc0-ab7f-4469-a0c1-35d231925182")
+	)
+	(wire
+		(pts
+			(xy 151.13 243.84) (xy 165.1 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4399f190-36c7-43c5-9f7f-68b726abcb85")
 	)
 	(wire
 		(pts
@@ -11025,6 +10799,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 26.67) (xy 261.62 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4642a5f6-fe31-4ad2-ab68-e974a13bcc1f")
+	)
+	(wire
+		(pts
 			(xy 129.54 193.04) (xy 129.54 194.31)
 		)
 		(stroke
@@ -11055,7 +10839,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 39.37) (xy 105.41 36.83)
+			(xy 105.41 33.02) (xy 105.41 31.75)
 		)
 		(stroke
 			(width 0)
@@ -11065,7 +10849,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 34.29) (xy 231.14 39.37)
+			(xy 231.14 33.02) (xy 231.14 39.37)
 		)
 		(stroke
 			(width 0)
@@ -11132,6 +10916,16 @@
 			(type default)
 		)
 		(uuid "4cdd1fba-6529-4e3c-af76-3d80aa1e466c")
+	)
+	(wire
+		(pts
+			(xy 161.29 97.79) (xy 154.94 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e1f56fe-4283-4670-b6ac-877d417528b4")
 	)
 	(wire
 		(pts
@@ -11435,6 +11229,16 @@
 	)
 	(wire
 		(pts
+			(xy 241.3 57.15) (xy 241.3 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fd3e7dc-1688-4e07-a667-01779823fa81")
+	)
+	(wire
+		(pts
 			(xy 280.67 200.66) (xy 308.61 200.66)
 		)
 		(stroke
@@ -11455,6 +11259,16 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 97.79) (xy 166.37 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62048638-3c73-4bcc-a140-400af657db57")
+	)
+	(wire
+		(pts
 			(xy 176.53 171.45) (xy 176.53 175.26)
 		)
 		(stroke
@@ -11462,6 +11276,26 @@
 			(type default)
 		)
 		(uuid "6291f26b-7383-41ab-a09e-38823d0e0dd3")
+	)
+	(wire
+		(pts
+			(xy 237.49 245.11) (xy 237.49 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62d9f93a-7d92-4a79-82e4-581d0ab8ce1d")
+	)
+	(wire
+		(pts
+			(xy 242.57 248.92) (xy 285.75 248.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63f83218-38f1-4e4b-bdee-4ba8b54a9c22")
 	)
 	(wire
 		(pts
@@ -11505,6 +11339,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 96.52) (xy 173.99 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66e419bb-3a43-4798-a4c5-2779bab84a96")
+	)
+	(wire
+		(pts
 			(xy 129.54 194.31) (xy 133.35 194.31)
 		)
 		(stroke
@@ -11532,6 +11376,16 @@
 			(type default)
 		)
 		(uuid "69936645-5c99-4a76-be8b-6a4baf182af8")
+	)
+	(wire
+		(pts
+			(xy 231.14 39.37) (xy 231.14 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a447641-41d2-441a-964b-ec3580a7752b")
 	)
 	(wire
 		(pts
@@ -11615,13 +11469,33 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 73.66) (xy 219.71 73.66)
+			(xy 293.37 24.13) (xy 293.37 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6f00f861-c0da-45dc-a93e-e9961c968633")
+		(uuid "6f27488d-6394-4a45-9ebf-5a4f0d00fc03")
+	)
+	(wire
+		(pts
+			(xy 119.38 31.75) (xy 119.38 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72852e43-d79c-43c5-8dca-ea3cf708c009")
+	)
+	(wire
+		(pts
+			(xy 279.4 41.91) (xy 279.4 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72be5194-1ebc-4f17-9579-cd698a873031")
 	)
 	(wire
 		(pts
@@ -11675,7 +11549,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 26.67) (xy 255.27 26.67)
+			(xy 251.46 26.67) (xy 259.08 26.67)
 		)
 		(stroke
 			(width 0)
@@ -11785,16 +11659,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 257.81) (xy 133.35 259.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7cf69f31-5b83-463b-81df-41cd871b004e")
-	)
-	(wire
-		(pts
 			(xy 267.97 252.73) (xy 267.97 254)
 		)
 		(stroke
@@ -11875,6 +11739,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 74.93) (xy 208.28 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8057d61c-de0c-4c36-b3d1-359318ba9690")
+	)
+	(wire
+		(pts
 			(xy 170.18 193.04) (xy 170.18 194.31)
 		)
 		(stroke
@@ -11912,6 +11786,16 @@
 			(type default)
 		)
 		(uuid "8394741a-528d-4425-9d96-fc788cb65ca9")
+	)
+	(wire
+		(pts
+			(xy 99.06 48.26) (xy 99.06 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84866fb8-d768-40e4-b8ef-af8d0962f340")
 	)
 	(wire
 		(pts
@@ -12035,17 +11919,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 29.21) (xy 231.14 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8e7c7c64-05df-42f1-b04f-fc27d444e489")
-	)
-	(wire
-		(pts
-			(xy 114.3 29.21) (xy 114.3 36.83)
+			(xy 114.3 29.21) (xy 114.3 31.75)
 		)
 		(stroke
 			(width 0)
@@ -12075,7 +11949,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 29.21) (xy 231.14 24.13)
+			(xy 231.14 30.48) (xy 231.14 24.13)
 		)
 		(stroke
 			(width 0)
@@ -12102,6 +11976,16 @@
 			(type default)
 		)
 		(uuid "923bbe07-f844-45a4-a890-02d5d1a716e9")
+	)
+	(wire
+		(pts
+			(xy 293.37 53.34) (xy 293.37 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92d04e37-efe3-4667-9e03-73f062efb99a")
 	)
 	(wire
 		(pts
@@ -12205,6 +12089,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.35 55.88) (xy 138.43 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a9862a5-8c6d-4f68-b787-5a69ea8ab831")
+	)
+	(wire
+		(pts
 			(xy 251.46 26.67) (xy 251.46 31.75)
 		)
 		(stroke
@@ -12212,6 +12106,16 @@
 			(type default)
 		)
 		(uuid "9d036ae1-ccf4-4dd5-9478-e0032839f19b")
+	)
+	(wire
+		(pts
+			(xy 219.71 48.26) (xy 219.71 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d1dab0c-6f60-47f9-b064-f44254e5e342")
 	)
 	(wire
 		(pts
@@ -12285,6 +12189,16 @@
 	)
 	(wire
 		(pts
+			(xy 91.44 58.42) (xy 97.79 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a19e50a4-58f8-496e-82c9-2bd45dc5cab5")
+	)
+	(wire
+		(pts
 			(xy 250.19 231.14) (xy 266.7 231.14)
 		)
 		(stroke
@@ -12295,7 +12209,7 @@
 	)
 	(wire
 		(pts
-			(xy 292.1 31.75) (xy 294.64 31.75)
+			(xy 292.1 31.75) (xy 293.37 31.75)
 		)
 		(stroke
 			(width 0)
@@ -12312,16 +12226,6 @@
 			(type default)
 		)
 		(uuid "a227803d-3e01-47dc-afde-4a7d4de68f49")
-	)
-	(wire
-		(pts
-			(xy 157.48 241.3) (xy 165.1 241.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a38ce4c6-cdc4-4e71-a18a-ebc9826073bb")
 	)
 	(bus
 		(pts
@@ -12352,6 +12256,16 @@
 			(type default)
 		)
 		(uuid "a64749eb-4a70-44d3-965a-d96e2ba39925")
+	)
+	(wire
+		(pts
+			(xy 251.46 25.4) (xy 251.46 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6b75d5c-d329-4fbb-9462-286492a9517e")
 	)
 	(wire
 		(pts
@@ -12455,16 +12369,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 35.56) (xy 219.71 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "acd356df-9ae3-45fc-b077-66bb1562713c")
-	)
-	(wire
-		(pts
 			(xy 252.73 270.51) (xy 280.67 270.51)
 		)
 		(stroke
@@ -12505,16 +12409,6 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 34.29) (xy 231.14 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad949abc-3299-4b6d-827c-8cf318960362")
-	)
-	(wire
-		(pts
 			(xy 116.84 125.73) (xy 124.46 125.73)
 		)
 		(stroke
@@ -12522,6 +12416,16 @@
 			(type default)
 		)
 		(uuid "adf5ee53-8140-4c92-806f-6a030e674c92")
+	)
+	(wire
+		(pts
+			(xy 314.96 54.61) (xy 314.96 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aebf6dec-c3b0-4bc5-9b09-b77ba6162a22")
 	)
 	(wire
 		(pts
@@ -12645,6 +12549,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 35.56) (xy 123.19 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5387967-0c91-4e6f-8a03-fb103db9dff4")
+	)
+	(wire
+		(pts
 			(xy 176.53 175.26) (xy 177.8 175.26)
 		)
 		(stroke
@@ -12685,6 +12599,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 69.85) (xy 250.19 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b91c981d-1b1b-4138-9148-326af5153198")
+	)
+	(wire
+		(pts
 			(xy 236.22 254) (xy 246.38 254)
 		)
 		(stroke
@@ -12712,16 +12636,6 @@
 			(type default)
 		)
 		(uuid "b9a53304-ccce-40ac-83d3-1f09718ff62e")
-	)
-	(wire
-		(pts
-			(xy 114.3 36.83) (xy 114.3 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9cd3954-6c56-447c-a66b-6a02382852b0")
 	)
 	(wire
 		(pts
@@ -12755,6 +12669,16 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 30.48) (xy 231.14 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc6fd4f6-ec76-426b-8e72-21a4d424d7bd")
+	)
+	(wire
+		(pts
 			(xy 232.41 144.78) (xy 220.98 144.78)
 		)
 		(stroke
@@ -12782,6 +12706,16 @@
 			(type default)
 		)
 		(uuid "bd3886c0-b931-4903-8cf7-4bff3d019394")
+	)
+	(wire
+		(pts
+			(xy 154.94 241.3) (xy 165.1 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf52fa0d-edab-49e1-8048-73aac645139d")
 	)
 	(wire
 		(pts
@@ -12835,13 +12769,13 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 26.67) (xy 261.62 26.67)
+			(xy 114.3 31.75) (xy 114.3 38.1)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c2d43d0a-aceb-4c88-b901-5f24e7b9f7e5")
+		(uuid "c2df54f6-6d01-4451-944d-26c06d6db559")
 	)
 	(wire
 		(pts
@@ -12892,6 +12826,16 @@
 			(type default)
 		)
 		(uuid "c64d851c-89ee-4b1b-a0bc-2e9ed46ddac3")
+	)
+	(wire
+		(pts
+			(xy 208.28 73.66) (xy 219.71 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c64eac39-7f3a-4a1c-8507-ecaf1d920046")
 	)
 	(wire
 		(pts
@@ -12955,13 +12899,23 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 55.88) (xy 138.43 55.88)
+			(xy 124.46 55.88) (xy 133.35 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cd38f901-55fa-4e7b-9f0c-84363842df9d")
+	)
+	(wire
+		(pts
+			(xy 242.57 245.11) (xy 242.57 248.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd763015-62fb-4386-b15e-00e60c1a271f")
 	)
 	(wire
 		(pts
@@ -12975,7 +12929,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 46.99) (xy 105.41 54.61)
+			(xy 105.41 40.64) (xy 105.41 54.61)
 		)
 		(stroke
 			(width 0)
@@ -13015,13 +12969,13 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 27.94) (xy 219.71 27.94)
+			(xy 180.34 97.79) (xy 173.99 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cfa3689c-66c3-4c89-a554-5258bb0c3915")
+		(uuid "cff30c22-c339-4265-94fe-966d6fa5c09a")
 	)
 	(wire
 		(pts
@@ -13042,6 +12996,16 @@
 			(type default)
 		)
 		(uuid "d04b1055-f023-4242-bf35-43845a77b992")
+	)
+	(wire
+		(pts
+			(xy 99.06 40.64) (xy 99.06 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d167cb1d-cc7f-4319-a0dd-28a6aa6954d8")
 	)
 	(wire
 		(pts
@@ -13195,6 +13159,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 54.61) (xy 105.41 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9ee945c-76fc-4fd2-ac56-70145b8ddd23")
+	)
+	(wire
+		(pts
 			(xy 247.65 111.76) (xy 247.65 119.38)
 		)
 		(stroke
@@ -13205,7 +13179,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 251.46) (xy 238.76 251.46)
+			(xy 227.33 251.46) (xy 237.49 251.46)
 		)
 		(stroke
 			(width 0)
@@ -13285,7 +13259,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 57.15) (xy 106.68 57.15)
+			(xy 105.41 58.42) (xy 106.68 58.42)
 		)
 		(stroke
 			(width 0)
@@ -13345,16 +13319,6 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 57.15) (xy 97.79 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e63330df-6140-4c3a-a1c1-c123c0f23ab9")
-	)
-	(wire
-		(pts
 			(xy 119.38 267.97) (xy 119.38 270.51)
 		)
 		(stroke
@@ -13372,16 +13336,6 @@
 			(type default)
 		)
 		(uuid "e7424f8b-7e2e-40e6-8097-b6c90b5e0f89")
-	)
-	(wire
-		(pts
-			(xy 157.48 243.84) (xy 165.1 243.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e75c7fdb-1f3e-45e3-8ac9-a7604a2e107b")
 	)
 	(wire
 		(pts
@@ -13525,6 +13479,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 73.66) (xy 229.87 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1f1563f-c7b5-46d9-be8d-d40b12926bb8")
+	)
+	(wire
+		(pts
 			(xy 290.83 133.35) (xy 304.8 133.35)
 		)
 		(stroke
@@ -13575,6 +13539,16 @@
 	)
 	(wire
 		(pts
+			(xy 154.94 96.52) (xy 154.94 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f48e954a-32c5-44d2-bcdf-41b8e43ee688")
+	)
+	(wire
+		(pts
 			(xy 167.64 57.15) (xy 191.77 57.15)
 		)
 		(stroke
@@ -13605,6 +13579,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 238.76) (xy 151.13 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6f0d638-acad-4abe-befe-9b3b8bd38740")
+	)
+	(wire
+		(pts
 			(xy 104.14 195.58) (xy 107.95 195.58)
 		)
 		(stroke
@@ -13625,7 +13609,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 36.83) (xy 114.3 36.83)
+			(xy 105.41 31.75) (xy 114.3 31.75)
 		)
 		(stroke
 			(width 0)
@@ -13705,6 +13689,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 97.79) (xy 185.42 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7540a0-07b2-4059-b333-5428b1644e60")
+	)
+	(wire
+		(pts
 			(xy 154.94 180.34) (xy 161.29 180.34)
 		)
 		(stroke
@@ -13735,6 +13729,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 22.86) (xy 231.14 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbf8e2bc-6926-44c6-94de-3f5fae0c9eee")
+	)
+	(wire
+		(pts
 			(xy 266.7 231.14) (xy 270.51 231.14)
 		)
 		(stroke
@@ -13752,6 +13756,16 @@
 			(type default)
 		)
 		(uuid "fd953eb7-acfa-4d95-a119-93d7358ef156")
+	)
+	(wire
+		(pts
+			(xy 190.5 97.79) (xy 185.42 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe564ca7-ecd1-451d-8748-a79470859044")
 	)
 	(wire
 		(pts
@@ -13794,7 +13808,7 @@
 		(uuid "ff626878-fb80-4bf3-9108-7221ce4bb1fd")
 	)
 	(label "GPIO21"
-		(at 91.44 57.15 0)
+		(at 91.44 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14155,16 +14169,6 @@
 		)
 		(uuid "60ccf64e-7582-42df-bb2d-227bfe8cbe1c")
 	)
-	(label "LIVE"
-		(at 209.55 27.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6198f174-a7a1-41cd-9b34-e4a5cc552f14")
-	)
 	(label "EN"
 		(at 234.95 119.38 0)
 		(effects
@@ -14184,6 +14188,18 @@
 			(justify right bottom)
 		)
 		(uuid "657285b3-04d3-4e1d-9321-33b29afd938c")
+	)
+	(label "SCK"
+		(at 171.45 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "678b659c-aae1-4f85-8556-cc6f77486d13")
 	)
 	(label "GPIO0"
 		(at 250.19 114.3 0)
@@ -14224,6 +14240,18 @@
 			(justify right bottom)
 		)
 		(uuid "6d8440a6-8e09-41bc-afab-2d32cb5781da")
+	)
+	(label "MOSI"
+		(at 161.29 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "6f328e3a-2223-4ea7-b0e5-6339e482b38f")
 	)
 	(label "SCL"
 		(at 304.8 151.13 180)
@@ -14295,8 +14323,20 @@
 		)
 		(uuid "80e843df-92d1-43b1-b582-3cff660254bd")
 	)
+	(label "CS"
+		(at 190.5 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "818d9943-96b0-4c77-ad32-8cb7887a26fb")
+	)
 	(label "VCC1"
-		(at 259.08 26.67 0)
+		(at 261.62 26.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14304,16 +14344,6 @@
 			(justify left bottom)
 		)
 		(uuid "84e30831-23d9-4e03-93d1-16bed2062b8a")
-	)
-	(label "NEUTRAL"
-		(at 209.55 35.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "85f7344f-eff7-483d-8ce3-2aff781444f3")
 	)
 	(label "MOSI"
 		(at 153.67 123.19 0)
@@ -14483,6 +14513,18 @@
 		)
 		(uuid "d70cef12-1488-4ad8-bffa-fa493e28c397")
 	)
+	(label "MISO"
+		(at 180.34 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d850ac23-f9cb-406d-9679-cff13fd5ef2e")
+	)
 	(label "SCL"
 		(at 125.73 209.55 90)
 		(effects
@@ -14577,6 +14619,756 @@
 		)
 		(uuid "edc98ddc-abd6-46aa-8739-1ce4a23bd6dd")
 	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 237.49 245.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "128bad58-09a6-4b4d-8740-ec616fa14ced")
+		(property "Netclass" "DIFF"
+			(at 235.204 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -172.72 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 279.4 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "23751c6c-3868-428b-82b9-7dabbc265934")
+		(property "Netclass" "HPWR"
+			(at 281.94 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Component Class" ""
+			(at 689.61 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 229.87 77.47 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4d9c9b2f-af27-45fc-8a6f-f68009fd2bca")
+		(property "Netclass" "KOFF"
+			(at 232.41 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Component Class" ""
+			(at 640.08 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 242.57 245.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "55559046-4bf4-4b93-a7b0-0066a12676d0")
+		(property "Netclass" "DIFF"
+			(at 240.284 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -167.64 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 151.13 238.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a7f0f9d-5988-4f75-a036-2a2c067f13b8")
+		(property "Netclass" "I2C"
+			(at 149.352 234.696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -259.08 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 293.37 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5d3fa16e-7a75-49aa-b051-c9308d09fc44")
+		(property "Netclass" "LPWR"
+			(at 290.83 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -116.84 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 248.92 199.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f83f867-5d99-418f-9648-e4668e6f95f8")
+		(property "Netclass" "LPWR"
+			(at 246.38 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -161.29 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 246.38 238.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "624c8883-d389-48bc-be73-567ee225efe0")
+		(property "Netclass" "HPWR"
+			(at 243.84 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -163.83 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 133.35 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "663b6ef9-cec0-4261-ae70-209ba5b8c00b")
+		(property "Netclass" "KOFF"
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -276.86 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 219.71 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7237c427-529c-48c6-b631-6d25eaa8f305")
+		(property "Netclass" "KOFF"
+			(at 217.17 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -190.5 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 154.94 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7327b193-855e-42f2-93d4-cf1b12425652")
+		(property "Netclass" "SPI"
+			(at 153.162 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -255.27 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 185.42 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "82c29a50-e36d-4808-b894-a7aa673232df")
+		(property "Netclass" "SPI"
+			(at 183.642 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -224.79 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 173.99 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8529ad27-4133-4384-84e5-06ada88704af")
+		(property "Netclass" "SPI"
+			(at 172.212 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -236.22 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 250.19 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "975c9f70-113c-4369-be6f-4681c00fe644")
+		(property "Netclass" "KOFF"
+			(at 252.73 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Component Class" ""
+			(at 660.4 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 293.37 24.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bb1173c5-7b24-44ba-94ca-6ad5b7924dbe")
+		(property "Netclass" "LPWR"
+			(at 290.83 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -116.84 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 241.3 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf4c11f2-b6a1-4f69-9cd1-96cfca4188d7")
+		(property "Netclass" "LPWR"
+			(at 238.76 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -168.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 208.28 74.93 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c245e9d8-6752-4c5c-bc17-77d256d19401")
+		(property "Netclass" "KOFF"
+			(at 210.82 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Component Class" ""
+			(at 618.49 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 119.38 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c56f0321-8f37-4647-b021-8281ed62428d")
+		(property "Netclass" "KOFF"
+			(at 116.84 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -290.83 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 154.94 238.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cf5468f2-47ca-4dc8-915f-942db12da397")
+		(property "Netclass" "I2C"
+			(at 153.162 234.696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -255.27 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 231.14 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0777173-0509-4299-9a6d-80f0d552172f")
+		(property "Netclass" "HPWR"
+			(at 228.6 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -179.07 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 314.96 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d27fa12f-96d5-4986-8839-0fb2c91be936")
+		(property "Netclass" "LPWR"
+			(at 312.42 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -95.25 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 231.14 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d8f471dc-f5fd-4f7a-84bc-be9f90ea1df9")
+		(property "Netclass" "HPWR"
+			(at 233.68 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Component Class" ""
+			(at 641.35 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 251.46 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee40f1de-02e3-4810-a2c2-372e3af3f05c")
+		(property "Netclass" "HPWR"
+			(at 248.92 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -158.75 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 166.37 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f88c969c-849d-4aa1-82d7-4879827108cf")
+		(property "Netclass" "SPI"
+			(at 164.592 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -243.84 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 314.96 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ff09254d-0aed-414e-8eff-e74c6517072f")
+		(property "Netclass" "LPWR"
+			(at 312.42 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -95.25 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "PCM_SL_Resistors:1M")
 		(at 271.78 205.74 270)
@@ -14586,7 +15378,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "009dd6e8-9581-4fde-aa36-e27f8f8abbd9")
-		(property "Reference" "R12"
+		(property "Reference" "R15"
 			(at 269.494 205.232 90)
 			(effects
 				(font
@@ -14640,7 +15432,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R12")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -14655,7 +15447,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0408558e-9354-4698-96f7-fc91db2256a0")
-		(property "Reference" "C3"
+		(property "Reference" "C5"
 			(at 136.144 261.62 90)
 			(effects
 				(font
@@ -14709,7 +15501,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C3")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -14724,7 +15516,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "061208a6-cf0f-4991-8204-c715cf99ab29")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR013"
 			(at 124.46 142.24 0)
 			(effects
 				(font
@@ -14774,7 +15566,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR011")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -14789,7 +15581,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "06b20f28-9290-4f87-bb32-3409fc2bdeff")
-		(property "Reference" "R2"
+		(property "Reference" "R7"
 			(at 160.528 53.34 0)
 			(effects
 				(font
@@ -14843,7 +15635,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R2")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -14858,7 +15650,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "06d8222a-4074-4880-94ba-ec3b915b1a8e")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR038"
 			(at 302.26 58.42 0)
 			(effects
 				(font
@@ -14908,7 +15700,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR035")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -14923,7 +15715,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "079a79d8-f16a-4180-92bf-85430bb293fd")
-		(property "Reference" "D34"
+		(property "Reference" "D5"
 			(at 233.68 59.944 0)
 			(effects
 				(font
@@ -14993,7 +15785,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D34")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -15008,7 +15800,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "09d961a1-4941-419f-950e-918748880180")
-		(property "Reference" "#PWR060"
+		(property "Reference" "#PWR029"
 			(at 241.3 78.74 0)
 			(effects
 				(font
@@ -15058,7 +15850,7 @@
 		(instances
 			(project ""
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR060")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -15073,7 +15865,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "09ff4e67-3ecd-46e1-9251-60930ebbce75")
-		(property "Reference" "D2"
+		(property "Reference" "D7"
 			(at 239.268 264.414 90)
 			(effects
 				(font
@@ -15127,7 +15919,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D2")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -15142,7 +15934,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0e57d769-5504-494d-982c-1559f639d1ad")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR019"
 			(at 160.02 267.97 0)
 			(effects
 				(font
@@ -15192,7 +15984,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR049")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -15341,7 +16133,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1a751cfe-f065-454d-a147-aa3006828ccb")
-		(property "Reference" "R4"
+		(property "Reference" "R9"
 			(at 163.83 178.308 0)
 			(effects
 				(font
@@ -15395,7 +16187,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R4")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -15410,7 +16202,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1ad139ef-3544-46e6-83cf-eb69eb691b7d")
-		(property "Reference" "#FLG06"
+		(property "Reference" "#FLG07"
 			(at 308.61 52.705 0)
 			(effects
 				(font
@@ -15460,7 +16252,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#FLG06")
+					(reference "#FLG07")
 					(unit 1)
 				)
 			)
@@ -15476,7 +16268,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1b560666-8c12-4d74-bd3b-dbcf32598cf8")
-		(property "Reference" "J7"
+		(property "Reference" "J8"
 			(at 219.202 250.19 0)
 			(effects
 				(font
@@ -15534,7 +16326,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "J7")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -15549,7 +16341,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1b77d242-1c91-434b-bcfc-976e01aef7aa")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR016"
 			(at 133.35 273.05 0)
 			(effects
 				(font
@@ -15599,7 +16391,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR015")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -15614,7 +16406,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1d0f0f25-887c-463d-96be-5c27223cb3a3")
-		(property "Reference" "D3"
+		(property "Reference" "D4"
 			(at 227.838 166.624 90)
 			(effects
 				(font
@@ -15677,7 +16469,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D3")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -15692,7 +16484,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1d4682ea-d012-4c8a-b2f7-fbf0fcb20c97")
-		(property "Reference" "C12"
+		(property "Reference" "C13"
 			(at 245.872 207.518 90)
 			(effects
 				(font
@@ -15746,7 +16538,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C12")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -15841,7 +16633,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1e3bf7fd-38d2-41f7-b880-2b77460a1965")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR022"
 			(at 176.53 175.26 0)
 			(effects
 				(font
@@ -15891,7 +16683,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR019")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -16038,7 +16830,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "28a1dca5-7716-4d4c-8eb3-aa3764f5cbc5")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR011"
 			(at 119.38 276.86 0)
 			(effects
 				(font
@@ -16088,7 +16880,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR017")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -16169,7 +16961,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ff0c997-3ebd-4f3a-9580-bc7aaaef1ec9")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR030"
 			(at 247.65 104.14 0)
 			(effects
 				(font
@@ -16219,7 +17011,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR027")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -16234,7 +17026,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "308f3c9b-f102-4c7e-8467-99fe0879918b")
-		(property "Reference" "#FLG02"
+		(property "Reference" "#FLG01"
 			(at 223.52 197.485 0)
 			(effects
 				(font
@@ -16284,7 +17076,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#FLG02")
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -16292,15 +17084,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 123.19 21.59 90)
+		(at 125.73 21.59 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "31c9c9ec-9a5e-4903-b6b8-69fb7d5af3ec")
-		(property "Reference" "J11"
-			(at 119.634 21.59 90)
+		(property "Reference" "J4"
+			(at 128.27 21.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16308,15 +17101,15 @@
 			)
 		)
 		(property "Value" "LOAD"
-			(at 124.206 19.304 90)
+			(at 124.714 19.304 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
-			(at 123.19 21.59 0)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 125.73 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16325,7 +17118,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 123.19 21.59 0)
+			(at 125.73 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16334,7 +17127,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 123.19 21.59 0)
+			(at 125.73 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16351,7 +17144,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "J11")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -16366,7 +17159,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "31cded6b-75f0-4c00-b81c-5a6e5fcaedd0")
-		(property "Reference" "J16"
+		(property "Reference" "J7"
 			(at 171.196 115.57 0)
 			(effects
 				(font
@@ -16434,7 +17227,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "J16")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -16450,7 +17243,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "33dc283a-9b9b-4c72-a7b5-f521fe2f84ec")
-		(property "Reference" "Q3"
+		(property "Reference" "Q1"
 			(at 236.728 225.552 0)
 			(effects
 				(font
@@ -16516,7 +17309,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "Q3")
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -16531,7 +17324,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3577b336-eef4-42a9-bbe5-cfaf1cfb447c")
-		(property "Reference" "#FLG011"
+		(property "Reference" "#FLG03"
 			(at 245.11 56.515 0)
 			(effects
 				(font
@@ -16581,7 +17374,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#FLG011")
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -16596,7 +17389,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "35da5d7f-6464-46a3-9462-3ec768a591c7")
-		(property "Reference" "D31"
+		(property "Reference" "D8"
 			(at 241.046 30.48 0)
 			(effects
 				(font
@@ -16655,7 +17448,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D31")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -16670,7 +17463,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3e5ae5b5-014d-4e1b-ab96-687be5d35dce")
-		(property "Reference" "R13"
+		(property "Reference" "R16"
 			(at 278.638 205.232 90)
 			(effects
 				(font
@@ -16724,7 +17517,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R13")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -16740,7 +17533,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3ec06c2a-fae8-4691-bf16-d55298f91571")
-		(property "Reference" "J4"
+		(property "Reference" "J3"
 			(at 124.46 183.134 90)
 			(effects
 				(font
@@ -16800,7 +17593,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "J4")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -16885,7 +17678,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "40e6dca9-2413-4484-8773-ede7a21fdbd2")
-		(property "Reference" "J17"
+		(property "Reference" "J6"
 			(at 172.72 250.1901 0)
 			(effects
 				(font
@@ -16959,7 +17752,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "J17")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -16974,7 +17767,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "46459f0e-7b12-4829-8d94-31c232b172fc")
-		(property "Reference" "R1"
+		(property "Reference" "R4"
 			(at 129.54 117.348 90)
 			(effects
 				(font
@@ -17028,7 +17821,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R1")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -17043,7 +17836,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "481a88fd-d69a-49fa-b123-d282e7f5bc31")
-		(property "Reference" "R15"
+		(property "Reference" "R5"
 			(at 130.81 199.898 90)
 			(effects
 				(font
@@ -17097,7 +17890,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R15")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -17112,7 +17905,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4a460a6a-7229-427a-ac9b-b6e3c872c942")
-		(property "Reference" "D6"
+		(property "Reference" "D11"
 			(at 282.448 212.344 90)
 			(effects
 				(font
@@ -17175,7 +17968,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D6")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -17190,7 +17983,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4def296c-d2ed-4a56-8cf1-1d82fda89d48")
-		(property "Reference" "R3"
+		(property "Reference" "R8"
 			(at 164.084 61.722 0)
 			(effects
 				(font
@@ -17244,7 +18037,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R3")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -17259,7 +18052,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "503d60e2-53cc-4f32-a16e-5477a2c60be5")
-		(property "Reference" "#PWR061"
+		(property "Reference" "#PWR031"
 			(at 250.19 62.23 0)
 			(effects
 				(font
@@ -17309,7 +18102,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR061")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -17317,15 +18110,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 135.89 21.59 90)
+		(at 138.43 21.59 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "51efec55-dbf4-40e6-a95b-bcef4405c152")
-		(property "Reference" "J1"
-			(at 141.224 21.336 90)
+		(property "Reference" "J5"
+			(at 133.096 21.336 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17333,15 +18127,15 @@
 			)
 		)
 		(property "Value" "220VAC"
-			(at 137.414 19.304 90)
+			(at 136.906 19.304 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
-			(at 135.89 21.59 0)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 138.43 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17350,7 +18144,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.89 21.59 0)
+			(at 138.43 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17359,7 +18153,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 135.89 21.59 0)
+			(at 138.43 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17376,7 +18170,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "J1")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -17391,7 +18185,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "53374079-1047-4aaa-83d5-90dec1039d08")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR037"
 			(at 302.26 29.21 0)
 			(effects
 				(font
@@ -17441,7 +18235,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR034")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -17456,7 +18250,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5701e086-e44c-4658-b27f-5d5139082ad8")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR025"
 			(at 189.23 115.57 0)
 			(effects
 				(font
@@ -17506,7 +18300,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR048")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -17521,7 +18315,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "58f0e047-907f-43b3-bbfc-38b59e48f48d")
-		(property "Reference" "D32"
+		(property "Reference" "D2"
 			(at 224.79 59.944 0)
 			(effects
 				(font
@@ -17591,7 +18385,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D32")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -17606,7 +18400,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5ac938b4-69cf-4333-b6a0-1dfd29526bc5")
-		(property "Reference" "R26"
+		(property "Reference" "R11"
 			(at 225.552 71.882 0)
 			(effects
 				(font
@@ -17660,7 +18454,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R26")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -17675,7 +18469,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5c68b4fe-3acf-407e-96c5-62b9d0f369c8")
-		(property "Reference" "C11"
+		(property "Reference" "C12"
 			(at 249.428 264.16 0)
 			(effects
 				(font
@@ -17727,7 +18521,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C11")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -17742,7 +18536,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5d2aa269-733c-453e-a60a-3845d61820ee")
-		(property "Reference" "R10"
+		(property "Reference" "R12"
 			(at 223.774 159.512 90)
 			(effects
 				(font
@@ -17796,7 +18590,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R10")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -17811,7 +18605,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "60b8cfed-1905-44a8-8473-dad95600a6dc")
-		(property "Reference" "R6"
+		(property "Reference" "R2"
 			(at 106.934 247.142 90)
 			(effects
 				(font
@@ -17865,7 +18659,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R6")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -17880,7 +18674,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "65ea2656-6312-4d5f-9bcf-ab6003e27d76")
-		(property "Reference" "OC3"
+		(property "Reference" "OC1"
 			(at 117.094 62.738 0)
 			(effects
 				(font
@@ -17943,7 +18737,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "OC3")
+					(reference "OC1")
 					(unit 1)
 				)
 			)
@@ -18011,6 +18805,73 @@
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
 					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 223.52 33.02 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "66da366c-ddef-4b2e-864a-02738d746415")
+		(property "Reference" "J9"
+			(at 223.52 28.194 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "12VAC"
+			(at 223.52 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 223.52 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 223.52 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 223.52 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2dfa8db4-6eb4-4e48-9a7b-60b9d21a5117")
+		)
+		(pin "2"
+			(uuid "34783c23-98a3-4308-8307-d7048d4f4c57")
+		)
+		(instances
+			(project "Predictive Maintenance System for Industrial Motor"
+				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -18138,7 +18999,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6b839dac-5533-48b7-a992-9d5453658cba")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR033"
 			(at 261.62 48.26 0)
 			(effects
 				(font
@@ -18188,7 +19049,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR030")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -18203,7 +19064,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6e7f8d3a-fe1b-4769-9ea7-0348dcc0f986")
-		(property "Reference" "C7"
+		(property "Reference" "C8"
 			(at 230.124 207.264 90)
 			(effects
 				(font
@@ -18257,7 +19118,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C7")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -18341,7 +19202,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6fa8e052-73ab-42ea-bc10-ae906f5e9c03")
-		(property "Reference" "#FLG05"
+		(property "Reference" "#FLG06"
 			(at 308.61 23.495 0)
 			(effects
 				(font
@@ -18391,7 +19252,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#FLG05")
+					(reference "#FLG06")
 					(unit 1)
 				)
 			)
@@ -18406,7 +19267,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "706712d7-231f-4589-840c-4de889902bd3")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR03"
 			(at 102.87 269.24 0)
 			(effects
 				(font
@@ -18456,7 +19317,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR012")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -18471,7 +19332,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "70950d41-4475-4ec5-93d5-89d4f8284054")
-		(property "Reference" "D33"
+		(property "Reference" "D3"
 			(at 224.79 67.564 0)
 			(effects
 				(font
@@ -18541,7 +19402,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D33")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -18556,7 +19417,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "74d6b6a2-660f-4e18-b6ab-aeb7722ad941")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR09"
 			(at 114.3 76.2 0)
 			(effects
 				(font
@@ -18565,7 +19426,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
+		(property "Value" "GNDA"
 			(at 114.3 73.66 0)
 			(effects
 				(font
@@ -18606,7 +19467,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR06")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -18621,7 +19482,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7597e986-d628-49cb-b903-169d5f8a529b")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR023"
 			(at 177.8 200.66 0)
 			(effects
 				(font
@@ -18671,7 +19532,72 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR020")
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 133.35 257.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7b4b2f3e-e9dd-4b0f-9a45-3610125c5a54")
+		(property "Reference" "#PWR039"
+			(at 133.35 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 133.35 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 133.35 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b3d825bb-c5ba-45f4-9008-d718bb738974")
+		)
+		(instances
+			(project "Predictive Maintenance System for Industrial Motor"
+				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -18686,7 +19612,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7f5b4f6a-8b5a-4165-958e-65d6f592e9f5")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR028"
 			(at 232.41 152.4 0)
 			(effects
 				(font
@@ -18736,7 +19662,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR026")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -18744,15 +19670,15 @@
 	)
 	(symbol
 		(lib_id "PCM_SL_Resistors:10k")
-		(at 101.6 57.15 0)
+		(at 101.6 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "811a5ab5-9aaf-44a5-bb77-31a85bb14ce5")
-		(property "Reference" "R5"
-			(at 100.33 55.118 0)
+		(property "Reference" "R1"
+			(at 100.33 56.388 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18761,7 +19687,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 99.568 59.182 0)
+			(at 99.568 60.452 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18770,7 +19696,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 102.489 61.468 0)
+			(at 102.489 62.738 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18779,7 +19705,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 102.108 57.15 0)
+			(at 102.108 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18788,7 +19714,7 @@
 			)
 		)
 		(property "Description" "10kΩ, 1/4W Resistor"
-			(at 101.6 57.15 0)
+			(at 101.6 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18805,7 +19731,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R5")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -18820,7 +19746,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "82ba6bdf-d4ff-4d82-9e8f-bc258ffd7986")
-		(property "Reference" "D5"
+		(property "Reference" "D10"
 			(at 273.558 212.344 90)
 			(effects
 				(font
@@ -18883,7 +19809,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D5")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -18899,7 +19825,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8328e067-2f75-415b-802c-6c1d689fc8e6")
-		(property "Reference" "J5"
+		(property "Reference" "J2"
 			(at 115.316 250.19 90)
 			(effects
 				(font
@@ -18959,7 +19885,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "J5")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -18974,7 +19900,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "839e2e67-9001-4aba-9644-51d7e6491ecb")
-		(property "Reference" "J3"
+		(property "Reference" "J1"
 			(at 111.76 120.65 0)
 			(effects
 				(font
@@ -18982,8 +19908,8 @@
 				)
 			)
 		)
-		(property "Value" "AM2301A"
-			(at 112.268 131.318 0)
+		(property "Value" "DS18B20"
+			(at 112.014 131.318 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19029,7 +19955,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "J3")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -19044,7 +19970,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "83eb2709-77bb-4f4e-b91d-7a4f932fbb92")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR034"
 			(at 266.7 78.74 0)
 			(effects
 				(font
@@ -19094,7 +20020,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR031")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -19178,7 +20104,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8a9d4597-1fbd-4ab1-b16f-dfac6ee2c2bd")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR012"
 			(at 121.92 115.57 0)
 			(effects
 				(font
@@ -19228,7 +20154,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR010")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -19243,7 +20169,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8cf59c6c-23f1-4b3c-8bea-8bf34cf9e059")
-		(property "Reference" "R9"
+		(property "Reference" "R13"
 			(at 242.57 106.934 90)
 			(effects
 				(font
@@ -19297,72 +20223,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 133.35 257.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8fcf1ea4-b9d5-420d-bc3e-50182c0a812c")
-		(property "Reference" "#PWR014"
-			(at 133.35 261.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 133.35 254.254 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 133.35 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 133.35 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 133.35 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "05f51613-7b29-4243-b799-c3e0fa13e25f")
-		)
-		(instances
-			(project "Predictive Maintenance System for Industrial Motor"
-				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR014")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -19377,7 +20238,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "903d28b0-420f-47f9-be88-42cdabe605c1")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR05"
 			(at 106.68 76.2 0)
 			(effects
 				(font
@@ -19427,7 +20288,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR04")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -19442,7 +20303,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "93edcd94-3077-4198-8d29-ea7ee6a29415")
-		(property "Reference" "C19"
+		(property "Reference" "C21"
 			(at 306.07 37.846 90)
 			(effects
 				(font
@@ -19496,7 +20357,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C19")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -19511,7 +20372,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "94d2156c-107c-4685-aecd-9e7b4412231d")
-		(property "Reference" "C8"
+		(property "Reference" "C9"
 			(at 224.028 264.922 90)
 			(effects
 				(font
@@ -19565,7 +20426,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C8")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -19580,7 +20441,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "951d33e6-94a2-4878-97a0-fbef00afaa7a")
-		(property "Reference" "#FLG04"
+		(property "Reference" "#FLG05"
 			(at 279.4 74.295 0)
 			(effects
 				(font
@@ -19630,7 +20491,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#FLG04")
+					(reference "#FLG05")
 					(unit 1)
 				)
 			)
@@ -19645,7 +20506,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "993638bc-fb9b-4838-97b0-f22d27f8e592")
-		(property "Reference" "C10"
+		(property "Reference" "C11"
 			(at 241.046 130.302 90)
 			(effects
 				(font
@@ -19699,7 +20560,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C10")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -19783,7 +20644,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9b42678b-50a1-4b99-b770-6dab99dbefc5")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR018"
 			(at 156.21 57.15 0)
 			(effects
 				(font
@@ -19833,7 +20694,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR013")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -19848,7 +20709,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9fe0c4c4-3d5d-433a-b383-955c9b88747d")
-		(property "Reference" "D7"
+		(property "Reference" "D12"
 			(at 295.148 36.83 90)
 			(effects
 				(font
@@ -19902,7 +20763,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D7")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -19917,7 +20778,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a1f93c50-5f5a-448b-971d-495c8c9a742f")
-		(property "Reference" "C13"
+		(property "Reference" "C15"
 			(at 255.016 33.274 90)
 			(effects
 				(font
@@ -19971,7 +20832,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C13")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -19987,7 +20848,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a4314175-1f7d-4e5d-8980-f27187438e31")
-		(property "Reference" "Q3"
+		(property "Reference" "Q1"
 			(at 259.334 220.472 0)
 			(effects
 				(font
@@ -20053,7 +20914,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "Q3")
+					(reference "Q1")
 					(unit 2)
 				)
 			)
@@ -20068,7 +20929,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a6508148-8332-4296-a2ae-d0bd2ac583d4")
-		(property "Reference" "C17"
+		(property "Reference" "C19"
 			(at 278.13 266.446 0)
 			(effects
 				(font
@@ -20120,7 +20981,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C17")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -20135,7 +20996,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a7e70aad-34c5-4615-bfae-7f4529d68d16")
-		(property "Reference" "OC1"
+		(property "Reference" "OC2"
 			(at 180.594 187.198 0)
 			(effects
 				(font
@@ -20198,7 +21059,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "OC1")
+					(reference "OC2")
 					(unit 1)
 				)
 			)
@@ -20213,7 +21074,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "acac9974-f7cb-472e-af58-c742dcbd1d7b")
-		(property "Reference" "C24"
+		(property "Reference" "C6"
 			(at 185.42 105.41 90)
 			(effects
 				(font
@@ -20267,7 +21128,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C24")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -20282,7 +21143,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b1f14284-8323-420d-a806-aa11cdd5fb18")
-		(property "Reference" "C20"
+		(property "Reference" "C22"
 			(at 306.07 67.056 90)
 			(effects
 				(font
@@ -20336,7 +21197,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C20")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -20351,7 +21212,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b2b166a2-e003-4636-af57-1bb57773b6c9")
-		(property "Reference" "R11"
+		(property "Reference" "R14"
 			(at 251.46 106.68 90)
 			(effects
 				(font
@@ -20405,7 +21266,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R11")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -20421,7 +21282,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba68bdbc-57c0-48fc-ab68-8483cf5c2ec4")
-		(property "Reference" "U6"
+		(property "Reference" "U2"
 			(at 275.59 95.25 0)
 			(effects
 				(font
@@ -20437,7 +21298,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ESP32-S3-WROOM-1U-N16R8:XCVR_ESP32-S3-WROOM-1U-N16R8"
+		(property "Footprint" "footprints:ESP32-S3-WROOM-1U-N16R8"
 			(at 279.4 128.524 0)
 			(effects
 				(font
@@ -20679,20 +21540,14 @@
 		(pin "29"
 			(uuid "73b54f5d-a335-4f9d-b107-84e58918e758")
 		)
-		(pin "41_7"
+		(pin "41"
 			(uuid "a35a499d-01a1-47b8-8df5-81d0c7839120")
 		)
 		(pin "33"
 			(uuid "2252a9e0-8657-4c27-b260-223d08cb6dca")
 		)
-		(pin "41_5"
-			(uuid "61e65a15-5802-40a8-a4bc-b9de21150459")
-		)
 		(pin "30"
 			(uuid "144fe4c5-29c9-4963-8708-4d11d842f06f")
-		)
-		(pin "41_6"
-			(uuid "5a027da5-9b94-4f87-b88e-452361ff92f7")
 		)
 		(pin "34"
 			(uuid "dfbf0967-de81-4401-b502-760b00c3add5")
@@ -20709,23 +21564,8 @@
 		(pin "40"
 			(uuid "14d6c0b0-1dee-4903-b617-b4173ccbbb4c")
 		)
-		(pin "41_9"
-			(uuid "e03ae95b-7173-4f33-93aa-554d41c28f7d")
-		)
-		(pin "41_1"
-			(uuid "6b0d24e9-cb89-4521-967f-69f1334c8874")
-		)
 		(pin "16"
 			(uuid "7a4248e2-dc5e-4732-87b6-1f0f0653ed70")
-		)
-		(pin "41_2"
-			(uuid "472b362e-b075-4f01-ad6d-440192d5cd64")
-		)
-		(pin "41_3"
-			(uuid "1cd5ed07-4557-41ee-9712-d1c371077eb7")
-		)
-		(pin "41_4"
-			(uuid "a7286708-4ee2-4bde-8dec-0ce71bb947dd")
 		)
 		(pin "35"
 			(uuid "89f5f29d-e6e6-4c60-a347-925ce3a3a39a")
@@ -20739,13 +21579,10 @@
 		(pin "32"
 			(uuid "c4b5aa88-5e6f-465e-acc3-e3fde0278fc3")
 		)
-		(pin "41_8"
-			(uuid "d22f7096-bb29-4b19-865f-71056844346b")
-		)
 		(instances
 			(project ""
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "U6")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -20760,7 +21597,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ba707685-0908-4603-836a-93da25d5dd76")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR021"
 			(at 170.18 200.66 0)
 			(effects
 				(font
@@ -20810,7 +21647,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR016")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -20825,7 +21662,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bcaca4b9-0f1b-492b-b593-1ca622903051")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR06"
 			(at 107.95 241.3 0)
 			(effects
 				(font
@@ -20875,7 +21712,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR09")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -20883,7 +21720,7 @@
 	)
 	(symbol
 		(lib_id "PCM_Diode_AKL:1N4007")
-		(at 105.41 43.18 90)
+		(at 105.41 36.83 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20891,7 +21728,7 @@
 		(dnp no)
 		(uuid "bf4005f0-f12f-49cd-ba00-99d37e174b11")
 		(property "Reference" "D1"
-			(at 99.314 42.164 90)
+			(at 101.6 37.846 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20900,7 +21737,7 @@
 			)
 		)
 		(property "Value" "1N4007"
-			(at 96.266 44.704 90)
+			(at 100.584 39.878 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20908,8 +21745,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "PCM_Diode_THT_AKL:D_DO-41_SOD81_P7.62mm_Horizontal"
-			(at 105.41 43.18 0)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 105.41 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20918,7 +21755,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.tme.eu/Document/5f8ffc5ac30fc86bac97d66040bf5502/1n400x.pdf"
-			(at 105.41 43.18 0)
+			(at 105.41 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20927,7 +21764,7 @@
 			)
 		)
 		(property "Description" "DO-41 Diode, Rectifier, 1000V, 1A, Alternate KiCad Library"
-			(at 105.41 43.18 0)
+			(at 105.41 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20959,7 +21796,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c2228d56-e17a-477a-85fe-618cf4f5648a")
-		(property "Reference" "R7"
+		(property "Reference" "R3"
 			(at 106.68 257.048 90)
 			(effects
 				(font
@@ -21013,7 +21850,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R7")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -21028,7 +21865,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c28f71e3-bf6c-4dbd-8703-ecaf735d0586")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR017"
 			(at 153.67 257.81 0)
 			(effects
 				(font
@@ -21078,7 +21915,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR050")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -21093,7 +21930,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c3907e37-baeb-4453-9a00-069860a66d37")
-		(property "Reference" "#FLG01"
+		(property "Reference" "#FLG02"
 			(at 234.95 74.295 0)
 			(effects
 				(font
@@ -21143,7 +21980,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#FLG01")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -21158,7 +21995,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c6f9b477-02f9-4715-9799-d3fea529cefe")
-		(property "Reference" "C14"
+		(property "Reference" "C16"
 			(at 255.016 62.484 90)
 			(effects
 				(font
@@ -21212,7 +22049,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C14")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -21227,7 +22064,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cc57f9d7-c86d-4e4d-abdb-a23636451801")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR024"
 			(at 180.34 67.31 0)
 			(effects
 				(font
@@ -21277,7 +22114,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR021")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -21363,80 +22200,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Transformer_1P_1S_1")
-		(lib_id "Device:Transformer_1P_1S")
-		(at 223.52 33.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board no)
-		(dnp no)
-		(uuid "cd4e8046-ab88-4b4b-aa34-26089e9bc3be")
-		(property "Reference" "T3"
-			(at 225.298 27.178 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "2220-12V"
-			(at 224.79 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 223.52 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 224.536 30.988 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Transformer, single primary, single secondary"
-			(at 226.568 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "de1e7285-9bd3-4d06-a9a1-0619f6a2331f")
-		)
-		(pin "2"
-			(uuid "4a0f6a67-e8c1-4304-b4bc-b4f6ac484d8b")
-		)
-		(pin "3"
-			(uuid "6eadf6c0-063d-4a22-a30a-7ab08455bbbf")
-		)
-		(pin "1"
-			(uuid "c01684e2-7102-4b81-8144-894613e5ed85")
-		)
-		(instances
-			(project "Predictive Maintenance System for Industrial Motor"
-				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "T3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Regulator_Linear:AMS1117-3.3")
 		(at 237.49 200.66 0)
 		(unit 1)
@@ -21508,6 +22271,75 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_SL_Capacitors:4.7uF_16V")
+		(at 99.06 44.45 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d4e10a1a-1be7-410d-84fb-db529ca4d834")
+		(property "Reference" "C25"
+			(at 98.552 42.164 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4.7uF/16V"
+			(at 103.124 48.514 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_HandSolder"
+			(at 95.25 45.212 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 44.958 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4.7uF, 16V Electrolytic Capacitor"
+			(at 99.06 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "211b8f2e-8ccd-4f93-b66b-6c4edbea5c70")
+		)
+		(pin "2"
+			(uuid "2b184aae-ed0a-4340-bf15-c0e86604ca02")
+		)
+		(instances
+			(project "Predictive Maintenance System for Industrial Motor"
+				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SL_Capacitors:104_Ceramic")
 		(at 295.91 227.33 180)
 		(unit 1)
@@ -21516,7 +22348,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d732030f-2a9b-4523-93f3-75594aac6d6b")
-		(property "Reference" "C18"
+		(property "Reference" "C20"
 			(at 295.148 221.996 0)
 			(effects
 				(font
@@ -21570,7 +22402,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C18")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -21585,7 +22417,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d7a5f86d-13ff-465f-816d-b82f8b658093")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR032"
 			(at 252.73 278.13 0)
 			(effects
 				(font
@@ -21635,7 +22467,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR029")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -21643,15 +22475,15 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 255.27 25.4 0)
+		(at 259.08 25.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "d7b6471a-937d-4a62-a009-87bc387ebba4")
-		(property "Reference" "#FLG03"
-			(at 255.27 23.495 0)
+		(property "Reference" "#FLG04"
+			(at 259.08 23.495 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21660,7 +22492,7 @@
 			)
 		)
 		(property "Value" "PF"
-			(at 255.27 21.844 0)
+			(at 259.08 21.844 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21668,7 +22500,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 255.27 25.4 0)
+			(at 259.08 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21677,7 +22509,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 255.27 25.4 0)
+			(at 259.08 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21686,7 +22518,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 255.27 25.4 0)
+			(at 259.08 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21700,7 +22532,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#FLG03")
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
@@ -21715,7 +22547,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d9f68706-89c7-4481-a97a-968bfc429ef9")
-		(property "Reference" "C42"
+		(property "Reference" "C14"
 			(at 254.254 69.088 90)
 			(effects
 				(font
@@ -21769,7 +22601,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C42")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -21784,7 +22616,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "daec7e68-013e-4900-8ee2-f3a615fa94f2")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR026"
 			(at 223.52 218.44 0)
 			(effects
 				(font
@@ -21834,7 +22666,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR025")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -21849,7 +22681,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "db0d44c5-29cc-4325-b4d5-6de6b0150f6f")
-		(property "Reference" "DZ2"
+		(property "Reference" "DZ1"
 			(at 243.332 65.532 90)
 			(effects
 				(font
@@ -21903,7 +22735,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "DZ2")
+					(reference "DZ1")
 					(unit 1)
 				)
 			)
@@ -21987,7 +22819,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dcd360f5-8653-4125-b060-455ca3b01920")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR036"
 			(at 271.78 203.2 0)
 			(effects
 				(font
@@ -22037,7 +22869,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR033")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -22052,7 +22884,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "de1b9163-7036-4ff8-8916-d4b529a1a778")
-		(property "Reference" "D4"
+		(property "Reference" "D9"
 			(at 259.08 198.12 0)
 			(effects
 				(font
@@ -22106,7 +22938,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D4")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -22190,7 +23022,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e195506d-f489-4a4f-8c3f-0524e8cf56bf")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR04"
 			(at 104.14 203.2 0)
 			(effects
 				(font
@@ -22240,7 +23072,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR03")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -22255,7 +23087,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e4090308-8153-454b-a08d-bd46a56420dd")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR08"
 			(at 114.3 33.02 0)
 			(effects
 				(font
@@ -22305,7 +23137,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR05")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -22320,7 +23152,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e40ccfe7-49c7-4573-b4a5-46212a81afd6")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR010"
 			(at 116.84 193.04 0)
 			(effects
 				(font
@@ -22370,7 +23202,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR08")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -22385,7 +23217,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e5a5ef8d-376f-4f88-b6b5-e52f47c1a298")
-		(property "Reference" "C22"
+		(property "Reference" "C24"
 			(at 317.754 64.77 90)
 			(effects
 				(font
@@ -22439,7 +23271,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C22")
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -22463,7 +23295,7 @@
 				)
 			)
 		)
-		(property "Value" "LM2596S-3.3V"
+		(property "Value" "LM2596S-5V"
 			(at 279.4 52.07 0)
 			(effects
 				(font
@@ -22536,7 +23368,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e65a8e48-bc74-48a3-a442-185921f17b49")
-		(property "Reference" "D35"
+		(property "Reference" "D6"
 			(at 233.68 67.564 0)
 			(effects
 				(font
@@ -22606,7 +23438,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D35")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -22621,7 +23453,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e83d27cf-465b-418c-a21d-37582a46e3eb")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR020"
 			(at 163.83 138.43 0)
 			(effects
 				(font
@@ -22671,7 +23503,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR038")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -22751,7 +23583,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "edcda040-f2f1-4fbd-8ccc-055bc768ac0f")
-		(property "Reference" "C16"
+		(property "Reference" "C18"
 			(at 260.858 266.7 90)
 			(effects
 				(font
@@ -22803,7 +23635,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C16")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -22818,7 +23650,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ef4df3fc-a1ac-48f7-a8ae-562e11345eb8")
-		(property "Reference" "C5"
+		(property "Reference" "C3"
 			(at 122.174 265.43 90)
 			(effects
 				(font
@@ -22872,7 +23704,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C5")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -22887,7 +23719,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ef8f227e-ef01-4b44-b28d-b9d9f7fdfe5b")
-		(property "Reference" "D8"
+		(property "Reference" "D13"
 			(at 295.148 66.04 90)
 			(effects
 				(font
@@ -22941,7 +23773,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "D8")
+					(reference "D13")
 					(unit 1)
 				)
 			)
@@ -22956,7 +23788,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "efcfabfc-d1e4-40d7-b681-decbc4de5a07")
-		(property "Reference" "C15"
+		(property "Reference" "C17"
 			(at 260.858 254 90)
 			(effects
 				(font
@@ -23008,7 +23840,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C15")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -23023,7 +23855,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f064f5ab-7b34-4566-af18-b4259eb105bd")
-		(property "Reference" "R14"
+		(property "Reference" "R6"
 			(at 138.43 199.898 90)
 			(effects
 				(font
@@ -23077,7 +23909,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R14")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -23174,7 +24006,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f20b5baa-f021-46de-a4dd-d244582c1b92")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR014"
 			(at 129.54 196.85 0)
 			(effects
 				(font
@@ -23224,7 +24056,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR036")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -23239,7 +24071,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f2d1df4e-9b7c-4f29-96ff-72dfc144d25c")
-		(property "Reference" "R25"
+		(property "Reference" "R10"
 			(at 212.852 55.372 0)
 			(effects
 				(font
@@ -23293,7 +24125,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "R25")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -23308,7 +24140,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f32d14a5-983b-4866-846d-094081b45ed3")
-		(property "Reference" "C21"
+		(property "Reference" "C23"
 			(at 317.754 35.56 90)
 			(effects
 				(font
@@ -23362,7 +24194,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C21")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -23377,7 +24209,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f4b988cb-71d3-4e68-adc4-28edaaaa7c67")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR027"
 			(at 226.06 176.53 0)
 			(effects
 				(font
@@ -23427,7 +24259,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR028")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -23442,7 +24274,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f8f7068e-35e5-45b6-86bb-2d896d6bf9cd")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR035"
 			(at 267.97 247.65 0)
 			(effects
 				(font
@@ -23492,7 +24324,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "#PWR032")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -23507,7 +24339,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fa091f97-59e4-42cb-8f2f-d16fe79ae263")
-		(property "Reference" "C41"
+		(property "Reference" "C7"
 			(at 214.376 46.99 90)
 			(effects
 				(font
@@ -23559,7 +24391,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C41")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -23574,7 +24406,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ffc9e4bf-51ad-4ca5-9b95-02e0923802bc")
-		(property "Reference" "C9"
+		(property "Reference" "C10"
 			(at 233.172 131.572 90)
 			(effects
 				(font
@@ -23628,7 +24460,7 @@
 		(instances
 			(project "Predictive Maintenance System for Industrial Motor"
 				(path "/900a473e-2e9b-475f-9b3f-84708db3e9c7"
-					(reference "C9")
+					(reference "C10")
 					(unit 1)
 				)
 			)
