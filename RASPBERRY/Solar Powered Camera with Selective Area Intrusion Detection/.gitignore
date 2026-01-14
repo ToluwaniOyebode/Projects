@@ -1,0 +1,16 @@
+*.bak
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.autosave
+*.tmp
+__pycache__/
+fp-info-cache
+
+*_autosave-
+~*.lck
+*.pro.bak
+*.sch-bak
+*.pyc
+
+Solar Powered Camera with Selective Area Intrusion Detection-backups/
