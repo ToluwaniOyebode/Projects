@@ -9705,7 +9705,7 @@
 		(descr "Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC-7352 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor tantalum")
 		(property "Reference" "C13"
-			(at 0 -6.52675 0)
+			(at -0.3475 -2.24 0)
 			(layer "F.SilkS")
 			(uuid "57ae1059-9c45-4100-9cea-04df8354e8a7")
 			(effects
