@@ -1,3 +1,5 @@
+
+#hardware design files
 *.DS_Store
 *.000
 *.bak
@@ -25,3 +27,11 @@ _autosave-*
 *.dsn
 *.ses
 Fingerprint and RFID Card Attendance System-backups/
+
+
+# software build files
+.pio
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
