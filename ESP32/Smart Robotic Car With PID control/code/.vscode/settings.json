@@ -1,0 +1,5 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "c_cpp.clang_format_fallbackStyle": "Google"
+}
