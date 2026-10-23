@@ -22,6 +22,7 @@ KNOWN_ACTIONS = {
 def validate(path: str | Path) -> dict:
     errors, warnings = [], []
     per_match = defaultdict(list)
+    last_timestamp = {}
     actions = Counter()
     total = 0
     with open(path, newline="", encoding="utf-8-sig") as f:
@@ -50,19 +51,26 @@ def validate(path: str | Path) -> dict:
                 errors.append(f"Line {line}: timestamp_seconds must be a non-negative number")
                 continue
             if match:
+                if match in last_timestamp:
+                    previous_timestamp, previous_line = last_timestamp[match]
+                    if timestamp < previous_timestamp:
+                        errors.append(
+                            f"Match {match!r}: timestamp goes backwards from "
+                            f"line {previous_line} ({previous_timestamp:g}s) "
+                            f"to line {line} ({timestamp:g}s)"
+                        )
+                    elif timestamp == previous_timestamp:
+                        warnings.append(
+                            f"Match {match!r}: duplicate timestamp {timestamp:g}s "
+                            f"at lines {previous_line}/{line}"
+                        )
+                last_timestamp[match] = (timestamp, line)
                 per_match[match].append((timestamp, line))
             if action:
                 actions[action] += 1
             for field in OPTIONAL & fields:
                 if not (row.get(field) or "").strip():
                     warnings.append(f"Line {line}: {field} is blank; use 'unknown' if unavailable")
-    for match, items in per_match.items():
-        items.sort()
-        for (t1, line1), (t2, line2) in zip(items, items[1:]):
-            if t2 < t1:
-                errors.append(f"Match {match!r}: timestamps go backwards at lines {line1}/{line2}")
-            if t2 == t1:
-                warnings.append(f"Match {match!r}: duplicate timestamp {t2:g}s at lines {line1}/{line2}")
     if total == 0:
         warnings.append("CSV contains a header but no event rows")
     return {"ok": not errors, "rows": total, "matches": len(per_match),
