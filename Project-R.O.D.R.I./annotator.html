@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R.O.D.R.I. — Event Annotation Pilot</title>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#172033;background:#f5f7fb}
+body{max-width:1100px;margin:0 auto;padding:20px}
+h1{margin-bottom:4px} .muted{color:#5d687b;font-size:.92rem}
+.panel{background:white;border:1px solid #dce2ed;border-radius:12px;padding:16px;margin:14px 0}
+.grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:14px}
+video{width:100%;background:#101827;border-radius:8px;max-height:62vh}
+label{display:block;font-weight:600;margin:9px 0 4px}
+input,select,button{font:inherit;padding:9px;border:1px solid #c8d0de;border-radius:7px;max-width:100%}
+input,select{width:100%;box-sizing:border-box}
+button{cursor:pointer;background:#f2f5fa}button.primary{background:#155eef;color:white;border-color:#155eef}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>*{flex:1}
+.stat{font-variant-numeric:tabular-nums;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;padding:8px;border-bottom:1px solid #e5e9f1}th{position:sticky;top:0;background:#f8faff}
+.tablewrap{overflow:auto;max-height:360px}.danger{color:#b42318}.notice{background:#fff7e6;border:1px solid #ffd591;padding:10px;border-radius:8px}
+kbd{background:#eef1f6;border:1px solid #ccd3df;border-radius:4px;padding:1px 5px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}body{padding:10px}}
+</style>
+</head>
+<body>
+<h1>Project R.O.D.R.I.</h1>
+<p class="muted">Local video event annotation pilot · runs in your browser · video and annotations are not uploaded anywhere by this page.</p>
+<div class="notice"><strong>Important:</strong> this tool records your labels; it does not automatically identify Rodri or verify actions. Only label events when you can confidently confirm his identity. Use <em>unknown</em> when unsure.</div>
+<section class="panel">
+<label for="videoFile">Choose a match video from your computer</label>
+<input id="videoFile" type="file" accept="video/*">
+<div class="muted" id="videoInfo">No video loaded.</div>
+</section>
+<div class="grid">
+<section class="panel">
+<video id="video" controls preload="metadata"></video>
+<div class="row" style="margin-top:10px">
+<div><div class="muted">Current video time</div><div class="stat" id="clock">00:00.000</div></div>
+<button id="capture" class="primary" type="button">Use current time</button>
+<button id="back" type="button">−2 seconds</button>
+<button id="forward" type="button">+2 seconds</button>
+</div>
+<p class="muted">Tip: pause near the action, use the arrow keys for fine movement, then record the action time. Do not use a sampled frame's time as an action time unless it matches the event.</p>
+</section>
+<section class="panel">
+<h2 style="margin-top:0">Record verified event</h2>
+<label for="matchId">Unique match ID</label><input id="matchId" value="match_01" required>
+<label for="time">Event time (seconds from video start)</label><input id="time" type="number" min="0" step="0.001" required>
+<label for="action">Action</label>
+<select id="action">
+<option>receive</option><option>short_pass</option><option>long_pass</option><option>carry</option><option>shield</option><option>shot</option><option>press</option><option>tackle</option><option>interception</option><option>clearance</option><option>support_run</option><option>track_opponent</option><option>stoppage</option><option>unknown</option>
+</select>
+<label for="zone">Zone</label><select id="zone"><option>unknown</option><option>defensive</option><option>middle</option><option>attacking</option><option>wide_left</option><option>wide_right</option><option>box</option></select>
+<label for="pressure">Pressure</label><select id="pressure"><option>unknown</option><option>low</option><option>medium</option><option>high</option></select>
+<label for="ballState">Ball state</label><select id="ballState"><option>unknown</option><option>team</option><option>opponent</option><option>loose</option><option>dead</option></select>
+<div class="row" style="margin-top:12px"><button id="add" class="primary" type="button">Add event</button><button id="clear" type="button">Clear form</button></div>
+<p class="muted">Shortcut: <kbd>Space</kbd> pauses/plays the video; <kbd>A</kbd> copies current time into the event form.</p>
+</section>
+</div>
+<section class="panel">
+<div class="row">
+<div><h2 style="margin:0">Event log</h2><div id="summary" class="muted">0 events</div></div>
+<button id="export" class="primary" type="button">Export CSV</button>
+<button id="save" type="button">Download session JSON</button>
+<label style="margin:0;max-width:250px">Import session JSON<input id="import" type="file" accept=".json,application/json"></label>
+</div>
+<div class="tablewrap"><table><thead><tr><th>#</th><th>Match</th><th>Time (s)</th><th>Action</th><th>Zone</th><th>Pressure</th><th>Ball state</th><th></th></tr></thead><tbody id="events"></tbody></table></div>
+<p class="muted">Exported CSV matches the project's validator/baseline schema. Save backups regularly. The tool stores data only in this open browser tab until you download it.</p>
+</section>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const video=$('video'); let objectUrl=null; let events=[];
+const fields=['match_id','timestamp_seconds','action','zone','pressure','ball_state'];
+function fmt(t){if(!Number.isFinite(t)||t<0)t=0;const m=Math.floor(t/60),s=(t%60).toFixed(3).padStart(6,'0');return String(m).padStart(2,'0')+':'+s;}
+function current(){return Number.isFinite(video.currentTime)?video.currentTime:0;}
+function setTime(){ $('time').value=current().toFixed(3); }
+function csvCell(v){const s=String(v??'');return '"'+s.replace(/"/g,'""')+'"';}
+function download(name,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function render(){
+$('events').replaceChildren();
+events.forEach((e,i)=>{const tr=document.createElement('tr');[i+1,e.match_id,Number(e.timestamp_seconds).toFixed(3),e.action,e.zone,e.pressure,e.ball_state].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.appendChild(td);});const td=document.createElement('td');const b=document.createElement('button');b.textContent='Delete';b.type='button';b.addEventListener('click',()=>{events.splice(i,1);render();});td.appendChild(b);tr.appendChild(td);$('events').appendChild(tr);});
+$('summary').textContent=events.length+' events · '+new Set(events.map(e=>e.match_id)).size+' matches';
+}
+$('videoFile').addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f)return;if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(f);video.src=objectUrl;$('videoInfo').textContent=f.name+' · '+(f.size/1024/1024).toFixed(1)+' MiB';});
+video.addEventListener('timeupdate',()=>{$('clock').textContent=fmt(current());});
+$('capture').addEventListener('click',setTime);
+$('back').addEventListener('click',()=>{video.currentTime=Math.max(0,current()-2);setTime();});
+$('forward').addEventListener('click',()=>{video.currentTime=Math.min(video.duration||Infinity,current()+2);setTime();});
+$('add').addEventListener('click',()=>{
+ const match=$('matchId').value.trim(),t=Number($('time').value);
+ if(!match){alert('Enter a unique match ID.');return;}
+ if($('time').value===''||!Number.isFinite(t)||t<0){alert('Enter a valid non-negative event timestamp.');return;}
+ if(Number.isFinite(video.duration)&&t>video.duration){alert('Timestamp is beyond this video duration.');return;}
+ events.push({match_id:match,timestamp_seconds:t,action:$('action').value,zone:$('zone').value,pressure:$('pressure').value,ball_state:$('ballState').value});
+ events.sort((a,b)=>a.match_id.localeCompare(b.match_id)||a.timestamp_seconds-b.timestamp_seconds);render();
+});
+$('clear').addEventListener('click',()=>{$('action').value='receive';$('zone').value='unknown';$('pressure').value='unknown';$('ballState').value='unknown';setTime();});
+$('export').addEventListener('click',()=>{if(!events.length){alert('No events to export yet.');return;}const rows=[fields.join(','),...events.map(e=>fields.map(k=>csvCell(e[k])).join(','))];download('rodri_events.csv',rows.join('\r\n'),'text/csv;charset=utf-8');});
+$('save').addEventListener('click',()=>download('rodri_annotation_session.json',JSON.stringify({schema_version:1,events},null,2),'application/json'));
+$('import').addEventListener('change',async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;try{const data=JSON.parse(await f.text());if(!Array.isArray(data.events))throw Error('JSON must contain an events array');const valid=data.events.every(x=>x&&typeof x.match_id==='string'&&Number.isFinite(Number(x.timestamp_seconds))&&typeof x.action==='string');if(!valid)throw Error('One or more events have invalid required fields');events=data.events.map(x=>({match_id:x.match_id,timestamp_seconds:Number(x.timestamp_seconds),action:x.action,zone:x.zone||'unknown',pressure:x.pressure||'unknown',ball_state:x.ball_state||'unknown'}));render();}catch(err){alert('Import failed: '+err.message);}finally{$('import').value='';}});
+document.addEventListener('keydown',e=>{if(e.target.matches('input,select,textarea'))return;if(e.code==='Space'){e.preventDefault();if(video.paused)video.play();else video.pause();}if(e.key.toLowerCase()==='a'){setTime();}});
+window.addEventListener('beforeunload',()=>{if(objectUrl)URL.revokeObjectURL(objectUrl);});
+render();
+})();
+</script>
+</body>
+</html>
