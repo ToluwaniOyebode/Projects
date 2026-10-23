@@ -113,3 +113,16 @@ python sequence_forecast.py data/events.csv --seed-match match_held_out --max-st
 ```
 
 This is a greedy chain of local transition-frequency choices. It is not a trained video model, a calibrated whole-sequence probability, or evidence of accuracy on real Rodri footage. Meaningful evaluation requires correctly labelled events from multiple matches.
+
+
+## New: build a Rodri identity review gallery
+
+Rather than training a new vision model from scratch, first collect verified positive examples from real footage. Run the detector/tracker, then crop a small set of views for each tracked player so a human can identify Rodri and flag tracker ID switches.
+
+```bash
+python rodri_identity_gallery.py "path/to/match.mp4" --detections runs/pilot/detections.csv --out runs/rodri_gallery
+```
+
+Open `runs/rodri_gallery/index.html` locally and inspect the crops. In `labels.csv`, set `is_rodri` to `yes` only for confidently identified Rodri crops, `no` for other players, and leave uncertain examples as `unknown`. Keep several views across time and verify the entire track; an ID is not automatically a player identity.
+
+This gallery is a data-curation tool, **not an automatic recognizer or trained model**. Once we have verified positive and negative crops across multiple matches, the next step is to benchmark a pretrained person re-identification embedding model against a simple visual baseline. We should only fine-tune if the verified data and evaluation justify it. Split evaluation by match to avoid near-duplicate frames leaking across train and test.
