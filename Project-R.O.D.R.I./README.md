@@ -126,3 +126,29 @@ python rodri_identity_gallery.py "path/to/match.mp4" --detections runs/pilot/det
 Open `runs/rodri_gallery/index.html` locally and inspect the crops. In `labels.csv`, set `is_rodri` to `yes` only for confidently identified Rodri crops, `no` for other players, and leave uncertain examples as `unknown`. Keep several views across time and verify the entire track; an ID is not automatically a player identity.
 
 This gallery is a data-curation tool, **not an automatic recognizer or trained model**. Once we have verified positive and negative crops across multiple matches, the next step is to benchmark a pretrained person re-identification embedding model against a simple visual baseline. We should only fine-tune if the verified data and evaluation justify it. Split evaluation by match to avoid near-duplicate frames leaking across train and test.
+
+
+## 6. Track motion features (new)
+
+After running person tracking, summarize each temporary track's duration, mean detector confidence, image-plane speed, net displacement, and average bounding-box size:
+
+```bash
+python track_features.py runs/pilot/detections.csv --out runs/pilot/track_features.json
+```
+
+These features are useful for auditing candidate tracks and later creating temporal action features. They are **not** pitch coordinates, Rodri identity, or action labels; camera movement can make stationary players appear to move. Tracks shorter than three observations are omitted by default.
+
+## 7. Remote pilot workflow
+
+A GitHub Actions workflow can download a short section of the publicly available official match video, run person detection/tracking, create the candidate identity gallery, and export motion summaries. It does not require your laptop to upload the full match.
+
+Open [RODRI remote video pilot](../../actions/workflows/rodri-video-pilot.yml), choose **Run workflow**, select the match and start offset, and then download the `rodri-remote-video-pilot` artifact when the run completes. This is an experimental processing route; availability of the video source and third-party download tooling may change. Outputs still require identity verification before they can be used as Rodri training data.
+
+## Current engineering status
+
+- Automated syntax checks and unit tests: passing in GitHub Actions.
+- Person detection/tracking: implemented, remote match-video pilot being debugged.
+- Candidate identity gallery: implemented; manual identity confirmation remains necessary.
+- Track-motion feature export: implemented and covered by unit tests.
+- Rodri-labelled event dataset: not yet established.
+- Predictive quality: not measured on real Rodri-labelled events. Template data is not evidence of accuracy.
