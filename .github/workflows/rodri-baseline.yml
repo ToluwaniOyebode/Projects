@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Syntax check
-        run: python -m py_compile Project-R.O.D.R.I./rodri_baseline.py Project-R.O.D.R.I./video_sampler.py Project-R.O.D.R.I./validate_events.py Project-R.O.D.R.I./video_inventory.py
+        run: python -m py_compile Project-R.O.D.R.I./rodri_baseline.py Project-R.O.D.R.I./video_sampler.py Project-R.O.D.R.I./validate_events.py Project-R.O.D.R.I./video_inventory.py Project-R.O.D.R.I./detect_track.py
       - name: Unit tests
         working-directory: Project-R.O.D.R.I.
         run: python -m unittest discover -s tests -v
