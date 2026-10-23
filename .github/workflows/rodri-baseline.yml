@@ -1,0 +1,21 @@
+name: RODRI baseline smoke test
+on:
+  push:
+    paths:
+      - 'Project-R.O.D.R.I./**'
+      - '.github/workflows/rodri-baseline.yml'
+  workflow_dispatch:
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check
+        run: python -m py_compile Project-R.O.D.R.I./rodri_baseline.py
+      - name: Run baseline CLI
+        run: python Project-R.O.D.R.I./rodri_baseline.py Project-R.O.D.R.I./data/events_template.csv
+      - name: Run match-held-out evaluation
+        run: python Project-R.O.D.R.I./rodri_baseline.py Project-R.O.D.R.I./data/events_template.csv --evaluate --top-k 3
