@@ -59,6 +59,11 @@ python validate_events.py data/rodri_events.csv
 
 Validation failure exits with code 1. Warnings do not prove data is wrong, but should be reviewed. Unfamiliar labels can fragment action classes. Duplicate timestamps are warnings because multiple events can sometimes be logged at one timestamp.
 
+
+## 3.5. Use the browser annotation tool
+
+Open [annotator.html](annotator.html) in a desktop browser, choose a match video from your computer, pause at a confirmed Rodri action, set the timestamp and action/context labels, then click **Add event**. Export a CSV when finished. You can save/import a JSON session as a backup. The page works locally and does not upload the selected video. It does not identify Rodri automatically; use `unknown` whenever identity/action is uncertain. Review every annotation before treating it as ground truth.
+
 ## 4. Evaluation discipline
 
 `--evaluate` uses leave-one-match-out evaluation: all events from the held-out match are excluded from training. Never randomly split frames/events from the same match into train and test. Compare top-1/top-3 accuracy to a simple most-common-action baseline before claiming the transition model adds value. Report per-match scores as well as aggregate scores, since matches differ.
