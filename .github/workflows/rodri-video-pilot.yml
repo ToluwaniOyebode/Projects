@@ -61,6 +61,7 @@ jobs:
         run: |
           VIDEO="$(find runs/remote_pilot -maxdepth 1 -type f -name 'match.*' ! -name '*.json' | head -n 1)"
           python Project-R.O.D.R.I./rodri_identity_gallery.py "$VIDEO" --detections runs/remote_pilot/tracking/detections.csv --out runs/remote_pilot/identity_gallery
+          python Project-R.O.D.R.I./track_features.py runs/remote_pilot/tracking/detections.csv --out runs/remote_pilot/track_features.json
       - name: Save pilot outputs
         if: always()
         uses: actions/upload-artifact@v4
