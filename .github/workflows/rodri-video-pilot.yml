@@ -33,7 +33,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           python -m pip install --upgrade pip
-          python -m pip install opencv-python-headless ultralytics yt-dlp
+          # Use CPU-only PyTorch on GitHub's CPU runner; avoids multi-GB CUDA wheels.
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          python -m pip install opencv-python-headless yt-dlp
+          python -m pip install ultralytics
       - name: Choose public match source
         id: source
         shell: bash
@@ -53,7 +56,12 @@ jobs:
           START="${{ steps.source.outputs.start }}"
           END=$((START + 75))
           echo "Requested clip range: ${START}s-${END}s"
-          yt-dlp --no-playlist --force-overwrites --retries 5 --fragment-retries 5 -f "bv*[height<=360]+ba/b[height<=360]/b" --download-sections "*${START}-${END}" --merge-output-format mp4 -o "runs/remote_pilot/match.%(ext)s" "${{ steps.source.outputs.url }}"
+          yt-dlp --version
+          yt-dlp --no-playlist --force-overwrites --retries 5 --fragment-retries 5 --extractor-retries 5 -f "bv*[height<=360]+ba/b[height<=360]/b" --download-sections "*${START}-${END}" --merge-output-format mp4 -o "runs/remote_pilot/match.%(ext)s" "${{ steps.source.outputs.url }}"
+          VIDEO="$(find runs/remote_pilot -maxdepth 1 -type f -name 'match.*' ! -name '*.json' | head -n 1)"
+          test -n "$VIDEO"
+          ffprobe -v error -show_entries format=duration,size -of json "$VIDEO" | tee runs/remote_pilot/video_metadata.json
+          test "$(stat -c%s "$VIDEO")" -gt 100000
           find runs/remote_pilot -maxdepth 1 -type f -printf '%f %s bytes\n'
       - name: Run person detection and tracking
         run: |
