@@ -71,23 +71,48 @@ class NextActionBaseline:
         if len(ids) < 2:
             raise ValueError("Need at least 2 matches for held-out-match evaluation")
         hit = total = 0
+        majority_hit = majority_total = 0
         per_match = {}
         for held in ids:
             train = [e for e in events if e["match_id"] != held]
             test = [e for e in events if e["match_id"] == held]
             model = NextActionBaseline().fit(train)
-            mh = mt = 0
+            majority_action = model.global_counts.most_common(1)[0][0]
+            mh = mt = bh = bt = 0
             for cur, nxt in zip(test, test[1:]):
                 pred = model.predict(cur, k)["predictions"]
                 if pred:
                     mt += 1
                     mh += int(nxt["action"] in {p["action"] for p in pred})
+                bt += 1
+                bh += int(nxt["action"] == majority_action)
             hit += mh
             total += mt
-            per_match[held] = {"correct": mh, "evaluated": mt,
-                               "top_k_accuracy": mh / mt if mt else None}
-        return {"split": "leave-one-match-out", "k": k, "correct": hit, "evaluated": total,
-                "top_k_accuracy": hit / total if total else None, "per_match": per_match}
+            majority_hit += bh
+            majority_total += bt
+            per_match[held] = {
+                "correct": mh, "evaluated": mt,
+                "top_k_accuracy": mh / mt if mt else None,
+                "majority_action": majority_action,
+                "majority_correct": bh, "majority_evaluated": bt,
+                "majority_top1_accuracy": bh / bt if bt else None,
+            }
+        model_accuracy = hit / total if total else None
+        majority_accuracy = majority_hit / majority_total if majority_total else None
+        return {
+            "split": "leave-one-match-out", "k": k,
+            "correct": hit, "evaluated": total,
+            "top_k_accuracy": model_accuracy,
+            "majority_baseline": {
+                "correct": majority_hit, "evaluated": majority_total,
+                "top1_accuracy": majority_accuracy,
+            },
+            "accuracy_lift_vs_majority": (
+                model_accuracy - majority_accuracy
+                if model_accuracy is not None and majority_accuracy is not None else None
+            ),
+            "per_match": per_match,
+        }
 
 def main():
     p = argparse.ArgumentParser(description="CPU-only transition baseline for Rodri action labels")
