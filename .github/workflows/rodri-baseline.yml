@@ -14,7 +14,10 @@ jobs:
         with:
           python-version: '3.11'
       - name: Syntax check
-        run: python -m py_compile Project-R.O.D.R.I./rodri_baseline.py
+        run: python -m py_compile Project-R.O.D.R.I./rodri_baseline.py Project-R.O.D.R.I./video_sampler.py
+      - name: Unit tests
+        working-directory: Project-R.O.D.R.I.
+        run: python -m unittest discover -s tests -v
       - name: Run baseline CLI
         run: python Project-R.O.D.R.I./rodri_baseline.py Project-R.O.D.R.I./data/events_template.csv
       - name: Run match-held-out evaluation
