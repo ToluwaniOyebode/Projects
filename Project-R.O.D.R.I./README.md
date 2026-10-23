@@ -80,3 +80,27 @@ python validate_events.py data/rodri_events.csv
 3. Validate the real labels and measure baseline performance on held-out matches.
 4. Build and test player detection/tracking with identity consistency checks.
 5. Connect tracked visual evidence to action classification and variable-length forecasting; define stopping events such as shot, turnover, foul or stoppage and report uncertainty.
+
+## New: short-clip person detection and tracking
+
+`detect_track.py` is the first pixel-to-detection component. It runs an Ultralytics pretrained person detector with persistent ByteTrack IDs and exports bounding boxes to CSV. It is deliberately limited to a short clip by default so it is more practical on a CPU-only laptop.
+
+Install the optional dependencies (in a virtual environment):
+```bash
+python -m pip install opencv-python ultralytics
+```
+
+Run a 30-second pilot (model weights may download on first run):
+```bash
+python detect_track.py "path/to/match.mp4" --out runs/pilot
+```
+
+Choose a 45-second segment starting at 20 minutes, process every third frame, and save an annotated preview:
+```bash
+python detect_track.py "path/to/match.mp4" --start 1200 --duration 45 --every 3 --preview --out runs/pilot_20m
+```
+
+Outputs: `detections.csv`, `run_summary.json`, and (if requested) `preview.mp4`. The CSV records timestamps, frame numbers, detector class/confidence, bounding boxes, and tracker IDs. Use `--tracker botsort.yaml` to compare the alternative tracker.
+
+**Critical limitation:** this does not recognize Rodri. COCO person detection treats players as generic people, and tracking IDs can switch after occlusion or camera cuts. Inspect the preview and verify identity manually before linking a track to Rodri or generating action labels. Small distant players in 640×360 broadcast footage may be missed. This component is not yet validated on the project's match videos; do not claim detection quality or prediction accuracy until a real clip is run and audited.
+
