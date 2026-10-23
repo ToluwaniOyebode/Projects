@@ -50,7 +50,10 @@ jobs:
       - name: Download a short segment from the public match
         run: |
           mkdir -p runs/remote_pilot
-          yt-dlp --no-playlist --force-overwrites -f "bv*[height<=360]+ba/b[height<=360]/b" --download-sections "*${{ steps.source.outputs.start }}-${{ steps.source.outputs.start }}+75" --merge-output-format mp4 -o "runs/remote_pilot/match.%(ext)s" "${{ steps.source.outputs.url }}"
+          START="${{ steps.source.outputs.start }}"
+          END=$((START + 75))
+          echo "Requested clip range: ${START}s-${END}s"
+          yt-dlp --no-playlist --force-overwrites --retries 5 --fragment-retries 5 -f "bv*[height<=360]+ba/b[height<=360]/b" --download-sections "*${START}-${END}" --merge-output-format mp4 -o "runs/remote_pilot/match.%(ext)s" "${{ steps.source.outputs.url }}"
           find runs/remote_pilot -maxdepth 1 -type f -printf '%f %s bytes\n'
       - name: Run person detection and tracking
         run: |
