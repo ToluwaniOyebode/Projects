@@ -49,6 +49,12 @@ class ValidateEventsTests(unittest.TestCase):
         self.assertTrue(result["ok"])
         self.assertTrue(any("duplicate timestamp" in w for w in result["warnings"]))
 
+    def test_out_of_order_timestamps_fail(self):
+        path = self.write_csv("match_id,timestamp_seconds,action\nm1,10,receive\nm1,4,short_pass\n")
+        result = validate(path)
+        self.assertFalse(result["ok"])
+        self.assertTrue(any("goes backwards" in e for e in result["errors"]))
+
 
 if __name__ == "__main__":
     unittest.main()
