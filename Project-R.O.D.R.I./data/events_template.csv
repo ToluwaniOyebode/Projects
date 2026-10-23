@@ -1,0 +1,7 @@
+match_id,timestamp_seconds,action,zone,pressure,ball_state
+MATCH_A,12,receive,middle,low,team
+MATCH_A,15,short_pass,middle,medium,team
+MATCH_A,22,support_run,middle,low,team
+MATCH_B,18,receive,defensive,medium,team
+MATCH_B,21,long_pass,middle,low,team
+MATCH_B,29,track_opponent,middle,medium,opponent
