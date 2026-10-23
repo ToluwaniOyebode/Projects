@@ -104,3 +104,12 @@ Outputs: `detections.csv`, `run_summary.json`, and (if requested) `preview.mp4`.
 
 **Critical limitation:** this does not recognize Rodri. COCO person detection treats players as generic people, and tracking IDs can switch after occlusion or camera cuts. Inspect the preview and verify identity manually before linking a track to Rodri or generating action labels. Small distant players in 640×360 broadcast footage may be missed. This component is not yet validated on the project's match videos; do not claim detection quality or prediction accuracy until a real clip is run and audited.
 
+## Variable-length sequence rollout
+
+`sequence_forecast.py` rolls the transition baseline forward one action at a time and stops at a configured major event (default: shot, tackle, interception, clearance, stoppage, or goal) or a maximum step count. It trains on every match except the specified seed match, then starts from the final labelled event in that held-out match:
+
+```bash
+python sequence_forecast.py data/events.csv --seed-match match_held_out --max-steps 12 --out forecast.json
+```
+
+This is a greedy chain of local transition-frequency choices. It is not a trained video model, a calibrated whole-sequence probability, or evidence of accuracy on real Rodri footage. Meaningful evaluation requires correctly labelled events from multiple matches.
