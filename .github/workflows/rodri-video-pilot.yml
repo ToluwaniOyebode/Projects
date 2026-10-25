@@ -59,7 +59,14 @@ jobs:
           END=$((START + 75))
           echo "Requested clip range: ${START}s-${END}s"
           yt-dlp --version
-          yt-dlp --no-playlist --force-overwrites --retries 5 --fragment-retries 5 --extractor-retries 5 --extractor-args "youtube:player_client=android,web_safari" -f "bv*[height<=360]+ba/b[height<=360]/b" --download-sections "*${START}-${END}" --merge-output-format mp4 -o "runs/remote_pilot/match.%(ext)s" "${{ steps.source.outputs.url }}"
+          if ! yt-dlp --no-playlist --force-overwrites --retries 2 --fragment-retries 2 --extractor-retries 2 --extractor-args "youtube:player_client=android,web_safari" -f "bv*[height<=360]+ba/b[height<=360]/b" --download-sections "*${START}-${END}" --merge-output-format mp4 -o "runs/remote_pilot/match.%(ext)s" "${{ steps.source.outputs.url }}"; then
+            echo "YouTube blocked this runner. Falling back to a small, openly downloadable soccer video for pipeline validation; this is NOT Rodri match footage."
+            rm -f runs/remote_pilot/match.*
+            curl -fL --retry 3 "https://raw.githubusercontent.com/Divyansh-git10/Soccer-Player-Reid-YOLOV11-Bytetrack/main/15sec_input_720p.mp4" -o runs/remote_pilot/match.mp4
+            echo "source_type=generic_soccer_fallback_not_rodri" > runs/remote_pilot/source.txt
+          else
+            echo "source_type=requested_public_match" > runs/remote_pilot/source.txt
+          fi
           VIDEO="$(find runs/remote_pilot -maxdepth 1 -type f -name 'match.*' ! -name '*.json' | head -n 1)"
           test -n "$VIDEO"
           ffprobe -v error -show_entries format=duration,size -of json "$VIDEO" | tee runs/remote_pilot/video_metadata.json
