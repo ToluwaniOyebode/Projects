@@ -1,5 +1,5 @@
 # Software verification
 
-Fifteen automated tests passed locally. Checks cover video/API validation, decoding, identity expiry and cut boundaries, replay suppression, JSON and video export, causal timestamp flooring, motion feature shapes and safe checkpoint serialization. Python compilation and browser JavaScript syntax checks passed.
+Unit tests cover causal timestamping, motion features, parameter serialization, sklearn/JSON score agreement, tree-threshold numeric precision, hierarchical probability semantics, canonical coordinates, unsupported-label handling, upload validation, identity expiry, camera cuts and replay suppression.
 
-These checks establish executable software, not reliable football action prediction, automatic person-name recognition, calibrated scores or independent final-match accuracy. Private data and model evaluation artifacts are supplied separately.
+The complete prepared application was also checked through real-video API and desktop/mobile browser flows: upload, analysis, identity confirmation, outcome scores, conditional action scores and replay suppression. Such functional checks do not establish predictive accuracy. Dataset-specific measurements are distributed with the prepared model package.

@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import numpy as np
 
-ACTIONS = ['receive','short_pass','long_pass','carry','shot','press','tackle','support_run','lose_possession','unknown']
+ACTIONS = ['off_ball','receive','short_pass','long_pass','carry','shot','press','tackle','support_run','lose_possession','unknown']
 FEATURES = ['x','y','vx','vy','speed','box_width','box_height']
 
 

@@ -33,6 +33,9 @@ def render_video(source,result,output,model_path,checkpoint='deployment'):
                 p=action_prediction(source,frame['time'],person,meta,checkpoint)
                 if p['alternatives']:
                     a=p['alternatives'][0];forecast=f"Experimental next: {a['action']} ({a['probability']:.0%} score)"
+                if p.get('off_ball_motion'):
+                    box=person['box'];cx,cy=(box[0]+box[2])/2,(box[1]+box[3])/2;dx,dy=p['off_ball_motion']['camera_relative_displacement']
+                    cv2.arrowedLine(image,(round(cx),round(cy)),(round(cx+dx*meta['width']),round(cy+dy*meta['height'])),(189,235,135),2,tipLength=.3)
             else:forecast='Forecast suppressed'
             image=cv2.resize(image,size)
             cv2.rectangle(image,(0,0),(size[0],88),(12,24,30),-1)

@@ -26,6 +26,11 @@ lock=threading.RLock()
 jobs={}
 
 
+def reviewed_events_path():
+    current=ROOT.parent/'data'/'v3'/'reviewed_events.json'
+    return current if current.exists() else ROOT.parent/'data'/'reviewed_events.json'
+
+
 def folder(uid):
     if len(uid)!=32 or any(c not in '0123456789abcdef' for c in uid):
         raise HTTPException(404,'Unknown video')
@@ -71,7 +76,7 @@ async def upload(video: UploadFile=File(...)):
     manifest_path=ROOT.parent/'data'/'video_manifest.json'
     sources=json.loads(manifest_path.read_text()) if manifest_path.exists() else []
     source=next((s for s in sources if s['sha256']==digest.hexdigest()),None)
-    event_path=ROOT.parent/'data'/'reviewed_events.json'
+    event_path=reviewed_events_path()
     anchors=[r for r in json.loads(event_path.read_text()) if source and r['match_id']==source['match_id']] if event_path.exists() else []
     info=dict(id=uid,name=video.filename,path=str(path),metadata=meta,sha256=digest.hexdigest(),known_match=source['match_id'] if source else None,suggested_start=max(0,anchors[0]['observation_seconds']-.2) if anchors else 0)
     (dest/'video.json').write_text(json.dumps(info))
@@ -135,7 +140,7 @@ def result(uid:str):
 
 def apply_reviewed_anchors(result,info):
     """Use recorded actor localizations only for the exact hashed source video."""
-    path=ROOT.parent/'data'/'reviewed_events.json'
+    path=reviewed_events_path()
     if not info.get('known_match') or not path.exists(): return
     rows=[r for r in json.loads(path.read_text()) if r['match_id']==info['known_match']]
     for row in rows:
@@ -153,6 +158,9 @@ def apply_reviewed_anchors(result,info):
 
 
 def action_prediction(source_path,time,det,metadata,checkpoint='deployment'):
+    from .temporal_model import predict_observation as temporal_predict
+    temporal=VISUAL_MODELS/('next_action_v3_holdout.json' if checkpoint=='holdout' else 'next_action_v3.json')
+    if temporal.exists():return temporal_predict(str(source_path),float(time),tuple(det['box']),temporal.stat().st_mtime_ns,str(temporal))
     from .visual_model import predict_observation
     artifact=VISUAL_MODELS/('next_action_holdout.json' if checkpoint=='holdout' else 'next_action.json')
     if artifact.exists():
@@ -162,6 +170,11 @@ def action_prediction(source_path,time,det,metadata,checkpoint='deployment'):
 
 @app.get('/api/model')
 def model_info():
+    current=VISUAL_MODELS/'next_action_v3.json'
+    if current.exists():
+        model=json.loads(current.read_text());metrics=model['held_out_metrics']
+        return dict(status='trained_pilot',version=3,classes=model['classes'],training_matches=model['training_matches'],metrics=metrics,
+            warning=f"V3 supports off-ball movement and conditional receiving context. Development accuracy (Inter used for selection): {metrics['accuracy']:.1%}; majority baseline: {metrics['majority_accuracy']:.1%}. Small selected sample, single-AI labels; not independent final accuracy. Deployment uses both real matches; holdout uses Chelsea only.")
     p=VISUAL_MODELS/'next_action.json'
     if not p.exists():return {'status':'untrained'}
     model=json.loads(p.read_text())

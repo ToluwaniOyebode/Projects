@@ -1,5 +1,3 @@
-# Code status
+# Implementation state
 
-Implemented: local video app, person tracking, identity review, cut/replay guards, causal motion and optional appearance feature extraction, serialized model heads, match/episode-aware evaluation, and JSON/video exports.
-
-Fifteen local automated tests pass. Real-world reliability is not established. Training inputs and prepared model artifacts are provided privately and omitted from this public source.
+The source supports five-class observed-outcome forecasting, a separate conditional on-ball action head, observed movement trails, versioned parameter-only JSON checkpoints, reproducible temporal-model comparisons and complete reviewed-case exports. Prepared weights and video-derived data are distributed separately. Identity confirmation is still required on unseen sources.

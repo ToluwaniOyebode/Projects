@@ -52,6 +52,9 @@ def main():
     if any(r.get('replay') for r in rows):
         raise ValueError('Replay cases must not be treated as live action targets')
     model = json.loads(args.model.read_text())
+    if model.get('kind')=='causal_temporal_v3':
+        from rodri_studio.temporal_model import predict_observation as predict_model
+    else:predict_model=predict_observation
     args.out.parent.mkdir(parents=True, exist_ok=True)
     writer = cv2.VideoWriter(str(args.out), cv2.VideoWriter_fourcc(*'mp4v'), 25, (1280, 540))
     if not writer.isOpened():
@@ -62,13 +65,13 @@ def main():
             obs, target = row['observation_seconds'], row['target_seconds']
             current, actual = frame_at(args.video, obs)
             # Only current/past frames reach the model. Future frames are for display.
-            result = predict_observation(str(args.video), obs, tuple(row['box']),
+            result = predict_model(str(args.video), obs, tuple(row['box']),
                                          args.model.stat().st_mtime_ns, str(args.model))
             prediction = result['alternatives'][0]
             case = dict(id=row['id'], observation_seconds=obs, decoded_observation_seconds=actual,
                         target_seconds=target, truth=row['target_action'], prediction=prediction,
                         supported_target=row['target_action'] in model['classes'],
-                        alternatives=result['alternatives'], actor_box=row['box'])
+                        alternatives=result['alternatives'], actor_box=row['box'],off_ball_motion=result.get('off_ball_motion'),conditional_options=result.get('conditional_options',[]))
             cases.append(case)
             frozen = current.copy()
             x1,y1,x2,y2 = map(int,row['box'])
@@ -97,7 +100,9 @@ def main():
                     cv2.putText(canvas,line,(x,y),cv2.FONT_HERSHEY_SIMPLEX,size,color,1,cv2.LINE_AA)
                 text('RODRI STUDIO | '+args.domain.upper()+' FOOTAGE | frozen model, no retraining',16,27)
                 text(row['id']+' | reviewer-provided identity box; not automatic identification',16,53)
-                text('Uncalibrated model scores. Every reviewed case is included.',16,79)
+                options=result.get('conditional_options',[])
+                line=(f"If an on-ball event occurs: {options[0]['action']} ({options[0]['probability']:.0%} conditional score)" if options else 'Receiving depends on a pass arriving; labels measure observed outcomes.')
+                text(line,16,79,size=.5)
                 text(f'OBSERVATION {obs:.2f}s | prediction made here',16,486)
                 text(f"Next: {prediction['action']} ({prediction['probability']:.0%} score)",16,515)
                 text(f'ACTUAL FUTURE | source {shown:.2f}s',656,486)
@@ -110,7 +115,7 @@ def main():
             cap.release()
     finally:
         writer.release()
-    report = dict(source_type=args.domain,
+    report = dict(source_type=args.domain, checkpoint_selection_source=model.get('held_out_metrics',{}).get('selection_source','unknown'),
                   checkpoint_sha256=hashlib.sha256(args.model.read_bytes()).hexdigest(),
                   checkpoint_training_matches=model['training_matches'],
                   classes=model['classes'], metrics=summarize(cases,model['classes']),

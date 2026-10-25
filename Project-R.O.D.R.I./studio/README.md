@@ -1,40 +1,15 @@
-# Rodri Studio — local video research tools
+# Rodri Studio source
 
-This is the source code for the local video interface, person tracking, identity review, replay/camera safeguards, causal feature extraction, model training, evaluation and exports.
+Local video analysis with person tracks, identity confirmation, camera/replay review and next-action visualization. The forecasting interface supports off-ball movement, receiving, carrying with possession, passing and shooting, plus a separate conditional on-ball action distribution.
 
-## Run on Windows
+This GitHub folder contains source code. The prepared trained checkpoints, reviewed examples, feature cache and private review videos are distributed separately. A source-only checkout reports an untrained state until a compatible checkpoint is provided.
 
-```powershell
-py -3 -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe run.py
-```
+Use Python 3.12 or 3.11. With the complete model package, run `start_windows.bat` on Windows or install `requirements.txt` and run `python run.py`. Open http://127.0.0.1:8000. Load a local video, analyze a passage and confirm the target player in a shot. Identity expires and does not transfer across camera cuts. No action labeling is required to use a prepared checkpoint.
 
-Open http://127.0.0.1:8000. A source-only checkout does not contain a trained action checkpoint. The prepared model package is supplied separately. Private videos, annotations, source manifests, feature caches, review clips and video-derived checkpoints are not published here.
+The observed-outcome model and conditional on-ball head are distinct. Receiving depends on delivery of a pass; conditional scores do not infer unobserved intentions. Scores are uncalibrated. Movement trails display observed image motion; learned future arrows are shown only when enabled by checkpoint validation.
 
-For unfamiliar footage, analyze a short passage, pause and select Rodri's detected person box. Identity confirmation is separate from action labeling. The interface does not automatically recognize Rodri by name across novel footage.
+`train_temporal.py` compares causal feature/classifier configurations using episode-separated cross-validation. `--selection development` explicitly uses the development match for selection and must not be described as independent testing. Models use parameter-only JSON serialization; the scorer is tested against sklearn. `evaluate_reviewed.py` includes all supplied review cases and retains unsupported labels.
 
-## Tests
+New videos require a target-player identity confirmation. This is not a general automatic Rodri name recognizer. Tracking, camera-cut detection and replay flags can fail. See the complete prepared package’s model card for dataset-specific results.
 
-```powershell
-.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
-.venv\Scripts\python.exe -m pytest -q
-```
-
-Fifteen local automated tests pass. They cover API operations, camera/identity guards, replay suppression, video decoding/export, causal timestamp access, motion feature shapes and checkpoint serialization. Tests are synthetic software checks and do not establish real-world prediction quality.
-
-## Train with local reviewed data
-
-Place reviewed annotations at `data/reviewed_events.json` and retain source videos locally. The schema includes unique observation IDs, match/episode IDs, a source filename, causal observation time, later target time, actor box, coarse target action and review/exclusion fields. Use only labels whose identity and action evidence you have reviewed.
-
-```powershell
-.venv\Scripts\python.exe scripts/train_visual.py --videos "C:\path\to\videos" --held-out MATCH_ID --out models/next_action.json
-```
-
-This compares feature families using training-only episode folds, fits a head, and records an entire separate match as a development holdout. `--refit-all` explicitly refits after recording development results; this does not produce an independent test score. With only iterative development matches, no claim of pristine final evaluation is justified.
-
-Runtime motion-only inference does not need the appearance encoder; first-time appearance comparisons download ImageNet ResNet18 weights. YOLO detector weights download on first use if not present locally.
-
-## Limits
-
-Forecasts require an externally confirmed actor location. Camera changes, occlusions, similar kits, replay edits and small distant players remain difficult. Ball-proximity blobs are heuristics, not a reliable ball detector. Scores are uncalibrated and no reliable tactical accuracy is claimed. Original recordings and checkpoints supplied privately must remain local unless their publication is explicitly authorized.
+Run software checks with `python -m pytest -q`. See THIRD_PARTY_MODELS.md for pretrained perception model provenance. Video-derived labels and learned private checkpoints are not included here.
