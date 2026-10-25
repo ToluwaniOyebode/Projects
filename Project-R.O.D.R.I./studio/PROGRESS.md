@@ -1,3 +1,3 @@
-# Implementation state
+# Current state
 
-The source supports five-class observed-outcome forecasting, a separate conditional on-ball action head, observed movement trails, versioned parameter-only JSON checkpoints, reproducible temporal-model comparisons and complete reviewed-case exports. Prepared weights and video-derived data are distributed separately. Identity confirmation is still required on unseen sources.
+V4 source supports three-second actor/ball context, camera-compensated global tracking with uncertainty handling, separate observed/conditional action heads and frozen episodic evaluation. Trained models and private review evidence are distributed separately. Predictive generalization and general automatic Rodri identification remain unestablished; see the prepared package's model card.

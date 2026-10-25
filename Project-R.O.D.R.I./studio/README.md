@@ -1,15 +1,17 @@
 # Rodri Studio source
 
-Local video analysis with person tracks, identity confirmation, camera/replay review and next-action visualization. The forecasting interface supports off-ball movement, receiving, carrying with possession, passing and shooting, plus a separate conditional on-ball action distribution.
+Local football-video analysis with person tracks, identity confirmation, camera/replay review and next-action visualization. V4 supports off-ball movement, receiving, carrying, passing and shooting, plus a separate conditional on-ball distribution.
 
-This GitHub folder contains source code. The prepared trained checkpoints, reviewed examples, feature cache and private review videos are distributed separately. A source-only checkout reports an untrained state until a compatible checkpoint is provided.
+This GitHub folder contains source code. Trained checkpoints, reviewed examples, feature caches and private review videos are distributed separately in the prepared model package. A source-only checkout reports an untrained state until a compatible checkpoint is supplied.
 
-Use Python 3.12 or 3.11. With the complete model package, run `start_windows.bat` on Windows or install `requirements.txt` and run `python run.py`. Open http://127.0.0.1:8000. Load a local video, analyze a passage and confirm the target player in a shot. Identity expires and does not transfer across camera cuts. No action labeling is required to use a prepared checkpoint.
+Use Python 3.12 or 3.11. With the complete prepared package, run `start_windows.bat` on Windows, or install `requirements.txt` and run `python run.py`. Open http://127.0.0.1:8000. Load a local video, analyze a passage, pause and confirm the target person. No action labeling is required to use a prepared checkpoint. CPU processing may be slower than playback.
 
-The observed-outcome model and conditional on-ball head are distinct. Receiving depends on delivery of a pass; conditional scores do not infer unobserved intentions. Scores are uncalibrated. Movement trails display observed image motion; learned future arrows are shown only when enabled by checkpoint validation.
+Tracking uses Hungarian assignment, camera compensation, velocity and jersey appearance. Confirmation expires and does not transfer across cuts. Ambiguous associations require confirmation again. This is not a general automatic Rodri name recognizer; tracks and uncertainty heuristics can fail.
 
-`train_temporal.py` compares causal feature/classifier configurations using episode-separated cross-validation. `--selection development` explicitly uses the development match for selection and must not be described as independent testing. Models use parameter-only JSON serialization; the scorer is tested against sklearn. `evaluate_reviewed.py` includes all supplied review cases and retains unsupported labels.
+V4 extracts up to three seconds of causal actor/ball/nearby-player context, stopping at cuts or lost/ambiguous identity. Missing evidence is masked. The viewer exposes usable history and learned-ball candidates. The hybrid representation also retains older motion/proximity cues; ball candidates are uncertain. Team context is a jersey-color heuristic.
 
-New videos require a target-player identity confirmation. This is not a general automatic Rodri name recognizer. Tracking, camera-cut detection and replay flags can fail. See the complete prepared package’s model card for dataset-specific results.
+The observed-outcome model and conditional on-ball head are distinct. Receiving depends on pass delivery; conditional scores do not reveal a passer's unobserved intention. Scores are uncalibrated. Trails display observed image motion. No validated future-trajectory claim is made.
 
-Run software checks with `python -m pytest -q`. See THIRD_PARTY_MODELS.md for pretrained perception model provenance. Video-derived labels and learned private checkpoints are not included here.
+`scripts/extract_sequence.py` encodes reviewed observations. `scripts/train_sequence.py` groups temporal neighbors, embargoes reserved clusters, selects using development-only GroupKFold and freezes parameters before scoring reserved episodes. An episode holdout from a previously used match must not be presented as unseen-match accuracy. `scripts/evaluate_reviewed.py` renders all supplied review cases, including errors. See the prepared package's model card for measured limitations; useful generalization is not established.
+
+Run software checks with `python -m pytest -q`. See THIRD_PARTY_MODELS.md for pretrained perception-model provenance. Private data, learned checkpoints and video exports are excluded from source commits.

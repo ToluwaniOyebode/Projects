@@ -52,7 +52,9 @@ def main():
     if any(r.get('replay') for r in rows):
         raise ValueError('Replay cases must not be treated as live action targets')
     model = json.loads(args.model.read_text())
-    if model.get('kind')=='causal_temporal_v3':
+    if model.get('kind')=='causal_sequence_v4':
+        from rodri_studio.sequence_model import predict_observation as predict_model
+    elif model.get('kind')=='causal_temporal_v3':
         from rodri_studio.temporal_model import predict_observation as predict_model
     else:predict_model=predict_observation
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -71,7 +73,7 @@ def main():
             case = dict(id=row['id'], observation_seconds=obs, decoded_observation_seconds=actual,
                         target_seconds=target, truth=row['target_action'], prediction=prediction,
                         supported_target=row['target_action'] in model['classes'],
-                        alternatives=result['alternatives'], actor_box=row['box'],off_ball_motion=result.get('off_ball_motion'),conditional_options=result.get('conditional_options',[]))
+                        alternatives=result['alternatives'], actor_box=row['box'],off_ball_motion=result.get('off_ball_motion'),conditional_options=result.get('conditional_options',[]),evidence=result.get('evidence'))
             cases.append(case)
             frozen = current.copy()
             x1,y1,x2,y2 = map(int,row['box'])

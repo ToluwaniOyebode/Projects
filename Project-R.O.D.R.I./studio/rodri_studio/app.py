@@ -27,8 +27,10 @@ jobs={}
 
 
 def reviewed_events_path():
-    current=ROOT.parent/'data'/'v3'/'reviewed_events.json'
-    return current if current.exists() else ROOT.parent/'data'/'reviewed_events.json'
+    for version in ['v4','v3']:
+        current=ROOT.parent/'data'/version/'reviewed_events.json'
+        if current.exists():return current
+    return ROOT.parent/'data'/'reviewed_events.json'
 
 
 def folder(uid):
@@ -158,6 +160,10 @@ def apply_reviewed_anchors(result,info):
 
 
 def action_prediction(source_path,time,det,metadata,checkpoint='deployment'):
+    sequence=VISUAL_MODELS/'next_action_v4.json'
+    if checkpoint=='deployment' and sequence.exists():
+        from .sequence_model import predict_observation as sequence_predict
+        return sequence_predict(str(source_path),float(time),tuple(det['box']),sequence.stat().st_mtime_ns,str(sequence))
     from .temporal_model import predict_observation as temporal_predict
     temporal=VISUAL_MODELS/('next_action_v3_holdout.json' if checkpoint=='holdout' else 'next_action_v3.json')
     if temporal.exists():return temporal_predict(str(source_path),float(time),tuple(det['box']),temporal.stat().st_mtime_ns,str(temporal))
@@ -170,6 +176,11 @@ def action_prediction(source_path,time,det,metadata,checkpoint='deployment'):
 
 @app.get('/api/model')
 def model_info():
+    sequence=VISUAL_MODELS/'next_action_v4.json'
+    if sequence.exists():
+        model=json.loads(sequence.read_text());metrics=model['held_out_metrics']
+        return dict(status='trained_pilot',version=4,classes=model['classes'],training_matches=model['training_matches'],metrics=metrics,
+            warning=f"V4 frozen-episode accuracy: {metrics['accuracy']:.1%} on {metrics['test_examples']} observations; majority baseline: {metrics['majority_accuracy']:.1%}. Selected using separate development folds. Previously used matches, single-AI labels; unseen-match accuracy remains unknown. New videos need Rodri confirmation.")
     current=VISUAL_MODELS/'next_action_v3.json'
     if current.exists():
         model=json.loads(current.read_text());metrics=model['held_out_metrics']
@@ -233,6 +244,8 @@ def context(r,t):
     if not seed or not seed['time']<=t<=seed['expires']:
         return frame,None,'Confirm Rodri in this shot (identity expires after 5 seconds)'
     det=next((d for d in frame['detections'] if d['track']==seed['track']),None)
+    if det and det.get('identity_uncertain') and frame['time']>seed['time']+.01:
+        return frame,None,'Ambiguous player association: confirm Rodri again'
     confirmed='AI-reviewed source anchor; verify identity (not a name recognizer)' if seed.get('source') else 'Human-confirmed track; ID switches remain possible'
     return frame,det,('Identity lost / occluded' if det is None else confirmed)
 

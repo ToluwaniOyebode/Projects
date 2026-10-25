@@ -30,7 +30,7 @@ def appearance(frame, box):
     return h / max(float(h.sum()), 1)
 
 
-class Tracker:
+class LegacyTracker:
     def __init__(self):
         self.tracks = {}
         self.next_id = 1
@@ -68,6 +68,9 @@ class Tracker:
             result.append(dict(**det, track=tid, center=center.tolist(), velocity=velocity))
         self.tracks = {k:v for k,v in self.tracks.items() if timestamp-v['t'] <= .7}
         return result
+
+
+from .tracking import Tracker
 
 
 class Detector:
