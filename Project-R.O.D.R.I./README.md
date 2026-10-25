@@ -152,3 +152,23 @@ Open [RODRI remote video pilot](../../actions/workflows/rodri-video-pilot.yml), 
 - Track-motion feature export: implemented and covered by unit tests.
 - Rodri-labelled event dataset: not yet established.
 - Predictive quality: not measured on real Rodri-labelled events. Template data is not evidence of accuracy.
+
+
+## Event-data-first annotation (Wyscout-compatible)
+
+The event-data route can reduce manual annotation, but dataset coverage must be checked first. The public Wyscout research collection is selective and does not include the 2023 Champions League final or 2024 FA Cup semi-final simply because they are famous fixtures.
+
+For a downloaded Wyscout-style JSON event file, convert event records into candidate rows:
+
+```bash
+python import_wyscout_events.py path/to/events.json --player Rodri --team "Manchester City" --out data/rodri_event_candidates.csv
+```
+
+The importer preserves event type, player/team, match period, minute/second, outcome, and available event positions. Its timestamps are match-clock candidates, **not yet seconds from the beginning of our video**. Before using rows for training:
+1. Confirm the event file's match ID and fixture are the intended match.
+2. Confirm the player identity and team.
+3. Align each half/period to the actual video timeline, including half-time, added time, and broadcast edits.
+4. Verify sampled actions against the video; mark missing/ambiguous labels as unknown.
+5. Keep only verified rows in the training dataset.
+
+This importer does not fetch proprietary data, solve access restrictions, or guarantee that a particular match is covered. Never treat unverified candidate rows as ground truth.
