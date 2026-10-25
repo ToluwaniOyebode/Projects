@@ -1,4 +1,5 @@
 import json
+import hashlib
 import math
 import os
 from pathlib import Path
@@ -17,6 +18,7 @@ from .predictor import features, predict, train, ACTIONS
 ROOT=Path(__file__).resolve().parent
 DATA=Path(os.environ.get('RODRI_DATA','workspace')).resolve(); DATA.mkdir(exist_ok=True,parents=True)
 MODEL=DATA/'action_model.json'
+VISUAL_MODELS=ROOT.parent/'models'
 app=FastAPI(title='Rodri Studio',version='0.1.0')
 app.mount('/static',StaticFiles(directory=ROOT/'static'),name='static')
 executor=ThreadPoolExecutor(max_workers=1)
@@ -57,15 +59,21 @@ async def upload(video: UploadFile=File(...)):
         raise HTTPException(400,'Choose a video file')
     uid=uuid4().hex; dest=DATA/uid; dest.mkdir()
     path=dest/('source'+suffix)
+    digest=hashlib.sha256()
     try:
         with path.open('wb') as f:
             while chunk:=await video.read(1024*1024):
-                f.write(chunk)
+                f.write(chunk);digest.update(chunk)
         meta=inspect(path)
     except (ValueError,OSError) as exc:
         path.unlink(missing_ok=True)
         raise HTTPException(400,str(exc))
-    info=dict(id=uid,name=video.filename,path=str(path),metadata=meta)
+    manifest_path=ROOT.parent/'data'/'video_manifest.json'
+    sources=json.loads(manifest_path.read_text()) if manifest_path.exists() else []
+    source=next((s for s in sources if s['sha256']==digest.hexdigest()),None)
+    event_path=ROOT.parent/'data'/'reviewed_events.json'
+    anchors=[r for r in json.loads(event_path.read_text()) if source and r['match_id']==source['match_id']] if event_path.exists() else []
+    info=dict(id=uid,name=video.filename,path=str(path),metadata=meta,sha256=digest.hexdigest(),known_match=source['match_id'] if source else None,suggested_start=max(0,anchors[0]['observation_seconds']-.2) if anchors else 0)
     (dest/'video.json').write_text(json.dumps(info))
     return {k:v for k,v in info.items() if k!='path'}
 
@@ -100,6 +108,8 @@ def start_analysis(uid:str,clip:Clip):
         try:
             jobs[uid]={'status':'running','progress':0}
             result=analyze(info['path'],clip.start,clip.duration,clip.backend,lambda v:jobs[uid].update(progress=v))
+            result['known_match']=info.get('known_match')
+            apply_reviewed_anchors(result,info)
             with lock:
                 write_result(uid,result)
             jobs[uid]={'status':'complete','progress':1}
@@ -121,6 +131,41 @@ def status(uid:str):
 def result(uid:str):
     with lock:
         return read_result(uid)
+
+
+def apply_reviewed_anchors(result,info):
+    """Use recorded actor localizations only for the exact hashed source video."""
+    path=ROOT.parent/'data'/'reviewed_events.json'
+    if not info.get('known_match') or not path.exists(): return
+    rows=[r for r in json.loads(path.read_text()) if r['match_id']==info['known_match']]
+    for row in rows:
+        candidates=[f for f in result['frames'] if f['time']<=row['observation_seconds'] and row['observation_seconds']-f['time']<.21]
+        if not candidates:continue
+        frame=candidates[-1];box=row['box'];cx=(box[0]+box[2])/2;cy=(box[1]+box[3])/2
+        detections=frame['detections']
+        if not detections:continue
+        det=min(detections,key=lambda d:((d['box'][0]+d['box'][2])/2-cx)**2+((d['box'][1]+d['box'][3])/2-cy)**2)
+        distance=((det['box'][0]+det['box'][2])/2-cx)**2+((det['box'][1]+det['box'][3])/2-cy)**2
+        if distance>max(12,box[3]-box[1])**2:continue
+        key=str(frame['shot'])
+        result['identities'].setdefault(key,[]).append(dict(track=det['track'],time=row['observation_seconds'],expires=row['observation_seconds']+2,source='exact-video reviewed actor anchor; not automatic name recognition'))
+    for key,seeds in result['identities'].items():result['identities'][key]=sorted(seeds,key=lambda v:v['time'])
+
+
+def action_prediction(source_path,time,det,metadata,checkpoint='deployment'):
+    from .visual_model import predict_observation
+    artifact=VISUAL_MODELS/('next_action_holdout.json' if checkpoint=='holdout' else 'next_action.json')
+    if artifact.exists():
+        return predict_observation(str(source_path),float(time),tuple(det['box']),artifact.stat().st_mtime_ns,str(artifact))
+    return predict(features(det,metadata['width'],metadata['height']),MODEL)
+
+
+@app.get('/api/model')
+def model_info():
+    p=VISUAL_MODELS/'next_action.json'
+    if not p.exists():return {'status':'untrained'}
+    model=json.loads(p.read_text())
+    return dict(status='trained_pilot',training_matches=model['training_matches'],metrics=model['held_out_metrics'],warning=f"Development holdout accuracy: {model['held_out_metrics']['accuracy']:.1%}; majority baseline: {model['held_out_metrics']['majority_accuracy']:.1%}. Not a reliable tactical predictor. Deployment refit uses both matches; holdout checkpoint uses Chelsea only.")
 
 
 class Identity(BaseModel):
@@ -175,15 +220,18 @@ def context(r,t):
     if not seed or not seed['time']<=t<=seed['expires']:
         return frame,None,'Confirm Rodri in this shot (identity expires after 5 seconds)'
     det=next((d for d in frame['detections'] if d['track']==seed['track']),None)
-    return frame,det,('Identity lost / occluded' if det is None else 'Human-confirmed track; ID switches remain possible')
+    confirmed='AI-reviewed source anchor; verify identity (not a name recognizer)' if seed.get('source') else 'Human-confirmed track; ID switches remain possible'
+    return frame,det,('Identity lost / occluded' if det is None else confirmed)
 
 
 @app.get('/api/videos/{uid}/forecast')
-def forecast(uid:str,time:float):
+def forecast(uid:str,time:float,checkpoint:str='deployment'):
     if not math.isfinite(time):
         raise HTTPException(400,'Invalid timestamp')
+    if checkpoint not in {'deployment','holdout'}:raise HTTPException(400,'Unknown checkpoint')
     r=read_result(uid); frame,det,message=context(r,time)
-    prediction=predict(features(det,r['metadata']['width'],r['metadata']['height']),MODEL) if det else {'status':'suppressed','alternatives':[]}
+    info=json.loads((folder(uid)/'video.json').read_text())
+    prediction=action_prediction(info.get('path',''),frame['time'],det,r['metadata'],checkpoint) if det else {'status':'suppressed','alternatives':[]}
     return dict(time=frame['time'],shot=frame['shot'],person=det,message=message,prediction=prediction)
 
 
@@ -235,7 +283,7 @@ def export(uid:str):
     return FileResponse(p,filename='rodri-analysis.json',media_type='application/json')
 
 @app.post('/api/videos/{uid}/render')
-def render(uid:str):
+def render(uid:str,checkpoint:str='deployment'):
     from .render import render_video
     with lock:
         r=read_result(uid)
@@ -246,7 +294,7 @@ def render(uid:str):
         jobs[uid]={'status':'rendering','progress':0}
     def work():
         try:
-            stats=render_video(source_path,r,p/'overlay.mp4',MODEL)
+            stats=render_video(source_path,r,p/'overlay.mp4',MODEL,checkpoint=checkpoint)
             jobs[uid]={'status':'rendered','progress':1,'render':stats}
         except Exception as exc:
             import traceback

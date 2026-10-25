@@ -9,6 +9,7 @@ from test_core import make_video
 def client(tmp_path,monkeypatch):
     monkeypatch.setattr(module,'DATA',tmp_path)
     monkeypatch.setattr(module,'MODEL',tmp_path/'model.json')
+    monkeypatch.setattr(module,'VISUAL_MODELS',tmp_path)
     return TestClient(module.app)
 
 

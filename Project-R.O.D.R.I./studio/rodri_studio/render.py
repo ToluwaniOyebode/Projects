@@ -5,9 +5,9 @@ import cv2
 from .predictor import features,predict
 
 
-def render_video(source,result,output,model_path):
+def render_video(source,result,output,model_path,checkpoint='deployment'):
     # Import here to keep the renderer reusable without an import cycle.
-    from .app import context
+    from .app import context, action_prediction
     meta=result['metadata']; cap=cv2.VideoCapture(str(source))
     start=result['frames'][0]['time']; end=result['frames'][-1]['time']+1/5
     first=round(start*meta['fps']); last=min(meta['frames'],round(end*meta['fps']))
@@ -30,7 +30,7 @@ def render_video(source,result,output,model_path):
                     cv2.putText(image,'Rodri (confirmed)' if selected else f"Person {det['track']}",(x1,max(20,y1-5)),cv2.FONT_HERSHEY_SIMPLEX,.5,color,1)
             forecast='No trained next-action model'
             if person:
-                p=predict(features(person,meta['width'],meta['height']),model_path)
+                p=action_prediction(source,frame['time'],person,meta,checkpoint)
                 if p['alternatives']:
                     a=p['alternatives'][0];forecast=f"Experimental next: {a['action']} ({a['probability']:.0%} score)"
             else:forecast='Forecast suppressed'
