@@ -1,3 +1,22 @@
+# Project R.O.D.R.I. — Rodri Studio
+
+The fresh local video application is in **[studio](studio/README.md)**. Start there for Windows/VS Code setup, video visualization, camera/replay review, tests, and exports.
+
+```powershell
+cd Project-R.O.D.R.I./studio
+py -3 -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe run.py
+```
+
+Open http://127.0.0.1:8000. The application detects people and supports human-confirmed Rodri tracks; automatic Rodri identification and trained next-action forecasting are not established. The project developer will label accessible training footage; the project owner is not expected to annotate actions. See [current progress](studio/PROGRESS.md) and [executed tests](studio/TEST_REPORT.md).
+
+The Studio implementation is independent of the earlier scripts below. They are retained for reference.
+
+---
+
+## Earlier prototype documentation
+
 # Project R.O.D.R.I. — early implementation
 
 This folder contains a deliberately staged video-to-prediction prototype:

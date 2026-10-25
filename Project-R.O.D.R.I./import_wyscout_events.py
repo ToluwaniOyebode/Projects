@@ -17,7 +17,7 @@ def main():
     parser.add_argument("json_file")
     parser.add_argument("--out", default="data/wyscout_candidates.csv")
     parser.add_argument("--player", default="Rodri")
-    parser.add_argument("--team", default="Manchester City")
+    parser.add_argument("--team", default=None, help="Optional explicit team filter; defaults to Manchester City unless --include-all-players")
     parser.add_argument("--include-all-players", action="store_true")
     args = parser.parse_args()
 
@@ -26,6 +26,7 @@ def main():
     if not isinstance(events, list):
         raise SystemExit("Expected a JSON list of events or an object containing an 'events' list.")
 
+    team_filter = args.team if args.team is not None else ("" if args.include_all_players else "Manchester City")
     out = []
     for e in events:
         if not isinstance(e, dict):
@@ -36,7 +37,7 @@ def main():
         team_name = team.get("name", "") if isinstance(team, dict) else str(team)
         if not args.include_all_players and args.player.casefold() not in player_name.casefold():
             continue
-        if args.team and team_name and args.team.casefold() not in team_name.casefold():
+        if team_filter and team_name and team_filter.casefold() not in team_name.casefold():
             continue
         period = str(e.get("matchPeriod", ""))
         minute = int(e.get("minute") or 0)
@@ -83,3 +84,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
