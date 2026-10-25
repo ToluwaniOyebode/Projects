@@ -3,3 +3,9 @@ workspace/
 *.pt
 __pycache__/
 .pytest_cache/
+
+# Prepared private model package; publish source separately.
+models/
+data/
+demo/
+MODEL_MANIFEST.json
