@@ -1,17 +1,21 @@
 {
   "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
-  "platform": "Linux CPU; Windows batch launcher supplied but Windows itself was not available for execution",
+  "platform": "Linux CPU",
   "packages": {
     "numpy": "2.3.5",
     "opencv-python": "4.14.0.94",
     "fastapi": "0.162.0",
     "uvicorn": "0.54.0",
-    "python-multipart": "0.0.32",
     "scikit-learn": "1.8.0",
     "ultralytics": "8.4.189",
     "torch": "2.9.1+cpu",
     "torchvision": "0.24.1+cpu",
     "pytest": "9.1.1",
     "httpx": "0.28.1"
-  }
+  },
+  "test_command": "python -m pytest -q",
+  "tests_passed": 38,
+  "ui_check": "JavaScript node --check; API smoke on actual edited video",
+  "default_checkpoint": "V4",
+  "experimental_checkpoint": "V5 mixed-player"
 }

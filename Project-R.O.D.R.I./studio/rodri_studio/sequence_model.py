@@ -9,6 +9,7 @@ from .temporal_model import canonical,ball_detector,BALL_LOCK,probabilities
 from .visual_model import frame_at
 from .vision import Detector,boundary,signature
 from .motion import motion_features
+from .edited_video import timeline_for
 
 ROOT=Path(__file__).resolve().parents[1]
 FEATURE_VERSION='actor_ball_sequence_3s_v4'
@@ -67,11 +68,16 @@ def extract(path,timestamp,box):
     if not (0<=b[0]<b[2]<=image.shape[1] and 0<=b[1]<b[3]<=image.shape[0]):raise ValueError('Invalid actor box')
     start_people=[q for q in people if iou(np.asarray(q['box']),b)<.4]+[dict(box=b.tolist(),confidence=1.)]
     tracker=Tracker();initial=tracker.update(start_people,image,0);tid=initial[-1]['track'];matrix=np.eye(3)
+    timeline=timeline_for(path)
+    segment=timeline.segment(actual) if timeline else None
     history=[dict(image=image,time=actual,people=people,box=b,balls=balls,to_current=np.eye(3),lag=0.)]
     previous=image;uncertain=False;cut=False
     for k,lag in enumerate(LAGS[1:],1):
         if actual<lag:break
-        index=int(np.floor((actual-lag)*fps+1e-6));past,t,ds,bs=sample(str(path),index,fps)
+        index=int(np.floor((actual-lag)*fps+1e-6))
+        if segment and index/fps < segment['clip_start_seconds']-1e-8:
+            cut=True;break
+        past,t,ds,bs=sample(str(path),index,fps)
         if boundary(signature(previous),signature(past)):cut=True;break
         tracked=tracker.update(ds,past,lag);actor=next((d for d in tracked if d['track']==tid),None)
         if actor is None or actor.get('identity_uncertain'):uncertain=True;break
@@ -101,14 +107,14 @@ def extract(path,timestamp,box):
         if current_ball and h['ball']:
             oldball=(h['to_current']@np.r_[h['ball']['center'],1.])[:2];ball_movement.extend(((np.asarray(current_ball['center'])-oldball)/bh/lag).tolist())
         else:ball_movement.extend([0.,0.])
-    previous,_=frame_at(path,max(0,actual-.24));previous,_=canonical(previous,box)
+    previous,_=frame_at(path,max(segment['clip_start_seconds'] if segment else 0,actual-.24));previous,_=canonical(previous,box)
     if boundary(signature(previous),signature(image)):previous=image
     legacy=motion_features(previous,image,b)
     geometry=[(b[2]-b[0])/bh,bh/image.shape[0],feet[0]/640,feet[1]/image.shape[0]]
     vector=np.nan_to_num(np.clip(np.r_[states,movement,ball_movement,geometry,legacy],-20,20)).astype(float)
     ball_info=None
     if current_ball:ball_info=dict(box_normalized=(np.asarray(current_ball['box'])/[640,image.shape[0],640,image.shape[0]]).tolist(),confidence=current_ball['confidence'],confirmed=current_ball['confirmed'])
-    evidence=dict(history_seconds=history[-1]['lag'],history_samples=len(history),history_uncertain=uncertain,history_cut=cut,ball=ball_info,ball_method='learned football detector with temporal association; no white-blob fallback')
+    evidence=dict(history_seconds=history[-1]['lag'],history_samples=len(history),history_uncertain=uncertain,history_cut=cut,ball=ball_info,ball_method='learned football detector with temporal association; no white-blob fallback',edit_sequence=segment['continuous_sequence_id'] if segment else None,original_source_seconds=timeline.source_time(actual) if timeline else actual)
     return vector,evidence
 
 

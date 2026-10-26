@@ -4,6 +4,7 @@ from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from rodri_studio.sequence_model import extract,FEATURE_VERSION
+from rodri_studio.edited_video import validate_observation
 
 
 def main():
@@ -11,7 +12,8 @@ def main():
     source=args.data/'reviewed_events.json';rows=json.loads(source.read_text());cache=args.data/'feature_rows';cache.mkdir(exist_ok=True,parents=True);features=[];evidence=[]
     for i,r in enumerate(rows):
         if r.get('replay') or r.get('source_type','real')!='real' or r['target_seconds']<=r['observation_seconds']:raise ValueError('Invalid training observation')
-        digest=hashlib.sha256(json.dumps(dict(row=r,feature_version=FEATURE_VERSION),sort_keys=True).encode()).hexdigest();file=cache/(digest+'.json')
+        timeline=validate_observation(args.videos/r['source_filename'],r)
+        digest=hashlib.sha256(json.dumps(dict(row=r,feature_version=FEATURE_VERSION,edit_timeline=timeline.metadata if timeline else None),sort_keys=True).encode()).hexdigest();file=cache/(digest+'.json')
         if file.exists():q=json.loads(file.read_text())
         else:
             x,e=extract(args.videos/r['source_filename'],r['observation_seconds'],r['box']);q=dict(features=x.tolist(),evidence=e,id=r['id'],feature_version=FEATURE_VERSION);file.write_text(json.dumps(q))

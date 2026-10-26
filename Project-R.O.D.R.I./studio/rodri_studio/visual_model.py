@@ -9,6 +9,7 @@ from pathlib import Path
 import threading
 import cv2
 import numpy as np
+from .edited_video import history_start
 
 ROOT=Path(__file__).resolve().parents[1]
 ARTIFACT=ROOT/'models'/'next_action.json'
@@ -71,7 +72,7 @@ def visual_features(image,box):
 def extract_observation(path,timestamp,box):
     from .motion import motion_features
     current,actual=frame_at(path,timestamp)
-    previous,_=frame_at(path,max(0,actual-.24))
+    previous,_=frame_at(path,max(history_start(path,actual),actual-.24))
     return np.concatenate([visual_features(current,box),motion_features(previous,current,box)])
 
 
@@ -104,7 +105,7 @@ def predict_image(image,box,artifact=ARTIFACT,previous=None):
 @lru_cache(maxsize=128)
 def predict_observation(path,timestamp,box,model_mtime,artifact=str(ARTIFACT)):
     image,actual=frame_at(path,timestamp)
-    previous,_=frame_at(path,max(0,actual-.24))
+    previous,_=frame_at(path,max(history_start(path,actual),actual-.24))
     return predict_image(image,box,artifact=artifact,previous=previous)
 
 

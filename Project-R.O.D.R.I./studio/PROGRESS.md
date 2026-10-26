@@ -1,3 +1,7 @@
 # Current state
 
 V4 source supports three-second actor/ball context, camera-compensated global tracking with uncertainty handling, separate observed/conditional action heads and frozen episodic evaluation. Trained models and private review evidence are distributed separately. Predictive generalization and general automatic Rodri identification remain unestablished; see the prepared package's model card.
+
+2026-10-26: Integrated eight edited non-Rodri clips as one general-football match. Registered 66 continuous spans over 4,553.2 seconds, preserving original source times. Tracking/history reset at explicit gaps; labels cannot bridge them or split one registered match into artificial match IDs. Added 32 sparse AI-reviewed generic-player examples and trained a 121-example mixed-player candidate using whole-match development folds. V5 scores 5/12 versus V4's 4/12 on reused regression cases, but macro-F1 and pass/receive recall decline. V4 remains the default; V5 is optional, and no independent-match improvement is claimed.
+
+Validation: 38 automated tests; JavaScript syntax check; real edited-video upload, YOLO analysis, confirmation and V4/V5 forecast API smoke check. A 96-second video renders all 32 added training cases, including errors, clearly labelled as training illustrations. Private artifacts are distributed in the separate model update. Next modelling work needs stronger balanced reviewed labels and genuinely independent match evaluation; dense full-match annotation and a reliable predictor are not complete.

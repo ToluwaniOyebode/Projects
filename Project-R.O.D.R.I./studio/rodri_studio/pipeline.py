@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from .vision import Detector, Tracker, signature, boundary
+from .edited_video import timeline_for
 
 
 def inspect(path):
@@ -25,7 +26,9 @@ def analyze(path,start,duration,backend,progress=lambda p:None, detector=None):
     step = max(1,round(meta['fps']/5)); first=int(start*meta['fps'])
     last=min(meta['frames'],int((start+duration)*meta['fps']))
     cap.set(cv2.CAP_PROP_POS_FRAMES,first)
-    previous=None; shot=0; history=[]; frames=[]; cuts=[]
+    timeline=timeline_for(path)
+    edit_cuts=[s for s in timeline.starts[1:] if start<s<start+duration] if timeline else []
+    previous=None; previous_segment=None; shot=0; history=[]; frames=[]; cuts=[]
     try:
         for index in range(first,last):
             ok,frame=cap.read()
@@ -34,15 +37,18 @@ def analyze(path,start,duration,backend,progress=lambda p:None, detector=None):
             if (index-first)%step:
                 continue
             t=index/meta['fps']; sig=signature(frame)
-            if boundary(previous,sig):
+            segment=timeline.segment(t)['continuous_sequence_id'] if timeline else None
+            if segment != previous_segment:
+                history=[]
+            if segment != previous_segment or boundary(previous,sig):
                 shot+=1; tracker=Tracker(); cuts.append(t)
             # A duplicate image is only a suspicion. It may be live, static play.
             duplicate=any(t-old_t>8 and float(np.mean(np.abs(sig[1]-old_gray)))<3 for old_t,old_gray in history[::5])
-            history.append((t,sig[1])); previous=sig
-            frames.append(dict(time=t,shot=shot,replay_suspected=duplicate,detections=tracker.update(detector.detect(frame),frame,t)))
+            history.append((t,sig[1])); previous=sig;previous_segment=segment
+            frames.append(dict(time=t,shot=shot,replay_suspected=duplicate,detections=tracker.update(detector.detect(frame),frame,t),edit_sequence=segment,original_source_seconds=timeline.source_time(t) if timeline else t))
             progress((index-first)/max(1,last-first))
     finally:
         cap.release()
     if not frames:
         raise ValueError('No frames could be decoded.')
-    return dict(metadata=meta,frames=frames,cuts=cuts,detector=backend,identities={},replays=[],annotations=[])
+    return dict(metadata=meta,frames=frames,cuts=sorted(set(cuts+edit_cuts)),edit_cuts=edit_cuts,actor_scope=timeline.metadata.get('actor_scope','rodri') if timeline else 'rodri',rodri_present=timeline.metadata.get('rodri_present') if timeline else None,detector=backend,identities={},replays=[],annotations=[])

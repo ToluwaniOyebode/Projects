@@ -8,6 +8,7 @@ from pathlib import Path
 import threading
 import cv2
 import numpy as np
+from .edited_video import history_start
 
 ROOT=Path(__file__).resolve().parents[1]
 ARTIFACT=ROOT/'models/next_action_v3.json'
@@ -72,13 +73,14 @@ def extract(path,timestamp,box,legacy_only=False):
     from .motion import motion_features
     from .vision import boundary,signature
     current,actual=frame_at(path,timestamp);current,b=canonical(current,box)
+    earliest=history_start(path,actual)
     if legacy_only:
-        previous,_=frame_at(path,max(0,actual-.24));previous,_=canonical(previous,box)
+        previous,_=frame_at(path,max(earliest,actual-.24));previous,_=canonical(previous,box)
         if boundary(signature(previous),signature(current)):previous=current
         return np.concatenate([np.zeros(78),motion_features(previous,current,b)]).astype(float)
     confidence,ball=locate_ball(current);center=(b[:2]+b[2:])/2;bh=max(8,b[3]-b[1]);vectors=[];legacy=None
     for lag in [.24,.48,.72]:
-        previous,_=frame_at(path,max(0,actual-lag));previous,_=canonical(previous,box)
+        previous,_=frame_at(path,max(earliest,actual-lag));previous,_=canonical(previous,box)
         if boundary(signature(previous),signature(current)):previous=current
         v=motion_features(previous,current,b)
         if legacy is None:legacy=v.copy()

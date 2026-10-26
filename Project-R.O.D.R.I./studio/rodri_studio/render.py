@@ -27,7 +27,8 @@ def render_video(source,result,output,model_path,checkpoint='deployment'):
                     x1,y1,x2,y2=map(int,det['box']); selected=det is person
                     color=(189,235,135) if selected else (150,150,150)
                     cv2.rectangle(image,(x1,y1),(x2,y2),color,3 if selected else 1)
-                    cv2.putText(image,'Rodri (confirmed)' if selected else f"Person {det['track']}",(x1,max(20,y1-5)),cv2.FONT_HERSHEY_SIMPLEX,.5,color,1)
+                    actor='Selected player' if result.get('actor_scope')=='general_football' else 'Rodri'
+                    cv2.putText(image,(actor+' (confirmed)') if selected else f"Person {det['track']}",(x1,max(20,y1-5)),cv2.FONT_HERSHEY_SIMPLEX,.5,color,1)
             forecast='No trained next-action model'
             if person:
                 p=action_prediction(source,frame['time'],person,meta,checkpoint)

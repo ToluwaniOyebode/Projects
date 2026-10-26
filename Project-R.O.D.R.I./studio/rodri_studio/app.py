@@ -78,9 +78,13 @@ async def upload(video: UploadFile=File(...)):
     manifest_path=ROOT.parent/'data'/'video_manifest.json'
     sources=json.loads(manifest_path.read_text()) if manifest_path.exists() else []
     source=next((s for s in sources if s['sha256']==digest.hexdigest()),None)
+    if source and source.get('edit_metadata'):
+        Path(str(path)+'.edits.json').write_text(json.dumps(source['edit_metadata']))
     event_path=reviewed_events_path()
     anchors=[r for r in json.loads(event_path.read_text()) if source and r['match_id']==source['match_id']] if event_path.exists() else []
-    info=dict(id=uid,name=video.filename,path=str(path),metadata=meta,sha256=digest.hexdigest(),known_match=source['match_id'] if source else None,suggested_start=max(0,anchors[0]['observation_seconds']-.2) if anchors else 0)
+    general=bool(source and source.get('rodri_present') is False)
+    if general:anchors=[]
+    info=dict(id=uid,name=video.filename,path=str(path),metadata=meta,sha256=digest.hexdigest(),known_match=source['match_id'] if source else None,actor_scope='general_football' if general else 'rodri',rodri_present=False if general else None,suggested_start=max(0,anchors[0]['observation_seconds']-.2) if anchors else 0)
     (dest/'video.json').write_text(json.dumps(info))
     return {k:v for k,v in info.items() if k!='path'}
 
@@ -142,6 +146,7 @@ def result(uid:str):
 
 def apply_reviewed_anchors(result,info):
     """Use recorded actor localizations only for the exact hashed source video."""
+    if info.get('rodri_present') is False:return
     path=reviewed_events_path()
     if not info.get('known_match') or not path.exists(): return
     rows=[r for r in json.loads(path.read_text()) if r['match_id']==info['known_match']]
@@ -160,8 +165,10 @@ def apply_reviewed_anchors(result,info):
 
 
 def action_prediction(source_path,time,det,metadata,checkpoint='deployment'):
-    sequence=VISUAL_MODELS/'next_action_v4.json'
-    if checkpoint=='deployment' and sequence.exists():
+    sequence=VISUAL_MODELS/('next_action_v5.json' if checkpoint=='mixed' else 'next_action_v4.json')
+    if checkpoint=='mixed' and not sequence.exists():
+        return dict(status='untrained',alternatives=[],message='The optional V5 mixed-player checkpoint is not installed.')
+    if checkpoint in {'deployment','v4','mixed'} and sequence.exists():
         from .sequence_model import predict_observation as sequence_predict
         return sequence_predict(str(source_path),float(time),tuple(det['box']),sequence.stat().st_mtime_ns,str(sequence))
     from .temporal_model import predict_observation as temporal_predict
@@ -176,10 +183,15 @@ def action_prediction(source_path,time,det,metadata,checkpoint='deployment'):
 
 @app.get('/api/model')
 def model_info():
+    mixed=VISUAL_MODELS/'next_action_v5.json'
+    candidate=None
+    if mixed.exists():
+        model=json.loads(mixed.read_text());metrics=model['held_out_metrics']
+        candidate=dict(version=5,checkpoint='mixed',recommended_default=False,metrics=metrics,warning=model['evaluation_warning'])
     sequence=VISUAL_MODELS/'next_action_v4.json'
     if sequence.exists():
         model=json.loads(sequence.read_text());metrics=model['held_out_metrics']
-        return dict(status='trained_pilot',version=4,classes=model['classes'],training_matches=model['training_matches'],metrics=metrics,
+        return dict(status='trained_pilot',version=4,classes=model['classes'],training_matches=model['training_matches'],metrics=metrics,mixed_candidate=candidate,
             warning=f"V4 frozen-episode accuracy: {metrics['accuracy']:.1%} on {metrics['test_examples']} observations; majority baseline: {metrics['majority_accuracy']:.1%}. Selected using separate development folds. Previously used matches, single-AI labels; unseen-match accuracy remains unknown. New videos need Rodri confirmation.")
     current=VISUAL_MODELS/'next_action_v3.json'
     if current.exists():
@@ -241,11 +253,12 @@ def context(r,t):
     if isinstance(confirmations,dict): confirmations=[confirmations]
     applicable=[v for v in confirmations if v['time']<=t]
     seed=applicable[-1] if applicable else None
+    actor='the selected player' if r.get('actor_scope')=='general_football' else 'Rodri'
     if not seed or not seed['time']<=t<=seed['expires']:
-        return frame,None,'Confirm Rodri in this shot (identity expires after 5 seconds)'
+        return frame,None,f'Confirm {actor} in this shot (identity expires after 5 seconds)'
     det=next((d for d in frame['detections'] if d['track']==seed['track']),None)
     if det and det.get('identity_uncertain') and frame['time']>seed['time']+.01:
-        return frame,None,'Ambiguous player association: confirm Rodri again'
+        return frame,None,f'Ambiguous player association: confirm {actor} again'
     confirmed='AI-reviewed source anchor; verify identity (not a name recognizer)' if seed.get('source') else 'Human-confirmed track; ID switches remain possible'
     return frame,det,('Identity lost / occluded' if det is None else confirmed)
 
@@ -254,7 +267,7 @@ def context(r,t):
 def forecast(uid:str,time:float,checkpoint:str='deployment'):
     if not math.isfinite(time):
         raise HTTPException(400,'Invalid timestamp')
-    if checkpoint not in {'deployment','holdout'}:raise HTTPException(400,'Unknown checkpoint')
+    if checkpoint not in {'deployment','holdout','v4','mixed'}:raise HTTPException(400,'Unknown checkpoint')
     r=read_result(uid); frame,det,message=context(r,time)
     info=json.loads((folder(uid)/'video.json').read_text())
     prediction=action_prediction(info.get('path',''),frame['time'],det,r['metadata'],checkpoint) if det else {'status':'suppressed','alternatives':[]}
@@ -272,6 +285,8 @@ class Annotation(BaseModel):
 def annotate(uid:str,label:Annotation):
     with lock:
         r=read_result(uid); frame,det,message=context(r,label.time)
+        if r.get('known_match') and label.match_id!=r['known_match']:
+            raise HTTPException(400,'Use the original match ID for every clip of this registered match')
         if det is None:
             raise HTTPException(400,message)
         if label.target_action not in ACTIONS or label.target_time<=label.time or label.target_time>r['metadata']['duration']:
