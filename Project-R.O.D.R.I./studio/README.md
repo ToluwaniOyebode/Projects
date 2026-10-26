@@ -1,10 +1,10 @@
 # Rodri Studio source
 
-Local football-video analysis with person tracks, identity confirmation, camera/replay review and next-action visualization. V4 supports off-ball movement, receiving, carrying, passing and shooting, plus a separate conditional on-ball distribution.
+All-player football-video analysis with anonymous visible-person tracks, optional identity confirmation, camera/replay review and experimental next-action visualization. V4 supports off-ball movement, receiving, carrying, passing and shooting, plus a separate conditional on-ball distribution.
 
 This GitHub folder contains source code. Trained checkpoints, reviewed examples, feature caches and private review videos are distributed separately in the prepared model package. A source-only checkout reports an untrained state until a compatible checkpoint is supplied.
 
-Use Python 3.12 or 3.11. With the complete prepared package, run `start_windows.bat` on Windows, or install `requirements.txt` and run `python run.py`. Open http://127.0.0.1:8000. Load a local video, analyze a passage, pause and confirm the target person. No action labeling is required to use a prepared checkpoint. CPU processing may be slower than playback.
+Use Python 3.12 or 3.11. With the complete prepared package, run `start_windows.bat` on Windows, or install `requirements.txt` and run `python run.py`. Open http://127.0.0.1:8000. Load a local video and analyze a passage to track all visible people. Pause and click any person for individual review, or use **Score all visible tracks at paused frame** for the optional V5 pilot. No action labeling is required to use a prepared checkpoint. CPU processing may be slower than playback.
 
 Tracking uses Hungarian assignment, camera compensation, velocity and jersey appearance. Confirmation expires and does not transfer across cuts. Ambiguous associations require confirmation again. This is not a general automatic Rodri name recognizer; tracks and uncertainty heuristics can fail.
 
@@ -20,7 +20,7 @@ Run software checks with `python -m pytest -q`. See THIRD_PARTY_MODELS.md for pr
 
 Eight prepared Real Madrid–Barcelona clips are treated as **one original match**, with Rodri explicitly absent. They contain 75m53.2s of edited footage. The prepared V5 model update supplies their hash registry, source-time maps, 32 sparse single-AI-reviewed examples and an optional mixed-player checkpoint. The complete match is not densely action-labelled. These examples must not be represented as Rodri observations.
 
-Install the separately supplied model update into this `studio` directory after updating the source. Run Studio normally, load one of the existing edited MP4s, analyze a passage, select the player, and choose **V5 · experimental mixed-player candidate** to try the added model. No action labelling is required for inference. V4 remains the default Rodri checkpoint. A source-only checkout has neither checkpoint.
+Install the separately supplied model update into this `studio` directory after updating the source. Run Studio normally, load one of the existing edited MP4s, analyze a passage, select the player, and choose **V5 · experimental mixed-player candidate** to try the added model. No action labelling is required for inference. All-player tracking is the default workflow. The individual review dropdown retains the historical V4 checkpoint; all-player action scoring uses V5 only and reports untrained when it is absent. A source-only checkout has neither checkpoint.
 
 To register validated edited clips for a local training run:
 
@@ -35,3 +35,7 @@ Registration verifies the video hashes before updating the registry and creates 
 V5 uses whole-original-match development folds, excluding the older reserved/embargoed observations from fitting. Its 5/12 result versus V4's 4/12 is on **reused regression cases**, not new independent test accuracy. Macro-F1 fell from 0.229 to 0.214, and pass/receive performance regressed. Useful improvement is not established. See [MODEL_CARD_V5.md](MODEL_CARD_V5.md).
 
 `scripts/render_mixed_review.py --videos "C:\matches\edited" --out demo/mixed-review.mp4` renders every added training case, including errors. Its video is a training illustration, not a held-out performance demonstration.
+
+## All-player direction and acceleration
+
+Rodri specialization is deferred until general-player recognition and anticipation have independent-match evidence. See [OPEN_SOURCE_ACCELERATION.md](OPEN_SOURCE_ACCELERATION.md) for the repository review, integration decisions, and current completion assessment.

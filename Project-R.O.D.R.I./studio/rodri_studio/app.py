@@ -84,7 +84,7 @@ async def upload(video: UploadFile=File(...)):
     anchors=[r for r in json.loads(event_path.read_text()) if source and r['match_id']==source['match_id']] if event_path.exists() else []
     general=bool(source and source.get('rodri_present') is False)
     if general:anchors=[]
-    info=dict(id=uid,name=video.filename,path=str(path),metadata=meta,sha256=digest.hexdigest(),known_match=source['match_id'] if source else None,actor_scope='general_football' if general else 'rodri',rodri_present=False if general else None,suggested_start=max(0,anchors[0]['observation_seconds']-.2) if anchors else 0)
+    info=dict(id=uid,name=video.filename,path=str(path),metadata=meta,sha256=digest.hexdigest(),known_match=source['match_id'] if source else None,actor_scope='general_football',rodri_present=False if general else None,suggested_start=max(0,anchors[0]['observation_seconds']-.2) if anchors else 0)
     (dest/'video.json').write_text(json.dumps(info))
     return {k:v for k,v in info.items() if k!='path'}
 
@@ -120,7 +120,8 @@ def start_analysis(uid:str,clip:Clip):
             jobs[uid]={'status':'running','progress':0}
             result=analyze(info['path'],clip.start,clip.duration,clip.backend,lambda v:jobs[uid].update(progress=v))
             result['known_match']=info.get('known_match')
-            apply_reviewed_anchors(result,info)
+            result['actor_scope']='general_football'
+            # All-player mode does not seed a specific footballer's identity.
             with lock:
                 write_result(uid,result)
             jobs[uid]={'status':'complete','progress':1}
@@ -192,7 +193,7 @@ def model_info():
     if sequence.exists():
         model=json.loads(sequence.read_text());metrics=model['held_out_metrics']
         return dict(status='trained_pilot',version=4,classes=model['classes'],training_matches=model['training_matches'],metrics=metrics,mixed_candidate=candidate,
-            warning=f"V4 frozen-episode accuracy: {metrics['accuracy']:.1%} on {metrics['test_examples']} observations; majority baseline: {metrics['majority_accuracy']:.1%}. Selected using separate development folds. Previously used matches, single-AI labels; unseen-match accuracy remains unknown. New videos need Rodri confirmation.")
+            warning=f"V4 frozen-episode accuracy: {metrics['accuracy']:.1%} on {metrics['test_examples']} observations; majority baseline: {metrics['majority_accuracy']:.1%}. Selected using separate development folds. Previously used matches, single-AI labels; unseen-match accuracy remains unknown. All-player tracking is available; selected-player forecasts need track confirmation. V4 was developed around Rodri and is not validated for general players.")
     current=VISUAL_MODELS/'next_action_v3.json'
     if current.exists():
         model=json.loads(current.read_text());metrics=model['held_out_metrics']
@@ -272,6 +273,32 @@ def forecast(uid:str,time:float,checkpoint:str='deployment'):
     info=json.loads((folder(uid)/'video.json').read_text())
     prediction=action_prediction(info.get('path',''),frame['time'],det,r['metadata'],checkpoint) if det else {'status':'suppressed','alternatives':[]}
     return dict(time=frame['time'],shot=frame['shot'],person=det,message=message,prediction=prediction)
+
+
+@app.get('/api/videos/{uid}/players')
+def players(uid:str,time:float,actions:bool=False):
+    """Anonymous visible tracks; optional weak V5 scores, never certified identities."""
+    if not math.isfinite(time) or time<0:
+        raise HTTPException(400,'Invalid timestamp')
+    r=read_result(uid)
+    past=[f for f in r['frames'] if f['time']<=time+1e-8]
+    if not past or time-past[-1]['time']>.3:
+        return dict(status='outside_analysis',players=[])
+    frame=past[-1]
+    replay=frame['replay_suspected'] or any(v['start']<=time<=v['end'] for v in r['replays'])
+    info=json.loads((folder(uid)/'video.json').read_text())
+    rows=[]
+    for det in frame['detections']:
+        row=dict(person=det,track_key=f"{frame['shot']}:{det['track']}",identity='anonymous person candidate')
+        if actions:
+            if replay or det.get('identity_uncertain'):
+                row['prediction']=dict(status='suppressed',alternatives=[],message='Replay or uncertain track association')
+            else:
+                row['prediction']=action_prediction(info.get('path',''),frame['time'],det,r['metadata'],'mixed')
+        rows.append(row)
+    return dict(status='replay_suspected' if replay else 'experimental',time=frame['time'],shot=frame['shot'],
+                original_source_seconds=frame.get('original_source_seconds',frame['time']),players=rows,
+                warning='Visible person candidates only, including possible referees. IDs reset at cuts. V5 action scores are unvalidated for general players; they are not calibrated probabilities.')
 
 
 class Annotation(BaseModel):

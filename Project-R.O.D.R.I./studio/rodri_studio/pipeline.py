@@ -29,13 +29,14 @@ def analyze(path,start,duration,backend,progress=lambda p:None, detector=None):
     timeline=timeline_for(path)
     edit_cuts=[s for s in timeline.starts[1:] if start<s<start+duration] if timeline else []
     previous=None; previous_segment=None; shot=0; history=[]; frames=[]; cuts=[]
-    try:
-        for index in range(first,last):
-            ok,frame=cap.read()
-            if not ok:
-                break
-            if (index-first)%step:
-                continue
+    pending=[]
+    def consume():
+        nonlocal previous, previous_segment, shot, history, tracker
+        images=[image for _,image in pending]
+        detected=detector.detect_many(images) if hasattr(detector,'detect_many') else [detector.detect(image) for image in images]
+        if len(detected)!=len(pending):
+            raise ValueError('Detector returned the wrong number of frames')
+        for (index,frame),detections in zip(pending,detected):
             t=index/meta['fps']; sig=signature(frame)
             segment=timeline.segment(t)['continuous_sequence_id'] if timeline else None
             if segment != previous_segment:
@@ -45,10 +46,19 @@ def analyze(path,start,duration,backend,progress=lambda p:None, detector=None):
             # A duplicate image is only a suspicion. It may be live, static play.
             duplicate=any(t-old_t>8 and float(np.mean(np.abs(sig[1]-old_gray)))<3 for old_t,old_gray in history[::5])
             history.append((t,sig[1])); previous=sig;previous_segment=segment
-            frames.append(dict(time=t,shot=shot,replay_suspected=duplicate,detections=tracker.update(detector.detect(frame),frame,t),edit_sequence=segment,original_source_seconds=timeline.source_time(t) if timeline else t))
+            frames.append(dict(time=t,shot=shot,replay_suspected=duplicate,detections=tracker.update(detections,frame,t),edit_sequence=segment,original_source_seconds=timeline.source_time(t) if timeline else t))
             progress((index-first)/max(1,last-first))
+        pending.clear()
+    try:
+        for index in range(first,last):
+            ok,frame=cap.read()
+            if not ok:break
+            if (index-first)%step:continue
+            pending.append((index,frame))
+            if len(pending)==4:consume()
+        if pending:consume()
     finally:
         cap.release()
     if not frames:
         raise ValueError('No frames could be decoded.')
-    return dict(metadata=meta,frames=frames,cuts=sorted(set(cuts+edit_cuts)),edit_cuts=edit_cuts,actor_scope=timeline.metadata.get('actor_scope','rodri') if timeline else 'rodri',rodri_present=timeline.metadata.get('rodri_present') if timeline else None,detector=backend,identities={},replays=[],annotations=[])
+    return dict(metadata=meta,frames=frames,cuts=sorted(set(cuts+edit_cuts)),edit_cuts=edit_cuts,actor_scope='general_football',rodri_present=timeline.metadata.get('rodri_present') if timeline else None,detector=backend,identities={},replays=[],annotations=[])

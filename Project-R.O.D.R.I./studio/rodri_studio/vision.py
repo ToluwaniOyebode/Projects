@@ -88,11 +88,22 @@ class Detector:
 
     def detect(self, frame):
         if self.backend == 'yolo':
-            result = self.model.predict(frame, classes=[0], device='cpu', conf=.3, imgsz=960, verbose=False)[0]
-            return [{'box':b[:4].tolist(), 'confidence':float(b[4])} for b in result.boxes.data.cpu().numpy()]
+            return self.detect_many([frame])[0]
         scale = min(1., 960/frame.shape[1])
         image = cv2.resize(frame, None, fx=scale, fy=scale)
         if image.shape[0] < 128 or image.shape[1] < 64:
             return []
         boxes, scores = self.hog.detectMultiScale(image, winStride=(8,8), scale=1.05)
         return [dict(box=[float(x/scale),float(y/scale),float((x+w)/scale),float((y+h)/scale)], confidence=float(1/(1+np.exp(-float(s))))) for (x,y,w,h),s in zip(boxes,scores)]
+
+    def detect_many(self, frames):
+        """Bounded batches share detector execution; tracking stays chronological."""
+        if not frames:
+            return []
+        if self.backend != 'yolo':
+            return [self.detect(frame) for frame in frames]
+        results = self.model.predict(frames, classes=[0], device='cpu', conf=.3,
+                                     imgsz=960, verbose=False)
+        return [[dict(box=b[:4].tolist(), confidence=float(b[4]))
+                 for b in result.boxes.data.cpu().numpy()] for result in results]
+

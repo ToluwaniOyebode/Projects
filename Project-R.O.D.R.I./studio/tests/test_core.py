@@ -101,3 +101,19 @@ def test_overlay_export_is_decodable(tmp_path):
     stats=render_video(path,r,output,tmp_path/'missing.json')
     assert stats['frames']==10
     assert inspect(output)['frames']==10
+
+
+
+def test_batched_detection_preserves_frame_order_and_cut_resets(tmp_path):
+    path=tmp_path/'fixture.mp4';make_video(path)
+    class BatchDetector(FakeDetector):
+        batches=[]
+        def detect_many(self,images):
+            self.batches.append(len(images))
+            return [self.detect(image) for image in images]
+    detector=BatchDetector()
+    result=analyze(path,0,3,'test',detector=detector)
+    reference=analyze(path,0,3,'test',detector=FakeDetector())
+    assert result==reference
+    assert detector.batches==[4,4,4,3]
+    assert result['actor_scope']=='general_football'

@@ -52,3 +52,28 @@ def test_identity_label_and_cut_guard(client,tmp_path):
     assert client.post(f'/api/videos/{uid}/labels',json=label).status_code==200
     exported=client.get(f'/api/videos/{uid}/export').json()
     assert len(exported['annotations'])==1
+
+
+
+def test_all_players_do_not_require_named_identity_and_abstain(client,tmp_path,monkeypatch):
+    uid='c'*32;d=tmp_path/uid;d.mkdir();(d/'video.json').write_text('{}')
+    detections=[dict(track=1,box=[10,10,30,50]),dict(track=2,box=[40,10,60,50],identity_uncertain=True)]
+    result=dict(metadata={'duration':10},frames=[dict(time=1,shot=2,replay_suspected=False,detections=detections,original_source_seconds=81)],identities={},replays=[])
+    (d/'analysis.json').write_text(json.dumps(result))
+    calls=[]
+    def score(*args):
+        calls.append(args[-1]);return dict(status='experimental',alternatives=[])
+    monkeypatch.setattr(module,'action_prediction',score)
+    response=client.get(f'/api/videos/{uid}/players?time=1').json()
+    assert len(response['players'])==2 and calls==[]
+    response=client.get(f'/api/videos/{uid}/players?time=1&actions=true').json()
+    assert response['original_source_seconds']==81
+    assert [p['track_key'] for p in response['players']]==['2:1','2:2']
+    assert response['players'][1]['prediction']['status']=='suppressed'
+    assert calls==['mixed']
+    assert client.get(f'/api/videos/{uid}/players?time=2').json()['players']==[]
+    assert client.get(f'/api/videos/{uid}/players?time=-1').status_code==400
+    result['replays']=[dict(start=0,end=2)];(d/'analysis.json').write_text(json.dumps(result))
+    response=client.get(f'/api/videos/{uid}/players?time=1&actions=true').json()
+    assert all(p['prediction']['status']=='suppressed' for p in response['players'])
+    assert calls==['mixed']
