@@ -75,6 +75,12 @@ from .tracking import Tracker
 
 class Detector:
     def __init__(self, backend='yolo', weights='yolo11n.pt'):
+        if backend == 'kaggle':
+            weights = 'kaggle_person_candidate.pt'
+            candidate = Path(__file__).resolve().parents[1] / 'models' / weights
+            if not candidate.exists():
+                raise ValueError('Install the separate Kaggle candidate model package before selecting this detector.')
+            backend = 'yolo'
         self.backend = backend
         if backend == 'yolo':
             from ultralytics import YOLO

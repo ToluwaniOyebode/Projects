@@ -39,3 +39,7 @@ V5 uses whole-original-match development folds, excluding the older reserved/emb
 ## All-player direction and acceleration
 
 Rodri specialization is deferred until general-player recognition and anticipation have independent-match evidence. See [OPEN_SOURCE_ACCELERATION.md](OPEN_SOURCE_ACCELERATION.md) for the repository review, integration decisions, and current completion assessment.
+
+## Kaggle detector candidate
+
+An optional retrained person detector is available in the separate Kaggle retraining package. Select **YOLO · Kaggle candidate (experimental)** after installing its weights. It improves a small reused drone-frame check, but unseen-match performance and action-prediction improvement remain unestablished. See [KAGGLE_RETRAINING.md](KAGGLE_RETRAINING.md) for training, regression results and reproduction commands.

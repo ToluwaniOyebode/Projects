@@ -104,7 +104,7 @@ class Clip(BaseModel):
 @app.post('/api/videos/{uid}/analyze')
 def start_analysis(uid:str,clip:Clip):
     p=folder(uid)
-    if clip.backend not in {'yolo','hog'}:
+    if clip.backend not in {'yolo','hog','kaggle'}:
         raise HTTPException(400,'Unknown detector')
     with lock:
         if jobs.get(uid,{}).get('status') in {'queued','running'}:
