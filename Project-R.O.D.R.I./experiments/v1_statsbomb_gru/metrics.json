@@ -1,61 +1,12 @@
 {
   "experiment": "statsbomb_event_type_next_action_gru_v1",
-  "task": "predict next general football event type from previous event types; not Rodri-specific and not video-to-action",
   "context_length": 8,
   "train_matches": 3396,
   "test_matches": 839,
   "train_sequences": 11891421,
   "test_sequences": 2948870,
-  "model": {
-    "type": "Embedding + GRU classifier",
-    "embedding_dim": 48,
-    "hidden_dim": 96,
-    "dropout": 0.2
-  },
-  "training": {
-    "device": "cuda",
-    "optimizer": "AdamW",
-    "learning_rate": 0.001,
-    "epochs": 12,
-    "train_loss_by_epoch": [
-      0.9125,
-      0.9012,
-      0.8981,
-      0.8965,
-      0.8955,
-      0.8949,
-      0.8944,
-      0.8941,
-      0.8938,
-      0.8936,
-      0.8934,
-      0.8932
-    ]
-  },
-  "evaluation": {
-    "gru_accuracy": 0.7286482618765833,
-    "gru_macro_f1": 0.33009090185719664,
-    "majority_baseline_accuracy": 0.2751240305608589,
-    "majority_baseline_macro_f1": 0.012691915543667984
-  },
-  "split": {
-    "method": "deterministic whole-match split using SHA-256 hash modulo 5",
-    "note": "The reported test split has already been inspected during development; use a new held-out test set for final claims."
-  },
-  "data_source": {
-    "name": "StatsBomb Open Data",
-    "canonical_url": "https://github.com/StatsBomb/open-data",
-    "cloned_mirror": "https://github.com/hudl/open-data",
-    "exact_commit_recorded": false
-  },
-  "artifact_status": {
-    "checkpoint_uploaded": false,
-    "vocabulary_uploaded": false,
-    "original_notebook_uploaded": false
-  },
-  "limitations": [
-    "Class performance is imbalanced.",
-    "Shot recall 0.025, Interception F1 0, Block F1 0 in the reported class report.",
-    "This is event-stream prediction, not player-specific Rodri action prediction from video."
-  ]
+  "gru_accuracy": 0.7286482618765833,
+  "gru_macro_f1": 0.33009090185719664,
+  "majority_baseline_accuracy": 0.2751240305608589,
+  "majority_baseline_macro_f1": 0.012691915543667984
 }
