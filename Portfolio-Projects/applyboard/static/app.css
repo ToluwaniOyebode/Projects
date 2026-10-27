@@ -1,1 +1,61 @@
-.board{display:grid;grid-template-columns:repeat(5,minmax(195px,1fr));gap:13px;overflow-x:auto;padding-bottom:12px}.lane{background:#0e1622;border:1px solid var(--line);border-radius:12px;padding:12px;min-height:270px}.lane-title{display:flex;justify-content:space-between;text-transform:capitalize;font-size:12px;font-weight:650;margin:3px 3px 18px}.lane-title span:last-child{color:var(--muted)}.company-icon{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);background:var(--panel);color:var(--accent);border-radius:8px;margin-bottom:13px;font-weight:700}.tiny{font-size:11px}.move{margin-top:12px;padding:6px 9px;font-size:11px}.due-row{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}.lane .empty{font-size:12px;padding:20px 8px}.board:has(.lane:only-child){grid-template-columns:minmax(240px,400px)}
+.board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(195px, 1fr));
+  gap: 13px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+.lane {
+  background: #0e1622;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 270px;
+}
+.lane-title {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 650;
+  margin: 3px 3px 18px;
+}
+.lane-title span:last-child {
+  color: var(--muted);
+}
+.company-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--accent);
+  border-radius: 8px;
+  margin-bottom: 13px;
+  font-weight: 700;
+}
+.tiny {
+  font-size: 11px;
+}
+.move {
+  margin-top: 12px;
+  padding: 6px 9px;
+  font-size: 11px;
+}
+.due-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+.lane .empty {
+  font-size: 12px;
+  padding: 20px 8px;
+}
+.board:has(.lane:only-child) {
+  grid-template-columns: minmax(240px, 400px);
+}

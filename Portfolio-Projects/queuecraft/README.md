@@ -6,6 +6,8 @@ A persistent background job queue with retries, crash recovery, fencing tokens a
 
 **Python 3.12+ · SQLite · Vanilla JavaScript · Zero third-party runtime dependencies**
 
+![Desktop dashboard with fictional demo data](docs/screenshot.webp)
+
 ## Run locally
 
 Open this project folder in VS Code and use its integrated terminal:
@@ -35,7 +37,7 @@ The first run creates `data.sqlite3` and loads fictional sample data. Changes pe
 
 ## How it works
 
-A short BEGIN IMMEDIATE transaction claims one eligible job, increments attempts and assigns a UUID token plus a 15-second lease. Higher priorities run first, then creation time and ID. Expired jobs return to queued or enter dead-letter if attempts are exhausted. A completion checks status, token and lease time in the same transaction. Failures wait min(60, 2**(attempts-1)) seconds. Manual retry resets attempts while retaining the full history. Built-in tasks are bounded and fast; no arbitrary code is executed.
+A short BEGIN IMMEDIATE transaction claims one eligible job, increments attempts and assigns a UUID token plus a 15-second lease. Higher priorities run first, then creation time and ID. Expired jobs return to queued or enter dead-letter if attempts are exhausted. A completion checks status, token and lease time in the same transaction. Failures wait min(60, 2\*\*(attempts-1)) seconds. Manual retry resets attempts while retaining the full history. Built-in tasks are bounded and fast; no arbitrary code is executed.
 
 ## Tests
 
@@ -51,11 +53,11 @@ See [API.md](API.md) for endpoints and an executable request example. All API ro
 
 ## Configuration
 
-| Setting | Default | Purpose |
-| --- | --- | --- |
-| `PORT` | `8106` | HTTP listen port |
-| `HOST` | `127.0.0.1` | Local-only binding |
-| `DB_PATH` | `data.sqlite3` in this folder | SQLite file |
+| Setting   | Default                       | Purpose            |
+| --------- | ----------------------------- | ------------------ |
+| `PORT`    | `8106`                        | HTTP listen port   |
+| `HOST`    | `127.0.0.1`                   | Local-only binding |
+| `DB_PATH` | `data.sqlite3` in this folder | SQLite file        |
 
 The Python server also accepts `--port`, `--host` and `--db`. Example: `python server.py --port 9000 --db my-demo.sqlite3`.
 
@@ -84,4 +86,4 @@ This is a complete local portfolio application, without public multi-user hostin
 - `tests/` — concrete examples of correct behavior and rejected inputs.
 - `worker.py` — bounded task execution and polling.
 
-[MIT licensed](LICENSE). Built with AI assistance; implementation and tests are available for inspection. No experience, deployment or performance claims are implied.
+[MIT licensed](LICENSE). Built with AI assistance; source and tests are available for inspection.

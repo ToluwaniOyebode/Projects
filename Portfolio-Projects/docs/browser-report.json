@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "project": "applyboard",
+      "desktop": true,
+      "mobile": true,
+      "workflow": true,
+      "consoleErrors": []
+    },
+    {
+      "project": "ledgerlens",
+      "desktop": true,
+      "mobile": true,
+      "workflow": true,
+      "consoleErrors": []
+    },
+    {
+      "project": "stockroom",
+      "desktop": true,
+      "mobile": true,
+      "workflow": true,
+      "consoleErrors": []
+    },
+    {
+      "project": "signaldesk",
+      "desktop": true,
+      "mobile": true,
+      "workflow": true,
+      "consoleErrors": []
+    },
+    {
+      "project": "pitchside",
+      "desktop": true,
+      "mobile": true,
+      "workflow": true,
+      "consoleErrors": []
+    },
+    {
+      "project": "queuecraft",
+      "desktop": true,
+      "mobile": true,
+      "workflow": true,
+      "consoleErrors": []
+    }
+  ]
+}

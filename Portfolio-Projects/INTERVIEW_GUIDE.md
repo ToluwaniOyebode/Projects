@@ -2,12 +2,12 @@
 
 Choose two or three projects that match a role, run them and learn the code before including them in an application. Describe your own review and modifications accurately. These projects were built with AI assistance; they do not establish professional work experience or independent authorship.
 
-| Role focus | Start with | Demonstrate | Be ready to explain |
-| --- | --- | --- | --- |
-| Full-stack / software engineering | Applyboard, Stockroom | Add an application, cause a version conflict, reserve and ship inventory | Request validation, persistence, UI state and transaction boundaries |
-| Backend / platform | Stockroom, QueueCraft | Competing reservations; a crashed lease and stale completion | Idempotency vs transactions, at-least-once delivery, retries and fencing |
-| Data / analytics | LedgerLens, Pitchside | Bad CSV rollback, exact sums, team/time event filters | Data quality, deduplication assumptions, clear metric definitions and synthetic-data limits |
-| Search / applied AI infrastructure | SignalDesk, QueueCraft | Term score breakdown; atomic index update | Inverted indexes, BM25 length normalization, lexical vs semantic search, background indexing |
+| Role focus                         | Start with             | Demonstrate                                                              | Be ready to explain                                                                          |
+| ---------------------------------- | ---------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Full-stack / software engineering  | Applyboard, Stockroom  | Add an application, cause a version conflict, reserve and ship inventory | Request validation, persistence, UI state and transaction boundaries                         |
+| Backend / platform                 | Stockroom, QueueCraft  | Competing reservations; a crashed lease and stale completion             | Idempotency vs transactions, at-least-once delivery, retries and fencing                     |
+| Data / analytics                   | LedgerLens, Pitchside  | Bad CSV rollback, exact sums, team/time event filters                    | Data quality, deduplication assumptions, clear metric definitions and synthetic-data limits  |
+| Search / applied AI infrastructure | SignalDesk, QueueCraft | Term score breakdown; atomic index update                                | Inverted indexes, BM25 length normalization, lexical vs semantic search, background indexing |
 
 ## Concrete code paths
 

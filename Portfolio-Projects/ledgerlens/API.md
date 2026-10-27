@@ -4,17 +4,17 @@ Base URL: `http://127.0.0.1:8102/api`.
 
 Send JSON objects with `Content-Type: application/json`. Bodies over 1 MiB are rejected. Errors use `{"error":"message"}`: 400 invalid input, 403 cross-origin writes, 404 unknown resource, 409 conflict, 413 oversized request, 415 unsupported content type. Successful requests return 200, including creates. There is no authentication; this API is designed for local use.
 
-| Method | Path after /api | Contract |
-| --- | --- | --- |
-| GET | `/health` | `ok` and project name. |
-| GET | `/transactions` | month=YYYY-MM; defaults to the current month. |
-| POST | `/transactions` | date, description and amount decimal string; optional category. |
-| PATCH | `/transactions/{id}` | category required; updates categorization. |
-| DELETE | `/transactions/{id}` | Removes a transaction. |
-| POST | `/import` | csv string; returns inserted, duplicates and rows. |
-| POST | `/budgets` | month, category and positive amount decimal string. |
-| GET | `/summary` | month=YYYY-MM; net/gross/refund totals, budgets and trend. |
-| GET | `/export.csv` | month=YYYY-MM; exports the selected month. |
+| Method | Path after /api      | Contract                                                        |
+| ------ | -------------------- | --------------------------------------------------------------- |
+| GET    | `/health`            | `ok` and project name.                                          |
+| GET    | `/transactions`      | month=YYYY-MM; defaults to the current month.                   |
+| POST   | `/transactions`      | date, description and amount decimal string; optional category. |
+| PATCH  | `/transactions/{id}` | category required; updates categorization.                      |
+| DELETE | `/transactions/{id}` | Removes a transaction.                                          |
+| POST   | `/import`            | csv string; returns inserted, duplicates and rows.              |
+| POST   | `/budgets`           | month, category and positive amount decimal string.             |
+| GET    | `/summary`           | month=YYYY-MM; net/gross/refund totals, budgets and trend.      |
+| GET    | `/export.csv`        | month=YYYY-MM; exports the selected month.                      |
 
 ## Executable Python example
 

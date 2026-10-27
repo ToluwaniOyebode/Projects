@@ -2,16 +2,18 @@
 
 Six independently runnable applications covering full-stack product work, transactional backends, data ingestion, information retrieval, sports analytics and background processing.
 
-| Project | What it does | Engineering focus | Local URL |
-| --- | --- | --- | --- |
-| [Applyboard](applyboard/) | A local job-application workspace | Versioned edits, CRUD and activity history | http://127.0.0.1:8101 |
-| [LedgerLens](ledgerlens/) | An expense analytics application | Exact money, atomic imports and deduplication | http://127.0.0.1:8102 |
-| [Stockroom](stockroom/) | An inventory operations dashboard and REST API | Transactions, idempotency and concurrency | http://127.0.0.1:8103 |
-| [SignalDesk](signaldesk/) | A local Markdown and text search engine | BM25, inverted indexes and source citations | http://127.0.0.1:8104 |
-| [Pitchside](pitchside/) | A football event-analysis dashboard | CSV analytics, visualizations and data provenance | http://127.0.0.1:8105 |
-| [QueueCraft](queuecraft/) | A persistent background job queue | Leases, retries, fencing and crash recovery | http://127.0.0.1:8106 |
+| Project                   | What it does                                   | Engineering focus                                 | Local URL             |
+| ------------------------- | ---------------------------------------------- | ------------------------------------------------- | --------------------- |
+| [Applyboard](applyboard/) | A local job-application workspace              | Versioned edits, CRUD and activity history        | http://127.0.0.1:8101 |
+| [LedgerLens](ledgerlens/) | An expense analytics application               | Exact money, atomic imports and deduplication     | http://127.0.0.1:8102 |
+| [Stockroom](stockroom/)   | An inventory operations dashboard and REST API | Transactions, idempotency and concurrency         | http://127.0.0.1:8103 |
+| [SignalDesk](signaldesk/) | A local Markdown and text search engine        | BM25, inverted indexes and source citations       | http://127.0.0.1:8104 |
+| [Pitchside](pitchside/)   | A football event-analysis dashboard            | CSV analytics, visualizations and data provenance | http://127.0.0.1:8105 |
+| [QueueCraft](queuecraft/) | A persistent background job queue              | Leases, retries, fencing and crash recovery       | http://127.0.0.1:8106 |
 
 Every project has a working browser interface, its own API guide, persistent SQLite storage, fictional demo data, business-rule tests and an optional Dockerfile. Applications use only Python/Node built-ins plus plain HTML/CSS/JavaScript at runtime; no API keys, cloud accounts or database installation are needed.
+
+![Six running project dashboards](docs/portfolio-overview.webp)
 
 ## Open in VS Code
 

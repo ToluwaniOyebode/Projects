@@ -1,1 +1,38 @@
-#pitch{background:#12332a;border-radius:10px;overflow:hidden}#pitch svg{width:100%;height:auto}.legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:15px;font-size:11px}.legend span{display:flex;align-items:center;gap:7px}.legend i{width:8px;height:8px;border-radius:50%}.legend span:last-child{margin-left:auto}.event-table{max-height:400px}.toolbar select{max-width:210px}.bar-row{grid-template-columns:60px 1fr 30px}
+#pitch {
+  background: #12332a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#pitch svg {
+  width: 100%;
+  height: auto;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 15px;
+  font-size: 11px;
+}
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.legend span:last-child {
+  margin-left: auto;
+}
+.event-table {
+  max-height: 400px;
+}
+.toolbar select {
+  max-width: 210px;
+}
+.bar-row {
+  grid-template-columns: 60px 1fr 30px;
+}

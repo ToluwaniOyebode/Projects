@@ -1,34 +1,331 @@
-import {$,esc,api,stat,empty,toast,action,download} from './core.js';
-let match={},analysis={},events=[],filters={team:'',player:'',from:'0',to:'90'},view='passes';
-const colors=['#8cde86','#80adfa'];
-$('#content').innerHTML=`<div class="intro"><div><div class="eyebrow">The story behind the score</div><h1>Read the game in numbers.</h1><p>Explore passing connections, shot locations and territory from a football event CSV. Every number traces back to an event.</p></div><div class="actions"><button class="secondary" id="export">Export selection ↓</button><button id="import">Import match ↑</button></div></div><div class="notice"><b id="match-label">Synthetic demonstration match</b> · Coordinates run 0–100. Both teams attack left to right after normalization. This dashboard analyzes event data; it does not detect video actions or predict the next action.</div><form class="toolbar" id="filters"><select id="team" aria-label="Team"></select><select id="player" aria-label="Player"></select><label for="from">Minutes</label><input id="from" type="number" min="0" max="130" value="0" aria-label="Start minute" style="width:80px"><span>–</span><input id="to" type="number" min="0" max="130" value="90" aria-label="End minute" style="width:80px"><button class="secondary">Apply filters</button></form><section class="stats" id="stats"></section><div class="grid" id="workspace"><section class="panel"><div class="panel-head"><div><h2 id="pitch-title">Passing connections</h2><p id="pitch-note">Average pass and reception positions in the selected events.</p></div><div class="actions"><button id="passes" class="small">Passes</button><button id="shots" class="secondary small">Shots</button></div></div><div id="pitch"></div><div id="legend" class="legend"></div></section><section class="panel"><div class="panel-head"><div><h2>Match rhythm</h2><p>Number of selected events per 15 minutes.</p></div></div><div id="timeline"></div><div class="notice"><b>A simple progression rule:</b> a completed pass gaining at least 15 points on the 0–100 horizontal axis. Final-third entries cross x = 66.67.</div></section></div><section class="panel" style="margin-bottom:20px"><div class="panel-head"><div><h2>Player contribution</h2><p>Counts from the current filters. No inferred off-ball events.</p></div></div><div class="table-wrap"><table><thead><tr><th>Player</th><th>Team</th><th>Events</th><th>Passes</th><th>Completed</th><th>Shots</th></tr></thead><tbody id="players"></tbody></table></div></section><section class="panel"><div class="panel-head"><div><h2>Event log</h2><p id="event-count"></p></div></div><div class="table-wrap event-table"><table><thead><tr><th>Minute</th><th>Player</th><th>Team</th><th>Action</th><th>Outcome</th><th>Start → end</th></tr></thead><tbody id="events"></tbody></table></div></section><dialog id="importer"><form id="import-form" class="fields"><div class="eyebrow">Event data</div><h2>Replace the current match</h2><p class="muted">Upload the documented CSV schema, up to 5,000 events. All rows are validated before replacement.</p><a href="/demo_match.csv" download>Download synthetic example</a><div><label for="label">Match label</label><input id="label" required maxlength="120" placeholder="My labeled match"></div><div><label for="csv">Event CSV</label><input id="csv" type="file" accept=".csv,text/csv" required></div><div class="actions"><button class="secondary" type="button" data-close>Cancel</button><button>Validate &amp; replace</button></div></form></dialog>`;
-function query(){return new URLSearchParams(filters).toString()}
-async function load(){[analysis,events]=await Promise.all([api('/analysis?'+query()),api('/events?'+query())]);render()}
-async function initialize(){match=await api('/match');$('#match-label').textContent=match.label;$('#team').innerHTML='<option value="">Both teams</option>'+match.teams.map(t=>`<option ${t===filters.team?'selected':''}>${esc(t)}</option>`).join('');players();await load()}
-function players(){const list=match.players.filter(p=>!$('#team').value||p.team===$('#team').value);$('#player').innerHTML='<option value="">All players</option>'+list.map(p=>`<option ${p.player===filters.player?'selected':''}>${esc(p.player)}</option>`).join('')}
-function teamColor(team){return colors[match.teams.indexOf(team)%2]||colors[0]}
-function pitch(){
- const base=`<rect width="1050" height="680" fill="#12332a"/><path d="M0 0H1050V680H0Z M525 0V680 M0 138H165V542H0 M1050 138H885V542H1050 M0 248H55V432H0 M1050 248H995V432H1050" fill="none" stroke="#b2d5c14a" stroke-width="3"/><circle cx="525" cy="340" r="91.5" stroke="#b2d5c14a" stroke-width="3" fill="none"/><circle cx="525" cy="340" r="4" fill="#b2d5c14a"/>`;
- let drawing='';
- if(view==='passes'){
-  const nodes=new Map(analysis.nodes.map(n=>[n.team+'|'+n.player,n]));
-  drawing=analysis.edges.map(e=>{const a=nodes.get(e.team+'|'+e.source),b=nodes.get(e.team+'|'+e.target);return a&&b?`<line x1="${a.x*10.5}" y1="${a.y*6.8}" x2="${b.x*10.5}" y2="${b.y*6.8}" stroke="${teamColor(e.team)}" stroke-opacity=".3" stroke-width="${Math.min(15,2+e.count)}"/>`:''}).join('')+analysis.nodes.map(n=>`<g><circle cx="${n.x*10.5}" cy="${n.y*6.8}" r="${Math.min(18,8+Math.sqrt(n.touches))}" fill="${teamColor(n.team)}" stroke="#0c201b" stroke-width="3"><title>${esc(n.player)} · ${n.touches} pass/reception locations</title></circle><text x="${n.x*10.5}" y="${n.y*6.8-24}" text-anchor="middle" fill="#eef9ef" font-size="15">${esc(n.player.split(' ').slice(-1)[0])}</text></g>`).join('');
- }else{
-  drawing=analysis.shots.map(s=>`<circle cx="${s.x*10.5}" cy="${s.y*6.8}" r="${8+s.location_score*35}" fill="${s.outcome==='goal'?teamColor(s.team):'transparent'}" stroke="${teamColor(s.team)}" stroke-width="3"><title>${esc(s.player)} · ${s.minute.toFixed(1)} min · ${esc(s.outcome)} · location heuristic ${s.location_score.toFixed(3)}</title></circle>`).join('');
- }
- $('#pitch').innerHTML=`<svg viewBox="-20 -20 1090 720" role="img" aria-label="${view==='passes'?'Pass network':'Shot map'} of selected football events">${base}${drawing}</svg>`;
- $('#pitch-title').textContent=view==='passes'?'Passing connections':'Shot locations';$('#pitch-note').textContent=view==='passes'?'Average pass and reception positions. Links aggregate completed passes.':'Filled circles are goals. Size uses an illustrative location heuristic, not trained xG.';
- $('#legend').innerHTML=match.teams.map(t=>`<span><i style="background:${teamColor(t)}"></i>${esc(t)}</span>`).join('')+'<span class="muted">Attack →</span>';
- $('#passes').className=(view==='passes'?'':'secondary ')+'small';$('#shots').className=(view==='shots'?'':'secondary ')+'small';
+import { $, esc, api, stat, empty, toast, action, download } from "./core.js";
+let match = {},
+  analysis = {},
+  events = [],
+  filters = { team: "", player: "", from: "0", to: "90" },
+  view = "passes";
+const colors = ["#8cde86", "#80adfa"];
+$("#content").innerHTML = /* HTML */ `<div class="intro">
+    <div>
+      <div class="eyebrow">The story behind the score</div>
+      <h1>Read the game in numbers.</h1>
+      <p>
+        Explore passing connections, shot locations and territory from a
+        football event CSV. Every number traces back to an event.
+      </p>
+    </div>
+    <div class="actions">
+      <button class="secondary" id="export">Export selection ↓</button
+      ><button id="import">Import match ↑</button>
+    </div>
+  </div>
+  <div class="notice">
+    <b id="match-label">Synthetic demonstration match</b> · Coordinates run
+    0–100. Both teams attack left to right after normalization. This dashboard
+    analyzes event data; it does not detect video actions or predict the next
+    action.
+  </div>
+  <form class="toolbar" id="filters">
+    <select id="team" aria-label="Team"></select
+    ><select id="player" aria-label="Player"></select
+    ><label for="from">Minutes</label
+    ><input
+      id="from"
+      type="number"
+      min="0"
+      max="130"
+      value="0"
+      aria-label="Start minute"
+      style="width:80px"
+    /><span>–</span
+    ><input
+      id="to"
+      type="number"
+      min="0"
+      max="130"
+      value="90"
+      aria-label="End minute"
+      style="width:80px"
+    /><button class="secondary">Apply filters</button>
+  </form>
+  <section class="stats" id="stats"></section>
+  <div class="grid" id="workspace">
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2 id="pitch-title">Passing connections</h2>
+          <p id="pitch-note">
+            Average pass and reception positions in the selected events.
+          </p>
+        </div>
+        <div class="actions">
+          <button id="passes" class="small">Passes</button
+          ><button id="shots" class="secondary small">Shots</button>
+        </div>
+      </div>
+      <div id="pitch"></div>
+      <div id="legend" class="legend"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>Match rhythm</h2>
+          <p>Number of selected events per 15 minutes.</p>
+        </div>
+      </div>
+      <div id="timeline"></div>
+      <div class="notice">
+        <b>A simple progression rule:</b> a completed pass gaining at least 15
+        points on the 0–100 horizontal axis. Final-third entries cross x =
+        66.67.
+      </div>
+    </section>
+  </div>
+  <section class="panel" style="margin-bottom:20px">
+    <div class="panel-head">
+      <div>
+        <h2>Player contribution</h2>
+        <p>Counts from the current filters. No inferred off-ball events.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Team</th>
+            <th>Events</th>
+            <th>Passes</th>
+            <th>Completed</th>
+            <th>Shots</th>
+          </tr>
+        </thead>
+        <tbody id="players"></tbody>
+      </table>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h2>Event log</h2>
+        <p id="event-count"></p>
+      </div>
+    </div>
+    <div class="table-wrap event-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Minute</th>
+            <th>Player</th>
+            <th>Team</th>
+            <th>Action</th>
+            <th>Outcome</th>
+            <th>Start → end</th>
+          </tr>
+        </thead>
+        <tbody id="events"></tbody>
+      </table>
+    </div>
+  </section>
+  <dialog id="importer">
+    <form id="import-form" class="fields">
+      <div class="eyebrow">Event data</div>
+      <h2>Replace the current match</h2>
+      <p class="muted">
+        Upload the documented CSV schema, up to 5,000 events. All rows are
+        validated before replacement.
+      </p>
+      <a href="/demo_match.csv" download>Download synthetic example</a>
+      <div>
+        <label for="label">Match label</label
+        ><input
+          id="label"
+          required
+          maxlength="120"
+          placeholder="My labeled match"
+        />
+      </div>
+      <div>
+        <label for="csv">Event CSV</label
+        ><input id="csv" type="file" accept=".csv,text/csv" required />
+      </div>
+      <div class="actions">
+        <button class="secondary" type="button" data-close>Cancel</button
+        ><button>Validate &amp; replace</button>
+      </div>
+    </form>
+  </dialog>`;
+function query() {
+  return new URLSearchParams(filters).toString();
 }
-function render(){
- $('#stats').innerHTML=stat('Pass completion',analysis.pass_completion+'%',`${analysis.completed_passes} of ${analysis.passes} passes`)+stat('Shots / goals',analysis.shots.length+' / '+analysis.goals,'Recorded events only')+stat('Progressive passes',analysis.progressive_passes,'Completed; horizontal gain ≥ 15')+stat('Final-third entries',analysis.final_third_entries,'Completed passes & carries');
- pitch();const max=Math.max(1,...analysis.timeline.map(t=>t.count));$('#timeline').innerHTML=analysis.timeline.filter(t=>t.minute<=Number(filters.to)).map(t=>`<div class="bar-row"><span>${t.minute}–${t.minute+15}′</span><div class="progress"><i style="width:${t.count/max*100}%"></i></div><strong>${t.count}</strong></div>`).join('');
- $('#players').innerHTML=analysis.players.map(p=>`<tr><td>${esc(p.player)}</td><td>${esc(p.team)}</td><td>${p.events}</td><td>${p.passes}</td><td>${p.completed}</td><td>${p.shots}</td></tr>`).join('');
- $('#event-count').textContent=`${events.length} selected events. Showing up to 200; export for the full selection.`;
- $('#events').innerHTML=events.slice(0,200).map(e=>`<tr><td>${e.minute.toFixed(1)}′</td><td>${esc(e.player)}</td><td>${esc(e.team)}</td><td><span class="pill">${esc(e.action)}</span></td><td>${esc(e.outcome)}</td><td>${e.x.toFixed(0)},${e.y.toFixed(0)} → ${e.end_x.toFixed(0)},${e.end_y.toFixed(0)}</td></tr>`).join('')||'<tr><td colspan="6">No events match these filters.</td></tr>';
+async function load() {
+  [analysis, events] = await Promise.all([
+    api("/analysis?" + query()),
+    api("/events?" + query()),
+  ]);
+  render();
 }
-$('#filters').onsubmit=e=>{e.preventDefault();filters=Object.fromEntries(['team','player','from','to'].map(k=>[k,$('#'+k).value]));action(load)};$('#team').onchange=players;
-$('#passes').onclick=()=>{view='passes';pitch()};$('#shots').onclick=()=>{view='shots';pitch()};$('#export').onclick=()=>download('/export.csv?'+query());$('#import').onclick=()=>$('#importer').showModal();
-$('#import-form').onsubmit=e=>{e.preventDefault();action(async()=>{const f=$('#csv').files[0];if(f.size>950000)throw new Error('CSV exceeds 950 KB');const result=await api('/import','POST',{label:$('#label').value,csv:await f.text()});$('#importer').close();filters={team:'',player:'',from:'0',to:'130'};$('#from').value=0;$('#to').value=130;await initialize();toast(`${result.imported} events imported`)})};
+async function initialize() {
+  match = await api("/match");
+  $("#match-label").textContent = match.label;
+  $("#team").innerHTML =
+    '<option value="">Both teams</option>' +
+    match.teams
+      .map(
+        (t) =>
+          `<option ${t === filters.team ? "selected" : ""}>${esc(t)}</option>`,
+      )
+      .join("");
+  players();
+  await load();
+}
+function players() {
+  const list = match.players.filter(
+    (p) => !$("#team").value || p.team === $("#team").value,
+  );
+  $("#player").innerHTML =
+    '<option value="">All players</option>' +
+    list
+      .map(
+        (p) =>
+          `<option ${p.player === filters.player ? "selected" : ""}>${esc(p.player)}</option>`,
+      )
+      .join("");
+}
+function teamColor(team) {
+  return colors[match.teams.indexOf(team) % 2] || colors[0];
+}
+function pitch() {
+  const base = `<rect width="1050" height="680" fill="#12332a"/><path d="M0 0H1050V680H0Z M525 0V680 M0 138H165V542H0 M1050 138H885V542H1050 M0 248H55V432H0 M1050 248H995V432H1050" fill="none" stroke="#b2d5c14a" stroke-width="3"/><circle cx="525" cy="340" r="91.5" stroke="#b2d5c14a" stroke-width="3" fill="none"/><circle cx="525" cy="340" r="4" fill="#b2d5c14a"/>`;
+  let drawing = "";
+  if (view === "passes") {
+    const nodes = new Map(
+      analysis.nodes.map((n) => [n.team + "|" + n.player, n]),
+    );
+    drawing =
+      analysis.edges
+        .map((e) => {
+          const a = nodes.get(e.team + "|" + e.source),
+            b = nodes.get(e.team + "|" + e.target);
+          return a && b
+            ? `<line x1="${a.x * 10.5}" y1="${a.y * 6.8}" x2="${b.x * 10.5}" y2="${b.y * 6.8}" stroke="${teamColor(e.team)}" stroke-opacity=".3" stroke-width="${Math.min(15, 2 + e.count)}"/>`
+            : "";
+        })
+        .join("") +
+      analysis.nodes
+        .map(
+          (n) =>
+            `<g><circle cx="${n.x * 10.5}" cy="${n.y * 6.8}" r="${Math.min(18, 8 + Math.sqrt(n.touches))}" fill="${teamColor(n.team)}" stroke="#0c201b" stroke-width="3"><title>${esc(n.player)} · ${n.touches} pass/reception locations</title></circle><text x="${n.x * 10.5}" y="${n.y * 6.8 - 24}" text-anchor="middle" fill="#eef9ef" font-size="15">${esc(n.player.split(" ").slice(-1)[0])}</text></g>`,
+        )
+        .join("");
+  } else {
+    drawing = analysis.shots
+      .map(
+        (s) =>
+          `<circle cx="${s.x * 10.5}" cy="${s.y * 6.8}" r="${8 + s.location_score * 35}" fill="${s.outcome === "goal" ? teamColor(s.team) : "transparent"}" stroke="${teamColor(s.team)}" stroke-width="3"><title>${esc(s.player)} · ${s.minute.toFixed(1)} min · ${esc(s.outcome)} · location heuristic ${s.location_score.toFixed(3)}</title></circle>`,
+      )
+      .join("");
+  }
+  $("#pitch").innerHTML =
+    `<svg viewBox="-20 -20 1090 720" role="img" aria-label="${view === "passes" ? "Pass network" : "Shot map"} of selected football events">${base}${drawing}</svg>`;
+  $("#pitch-title").textContent =
+    view === "passes" ? "Passing connections" : "Shot locations";
+  $("#pitch-note").textContent =
+    view === "passes"
+      ? "Average pass and reception positions. Links aggregate completed passes."
+      : "Filled circles are goals. Size uses an illustrative location heuristic, not trained xG.";
+  $("#legend").innerHTML =
+    match.teams
+      .map(
+        (t) =>
+          `<span><i style="background:${teamColor(t)}"></i>${esc(t)}</span>`,
+      )
+      .join("") + '<span class="muted">Attack →</span>';
+  $("#passes").className = (view === "passes" ? "" : "secondary ") + "small";
+  $("#shots").className = (view === "shots" ? "" : "secondary ") + "small";
+}
+function render() {
+  $("#stats").innerHTML =
+    stat(
+      "Pass completion",
+      analysis.pass_completion + "%",
+      `${analysis.completed_passes} of ${analysis.passes} passes`,
+    ) +
+    stat(
+      "Shots / goals",
+      analysis.shots.length + " / " + analysis.goals,
+      "Recorded events only",
+    ) +
+    stat(
+      "Progressive passes",
+      analysis.progressive_passes,
+      "Completed; horizontal gain ≥ 15",
+    ) +
+    stat(
+      "Final-third entries",
+      analysis.final_third_entries,
+      "Completed passes & carries",
+    );
+  pitch();
+  const max = Math.max(1, ...analysis.timeline.map((t) => t.count));
+  $("#timeline").innerHTML = analysis.timeline
+    .filter((t) => t.minute <= Number(filters.to))
+    .map(
+      (t) =>
+        `<div class="bar-row"><span>${t.minute}–${t.minute + 15}′</span><div class="progress"><i style="width:${(t.count / max) * 100}%"></i></div><strong>${t.count}</strong></div>`,
+    )
+    .join("");
+  $("#players").innerHTML = analysis.players
+    .map(
+      (p) =>
+        `<tr><td>${esc(p.player)}</td><td>${esc(p.team)}</td><td>${p.events}</td><td>${p.passes}</td><td>${p.completed}</td><td>${p.shots}</td></tr>`,
+    )
+    .join("");
+  $("#event-count").textContent =
+    `${events.length} selected events. Showing up to 200; export for the full selection.`;
+  $("#events").innerHTML =
+    events
+      .slice(0, 200)
+      .map(
+        (e) =>
+          `<tr><td>${e.minute.toFixed(1)}′</td><td>${esc(e.player)}</td><td>${esc(e.team)}</td><td><span class="pill">${esc(e.action)}</span></td><td>${esc(e.outcome)}</td><td>${e.x.toFixed(0)},${e.y.toFixed(0)} → ${e.end_x.toFixed(0)},${e.end_y.toFixed(0)}</td></tr>`,
+      )
+      .join("") ||
+    '<tr><td colspan="6">No events match these filters.</td></tr>';
+}
+$("#filters").onsubmit = (e) => {
+  e.preventDefault();
+  filters = Object.fromEntries(
+    ["team", "player", "from", "to"].map((k) => [k, $("#" + k).value]),
+  );
+  action(load);
+};
+$("#team").onchange = players;
+$("#passes").onclick = () => {
+  view = "passes";
+  pitch();
+};
+$("#shots").onclick = () => {
+  view = "shots";
+  pitch();
+};
+$("#export").onclick = () => download("/export.csv?" + query());
+$("#import").onclick = () => $("#importer").showModal();
+$("#import-form").onsubmit = (e) => {
+  e.preventDefault();
+  action(async () => {
+    const f = $("#csv").files[0];
+    if (f.size > 950000) throw new Error("CSV exceeds 950 KB");
+    const result = await api("/import", "POST", {
+      label: $("#label").value,
+      csv: await f.text(),
+    });
+    $("#importer").close();
+    filters = { team: "", player: "", from: "0", to: "130" };
+    $("#from").value = 0;
+    $("#to").value = 130;
+    await initialize();
+    toast(`${result.imported} events imported`);
+  });
+};
 action(initialize);

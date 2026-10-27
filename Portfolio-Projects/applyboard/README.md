@@ -6,6 +6,8 @@ A local job-application workspace with a five-stage pipeline, follow-up reminder
 
 **Python 3.12+ · SQLite · Vanilla JavaScript · Zero third-party runtime dependencies**
 
+![Desktop dashboard with fictional demo data](docs/screenshot.webp)
+
 ## Run locally
 
 Open this project folder in VS Code and use its integrated terminal:
@@ -49,11 +51,11 @@ See [API.md](API.md) for endpoints and an executable request example. All API ro
 
 ## Configuration
 
-| Setting | Default | Purpose |
-| --- | --- | --- |
-| `PORT` | `8101` | HTTP listen port |
-| `HOST` | `127.0.0.1` | Local-only binding |
-| `DB_PATH` | `data.sqlite3` in this folder | SQLite file |
+| Setting   | Default                       | Purpose            |
+| --------- | ----------------------------- | ------------------ |
+| `PORT`    | `8101`                        | HTTP listen port   |
+| `HOST`    | `127.0.0.1`                   | Local-only binding |
+| `DB_PATH` | `data.sqlite3` in this folder | SQLite file        |
 
 The Python server also accepts `--port`, `--host` and `--db`. Example: `python server.py --port 9000 --db my-demo.sqlite3`.
 
@@ -79,5 +81,4 @@ This is a complete local portfolio application, without public multi-user hostin
 - `static/app.js` — complete frontend interactions.
 - `tests/` — concrete examples of correct behavior and rejected inputs.
 
-
-[MIT licensed](LICENSE). Built with AI assistance; implementation and tests are available for inspection. No experience, deployment or performance claims are implied.
+[MIT licensed](LICENSE). Built with AI assistance; source and tests are available for inspection.
