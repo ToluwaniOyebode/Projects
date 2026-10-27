@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.sqlite*
+*.db*
+.env
+node_modules/
+coverage/
+.DS_Store

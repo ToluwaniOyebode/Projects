@@ -1,0 +1,32 @@
+services:
+  applyboard:
+    build: ./applyboard
+    ports: ["127.0.0.1:8101:8101"]
+    volumes: ["applyboard-data:/data"]
+  ledgerlens:
+    build: ./ledgerlens
+    ports: ["127.0.0.1:8102:8102"]
+    volumes: ["ledgerlens-data:/data"]
+  stockroom:
+    build: ./stockroom
+    ports: ["127.0.0.1:8103:8103"]
+    volumes: ["stockroom-data:/data"]
+  signaldesk:
+    build: ./signaldesk
+    ports: ["127.0.0.1:8104:8104"]
+    volumes: ["signaldesk-data:/data"]
+  pitchside:
+    build: ./pitchside
+    ports: ["127.0.0.1:8105:8105"]
+    volumes: ["pitchside-data:/data"]
+  queuecraft:
+    build: ./queuecraft
+    ports: ["127.0.0.1:8106:8106"]
+    volumes: ["queuecraft-data:/data"]
+volumes:
+  applyboard-data:
+  ledgerlens-data:
+  stockroom-data:
+  signaldesk-data:
+  pitchside-data:
+  queuecraft-data:

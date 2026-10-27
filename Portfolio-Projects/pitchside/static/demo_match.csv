@@ -1,0 +1,421 @@
+event_id,minute,team,player,action,outcome,x,y,end_x,end_y,receiver
+DEMO-0001,0.21,Harbor FC,D. Cole,pass,complete,69.82,16.85,93.46,12.80,J. Eze
+DEMO-0002,0.43,Atlas United,C. Khan,pass,incomplete,74.60,30.48,91.01,16.90,K. Mensah
+DEMO-0003,0.64,Atlas United,N. James,pass,complete,36.02,81.10,52.90,78.23,M. Reed
+DEMO-0004,0.86,Harbor FC,T. Adebayo,shot,saved,90.53,35.52,100.00,50.00,
+DEMO-0005,1.07,Atlas United,M. Reed,pass,complete,61.54,73.39,61.19,88.76,C. Khan
+DEMO-0006,1.29,Harbor FC,T. Adebayo,pass,incomplete,46.47,23.10,59.53,31.69,I. Okafor
+DEMO-0007,1.50,Atlas United,F. Adeyemi,pass,complete,43.56,54.46,47.90,52.38,M. Reed
+DEMO-0008,1.71,Atlas United,L. Silva,pass,complete,64.23,61.40,61.78,59.42,C. Khan
+DEMO-0009,1.93,Harbor FC,T. Adebayo,carry,complete,49.94,60.99,61.68,71.17,
+DEMO-0010,2.14,Atlas United,K. Mensah,shot,goal,89.97,64.06,100.00,50.00,
+DEMO-0011,2.36,Atlas United,C. Khan,pass,complete,67.88,68.45,77.79,75.98,F. Adeyemi
+DEMO-0012,2.57,Harbor FC,I. Okafor,pass,complete,32.76,30.10,37.96,29.66,A. Bello
+DEMO-0013,2.79,Atlas United,M. Reed,pass,complete,53.32,74.73,63.50,87.58,L. Silva
+DEMO-0014,3.00,Atlas United,L. Silva,pass,complete,79.78,20.43,81.89,13.66,K. Mensah
+DEMO-0015,3.21,Harbor FC,A. Bello,pass,complete,72.09,66.01,91.06,51.42,J. Eze
+DEMO-0016,3.43,Atlas United,M. Reed,pass,incomplete,23.52,19.73,37.20,2.41,L. Silva
+DEMO-0017,3.64,Atlas United,N. James,pass,complete,60.57,85.04,79.04,91.83,C. Khan
+DEMO-0018,3.86,Atlas United,F. Adeyemi,turnover,lost,16.35,20.84,26.89,6.18,
+DEMO-0019,4.07,Atlas United,F. Adeyemi,carry,complete,33.32,84.39,25.69,88.38,
+DEMO-0020,4.29,Atlas United,C. Khan,pass,complete,31.08,54.13,48.82,61.86,L. Silva
+DEMO-0021,4.50,Atlas United,N. James,pass,complete,30.63,73.88,31.56,83.42,C. Khan
+DEMO-0022,4.71,Atlas United,M. Reed,carry,incomplete,51.91,54.53,49.54,43.02,
+DEMO-0023,4.93,Atlas United,C. Khan,carry,complete,36.42,85.82,52.75,80.46,
+DEMO-0024,5.14,Harbor FC,D. Cole,pass,complete,36.59,89.80,26.26,100.00,J. Eze
+DEMO-0025,5.36,Atlas United,C. Khan,carry,complete,29.86,72.85,20.40,72.15,
+DEMO-0026,5.57,Atlas United,C. Khan,pass,complete,64.65,85.02,66.61,80.85,M. Reed
+DEMO-0027,5.79,Atlas United,N. James,pass,complete,50.36,58.97,44.27,76.52,F. Adeyemi
+DEMO-0028,6.00,Atlas United,K. Mensah,shot,saved,89.61,66.86,100.00,50.00,
+DEMO-0029,6.21,Harbor FC,I. Okafor,pass,complete,37.81,35.64,58.82,26.29,S. Musa
+DEMO-0030,6.43,Atlas United,L. Silva,carry,complete,24.46,59.54,23.50,65.37,
+DEMO-0031,6.64,Harbor FC,A. Bello,turnover,lost,18.72,24.90,14.02,29.12,
+DEMO-0032,6.86,Atlas United,F. Adeyemi,pass,complete,40.18,21.08,55.20,32.16,K. Mensah
+DEMO-0033,7.07,Harbor FC,A. Bello,carry,complete,78.74,26.79,100.00,21.83,
+DEMO-0034,7.29,Harbor FC,I. Okafor,pass,complete,66.02,32.22,76.74,17.88,D. Cole
+DEMO-0035,7.50,Harbor FC,A. Bello,pass,complete,52.42,8.96,45.96,9.99,J. Eze
+DEMO-0036,7.71,Harbor FC,D. Cole,pass,complete,59.46,78.08,81.89,87.95,S. Musa
+DEMO-0037,7.93,Atlas United,L. Silva,pass,complete,40.71,64.59,55.90,55.32,N. James
+DEMO-0038,8.14,Harbor FC,S. Musa,carry,complete,15.79,27.44,17.25,28.80,
+DEMO-0039,8.36,Harbor FC,A. Bello,pass,complete,16.70,86.68,11.56,80.14,D. Cole
+DEMO-0040,8.57,Harbor FC,D. Cole,pass,complete,71.88,84.12,72.32,98.41,A. Bello
+DEMO-0041,8.79,Harbor FC,S. Musa,pass,complete,79.63,74.11,96.02,65.34,A. Bello
+DEMO-0042,9.00,Harbor FC,J. Eze,pass,complete,55.01,52.96,56.38,35.88,A. Bello
+DEMO-0043,9.21,Atlas United,K. Mensah,carry,complete,79.14,51.36,77.46,39.15,
+DEMO-0044,9.43,Harbor FC,T. Adebayo,carry,complete,60.01,53.72,81.92,55.14,
+DEMO-0045,9.64,Harbor FC,S. Musa,carry,complete,35.09,67.76,45.03,55.26,
+DEMO-0046,9.86,Harbor FC,A. Bello,pass,complete,32.20,82.77,39.64,67.85,T. Adebayo
+DEMO-0047,10.07,Atlas United,N. James,carry,complete,44.57,50.60,42.58,64.18,
+DEMO-0048,10.29,Harbor FC,A. Bello,pass,complete,74.43,40.19,90.60,29.30,I. Okafor
+DEMO-0049,10.50,Atlas United,M. Reed,pass,complete,50.35,23.34,56.95,34.45,F. Adeyemi
+DEMO-0050,10.71,Harbor FC,A. Bello,shot,wide,92.66,72.24,100.00,50.00,
+DEMO-0051,10.93,Atlas United,M. Reed,pass,complete,64.31,71.05,87.21,74.63,F. Adeyemi
+DEMO-0052,11.14,Harbor FC,J. Eze,carry,complete,13.64,63.91,3.02,74.06,
+DEMO-0053,11.36,Atlas United,M. Reed,pass,complete,81.06,36.76,76.94,23.03,K. Mensah
+DEMO-0054,11.57,Atlas United,N. James,pass,complete,80.44,8.18,89.20,25.45,F. Adeyemi
+DEMO-0055,11.79,Atlas United,C. Khan,carry,complete,70.53,91.98,85.37,79.91,
+DEMO-0056,12.00,Atlas United,F. Adeyemi,carry,complete,81.05,66.54,73.12,52.28,
+DEMO-0057,12.21,Harbor FC,S. Musa,carry,complete,65.24,64.35,59.74,49.17,
+DEMO-0058,12.43,Atlas United,K. Mensah,pass,complete,44.10,46.51,58.43,54.97,C. Khan
+DEMO-0059,12.64,Atlas United,K. Mensah,carry,complete,26.14,57.02,24.43,50.41,
+DEMO-0060,12.86,Harbor FC,D. Cole,shot,blocked,72.81,32.68,100.00,50.00,
+DEMO-0061,13.07,Harbor FC,T. Adebayo,pass,complete,56.87,85.96,49.25,83.42,J. Eze
+DEMO-0062,13.29,Harbor FC,J. Eze,pass,complete,63.13,77.79,60.15,72.17,S. Musa
+DEMO-0063,13.50,Harbor FC,I. Okafor,turnover,lost,44.58,54.61,35.83,48.09,
+DEMO-0064,13.71,Atlas United,C. Khan,carry,complete,45.57,34.63,58.67,20.58,
+DEMO-0065,13.93,Atlas United,L. Silva,carry,complete,45.30,17.99,49.81,4.20,
+DEMO-0066,14.14,Harbor FC,D. Cole,pass,complete,82.16,66.21,91.41,71.40,S. Musa
+DEMO-0067,14.36,Harbor FC,A. Bello,pass,incomplete,14.95,23.02,27.05,40.79,I. Okafor
+DEMO-0068,14.57,Harbor FC,D. Cole,carry,complete,58.81,45.16,69.75,33.93,
+DEMO-0069,14.79,Harbor FC,I. Okafor,carry,complete,74.87,64.57,68.98,73.27,
+DEMO-0070,15.00,Atlas United,C. Khan,carry,complete,45.08,34.35,52.52,21.21,
+DEMO-0071,15.21,Atlas United,C. Khan,pass,incomplete,62.65,25.44,83.39,24.68,F. Adeyemi
+DEMO-0072,15.43,Harbor FC,T. Adebayo,carry,complete,32.27,39.23,21.17,52.30,
+DEMO-0073,15.64,Atlas United,C. Khan,pass,complete,77.59,72.93,81.13,89.74,M. Reed
+DEMO-0074,15.86,Harbor FC,J. Eze,pass,complete,23.71,55.82,33.56,68.75,A. Bello
+DEMO-0075,16.07,Harbor FC,S. Musa,turnover,lost,74.75,51.11,90.26,44.21,
+DEMO-0076,16.29,Harbor FC,T. Adebayo,pass,complete,17.65,46.59,21.47,32.85,J. Eze
+DEMO-0077,16.50,Atlas United,K. Mensah,carry,complete,53.10,78.41,54.28,71.61,
+DEMO-0078,16.71,Atlas United,L. Silva,pass,complete,41.22,68.25,46.27,54.65,C. Khan
+DEMO-0079,16.93,Atlas United,F. Adeyemi,pass,complete,32.51,52.22,21.75,67.51,M. Reed
+DEMO-0080,17.14,Atlas United,C. Khan,carry,complete,46.94,33.51,66.14,17.59,
+DEMO-0081,17.36,Harbor FC,S. Musa,carry,complete,16.14,25.32,14.16,40.05,
+DEMO-0082,17.57,Harbor FC,A. Bello,pass,complete,55.41,33.85,62.51,40.79,J. Eze
+DEMO-0083,17.79,Harbor FC,T. Adebayo,shot,goal,93.15,67.34,100.00,50.00,
+DEMO-0084,18.00,Harbor FC,T. Adebayo,pass,complete,13.61,53.69,3.71,40.36,J. Eze
+DEMO-0085,18.21,Harbor FC,I. Okafor,pass,complete,48.88,13.19,47.95,3.74,D. Cole
+DEMO-0086,18.43,Atlas United,N. James,carry,complete,61.68,76.02,82.74,86.28,
+DEMO-0087,18.64,Atlas United,N. James,carry,complete,14.17,58.38,3.19,60.76,
+DEMO-0088,18.86,Atlas United,L. Silva,pass,complete,55.79,68.36,68.02,84.84,C. Khan
+DEMO-0089,19.07,Harbor FC,A. Bello,pass,complete,52.36,70.58,48.82,73.39,T. Adebayo
+DEMO-0090,19.29,Harbor FC,S. Musa,carry,complete,64.90,48.76,56.14,65.04,
+DEMO-0091,19.50,Atlas United,C. Khan,pass,complete,25.73,17.56,44.29,4.46,K. Mensah
+DEMO-0092,19.71,Harbor FC,I. Okafor,pass,complete,41.88,14.50,48.50,24.73,J. Eze
+DEMO-0093,19.93,Harbor FC,T. Adebayo,turnover,lost,45.80,23.26,67.25,10.03,
+DEMO-0094,20.14,Harbor FC,I. Okafor,pass,complete,23.14,48.45,12.36,32.85,T. Adebayo
+DEMO-0095,20.36,Atlas United,M. Reed,carry,complete,24.03,40.47,27.85,24.52,
+DEMO-0096,20.57,Atlas United,C. Khan,pass,complete,19.81,59.77,41.42,62.72,L. Silva
+DEMO-0097,20.79,Harbor FC,A. Bello,pass,complete,34.35,50.57,38.04,63.03,S. Musa
+DEMO-0098,21.00,Harbor FC,D. Cole,shot,saved,77.01,69.31,100.00,50.00,
+DEMO-0099,21.21,Atlas United,C. Khan,pass,complete,76.43,30.20,75.00,26.85,F. Adeyemi
+DEMO-0100,21.43,Harbor FC,I. Okafor,carry,complete,64.44,67.46,85.80,73.36,
+DEMO-0101,21.64,Harbor FC,T. Adebayo,pass,complete,61.78,48.86,72.34,60.15,A. Bello
+DEMO-0102,21.86,Harbor FC,D. Cole,pass,complete,15.98,65.98,10.84,68.79,S. Musa
+DEMO-0103,22.07,Harbor FC,A. Bello,pass,complete,34.48,46.37,58.42,56.21,I. Okafor
+DEMO-0104,22.29,Harbor FC,D. Cole,turnover,lost,78.33,63.26,84.64,67.92,
+DEMO-0105,22.50,Atlas United,N. James,pass,complete,26.30,32.57,37.36,46.05,F. Adeyemi
+DEMO-0106,22.71,Atlas United,C. Khan,pass,complete,29.13,79.41,43.18,74.52,F. Adeyemi
+DEMO-0107,22.93,Harbor FC,S. Musa,pass,complete,41.07,62.13,58.54,53.35,I. Okafor
+DEMO-0108,23.14,Harbor FC,J. Eze,carry,complete,34.68,73.50,56.32,87.44,
+DEMO-0109,23.36,Atlas United,N. James,shot,goal,91.60,72.53,100.00,50.00,
+DEMO-0110,23.57,Atlas United,M. Reed,pass,complete,23.13,63.71,18.27,56.70,N. James
+DEMO-0111,23.79,Atlas United,C. Khan,shot,wide,93.88,67.20,100.00,50.00,
+DEMO-0112,24.00,Harbor FC,A. Bello,pass,complete,44.73,78.74,33.44,94.59,J. Eze
+DEMO-0113,24.21,Atlas United,M. Reed,pass,complete,39.50,54.54,53.05,47.75,F. Adeyemi
+DEMO-0114,24.43,Harbor FC,I. Okafor,carry,incomplete,47.27,56.03,59.70,57.09,
+DEMO-0115,24.64,Harbor FC,T. Adebayo,pass,complete,65.74,72.24,74.74,65.36,I. Okafor
+DEMO-0116,24.86,Harbor FC,J. Eze,pass,complete,54.21,53.71,59.74,40.14,D. Cole
+DEMO-0117,25.07,Harbor FC,S. Musa,carry,complete,79.88,19.48,71.59,9.62,
+DEMO-0118,25.29,Atlas United,K. Mensah,pass,complete,73.37,46.79,91.24,31.75,N. James
+DEMO-0119,25.50,Harbor FC,T. Adebayo,carry,complete,61.95,54.10,86.93,51.10,
+DEMO-0120,25.71,Atlas United,N. James,pass,complete,39.24,23.58,49.02,6.49,K. Mensah
+DEMO-0121,25.93,Atlas United,K. Mensah,pass,complete,14.64,86.13,17.05,75.93,L. Silva
+DEMO-0122,26.14,Atlas United,K. Mensah,pass,complete,73.60,38.33,97.51,40.54,F. Adeyemi
+DEMO-0123,26.36,Harbor FC,D. Cole,pass,complete,63.58,23.65,72.85,37.41,A. Bello
+DEMO-0124,26.57,Harbor FC,I. Okafor,pass,complete,35.86,18.34,36.78,17.52,T. Adebayo
+DEMO-0125,26.79,Atlas United,K. Mensah,shot,blocked,91.01,27.25,100.00,50.00,
+DEMO-0126,27.00,Harbor FC,D. Cole,pass,incomplete,54.19,15.17,60.27,4.56,S. Musa
+DEMO-0127,27.21,Harbor FC,T. Adebayo,pass,complete,32.60,45.12,50.97,60.05,I. Okafor
+DEMO-0128,27.43,Atlas United,M. Reed,shot,saved,80.47,58.52,100.00,50.00,
+DEMO-0129,27.64,Atlas United,L. Silva,pass,incomplete,32.81,83.38,31.25,75.91,K. Mensah
+DEMO-0130,27.86,Harbor FC,S. Musa,pass,complete,38.50,87.50,53.00,98.30,A. Bello
+DEMO-0131,28.07,Harbor FC,J. Eze,pass,complete,36.00,71.40,56.51,73.56,A. Bello
+DEMO-0132,28.29,Harbor FC,A. Bello,pass,complete,27.93,21.53,19.01,12.54,S. Musa
+DEMO-0133,28.50,Atlas United,F. Adeyemi,pass,complete,37.77,88.43,48.39,100.00,N. James
+DEMO-0134,28.71,Harbor FC,J. Eze,pass,complete,81.24,88.51,82.92,95.36,A. Bello
+DEMO-0135,28.93,Atlas United,C. Khan,pass,complete,55.79,37.85,68.29,29.20,M. Reed
+DEMO-0136,29.14,Harbor FC,S. Musa,pass,complete,58.46,81.20,70.91,95.48,J. Eze
+DEMO-0137,29.36,Atlas United,K. Mensah,carry,complete,53.29,8.74,47.90,9.41,
+DEMO-0138,29.57,Atlas United,L. Silva,pass,complete,62.20,29.55,65.81,21.74,K. Mensah
+DEMO-0139,29.79,Harbor FC,A. Bello,pass,complete,13.40,10.99,19.11,23.28,T. Adebayo
+DEMO-0140,30.00,Harbor FC,J. Eze,pass,complete,52.05,17.95,73.89,4.09,D. Cole
+DEMO-0141,30.21,Harbor FC,D. Cole,pass,incomplete,62.94,47.52,64.47,47.57,T. Adebayo
+DEMO-0142,30.43,Harbor FC,I. Okafor,carry,complete,50.70,54.37,50.31,39.64,
+DEMO-0143,30.64,Harbor FC,A. Bello,pass,incomplete,21.44,81.90,30.73,74.07,J. Eze
+DEMO-0144,30.86,Atlas United,C. Khan,pass,complete,76.82,16.59,76.19,6.22,N. James
+DEMO-0145,31.07,Harbor FC,J. Eze,pass,incomplete,41.35,75.17,61.56,87.35,T. Adebayo
+DEMO-0146,31.29,Harbor FC,J. Eze,pass,complete,52.24,8.41,60.69,4.30,S. Musa
+DEMO-0147,31.50,Harbor FC,I. Okafor,pass,complete,17.38,21.47,35.37,21.07,T. Adebayo
+DEMO-0148,31.71,Harbor FC,I. Okafor,carry,complete,74.59,33.05,70.75,15.53,
+DEMO-0149,31.93,Harbor FC,T. Adebayo,carry,complete,74.03,8.37,68.74,0.00,
+DEMO-0150,32.14,Harbor FC,I. Okafor,pass,complete,42.32,16.81,52.13,1.48,S. Musa
+DEMO-0151,32.36,Harbor FC,J. Eze,carry,complete,47.48,59.06,59.32,55.11,
+DEMO-0152,32.57,Atlas United,N. James,pass,incomplete,70.44,21.48,89.42,18.25,L. Silva
+DEMO-0153,32.79,Harbor FC,A. Bello,pass,incomplete,51.78,67.78,42.69,70.53,I. Okafor
+DEMO-0154,33.00,Atlas United,M. Reed,pass,incomplete,56.03,75.76,59.20,90.82,C. Khan
+DEMO-0155,33.21,Harbor FC,D. Cole,pass,complete,57.70,11.59,78.17,4.35,T. Adebayo
+DEMO-0156,33.43,Harbor FC,A. Bello,pass,complete,18.36,9.09,14.91,18.99,S. Musa
+DEMO-0157,33.64,Harbor FC,I. Okafor,pass,complete,35.82,26.03,47.89,39.67,S. Musa
+DEMO-0158,33.86,Atlas United,N. James,carry,complete,17.43,63.12,35.37,66.06,
+DEMO-0159,34.07,Harbor FC,T. Adebayo,carry,complete,28.96,9.24,52.83,0.00,
+DEMO-0160,34.29,Harbor FC,S. Musa,pass,complete,34.27,32.60,31.76,43.42,D. Cole
+DEMO-0161,34.50,Harbor FC,S. Musa,pass,complete,18.72,35.05,18.14,31.73,D. Cole
+DEMO-0162,34.71,Harbor FC,S. Musa,pass,complete,42.08,20.32,57.49,28.72,I. Okafor
+DEMO-0163,34.93,Harbor FC,A. Bello,turnover,lost,75.97,84.04,81.05,83.10,
+DEMO-0164,35.14,Harbor FC,I. Okafor,shot,wide,89.01,52.08,100.00,50.00,
+DEMO-0165,35.36,Harbor FC,J. Eze,pass,incomplete,71.66,88.35,89.46,79.70,I. Okafor
+DEMO-0166,35.57,Harbor FC,J. Eze,pass,complete,53.71,45.34,59.17,32.35,S. Musa
+DEMO-0167,35.79,Atlas United,C. Khan,pass,complete,52.14,38.14,43.72,24.11,L. Silva
+DEMO-0168,36.00,Harbor FC,I. Okafor,carry,complete,25.61,84.58,20.40,90.09,
+DEMO-0169,36.21,Harbor FC,T. Adebayo,pass,complete,39.57,59.97,56.99,70.36,S. Musa
+DEMO-0170,36.43,Atlas United,M. Reed,pass,complete,27.90,40.52,20.96,32.19,C. Khan
+DEMO-0171,36.64,Atlas United,L. Silva,pass,complete,61.10,33.05,79.34,18.19,M. Reed
+DEMO-0172,36.86,Atlas United,C. Khan,turnover,lost,41.41,67.04,66.07,84.85,
+DEMO-0173,37.07,Atlas United,K. Mensah,pass,complete,53.84,16.92,69.58,2.88,M. Reed
+DEMO-0174,37.29,Atlas United,M. Reed,pass,complete,23.20,44.73,15.70,31.96,N. James
+DEMO-0175,37.50,Harbor FC,I. Okafor,pass,complete,28.13,32.30,17.14,47.00,T. Adebayo
+DEMO-0176,37.71,Harbor FC,D. Cole,pass,complete,40.85,56.06,36.37,55.69,J. Eze
+DEMO-0177,37.93,Atlas United,F. Adeyemi,carry,complete,59.49,88.34,48.93,81.37,
+DEMO-0178,38.14,Harbor FC,J. Eze,pass,complete,61.25,71.90,84.99,78.02,D. Cole
+DEMO-0179,38.36,Atlas United,L. Silva,pass,incomplete,75.49,86.88,71.04,94.05,K. Mensah
+DEMO-0180,38.57,Harbor FC,I. Okafor,turnover,lost,41.03,28.21,61.99,21.67,
+DEMO-0181,38.79,Harbor FC,A. Bello,pass,complete,25.61,41.11,45.63,51.16,T. Adebayo
+DEMO-0182,39.00,Harbor FC,D. Cole,pass,incomplete,73.09,23.14,85.13,39.48,A. Bello
+DEMO-0183,39.21,Harbor FC,S. Musa,pass,complete,54.31,55.68,51.72,66.97,I. Okafor
+DEMO-0184,39.43,Harbor FC,S. Musa,turnover,lost,52.83,57.76,71.13,60.06,
+DEMO-0185,39.64,Atlas United,N. James,pass,complete,48.19,47.12,36.60,35.76,C. Khan
+DEMO-0186,39.86,Atlas United,K. Mensah,pass,complete,80.63,70.31,84.11,78.55,F. Adeyemi
+DEMO-0187,40.07,Harbor FC,S. Musa,pass,complete,48.45,38.00,51.62,55.35,J. Eze
+DEMO-0188,40.29,Atlas United,N. James,carry,complete,25.22,44.31,35.12,46.43,
+DEMO-0189,40.50,Harbor FC,D. Cole,pass,complete,56.79,23.57,62.65,14.02,J. Eze
+DEMO-0190,40.71,Harbor FC,T. Adebayo,pass,complete,37.29,90.66,34.89,90.99,D. Cole
+DEMO-0191,40.93,Harbor FC,A. Bello,carry,incomplete,71.16,26.36,67.62,33.48,
+DEMO-0192,41.14,Harbor FC,I. Okafor,turnover,lost,44.94,40.71,66.40,52.66,
+DEMO-0193,41.36,Harbor FC,D. Cole,pass,complete,22.75,86.90,12.72,82.47,T. Adebayo
+DEMO-0194,41.57,Harbor FC,I. Okafor,pass,complete,20.44,90.82,23.13,84.51,S. Musa
+DEMO-0195,41.79,Atlas United,C. Khan,pass,complete,60.36,13.06,76.40,0.00,N. James
+DEMO-0196,42.00,Atlas United,K. Mensah,pass,complete,74.41,19.87,66.28,19.98,F. Adeyemi
+DEMO-0197,42.21,Harbor FC,T. Adebayo,pass,incomplete,33.10,75.53,23.05,65.59,J. Eze
+DEMO-0198,42.43,Harbor FC,T. Adebayo,pass,complete,38.30,41.46,45.96,40.15,A. Bello
+DEMO-0199,42.64,Harbor FC,T. Adebayo,pass,complete,43.44,54.14,52.02,53.54,J. Eze
+DEMO-0200,42.86,Harbor FC,T. Adebayo,pass,incomplete,30.11,75.48,19.20,68.01,I. Okafor
+DEMO-0201,43.07,Atlas United,M. Reed,pass,complete,24.22,44.84,35.51,47.67,L. Silva
+DEMO-0202,43.29,Harbor FC,A. Bello,pass,complete,58.75,28.01,67.29,14.17,T. Adebayo
+DEMO-0203,43.50,Atlas United,F. Adeyemi,pass,complete,28.44,52.34,46.11,41.41,M. Reed
+DEMO-0204,43.71,Harbor FC,T. Adebayo,pass,complete,36.68,79.87,47.70,92.22,D. Cole
+DEMO-0205,43.93,Atlas United,K. Mensah,pass,complete,41.53,64.13,60.62,60.13,L. Silva
+DEMO-0206,44.14,Atlas United,L. Silva,shot,blocked,90.25,62.53,100.00,50.00,
+DEMO-0207,44.36,Harbor FC,J. Eze,pass,incomplete,68.76,39.24,57.42,23.16,D. Cole
+DEMO-0208,44.57,Harbor FC,D. Cole,shot,wide,83.13,47.87,100.00,50.00,
+DEMO-0209,44.79,Harbor FC,T. Adebayo,carry,complete,35.41,73.53,44.60,55.96,
+DEMO-0210,45.00,Atlas United,F. Adeyemi,pass,complete,69.16,17.15,74.93,17.22,C. Khan
+DEMO-0211,45.21,Harbor FC,T. Adebayo,pass,complete,29.63,47.27,27.03,52.18,S. Musa
+DEMO-0212,45.43,Harbor FC,S. Musa,pass,complete,23.06,90.56,19.88,83.47,J. Eze
+DEMO-0213,45.64,Atlas United,M. Reed,pass,complete,40.64,79.33,45.41,77.45,C. Khan
+DEMO-0214,45.86,Harbor FC,I. Okafor,pass,complete,42.57,60.45,53.08,49.11,T. Adebayo
+DEMO-0215,46.07,Harbor FC,T. Adebayo,pass,complete,74.51,18.19,97.62,1.41,D. Cole
+DEMO-0216,46.29,Atlas United,N. James,carry,complete,33.20,49.86,49.96,33.58,
+DEMO-0217,46.50,Atlas United,N. James,pass,complete,64.23,63.42,85.26,76.96,K. Mensah
+DEMO-0218,46.71,Atlas United,N. James,pass,incomplete,18.24,17.95,9.32,22.27,M. Reed
+DEMO-0219,46.93,Atlas United,N. James,carry,complete,13.25,35.84,14.41,48.16,
+DEMO-0220,47.14,Harbor FC,I. Okafor,pass,complete,12.31,22.15,33.47,38.74,J. Eze
+DEMO-0221,47.36,Harbor FC,I. Okafor,pass,incomplete,72.12,9.24,63.65,15.21,J. Eze
+DEMO-0222,47.57,Atlas United,L. Silva,carry,complete,41.52,86.22,60.04,98.72,
+DEMO-0223,47.79,Atlas United,N. James,shot,saved,85.23,48.06,100.00,50.00,
+DEMO-0224,48.00,Atlas United,M. Reed,pass,incomplete,44.11,27.55,59.62,44.13,K. Mensah
+DEMO-0225,48.21,Harbor FC,A. Bello,pass,incomplete,82.09,13.53,98.32,25.16,S. Musa
+DEMO-0226,48.43,Atlas United,L. Silva,carry,complete,47.89,18.97,39.28,16.08,
+DEMO-0227,48.64,Harbor FC,A. Bello,shot,saved,80.53,69.44,100.00,50.00,
+DEMO-0228,48.86,Harbor FC,I. Okafor,pass,incomplete,62.71,59.21,55.75,57.89,T. Adebayo
+DEMO-0229,49.07,Atlas United,N. James,pass,complete,12.88,64.10,30.51,59.86,F. Adeyemi
+DEMO-0230,49.29,Atlas United,M. Reed,pass,complete,65.81,18.11,60.27,20.45,K. Mensah
+DEMO-0231,49.50,Harbor FC,S. Musa,carry,complete,39.61,16.98,36.26,16.79,
+DEMO-0232,49.71,Atlas United,K. Mensah,pass,complete,20.89,70.45,10.40,87.78,C. Khan
+DEMO-0233,49.93,Atlas United,F. Adeyemi,pass,incomplete,16.03,66.35,7.93,60.27,L. Silva
+DEMO-0234,50.14,Atlas United,C. Khan,pass,complete,16.71,91.56,33.17,74.24,F. Adeyemi
+DEMO-0235,50.36,Atlas United,L. Silva,pass,complete,72.47,63.31,61.15,77.27,F. Adeyemi
+DEMO-0236,50.57,Harbor FC,A. Bello,pass,complete,68.37,36.32,68.57,48.51,T. Adebayo
+DEMO-0237,50.79,Atlas United,N. James,carry,complete,39.97,30.19,62.69,38.72,
+DEMO-0238,51.00,Harbor FC,T. Adebayo,pass,complete,49.20,61.25,42.64,76.54,A. Bello
+DEMO-0239,51.21,Atlas United,C. Khan,carry,complete,21.06,32.92,21.19,48.36,
+DEMO-0240,51.43,Harbor FC,A. Bello,pass,complete,27.31,91.46,21.08,88.77,S. Musa
+DEMO-0241,51.64,Atlas United,N. James,pass,complete,35.16,9.65,41.19,14.28,K. Mensah
+DEMO-0242,51.86,Atlas United,C. Khan,carry,complete,71.77,18.79,85.02,31.00,
+DEMO-0243,52.07,Harbor FC,J. Eze,pass,incomplete,59.02,62.29,47.16,76.14,A. Bello
+DEMO-0244,52.29,Harbor FC,I. Okafor,shot,saved,75.53,73.16,100.00,50.00,
+DEMO-0245,52.50,Harbor FC,D. Cole,pass,complete,79.34,51.33,85.29,62.20,S. Musa
+DEMO-0246,52.71,Harbor FC,D. Cole,pass,complete,12.41,35.05,22.82,17.48,T. Adebayo
+DEMO-0247,52.93,Atlas United,M. Reed,pass,complete,82.11,20.87,96.50,16.74,N. James
+DEMO-0248,53.14,Atlas United,K. Mensah,pass,complete,18.02,89.34,28.42,82.43,M. Reed
+DEMO-0249,53.36,Harbor FC,I. Okafor,pass,complete,13.98,51.18,33.94,44.11,S. Musa
+DEMO-0250,53.57,Harbor FC,I. Okafor,carry,complete,28.37,76.38,52.46,81.68,
+DEMO-0251,53.79,Atlas United,C. Khan,carry,complete,70.34,35.25,64.29,49.01,
+DEMO-0252,54.00,Atlas United,L. Silva,pass,complete,40.58,52.88,37.98,64.20,M. Reed
+DEMO-0253,54.21,Harbor FC,D. Cole,pass,complete,29.20,21.46,43.71,9.75,A. Bello
+DEMO-0254,54.43,Atlas United,M. Reed,pass,incomplete,14.40,25.87,19.20,21.18,C. Khan
+DEMO-0255,54.64,Atlas United,L. Silva,pass,complete,52.87,68.14,60.99,70.05,K. Mensah
+DEMO-0256,54.86,Atlas United,L. Silva,carry,complete,53.28,45.72,45.42,33.89,
+DEMO-0257,55.07,Harbor FC,S. Musa,pass,complete,68.07,63.29,70.46,69.94,I. Okafor
+DEMO-0258,55.29,Harbor FC,S. Musa,pass,incomplete,70.71,31.12,78.46,44.27,I. Okafor
+DEMO-0259,55.50,Atlas United,L. Silva,pass,complete,52.74,82.42,61.87,70.32,N. James
+DEMO-0260,55.71,Harbor FC,S. Musa,pass,complete,23.85,33.88,43.75,48.07,D. Cole
+DEMO-0261,55.93,Atlas United,C. Khan,carry,complete,53.87,13.01,45.26,29.73,
+DEMO-0262,56.14,Atlas United,M. Reed,pass,complete,63.66,11.35,74.34,1.57,C. Khan
+DEMO-0263,56.36,Harbor FC,J. Eze,pass,complete,36.54,61.90,57.71,62.04,T. Adebayo
+DEMO-0264,56.57,Harbor FC,I. Okafor,pass,complete,60.63,27.07,51.59,9.63,D. Cole
+DEMO-0265,56.79,Atlas United,M. Reed,carry,complete,31.15,12.70,46.83,0.00,
+DEMO-0266,57.00,Atlas United,K. Mensah,pass,complete,38.81,41.43,42.36,40.09,C. Khan
+DEMO-0267,57.21,Atlas United,K. Mensah,pass,complete,62.27,62.04,73.51,47.69,F. Adeyemi
+DEMO-0268,57.43,Harbor FC,D. Cole,pass,complete,73.93,39.06,88.21,38.41,S. Musa
+DEMO-0269,57.64,Atlas United,L. Silva,pass,complete,64.13,86.67,54.68,99.19,C. Khan
+DEMO-0270,57.86,Atlas United,F. Adeyemi,pass,complete,56.87,24.06,55.94,18.78,L. Silva
+DEMO-0271,58.07,Atlas United,C. Khan,pass,incomplete,23.54,24.61,26.34,37.62,L. Silva
+DEMO-0272,58.29,Atlas United,N. James,shot,wide,91.99,69.16,100.00,50.00,
+DEMO-0273,58.50,Atlas United,F. Adeyemi,pass,incomplete,57.25,29.09,62.19,23.20,K. Mensah
+DEMO-0274,58.71,Harbor FC,J. Eze,pass,complete,45.82,17.67,41.09,17.82,I. Okafor
+DEMO-0275,58.93,Atlas United,K. Mensah,pass,complete,13.31,80.54,16.54,77.05,C. Khan
+DEMO-0276,59.14,Atlas United,M. Reed,carry,complete,26.49,31.65,44.41,45.87,
+DEMO-0277,59.36,Harbor FC,T. Adebayo,carry,complete,26.06,68.20,33.58,75.95,
+DEMO-0278,59.57,Harbor FC,S. Musa,pass,complete,19.84,21.22,34.85,35.88,J. Eze
+DEMO-0279,59.79,Harbor FC,T. Adebayo,pass,incomplete,31.76,76.00,28.56,67.00,A. Bello
+DEMO-0280,60.00,Atlas United,M. Reed,pass,complete,65.32,60.88,55.63,77.61,K. Mensah
+DEMO-0281,60.21,Harbor FC,J. Eze,pass,complete,75.34,18.05,97.94,4.81,T. Adebayo
+DEMO-0282,60.43,Harbor FC,J. Eze,pass,complete,47.15,67.86,53.05,69.98,I. Okafor
+DEMO-0283,60.64,Atlas United,F. Adeyemi,pass,complete,25.16,83.78,21.69,71.75,N. James
+DEMO-0284,60.86,Harbor FC,A. Bello,turnover,lost,81.45,57.97,87.85,41.23,
+DEMO-0285,61.07,Atlas United,M. Reed,pass,complete,41.72,73.33,56.66,73.53,F. Adeyemi
+DEMO-0286,61.29,Harbor FC,S. Musa,pass,complete,61.32,22.24,84.80,34.39,D. Cole
+DEMO-0287,61.50,Atlas United,C. Khan,pass,incomplete,48.84,42.67,69.04,40.82,F. Adeyemi
+DEMO-0288,61.71,Harbor FC,J. Eze,shot,wide,75.23,25.52,100.00,50.00,
+DEMO-0289,61.93,Harbor FC,D. Cole,pass,complete,31.40,72.14,35.73,79.42,S. Musa
+DEMO-0290,62.14,Harbor FC,I. Okafor,carry,complete,43.35,72.23,55.75,67.86,
+DEMO-0291,62.36,Harbor FC,S. Musa,pass,complete,25.55,32.15,21.78,34.84,J. Eze
+DEMO-0292,62.57,Harbor FC,I. Okafor,pass,complete,68.50,22.22,61.95,14.99,D. Cole
+DEMO-0293,62.79,Atlas United,F. Adeyemi,pass,complete,45.19,44.83,52.23,27.66,C. Khan
+DEMO-0294,63.00,Harbor FC,A. Bello,pass,complete,31.90,27.73,20.16,24.30,T. Adebayo
+DEMO-0295,63.21,Harbor FC,J. Eze,pass,complete,51.20,86.43,55.75,90.89,D. Cole
+DEMO-0296,63.43,Atlas United,M. Reed,pass,incomplete,74.60,35.38,86.59,44.07,L. Silva
+DEMO-0297,63.64,Atlas United,K. Mensah,carry,complete,50.85,72.99,60.48,80.20,
+DEMO-0298,63.86,Atlas United,C. Khan,pass,complete,51.78,21.07,53.23,3.71,N. James
+DEMO-0299,64.07,Harbor FC,S. Musa,pass,complete,13.52,64.38,7.49,55.00,A. Bello
+DEMO-0300,64.29,Atlas United,F. Adeyemi,carry,complete,14.30,85.69,5.41,100.00,
+DEMO-0301,64.50,Harbor FC,A. Bello,pass,complete,78.62,81.05,90.76,97.38,I. Okafor
+DEMO-0302,64.71,Atlas United,K. Mensah,pass,complete,75.97,89.71,90.05,80.26,N. James
+DEMO-0303,64.93,Atlas United,L. Silva,carry,complete,69.37,22.61,66.64,34.05,
+DEMO-0304,65.14,Atlas United,F. Adeyemi,carry,complete,21.87,19.07,22.33,22.17,
+DEMO-0305,65.36,Atlas United,M. Reed,pass,complete,41.55,15.99,50.19,3.38,L. Silva
+DEMO-0306,65.57,Atlas United,C. Khan,pass,complete,54.22,66.41,46.40,64.18,L. Silva
+DEMO-0307,65.79,Atlas United,K. Mensah,pass,incomplete,16.02,53.55,10.32,70.13,N. James
+DEMO-0308,66.00,Atlas United,F. Adeyemi,pass,complete,18.43,45.31,11.15,51.27,M. Reed
+DEMO-0309,66.21,Harbor FC,S. Musa,pass,complete,77.31,37.33,95.10,48.50,T. Adebayo
+DEMO-0310,66.43,Atlas United,C. Khan,pass,incomplete,22.66,62.46,13.60,69.77,F. Adeyemi
+DEMO-0311,66.64,Atlas United,N. James,pass,complete,77.92,43.61,82.99,59.04,K. Mensah
+DEMO-0312,66.86,Harbor FC,A. Bello,pass,incomplete,44.34,23.66,45.38,9.24,J. Eze
+DEMO-0313,67.07,Harbor FC,D. Cole,pass,complete,26.04,56.07,40.70,43.07,J. Eze
+DEMO-0314,67.29,Atlas United,N. James,pass,complete,54.38,39.86,43.23,37.61,C. Khan
+DEMO-0315,67.50,Harbor FC,J. Eze,pass,complete,21.09,63.65,38.02,50.23,A. Bello
+DEMO-0316,67.71,Atlas United,L. Silva,shot,wide,91.31,44.96,100.00,50.00,
+DEMO-0317,67.93,Atlas United,L. Silva,pass,complete,18.84,87.60,38.12,79.06,K. Mensah
+DEMO-0318,68.14,Atlas United,L. Silva,pass,complete,56.65,38.15,47.22,39.87,N. James
+DEMO-0319,68.36,Harbor FC,A. Bello,carry,complete,31.48,84.51,32.59,88.13,
+DEMO-0320,68.57,Harbor FC,S. Musa,pass,complete,43.19,89.10,52.79,74.92,J. Eze
+DEMO-0321,68.79,Harbor FC,J. Eze,pass,complete,35.86,39.62,28.21,35.23,T. Adebayo
+DEMO-0322,69.00,Harbor FC,T. Adebayo,pass,complete,17.10,75.20,12.75,90.21,I. Okafor
+DEMO-0323,69.21,Harbor FC,A. Bello,turnover,lost,63.26,19.89,52.60,7.07,
+DEMO-0324,69.43,Harbor FC,I. Okafor,carry,complete,77.87,66.77,74.54,65.29,
+DEMO-0325,69.64,Atlas United,K. Mensah,pass,complete,31.97,40.43,20.97,25.62,F. Adeyemi
+DEMO-0326,69.86,Harbor FC,J. Eze,pass,complete,28.44,25.63,23.84,33.93,I. Okafor
+DEMO-0327,70.07,Harbor FC,J. Eze,carry,complete,61.48,89.45,60.37,89.06,
+DEMO-0328,70.29,Harbor FC,D. Cole,pass,complete,59.89,28.59,77.78,20.09,A. Bello
+DEMO-0329,70.50,Atlas United,L. Silva,pass,complete,12.29,35.08,6.16,33.36,N. James
+DEMO-0330,70.71,Harbor FC,S. Musa,pass,complete,16.92,21.12,30.39,39.08,I. Okafor
+DEMO-0331,70.93,Harbor FC,T. Adebayo,pass,complete,32.19,75.90,41.15,80.29,D. Cole
+DEMO-0332,71.14,Atlas United,L. Silva,pass,complete,29.54,69.39,28.28,60.61,K. Mensah
+DEMO-0333,71.36,Atlas United,F. Adeyemi,carry,complete,23.70,34.03,45.35,45.51,
+DEMO-0334,71.57,Atlas United,N. James,carry,complete,45.69,10.23,65.12,13.78,
+DEMO-0335,71.79,Atlas United,L. Silva,pass,complete,40.09,69.36,31.22,76.03,N. James
+DEMO-0336,72.00,Atlas United,N. James,pass,complete,32.88,41.93,57.14,26.38,K. Mensah
+DEMO-0337,72.21,Harbor FC,A. Bello,pass,complete,24.01,61.76,26.54,69.53,I. Okafor
+DEMO-0338,72.43,Harbor FC,J. Eze,carry,complete,38.55,76.19,31.42,67.79,
+DEMO-0339,72.64,Atlas United,F. Adeyemi,pass,complete,48.27,79.22,64.34,76.79,M. Reed
+DEMO-0340,72.86,Atlas United,L. Silva,pass,complete,30.95,53.55,51.23,63.42,N. James
+DEMO-0341,73.07,Atlas United,N. James,pass,incomplete,54.61,72.31,63.52,67.31,F. Adeyemi
+DEMO-0342,73.29,Atlas United,N. James,carry,incomplete,37.43,21.96,49.94,10.86,
+DEMO-0343,73.50,Atlas United,N. James,carry,complete,77.30,82.40,99.24,97.90,
+DEMO-0344,73.71,Atlas United,M. Reed,pass,complete,26.07,19.12,33.29,24.47,K. Mensah
+DEMO-0345,73.93,Atlas United,F. Adeyemi,pass,complete,48.19,61.48,66.93,71.19,N. James
+DEMO-0346,74.14,Atlas United,K. Mensah,shot,wide,73.41,35.89,100.00,50.00,
+DEMO-0347,74.36,Atlas United,F. Adeyemi,pass,complete,58.24,12.22,57.74,26.88,L. Silva
+DEMO-0348,74.57,Harbor FC,D. Cole,turnover,lost,23.98,79.06,40.84,94.28,
+DEMO-0349,74.79,Atlas United,K. Mensah,pass,complete,23.37,27.40,19.20,41.07,L. Silva
+DEMO-0350,75.00,Harbor FC,A. Bello,pass,complete,37.90,25.14,60.47,17.07,D. Cole
+DEMO-0351,75.21,Atlas United,K. Mensah,shot,blocked,86.16,56.25,100.00,50.00,
+DEMO-0352,75.43,Atlas United,C. Khan,pass,complete,74.86,52.85,70.17,60.95,M. Reed
+DEMO-0353,75.64,Harbor FC,J. Eze,pass,complete,18.23,14.04,30.18,16.04,T. Adebayo
+DEMO-0354,75.86,Harbor FC,D. Cole,pass,complete,46.95,50.82,49.83,53.08,J. Eze
+DEMO-0355,76.07,Atlas United,L. Silva,carry,complete,23.16,79.00,42.44,61.58,
+DEMO-0356,76.29,Atlas United,F. Adeyemi,pass,complete,82.18,51.97,92.19,46.20,L. Silva
+DEMO-0357,76.50,Harbor FC,A. Bello,turnover,lost,17.99,42.89,26.61,34.32,
+DEMO-0358,76.71,Harbor FC,A. Bello,pass,complete,81.06,14.96,71.51,24.45,D. Cole
+DEMO-0359,76.93,Atlas United,N. James,pass,complete,57.16,41.35,70.64,33.95,M. Reed
+DEMO-0360,77.14,Harbor FC,I. Okafor,pass,incomplete,53.47,40.31,48.51,51.93,S. Musa
+DEMO-0361,77.36,Harbor FC,I. Okafor,pass,complete,31.60,78.59,38.90,66.73,A. Bello
+DEMO-0362,77.57,Atlas United,F. Adeyemi,pass,incomplete,38.29,58.10,46.87,41.45,N. James
+DEMO-0363,77.79,Harbor FC,D. Cole,shot,blocked,77.45,24.70,100.00,50.00,
+DEMO-0364,78.00,Harbor FC,D. Cole,carry,complete,39.18,12.72,29.35,10.58,
+DEMO-0365,78.21,Atlas United,C. Khan,shot,wide,84.40,43.90,100.00,50.00,
+DEMO-0366,78.43,Atlas United,N. James,pass,complete,48.91,59.46,50.05,70.24,M. Reed
+DEMO-0367,78.64,Harbor FC,I. Okafor,turnover,lost,72.55,75.49,72.22,86.78,
+DEMO-0368,78.86,Harbor FC,T. Adebayo,pass,complete,44.78,28.02,69.04,36.15,I. Okafor
+DEMO-0369,79.07,Atlas United,K. Mensah,carry,complete,40.53,55.36,65.39,71.60,
+DEMO-0370,79.29,Atlas United,F. Adeyemi,pass,complete,71.46,45.72,90.62,46.73,N. James
+DEMO-0371,79.50,Atlas United,K. Mensah,pass,incomplete,56.36,14.36,55.70,5.36,C. Khan
+DEMO-0372,79.71,Atlas United,K. Mensah,pass,complete,63.70,28.05,63.92,37.14,F. Adeyemi
+DEMO-0373,79.93,Harbor FC,D. Cole,pass,complete,31.09,47.78,47.66,31.83,T. Adebayo
+DEMO-0374,80.14,Harbor FC,I. Okafor,pass,complete,50.02,44.73,71.07,29.07,A. Bello
+DEMO-0375,80.36,Harbor FC,I. Okafor,pass,complete,42.10,73.20,49.91,60.25,J. Eze
+DEMO-0376,80.57,Harbor FC,A. Bello,pass,incomplete,13.91,52.99,9.47,46.25,J. Eze
+DEMO-0377,80.79,Atlas United,M. Reed,pass,incomplete,59.56,45.58,62.11,36.09,K. Mensah
+DEMO-0378,81.00,Harbor FC,S. Musa,carry,complete,65.30,14.84,58.26,17.21,
+DEMO-0379,81.21,Harbor FC,I. Okafor,carry,complete,42.07,35.72,47.82,27.58,
+DEMO-0380,81.43,Atlas United,N. James,pass,complete,48.30,35.70,50.82,32.84,C. Khan
+DEMO-0381,81.64,Atlas United,F. Adeyemi,pass,complete,32.03,62.97,55.34,45.53,K. Mensah
+DEMO-0382,81.86,Atlas United,N. James,carry,complete,76.03,90.44,81.30,75.13,
+DEMO-0383,82.07,Atlas United,C. Khan,pass,complete,61.39,11.95,52.16,7.96,K. Mensah
+DEMO-0384,82.29,Harbor FC,S. Musa,carry,complete,51.45,23.05,75.53,19.02,
+DEMO-0385,82.50,Atlas United,L. Silva,turnover,lost,52.89,62.09,62.72,62.30,
+DEMO-0386,82.71,Harbor FC,S. Musa,carry,complete,73.60,70.59,85.43,86.42,
+DEMO-0387,82.93,Harbor FC,I. Okafor,carry,complete,80.50,88.79,98.46,100.00,
+DEMO-0388,83.14,Atlas United,N. James,carry,complete,42.66,28.77,47.15,28.11,
+DEMO-0389,83.36,Atlas United,M. Reed,shot,saved,82.87,32.67,100.00,50.00,
+DEMO-0390,83.57,Atlas United,M. Reed,pass,complete,49.25,26.85,52.50,30.46,F. Adeyemi
+DEMO-0391,83.79,Atlas United,F. Adeyemi,pass,complete,26.75,67.38,44.36,49.80,C. Khan
+DEMO-0392,84.00,Harbor FC,T. Adebayo,pass,complete,78.27,76.08,75.91,68.13,J. Eze
+DEMO-0393,84.21,Harbor FC,J. Eze,pass,complete,62.60,14.97,69.96,16.64,D. Cole
+DEMO-0394,84.43,Atlas United,N. James,shot,goal,86.70,54.27,100.00,50.00,
+DEMO-0395,84.64,Atlas United,N. James,carry,complete,67.55,24.23,76.72,12.68,
+DEMO-0396,84.86,Atlas United,C. Khan,carry,complete,71.09,77.59,60.50,80.26,
+DEMO-0397,85.07,Harbor FC,I. Okafor,pass,complete,81.58,57.28,99.43,74.58,J. Eze
+DEMO-0398,85.29,Harbor FC,D. Cole,pass,complete,24.44,40.84,35.33,56.38,J. Eze
+DEMO-0399,85.50,Harbor FC,D. Cole,pass,complete,53.88,90.32,66.18,92.73,S. Musa
+DEMO-0400,85.71,Harbor FC,J. Eze,pass,complete,36.87,80.58,60.77,76.95,I. Okafor
+DEMO-0401,85.93,Atlas United,N. James,shot,wide,74.94,49.48,100.00,50.00,
+DEMO-0402,86.14,Harbor FC,S. Musa,pass,complete,17.55,67.91,14.98,54.68,T. Adebayo
+DEMO-0403,86.36,Atlas United,M. Reed,pass,incomplete,25.91,69.76,48.64,56.05,N. James
+DEMO-0404,86.57,Atlas United,F. Adeyemi,carry,incomplete,19.31,63.35,27.90,53.81,
+DEMO-0405,86.79,Harbor FC,A. Bello,pass,complete,80.00,31.77,69.95,26.33,D. Cole
+DEMO-0406,87.00,Harbor FC,D. Cole,pass,complete,26.22,16.06,36.01,7.67,T. Adebayo
+DEMO-0407,87.21,Atlas United,N. James,pass,complete,46.57,18.98,36.62,11.66,F. Adeyemi
+DEMO-0408,87.43,Atlas United,K. Mensah,carry,complete,54.71,65.70,55.13,58.32,
+DEMO-0409,87.64,Harbor FC,A. Bello,pass,complete,29.36,89.58,40.15,99.38,S. Musa
+DEMO-0410,87.86,Harbor FC,J. Eze,pass,complete,15.71,51.77,24.49,67.58,A. Bello
+DEMO-0411,88.07,Harbor FC,A. Bello,pass,incomplete,18.43,14.55,40.01,18.09,D. Cole
+DEMO-0412,88.29,Atlas United,N. James,pass,complete,34.78,46.27,32.10,56.60,F. Adeyemi
+DEMO-0413,88.50,Harbor FC,S. Musa,pass,incomplete,74.59,14.86,86.64,0.00,A. Bello
+DEMO-0414,88.71,Harbor FC,D. Cole,pass,complete,63.59,38.37,75.44,42.64,J. Eze
+DEMO-0415,88.93,Atlas United,K. Mensah,pass,complete,30.50,79.39,19.74,73.41,N. James
+DEMO-0416,89.14,Harbor FC,S. Musa,pass,incomplete,80.37,83.81,68.53,100.00,T. Adebayo
+DEMO-0417,89.36,Atlas United,K. Mensah,carry,complete,70.44,53.34,86.57,55.03,
+DEMO-0418,89.57,Atlas United,N. James,pass,complete,25.63,21.14,46.04,27.03,C. Khan
+DEMO-0419,89.79,Harbor FC,A. Bello,pass,incomplete,60.10,75.65,84.19,93.21,I. Okafor
+DEMO-0420,90.00,Atlas United,M. Reed,turnover,lost,70.90,25.57,93.97,30.17,

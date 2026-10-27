@@ -1,0 +1,5 @@
+date,description,amount,category
+2026-10-01,Bus ride,500.00,transport
+2026-10-02,Weekly groceries,12500.00,groceries
+2026-10-03,Python course,8000.00,learning
+2026-10-05,Course refund,-1500.00,learning

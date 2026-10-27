@@ -1,0 +1,39 @@
+name: Portfolio projects
+on:
+  push:
+    paths: ['Portfolio-Projects/**', '.github/workflows/portfolio-ci.yml']
+  pull_request:
+    paths: ['Portfolio-Projects/**', '.github/workflows/portfolio-ci.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Domain, syntax and HTTP integration tests
+        run: python Portfolio-Projects/verify.py
+      - name: Install optional browser test tooling
+        working-directory: Portfolio-Projects
+        run: npm install --ignore-scripts
+      - name: Install test browser
+        working-directory: Portfolio-Projects
+        run: npx playwright install --with-deps chromium
+      - name: Browser acceptance and responsive screenshots
+        working-directory: Portfolio-Projects
+        run: npm run test:browser
+      - name: Upload screenshots and browser report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-results
+          path: Portfolio-Projects/artifacts/
+          if-no-files-found: ignore

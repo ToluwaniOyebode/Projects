@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-projects-acceptance",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Optional browser checks; the six apps themselves have no npm dependencies",
+  "scripts": { "test:browser": "node tests/browser.mjs" },
+  "devDependencies": { "playwright": "1.62.1" }
+}
