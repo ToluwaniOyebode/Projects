@@ -1,0 +1,12 @@
+{
+  "experiment": "statsbomb_event_type_next_action_gru_v1",
+  "context_length": 8,
+  "train_matches": 3396,
+  "test_matches": 839,
+  "train_sequences": 11891421,
+  "test_sequences": 2948870,
+  "gru_accuracy": 0.7286482618765833,
+  "gru_macro_f1": 0.33009090185719664,
+  "majority_baseline_accuracy": 0.2751240305608589,
+  "majority_baseline_macro_f1": 0.012691915543667984
+}
