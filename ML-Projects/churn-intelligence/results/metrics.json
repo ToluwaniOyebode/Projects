@@ -1,0 +1,251 @@
+{
+  "dataset": {
+    "customers": 12000,
+    "churn_rate": 0.26075,
+    "numeric_features": [
+      "tenure_months",
+      "monthly_charges",
+      "support_tickets_90d",
+      "avg_usage_gb",
+      "usage_trend_pct",
+      "late_payments_12m",
+      "num_add_on_services"
+    ],
+    "categorical_features": [
+      "contract",
+      "internet_service",
+      "payment_method",
+      "paperless_billing",
+      "region",
+      "signup_channel"
+    ],
+    "train_size": 9000,
+    "test_size": 3000,
+    "seed": 7
+  },
+  "cross_validation": {
+    "Logistic regression": {
+      "cv_roc_auc_mean": 0.7842847911711365,
+      "cv_roc_auc_std": 0.005737362100130037,
+      "cv_pr_auc_mean": 0.5604551920219357
+    },
+    "Random forest": {
+      "cv_roc_auc_mean": 0.7772868295069896,
+      "cv_roc_auc_std": 0.008405069596114676,
+      "cv_pr_auc_mean": 0.5435168913519346
+    },
+    "Gradient boosting": {
+      "cv_roc_auc_mean": 0.7749969507795422,
+      "cv_roc_auc_std": 0.0035039447710418577,
+      "cv_pr_auc_mean": 0.5381242075647723
+    }
+  },
+  "selected_model": "Logistic regression",
+  "test_metrics": {
+    "Logistic regression": {
+      "roc_auc": 0.7841226975755214,
+      "pr_auc": 0.5521446957541188,
+      "brier": 0.1545181652212596,
+      "log_loss": 0.47006944704511866,
+      "ece": 0.015716205266164206
+    },
+    "Random forest": {
+      "roc_auc": 0.7763393670480305,
+      "pr_auc": 0.5334375558862996,
+      "brier": 0.15766548345082157,
+      "log_loss": 0.4786538757800716,
+      "ece": 0.023060975424394496
+    },
+    "Gradient boosting": {
+      "roc_auc": 0.7751038353946667,
+      "pr_auc": 0.5386194127609777,
+      "brier": 0.15698692953311008,
+      "log_loss": 0.47784787478626056,
+      "ece": 0.02179129970337207
+    }
+  },
+  "calibrated_test_metrics": {
+    "roc_auc": 0.7841235623900245,
+    "pr_auc": 0.5489616080977306,
+    "brier": 0.15465166371019384,
+    "log_loss": 0.4705379550761201,
+    "ece": 0.01995537705314042
+  },
+  "economics": {
+    "contact_cost": 25.0,
+    "save_rate": 0.35,
+    "customer_value": 480.0,
+    "breakeven_probability": 0.1488095238095238
+  },
+  "campaign_profit_test": {
+    "Contact nobody": 0.0,
+    "Contact everyone": 56376.0,
+    "Random, same volume": 34114.0,
+    "Model, break-even rule": 70785.0,
+    "Model, best threshold (hindsight)": 70908.0
+  },
+  "best_threshold": 0.13,
+  "lift_deciles": [
+    {
+      "decile": 1,
+      "customers": 300,
+      "churn_rate": 0.6366666666666667,
+      "lift": 2.4424552429667523,
+      "cumulative_capture": 0.2442455242966752
+    },
+    {
+      "decile": 2,
+      "customers": 300,
+      "churn_rate": 0.5066666666666667,
+      "lift": 1.9437340153452687,
+      "cumulative_capture": 0.43861892583120204
+    },
+    {
+      "decile": 3,
+      "customers": 300,
+      "churn_rate": 0.41,
+      "lift": 1.5728900255754474,
+      "cumulative_capture": 0.5959079283887468
+    },
+    {
+      "decile": 4,
+      "customers": 300,
+      "churn_rate": 0.32,
+      "lift": 1.227621483375959,
+      "cumulative_capture": 0.7186700767263428
+    },
+    {
+      "decile": 5,
+      "customers": 300,
+      "churn_rate": 0.23666666666666666,
+      "lift": 0.907928388746803,
+      "cumulative_capture": 0.809462915601023
+    },
+    {
+      "decile": 6,
+      "customers": 300,
+      "churn_rate": 0.18666666666666668,
+      "lift": 0.7161125319693096,
+      "cumulative_capture": 0.881074168797954
+    },
+    {
+      "decile": 7,
+      "customers": 300,
+      "churn_rate": 0.12,
+      "lift": 0.46035805626598464,
+      "cumulative_capture": 0.9271099744245525
+    },
+    {
+      "decile": 8,
+      "customers": 300,
+      "churn_rate": 0.1,
+      "lift": 0.38363171355498726,
+      "cumulative_capture": 0.9654731457800512
+    },
+    {
+      "decile": 9,
+      "customers": 300,
+      "churn_rate": 0.07666666666666666,
+      "lift": 0.29411764705882354,
+      "cumulative_capture": 0.9948849104859335
+    },
+    {
+      "decile": 10,
+      "customers": 300,
+      "churn_rate": 0.013333333333333334,
+      "lift": 0.05115089514066497,
+      "cumulative_capture": 1.0
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "contract",
+      "mean": 0.09444552706408162,
+      "std": 0.004971867433714044
+    },
+    {
+      "feature": "monthly_charges",
+      "mean": 0.053389179210320624,
+      "std": 0.0022366630994786756
+    },
+    {
+      "feature": "tenure_months",
+      "mean": 0.04060438618541475,
+      "std": 0.005678750865696368
+    },
+    {
+      "feature": "support_tickets_90d",
+      "mean": 0.02082675113406011,
+      "std": 0.0030455818142495687
+    },
+    {
+      "feature": "usage_trend_pct",
+      "mean": 0.017588933679874148,
+      "std": 0.0007087730290820757
+    },
+    {
+      "feature": "payment_method",
+      "mean": 0.013611267418325043,
+      "std": 0.0014203494963452733
+    },
+    {
+      "feature": "late_payments_12m",
+      "mean": 0.004408055612569277,
+      "std": 0.0005535107005476401
+    },
+    {
+      "feature": "internet_service",
+      "mean": 0.0018796262771389276,
+      "std": 0.0012674579622777896
+    },
+    {
+      "feature": "signup_channel",
+      "mean": 0.0014772953522178185,
+      "std": 0.0005896458474670779
+    },
+    {
+      "feature": "region",
+      "mean": 0.0010449361459407742,
+      "std": 0.0005527159679683236
+    },
+    {
+      "feature": "num_add_on_services",
+      "mean": 0.0008046138045919027,
+      "std": 0.00033595601587181286
+    },
+    {
+      "feature": "paperless_billing",
+      "mean": 0.0007541662919137345,
+      "std": 0.000840346043981022
+    },
+    {
+      "feature": "avg_usage_gb",
+      "mean": 9.806035559637809e-05,
+      "std": 0.0002440379253004717
+    }
+  ],
+  "segments_by_contract": {
+    "month-to-month": {
+      "customers": 1635,
+      "churn_rate": 0.36819571865443423,
+      "roc_auc": 0.7161172985820097
+    },
+    "one-year": {
+      "customers": 723,
+      "churn_rate": 0.18118948824343015,
+      "roc_auc": 0.7613149886527749
+    },
+    "two-year": {
+      "customers": 642,
+      "churn_rate": 0.0763239875389408,
+      "roc_auc": 0.7716729187459133
+    }
+  },
+  "figures": [
+    "roc_pr.png",
+    "calibration.png",
+    "lift_gains.png",
+    "profit_curve.png",
+    "feature_importance.png"
+  ]
+}

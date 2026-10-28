@@ -1,5 +1,17 @@
 # Projects
 
+## Data, AI and ML portfolio
+
+[Explore three end-to-end ML projects →](ML-Projects/README.md)
+
+| Project | Focus |
+| --- | --- |
+| [Churn Intelligence](ML-Projects/churn-intelligence/) | Model comparison, calibration and a profit-based retention decision |
+| [Demand Forecasting Lab](ML-Projects/demand-forecasting-lab/) | Leakage-safe rolling backtests, promotions and prediction intervals |
+| [Ticket Triage NLP](ML-Projects/ticket-triage-nlp/) | Unseen-phrasing evaluation, confidence routing and similar-ticket search |
+
+Each project reproduces from one command, ships its real results and figures, and states its own limitations. Data is synthetic and generated locally.
+
 ## Software engineering portfolio
 
 [Explore six complete local applications →](Portfolio-Projects/README.md)

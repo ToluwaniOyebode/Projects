@@ -1,0 +1,507 @@
+{
+  "dataset": {
+    "tickets": 6000,
+    "categories": [
+      "billing",
+      "technical_issue",
+      "account_access",
+      "shipping",
+      "feature_request",
+      "security"
+    ],
+    "templates": 48,
+    "train_tickets": 4151,
+    "test_tickets": 1509,
+    "test_templates": 12,
+    "seed": 5
+  },
+  "models": {
+    "Word TF-IDF + logistic regression": {
+      "random_split": {
+        "accuracy": 0.9673333333333334,
+        "macro_f1": 0.9661171007439652
+      },
+      "grouped_split": {
+        "accuracy": 0.6368455931080186,
+        "macro_f1": 0.6240795356041072
+      },
+      "grouped_cv_macro_f1": 0.4267324621933448
+    },
+    "Word + character TF-IDF + logistic regression": {
+      "random_split": {
+        "accuracy": 0.9613333333333334,
+        "macro_f1": 0.9605870186995512
+      },
+      "grouped_split": {
+        "accuracy": 0.705765407554672,
+        "macro_f1": 0.6890984227570641
+      },
+      "grouped_cv_macro_f1": 0.4764012987210348
+    },
+    "Word TF-IDF + complement naive Bayes": {
+      "random_split": {
+        "accuracy": 0.968,
+        "macro_f1": 0.9672074807245524
+      },
+      "grouped_split": {
+        "accuracy": 0.6169648774022531,
+        "macro_f1": 0.6170910342138405
+      },
+      "grouped_cv_macro_f1": 0.4908600469107783
+    }
+  },
+  "selected_model": "Word TF-IDF + complement naive Bayes",
+  "top_confusions": [
+    {
+      "actual": "billing",
+      "predicted": "shipping",
+      "count": 78
+    },
+    {
+      "actual": "billing",
+      "predicted": "account_access",
+      "count": 75
+    },
+    {
+      "actual": "account_access",
+      "predicted": "shipping",
+      "count": 73
+    },
+    {
+      "actual": "technical_issue",
+      "predicted": "feature_request",
+      "count": 57
+    },
+    {
+      "actual": "shipping",
+      "predicted": "account_access",
+      "count": 43
+    }
+  ],
+  "accuracy_by_ticket_type": {
+    "with_secondary_issue": 0.45322245322245325,
+    "single_issue": 0.693579766536965
+  },
+  "misclassified_examples": [
+    {
+      "text": "i need to update the credit card on file because my payment keeps getting declined",
+      "actual": "billing",
+      "predicted": "shipping",
+      "confidence": 0.4309125416227126
+    },
+    {
+      "text": "Hey there, The discount code was not applied and I paid the full price of $49.00. Please get back to me as soon as possible.",
+      "actual": "billing",
+      "predicted": "account_access",
+      "confidence": 0.4555349391180449
+    },
+    {
+      "text": "we would love an option to schedule messages to send at a later time",
+      "actual": "feature_request",
+      "predicted": "billing",
+      "confidence": 0.62009211936287
+    },
+    {
+      "text": "the integration with our calendar keeps disconnecting and throws an authentication error",
+      "actual": "technical_issue",
+      "predicted": "feature_request",
+      "confidence": 0.3842666917176732
+    }
+  ],
+  "routing": {
+    "threshold": 0.9299999999999999,
+    "coverage": 0.43870112657389,
+    "automated_accuracy": 0.9063444108761329,
+    "escalated": 847,
+    "overall_accuracy_all_automated": 0.6169648774022531,
+    "target_accuracy": 0.95
+  },
+  "typo_robustness": {
+    "rates": [
+      0.0,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "macro_f1": {
+      "Word TF-IDF + logistic regression": [
+        0.6240795356041072,
+        0.6245710412188547,
+        0.6320715151900494,
+        0.6226153556795646
+      ],
+      "Word + character TF-IDF + logistic regression": [
+        0.6890984227570641,
+        0.6842632168447924,
+        0.6812187934341093,
+        0.6805078816401351
+      ],
+      "Word TF-IDF + complement naive Bayes": [
+        0.6170910342138405,
+        0.6132173914846286,
+        0.616704630416268,
+        0.6024774752214438
+      ]
+    }
+  },
+  "retrieval": {
+    "TF-IDF cosine": {
+      "precision_at_1": 0.625,
+      "precision_at_5": 0.625,
+      "mrr": 0.6840121028495642
+    },
+    "LSA, 50 dimensions": {
+      "precision_at_1": 0.58,
+      "precision_at_5": 0.5753333333333334,
+      "mrr": 0.6229263344512957
+    },
+    "LSA, 150 dimensions": {
+      "precision_at_1": 0.6433333333333333,
+      "precision_at_5": 0.6256666666666667,
+      "mrr": 0.6937387447791858
+    }
+  },
+  "best_search": "LSA, 150 dimensions",
+  "search_demo": [
+    {
+      "query": "i need to update the credit card on file because my payment keeps getting declined",
+      "category": "billing",
+      "results": [
+        {
+          "text": "My invoice for the starter plan shows the wrong total and I need a corrected receipt. This is abotu my invoice and the payment on my card. Also, after the latest update the Echo search returns no results at all. Please get back to me as soon as possible.",
+          "category": "billing",
+          "similarity": 0.5697034968498564
+        },
+        {
+          "text": "Can you send me a VAT invoice for the tem payment made on Monday?. This is about my invoice and the payment on my card.",
+          "category": "billing",
+          "similarity": 0.5624842570305532
+        },
+        {
+          "text": "Can you send me a VAT invoice for the strter payment made on last Friday?. This is about my invoice and the payment on my card. Let me know what you need from me.",
+          "category": "billing",
+          "similarity": 0.562025739734968
+        }
+      ]
+    },
+    {
+      "query": "Hey there, The integration with our calendar keeps disconnecting and throws an authentication error. This is quite urgent for us.",
+      "category": "technical_issue",
+      "results": [
+        {
+          "text": "Hey there, The courier left my parcel wiht a neighbour I do not know. This is quite urgent for us.",
+          "category": "shipping",
+          "similarity": 0.6213672448254299
+        },
+        {
+          "text": "Hey there, Please consider adding an integration with Compass so we can sync our data. This is quite urgent for us.",
+          "category": "feature_request",
+          "similarity": 0.5895990541062921
+        },
+        {
+          "text": "Hey there, The page loads forevr and then shows a blank screen in the browser. This is quite urgent for us.",
+          "category": "technical_issue",
+          "similarity": 0.5886503963366277
+        }
+      ]
+    },
+    {
+      "query": "Hello, I forgot which email I used to register and I cannot sign in. It seems to be a login problem with my email or verifiaction code. Please get back to me as soon as possible.",
+      "category": "account_access",
+      "results": [
+        {
+          "text": "Helloo, How do I change the email address linked to my login?. It seems to be a login problem with my email or verification code. Please get back to me as soon as possible.",
+          "category": "account_access",
+          "similarity": 0.8227225432914655
+        },
+        {
+          "text": "I am stuck in a login loop and it keeps sending me back to the sign in page. It seems to be a login problem with my email or verification code. Please get back to me as soon as possible.",
+          "category": "account_access",
+          "similarity": 0.819351452509458
+        },
+        {
+          "text": "I cannot log in to my account, the password reset email never arrives. It seems to be a login problem with my email or verification code. Please get back to me as soon as possible.",
+          "category": "account_access",
+          "similarity": 0.8180411495356731
+        }
+      ]
+    },
+    {
+      "query": "Part of my orer #10452 is missing, only one of the two boxes came. The courier and the tracking information do not match what I ordered. Also, my account is locked after too many sign in attempts and I nede it unlocked. Thanks for your help.",
+      "category": "shipping",
+      "results": [
+        {
+          "text": "Hello, My account is locked after too many sign in attempts and I need it unlocked. Thanks for your help.",
+          "category": "account_access",
+          "similarity": 0.6941071948843884
+        },
+        {
+          "text": "Hello, My account is locked after too many sign in attempts and I need it unlocked. Thanks for your help.",
+          "category": "account_access",
+          "similarity": 0.6941071948843884
+        },
+        {
+          "text": "Dear support, My account is locked after too many sign in attempts and I need it unlocked. Thanks for your help.",
+          "category": "account_access",
+          "similarity": 0.6801465249462347
+        }
+      ]
+    },
+    {
+      "query": "we would love an option to schedule messages to send at a later time",
+      "category": "feature_request",
+      "results": [
+        {
+          "text": "Hello, Please consider adding an integration with Dashly so we can sync our data. It would really improve the product for our team. Als,o can you send me a VAT invoice for the starter payment made on last week?. Let me know what you need from me.",
+          "category": "feature_request",
+          "similarity": 0.5975449592008428
+        },
+        {
+          "text": "Please consider adding an integration with Dashyl so we can sync our data.",
+          "category": "feature_request",
+          "similarity": 0.5742202159815515
+        },
+        {
+          "text": "Hey there, Can you send me a VAT invoice for the team payment made on last Friday?. Allso, please consider adding an integration with Beacon so we can sync our data. This is quite urgent for us.",
+          "category": "billing",
+          "similarity": 0.5603094950682695
+        }
+      ]
+    },
+    {
+      "query": "Hi teaam, I think someone accessed my account, I see logins from a country I have nver visited. I am worried about the safety and privacy of my data. Let me know what you need from me.",
+      "category": "security",
+      "results": [
+        {
+          "text": "Dear support, I want to reort a vulnerability that lets users see other customers data. I am worried about the safety and privacy of my data. Let me know what you need from me.",
+          "category": "security",
+          "similarity": 0.790939947327663
+        },
+        {
+          "text": "A phishing site is using your logo and I want to report it. I am worried about the safety and privacy of my data. Let me know what you need from me.",
+          "category": "security",
+          "similarity": 0.7614809213405277
+        },
+        {
+          "text": "Hi team, I received a suspicious email pretending to be from your company asking for my password. I am worried about the safety and privacy of my data. Let me know what you need from me.",
+          "category": "security",
+          "similarity": 0.7394556572671956
+        }
+      ]
+    }
+  ],
+  "top_terms": {
+    "account_access": [
+      [
+        "account",
+        4.355688626214576
+      ],
+      [
+        "login",
+        4.1942754334733365
+      ],
+      [
+        "sign",
+        4.1644994423414206
+      ],
+      [
+        "email",
+        3.5680910956018095
+      ],
+      [
+        "access",
+        3.098209001106489
+      ],
+      [
+        "code",
+        2.9832231877827824
+      ],
+      [
+        "password",
+        2.6429760439966072
+      ],
+      [
+        "denied",
+        2.4999336442918416
+      ]
+    ],
+    "billing": [
+      [
+        "invoice",
+        4.518062387330111
+      ],
+      [
+        "subscription",
+        4.4922876213852145
+      ],
+      [
+        "payment",
+        4.1055190138627795
+      ],
+      [
+        "billed",
+        4.065578039650672
+      ],
+      [
+        "refund",
+        3.9043431022501984
+      ],
+      [
+        "statement",
+        3.783714137471379
+      ],
+      [
+        "card",
+        3.6062738870442934
+      ],
+      [
+        "charge",
+        3.410607410170913
+      ]
+    ],
+    "feature_request": [
+      [
+        "add",
+        3.684786534148294
+      ],
+      [
+        "really",
+        3.0684571540780885
+      ],
+      [
+        "sync data",
+        2.807183984370757
+      ],
+      [
+        "users",
+        2.793686476664327
+      ],
+      [
+        "benefit",
+        2.573432791521056
+      ],
+      [
+        "feature",
+        2.570578677749263
+      ],
+      [
+        "consider",
+        2.4525485402952962
+      ],
+      [
+        "improve",
+        2.409611234438341
+      ]
+    ],
+    "security": [
+      [
+        "data",
+        3.40852116655812
+      ],
+      [
+        "needs",
+        2.9523034666222605
+      ],
+      [
+        "support want",
+        2.628716950282488
+      ],
+      [
+        "want",
+        2.4357155120781235
+      ],
+      [
+        "report",
+        2.4309758355990847
+      ],
+      [
+        "gained",
+        2.3712600354015945
+      ],
+      [
+        "want report",
+        2.303779935695395
+      ],
+      [
+        "concerned",
+        2.1766214834632427
+      ]
+    ],
+    "shipping": [
+      [
+        "parcel",
+        4.528266513306078
+      ],
+      [
+        "delivery",
+        4.41543028854297
+      ],
+      [
+        "tracking",
+        4.192814599403591
+      ],
+      [
+        "ordered",
+        3.8794827858161973
+      ],
+      [
+        "courier",
+        3.094167486866658
+      ],
+      [
+        "got",
+        3.074343753498478
+      ],
+      [
+        "package",
+        3.019227354459024
+      ],
+      [
+        "delivered",
+        2.9810079874197246
+      ]
+    ],
+    "technical_issue": [
+      [
+        "update",
+        3.470151433911057
+      ],
+      [
+        "results",
+        3.3754591343499842
+      ],
+      [
+        "working",
+        3.1972082436115445
+      ],
+      [
+        "browser",
+        3.1721360187761656
+      ],
+      [
+        "app",
+        3.066772000632678
+      ],
+      [
+        "fine",
+        2.902384148078713
+      ],
+      [
+        "hours",
+        2.726167792025135
+      ],
+      [
+        "percent",
+        2.7099115164052257
+      ]
+    ]
+  },
+  "figures": [
+    "split_comparison.png",
+    "confusion_matrix.png",
+    "typo_robustness.png",
+    "routing_tradeoff.png",
+    "top_terms.png",
+    "retrieval.png"
+  ]
+}
