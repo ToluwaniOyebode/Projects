@@ -1,5 +1,11 @@
 # Projects
 
+## AI video creative portfolio
+
+[Explore the AI video creative portfolio →](AI-Video-Portfolio/README.md) · [Open the portfolio website](https://toluwanioyebode.github.io/Projects/)
+
+Six product-led short-form advertising concepts, shot-by-shot storyboards and a Loom introduction script. Final video exports and Loom recording are still in production; the portfolio labels them honestly rather than presenting mockups as finished videos.
+
 ## Data, AI and ML portfolio
 
 [Explore three end-to-end ML projects →](ML-Projects/README.md)
@@ -16,16 +22,16 @@ Each project reproduces from one command, ships its real results and figures, an
 
 [Explore six complete local applications →](Portfolio-Projects/README.md)
 
-| Project                                      | Focus                                                            |
-| -------------------------------------------- | ---------------------------------------------------------------- |
-| [Applyboard](Portfolio-Projects/applyboard/) | Job application pipeline, versioned edits and follow-ups         |
+| Project | Focus |
+| --- | --- |
+| [Applyboard](Portfolio-Projects/applyboard/) | Job application pipeline, versioned edits and follow-ups |
 | [LedgerLens](Portfolio-Projects/ledgerlens/) | Exact-money expense analytics, budgets and validated CSV imports |
-| [Stockroom](Portfolio-Projects/stockroom/)   | Transactional inventory, idempotent reservations and fulfillment |
-| [SignalDesk](Portfolio-Projects/signaldesk/) | Local document search with explainable BM25 ranking              |
-| [Pitchside](Portfolio-Projects/pitchside/)   | Football event analytics, passing networks and shot maps         |
-| [QueueCraft](Portfolio-Projects/queuecraft/) | Persistent background jobs, retries and crash-safe leases        |
+| [Stockroom](Portfolio-Projects/stockroom/) | Transactional inventory, idempotent reservations and fulfillment |
+| [SignalDesk](Portfolio-Projects/signaldesk/) | Local document search with explainable BM25 ranking |
+| [Pitchside](Portfolio-Projects/pitchside/) | Football event analytics, passing networks and shot maps |
+| [QueueCraft](Portfolio-Projects/queuecraft/) | Persistent background jobs, retries and crash-safe leases |
 
-Each project includes a working UI, demo data, an API guide, tests and local setup instructions. The collection has 45 domain tests plus HTTP and optional browser acceptance checks. [Validation evidence](Portfolio-Projects/VALIDATION.md) · [Demo and interview guide](Portfolio-Projects/INTERVIEW_GUIDE.md)
+Each project includes a working UI, demo data, an API guide, tests and local setup instructions.
 
 ## Other projects
 
